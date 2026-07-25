@@ -7886,18 +7886,6 @@
           "value": 0
         },
         {
-          "name": "ShowMessage",
-          "persistentUuid": "a9488c15-1eb2-4d82-97c4-f2cb82353f65",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "MessageTimer",
-          "persistentUuid": "8d715973-c059-467f-9642-16fa2cadb745",
-          "type": "number",
-          "value": 0
-        },
-        {
           "name": "InteractionRequested",
           "persistentUuid": "603caba6-933e-4bf2-b13e-7d2348f7310b",
           "type": "boolean",
@@ -7920,6 +7908,30 @@
           "persistentUuid": "f71ce58a-2c19-4357-ae77-428159003ed2",
           "type": "string",
           "value": ""
+        },
+        {
+          "name": "DialogueActive",
+          "persistentUuid": "cb4ed36b-c590-4ac2-80aa-410fdd2ee7f7",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "DialogueTextValue",
+          "persistentUuid": "ba497ee4-9e86-4924-ae61-68f011163e23",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "DialogueNextText",
+          "persistentUuid": "b6623916-88ce-49ad-a936-ee138085698d",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "DialogueInputDelay",
+          "persistentUuid": "2db1c62c-2f75-4230-9e1c-b6e21b6c5eaf",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -8169,22 +8181,6 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "DialogueText",
-          "persistentUuid": "47aa4678-5d61-463c-ada9-8cf8b64716d9",
-          "width": 0,
-          "x": -96,
-          "y": -128,
-          "zOrder": 18,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
           "name": "TempleEntrance",
           "persistentUuid": "b073a554-9db9-40e6-95fc-2c8874ad3019",
           "width": 0,
@@ -8226,6 +8222,58 @@
           "x": 440,
           "y": 476,
           "zOrder": 99,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 128,
+          "keepRatio": false,
+          "layer": "UI",
+          "locked": true,
+          "name": "DialogueBox",
+          "persistentUuid": "ce3d6fdc-f55c-4be0-92e3-0b1639432c5b",
+          "width": 960,
+          "x": 160,
+          "y": 384,
+          "zOrder": 110,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 56,
+          "keepRatio": true,
+          "layer": "UI",
+          "locked": true,
+          "name": "DialogueText",
+          "persistentUuid": "21eea0f7-bed1-4f32-acf5-d70b94323ccd",
+          "width": 880,
+          "x": 200,
+          "y": 414,
+          "zOrder": 111,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "keepRatio": true,
+          "layer": "UI",
+          "locked": true,
+          "name": "DialogueContinuePrompt",
+          "persistentUuid": "5d989d20-f2f9-49db-9c56-4e513dadc0ea",
+          "width": 220,
+          "x": 900,
+          "y": 478,
+          "zOrder": 112,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -9822,25 +9870,25 @@
           "italic": false,
           "name": "DialogueText",
           "persistentUuid": "8da5c5e4-dcb7-48a2-8b62-241919dd2673",
-          "smoothed": true,
+          "smoothed": false,
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [],
           "effects": [],
           "behaviors": [],
           "string": "HP: 100",
-          "font": "",
+          "font": "assets\\PressStart2P-Regular.ttf",
           "textAlignment": "left",
-          "characterSize": 20,
+          "characterSize": 16,
           "color": {
-            "b": 255,
-            "g": 255,
-            "r": 255
+            "r": 255,
+            "g": 244,
+            "b": 214
           },
           "content": {
             "bold": false,
             "isOutlineEnabled": false,
-            "isShadowEnabled": true,
+            "isShadowEnabled": false,
             "italic": false,
             "outlineColor": "255;255;255",
             "outlineThickness": 2,
@@ -9849,15 +9897,15 @@
             "shadowColor": "0;0;0",
             "shadowDistance": 3,
             "shadowOpacity": 180,
-            "smoothed": true,
+            "smoothed": false,
             "underlined": false,
             "text": "HP: 100",
-            "font": "",
+            "font": "assets\\PressStart2P-Regular.ttf",
             "textAlignment": "left",
-            "verticalTextAlignment": "top",
-            "characterSize": 20,
+            "verticalTextAlignment": "center",
+            "characterSize": 16,
             "lineHeight": 0,
-            "color": "255;255;255"
+            "color": "255;244;214"
           }
         },
         {
@@ -10478,68 +10526,6 @@
         {
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
-          "name": "DialogueBox",
-          "persistentUuid": "c55db6d3-38e2-4c54-b00e-07f26ec5f541",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "NewSprite",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "metadata": "{\"pskl\":{}}",
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "NewSprite",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 2,
-                            "y": 16
-                          },
-                          {
-                            "x": 62,
-                            "y": 16
-                          },
-                          {
-                            "x": 62,
-                            "y": 43
-                          },
-                          {
-                            "x": 2,
-                            "y": 43
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "",
           "name": "TempleEntrance",
           "persistentUuid": "c8d18a7a-aeea-44fd-a752-5870ba522fe0",
           "type": "Sprite",
@@ -10658,6 +10644,67 @@
           "variables": [],
           "effects": [],
           "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "bottomMargin": 8,
+          "height": 128,
+          "leftMargin": 8,
+          "name": "DialogueBox",
+          "persistentUuid": "b617d00b-ce16-4f3d-992b-293154381d6c",
+          "rightMargin": 8,
+          "texture": "assets\\interaction-prompt-retro.png",
+          "tiled": false,
+          "topMargin": 8,
+          "type": "PanelSpriteObject::PanelSprite",
+          "width": 960,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "DialogueContinuePrompt",
+          "persistentUuid": "236863f3-f043-4f8a-bf1b-d7a76bbc8afa",
+          "smoothed": false,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "A: Continue",
+          "font": "assets\\PressStart2P-Regular.ttf",
+          "textAlignment": "center",
+          "characterSize": 10,
+          "color": {
+            "r": 255,
+            "g": 244,
+            "b": 214
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 3,
+            "shadowOpacity": 180,
+            "smoothed": false,
+            "underlined": false,
+            "text": "A: Continue",
+            "font": "assets\\PressStart2P-Regular.ttf",
+            "textAlignment": "right",
+            "verticalTextAlignment": "center",
+            "characterSize": 10,
+            "lineHeight": 0,
+            "color": "255;244;214"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -10717,116 +10764,20 @@
             "objectName": "DialogueText"
           },
           {
-            "objectName": "DialogueBox"
-          },
-          {
             "objectName": "InteractionPromptBox"
           },
           {
             "objectName": "InteractionPrompt"
+          },
+          {
+            "objectName": "DialogueBox"
+          },
+          {
+            "objectName": "DialogueContinuePrompt"
           }
         ]
       },
       "events": [
-        {
-          "aiGeneratedEventId": "01KXKS7HWPZ9Z4D9PQHF4RVT3X",
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "BooleanVariable"
-              },
-              "parameters": [
-                "ShowMessage",
-                "True",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "DialogueText",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "DialogueBox",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "MessageTimer",
-                "-",
-                "1"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "NumberVariable"
-              },
-              "parameters": [
-                "MessageTimer",
-                "<=",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "BooleanVariable"
-              },
-              "parameters": [
-                "ShowMessage",
-                "True",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "DialogueText"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "DialogueBox"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetBooleanVariable"
-              },
-              "parameters": [
-                "ShowMessage",
-                "False",
-                ""
-              ]
-            }
-          ]
-        },
         {
           "colorB": 99,
           "colorG": 184,
@@ -10904,6 +10855,16 @@
               "conditions": [
                 {
                   "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
                     "value": "CollisionNP"
                   },
                   "parameters": [
@@ -10951,6 +10912,16 @@
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
                 {
                   "type": {
                     "value": "StringVariable"
@@ -11002,6 +10973,16 @@
               "conditions": [
                 {
                   "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
                     "value": "StringVariable"
                   },
                   "parameters": [
@@ -11051,6 +11032,16 @@
               "conditions": [
                 {
                   "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
                     "value": "StringVariable"
                   },
                   "parameters": [
@@ -11097,6 +11088,16 @@
               "conditions": [
                 {
                   "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
                     "value": "ButtonStates::ButtonFSM::IsPressed"
                   },
                   "parameters": [
@@ -11128,6 +11129,16 @@
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
                 {
                   "type": {
                     "value": "BooleanVariable"
@@ -11202,6 +11213,16 @@
                     "value": "BooleanVariable"
                   },
                   "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
                     "InteractionRequested",
                     "True",
                     ""
@@ -11254,6 +11275,16 @@
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
                 {
                   "type": {
                     "value": "BooleanVariable"
@@ -11362,35 +11393,22 @@
                 },
                 {
                   "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                    "value": "SetStringVariable"
                   },
                   "parameters": [
-                    "DialogueText",
-                    "Text",
+                    "DialogueTextValue",
                     "=",
-                    "\"this stone feels warm...\""
+                    "\"This stone feels warm...\""
                   ]
                 },
                 {
                   "type": {
-                    "value": "SetXY"
+                    "value": "SetStringVariable"
                   },
                   "parameters": [
-                    "DialogueText",
+                    "DialogueNextText",
                     "=",
-                    "artifact.CenterX()",
-                    "=",
-                    "artifact.Y()-20"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetBooleanVariable"
-                  },
-                  "parameters": [
-                    "ShowMessage",
-                    "True",
-                    ""
+                    "\"A faint pulse answers my touch.\""
                   ]
                 },
                 {
@@ -11398,9 +11416,19 @@
                     "value": "SetNumberVariable"
                   },
                   "parameters": [
-                    "MessageTimer",
+                    "DialogueInputDelay",
                     "=",
-                    "180"
+                    "8"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "True",
+                    ""
                   ]
                 },
                 {
@@ -11425,6 +11453,259 @@
                 "textR": 0
               },
               "comment": "Add future interactions in three steps: register the nearby target, set its prompt, then handle it only when InteractionRequested is true and InteractionConsumed is false."
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 99,
+          "colorG": 104,
+          "colorR": 175,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Ancient Digs Dialogue System",
+          "source": "Reusable paged dialogue with input lock",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "DialogueBox"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "DialogueText"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "DialogueContinuePrompt"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "DialogueBox",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "DialogueText",
+                    "Text",
+                    "=",
+                    "VariableString(DialogueTextValue)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "DialogueText",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "DialogueContinuePrompt",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "DialogueInputDelay",
+                    ">",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "DialogueInputDelay",
+                    "-",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "DialogueInputDelay",
+                    "<=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsPressed"
+                  },
+                  "parameters": [
+                    "ActionButton",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringVariable"
+                      },
+                      "parameters": [
+                        "DialogueNextText",
+                        "!=",
+                        "\"\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "DialogueTextValue",
+                        "=",
+                        "VariableString(DialogueNextText)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "DialogueNextText",
+                        "=",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "DialogueInputDelay",
+                        "=",
+                        "8"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringVariable"
+                      },
+                      "parameters": [
+                        "DialogueNextText",
+                        "=",
+                        "\"\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "DialogueActive",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ],
           "parameters": []
@@ -13526,18 +13807,6 @@
           "value": 0
         },
         {
-          "name": "ShowMessage",
-          "persistentUuid": "a9488c15-1eb2-4d82-97c4-f2cb82353f65",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "MessageTimer",
-          "persistentUuid": "8d715973-c059-467f-9642-16fa2cadb745",
-          "type": "number",
-          "value": 0
-        },
-        {
           "name": "InteractionRequested",
           "persistentUuid": "4e776904-08a7-4256-9b53-ad1a67f5119b",
           "type": "boolean",
@@ -13560,6 +13829,30 @@
           "persistentUuid": "67d056a2-856e-4a15-9661-9b3333ca3ef1",
           "type": "string",
           "value": ""
+        },
+        {
+          "name": "DialogueActive",
+          "persistentUuid": "a8bf892a-a768-4922-ae82-c9dde564aaa6",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "DialogueTextValue",
+          "persistentUuid": "57e45990-e04b-4210-b68e-3cf4dffd1cb7",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "DialogueNextText",
+          "persistentUuid": "1a7fdd2c-edc6-4710-b61e-6ef32cca4101",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "DialogueInputDelay",
+          "persistentUuid": "215e40f8-7dea-41d5-9b4b-b48e7f5922b9",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -13805,22 +14098,6 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "DialogueText",
-          "persistentUuid": "47aa4678-5d61-463c-ada9-8cf8b64716d9",
-          "width": 0,
-          "x": 20,
-          "y": 0,
-          "zOrder": 18,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": true,
           "height": 32,
           "keepRatio": true,
@@ -13850,6 +14127,58 @@
           "x": 440,
           "y": 476,
           "zOrder": 99,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 128,
+          "keepRatio": false,
+          "layer": "UI",
+          "locked": true,
+          "name": "DialogueBox",
+          "persistentUuid": "c09c6159-9240-4e5c-8999-f100bd2c8881",
+          "width": 960,
+          "x": 160,
+          "y": 384,
+          "zOrder": 110,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 56,
+          "keepRatio": true,
+          "layer": "UI",
+          "locked": true,
+          "name": "DialogueText",
+          "persistentUuid": "9dc181ad-899a-4201-ab79-0e8c9ed7490d",
+          "width": 880,
+          "x": 200,
+          "y": 414,
+          "zOrder": 111,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "keepRatio": true,
+          "layer": "UI",
+          "locked": true,
+          "name": "DialogueContinuePrompt",
+          "persistentUuid": "e6b5eb59-82d2-4eeb-8879-5167330ee73c",
+          "width": 220,
+          "x": 900,
+          "y": 478,
+          "zOrder": 112,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -15446,25 +15775,25 @@
           "italic": false,
           "name": "DialogueText",
           "persistentUuid": "8da5c5e4-dcb7-48a2-8b62-241919dd2673",
-          "smoothed": true,
+          "smoothed": false,
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [],
           "effects": [],
           "behaviors": [],
           "string": "HP: 100",
-          "font": "",
+          "font": "assets\\PressStart2P-Regular.ttf",
           "textAlignment": "left",
-          "characterSize": 20,
+          "characterSize": 16,
           "color": {
-            "b": 255,
-            "g": 255,
-            "r": 255
+            "r": 255,
+            "g": 244,
+            "b": 214
           },
           "content": {
             "bold": false,
             "isOutlineEnabled": false,
-            "isShadowEnabled": true,
+            "isShadowEnabled": false,
             "italic": false,
             "outlineColor": "255;255;255",
             "outlineThickness": 2,
@@ -15473,15 +15802,15 @@
             "shadowColor": "0;0;0",
             "shadowDistance": 3,
             "shadowOpacity": 180,
-            "smoothed": true,
+            "smoothed": false,
             "underlined": false,
             "text": "HP: 100",
-            "font": "",
+            "font": "assets\\PressStart2P-Regular.ttf",
             "textAlignment": "left",
-            "verticalTextAlignment": "top",
-            "characterSize": 20,
+            "verticalTextAlignment": "center",
+            "characterSize": 16,
             "lineHeight": 0,
-            "color": "255;255;255"
+            "color": "255;244;214"
           }
         },
         {
@@ -16100,68 +16429,6 @@
           ]
         },
         {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "",
-          "name": "DialogueBox",
-          "persistentUuid": "c55db6d3-38e2-4c54-b00e-07f26ec5f541",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "NewSprite",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "metadata": "{\"pskl\":{}}",
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "NewSprite",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 2,
-                            "y": 16
-                          },
-                          {
-                            "x": 62,
-                            "y": 16
-                          },
-                          {
-                            "x": 62,
-                            "y": 43
-                          },
-                          {
-                            "x": 2,
-                            "y": 43
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
           "assetStoreId": "",
           "bold": false,
           "italic": false,
@@ -16221,6 +16488,67 @@
           "variables": [],
           "effects": [],
           "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "bottomMargin": 8,
+          "height": 128,
+          "leftMargin": 8,
+          "name": "DialogueBox",
+          "persistentUuid": "93f3a0c5-9340-42b6-a268-83b655263642",
+          "rightMargin": 8,
+          "texture": "assets\\interaction-prompt-retro.png",
+          "tiled": false,
+          "topMargin": 8,
+          "type": "PanelSpriteObject::PanelSprite",
+          "width": 960,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "DialogueContinuePrompt",
+          "persistentUuid": "f50a7a14-bcfe-4226-880c-a5062022342c",
+          "smoothed": false,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "A: Continue",
+          "font": "assets\\PressStart2P-Regular.ttf",
+          "textAlignment": "center",
+          "characterSize": 10,
+          "color": {
+            "r": 255,
+            "g": 244,
+            "b": 214
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 3,
+            "shadowOpacity": 180,
+            "smoothed": false,
+            "underlined": false,
+            "text": "A: Continue",
+            "font": "assets\\PressStart2P-Regular.ttf",
+            "textAlignment": "right",
+            "verticalTextAlignment": "center",
+            "characterSize": 10,
+            "lineHeight": 0,
+            "color": "255;244;214"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -16277,116 +16605,20 @@
             "objectName": "DialogueText"
           },
           {
-            "objectName": "DialogueBox"
-          },
-          {
             "objectName": "InteractionPromptBox"
           },
           {
             "objectName": "InteractionPrompt"
+          },
+          {
+            "objectName": "DialogueBox"
+          },
+          {
+            "objectName": "DialogueContinuePrompt"
           }
         ]
       },
       "events": [
-        {
-          "aiGeneratedEventId": "01KXKS7HWPZ9Z4D9PQHF4RVT3X",
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "BooleanVariable"
-              },
-              "parameters": [
-                "ShowMessage",
-                "True",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "DialogueText",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "DialogueBox",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "MessageTimer",
-                "-",
-                "1"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "NumberVariable"
-              },
-              "parameters": [
-                "MessageTimer",
-                "<=",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "BooleanVariable"
-              },
-              "parameters": [
-                "ShowMessage",
-                "True",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "DialogueText"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "DialogueBox"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetBooleanVariable"
-              },
-              "parameters": [
-                "ShowMessage",
-                "False",
-                ""
-              ]
-            }
-          ]
-        },
         {
           "colorB": 99,
           "colorG": 184,
@@ -16464,6 +16696,16 @@
               "conditions": [
                 {
                   "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
                     "value": "CollisionNP"
                   },
                   "parameters": [
@@ -16513,6 +16755,16 @@
               "conditions": [
                 {
                   "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
                     "value": "StringVariable"
                   },
                   "parameters": [
@@ -16559,6 +16811,16 @@
               "conditions": [
                 {
                   "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
                     "value": "ButtonStates::ButtonFSM::IsPressed"
                   },
                   "parameters": [
@@ -16590,6 +16852,16 @@
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
                 {
                   "type": {
                     "value": "BooleanVariable"
@@ -16667,6 +16939,259 @@
                 "textR": 0
               },
               "comment": "Add future interactions in three steps: register the nearby target, set its prompt, then handle it only when InteractionRequested is true and InteractionConsumed is false."
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 99,
+          "colorG": 104,
+          "colorR": 175,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Ancient Digs Dialogue System",
+          "source": "Reusable paged dialogue with input lock",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "DialogueBox"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "DialogueText"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "DialogueContinuePrompt"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "DialogueBox",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "DialogueText",
+                    "Text",
+                    "=",
+                    "VariableString(DialogueTextValue)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "DialogueText",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "DialogueContinuePrompt",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "DialogueInputDelay",
+                    ">",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "DialogueInputDelay",
+                    "-",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "DialogueInputDelay",
+                    "<=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsPressed"
+                  },
+                  "parameters": [
+                    "ActionButton",
+                    "ButtonFSM",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringVariable"
+                      },
+                      "parameters": [
+                        "DialogueNextText",
+                        "!=",
+                        "\"\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "DialogueTextValue",
+                        "=",
+                        "VariableString(DialogueNextText)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "DialogueNextText",
+                        "=",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "DialogueInputDelay",
+                        "=",
+                        "8"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringVariable"
+                      },
+                      "parameters": [
+                        "DialogueNextText",
+                        "=",
+                        "\"\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "DialogueActive",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ],
           "parameters": []
