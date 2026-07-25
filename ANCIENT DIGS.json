@@ -935,16 +935,86 @@
       "value": 1
     },
     {
-      "name": "InventoryInitialized",
-      "persistentUuid": "e2e6ba70-0903-4423-a25c-5851757e021e",
-      "type": "boolean",
-      "value": false
-    },
-    {
       "name": "Inventory",
       "persistentUuid": "a359fb72-ba71-4c5f-ac25-b3f2e3aaf087",
       "type": "array",
-      "children": []
+      "children": [
+        {
+          "type": "structure",
+          "children": [
+            {
+              "name": "Name",
+              "type": "string",
+              "value": "Empty"
+            },
+            {
+              "name": "Quantity",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "type": "structure",
+          "children": [
+            {
+              "name": "Name",
+              "type": "string",
+              "value": "Empty"
+            },
+            {
+              "name": "Quantity",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "type": "structure",
+          "children": [
+            {
+              "name": "Name",
+              "type": "string",
+              "value": "Empty"
+            },
+            {
+              "name": "Quantity",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "type": "structure",
+          "children": [
+            {
+              "name": "Name",
+              "type": "string",
+              "value": "Empty"
+            },
+            {
+              "name": "Quantity",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "type": "structure",
+          "children": [
+            {
+              "name": "Name",
+              "type": "string",
+              "value": "Empty"
+            },
+            {
+              "name": "Quantity",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "CollectedArtifacts",
@@ -4807,64 +4877,7 @@
                   ]
                 }
               ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BooleanGlobalVariable"
-                      },
-                      "parameters": [
-                        "InventoryInitialized",
-                        "False",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetBooleanGlobalVariable"
-                      },
-                      "parameters": [
-                        "InventoryInitialized",
-                        "True",
-                        ""
-                      ]
-                    }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::ForEach",
-                      "object": "InventorySlot",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetStringGlobalVariable"
-                          },
-                          "parameters": [
-                            "Inventory[InventorySlot.SlotNumber].Name",
-                            "=",
-                            "\"Empty\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberGlobalVariable"
-                          },
-                          "parameters": [
-                            "Inventory[InventorySlot.SlotNumber].Quantity",
-                            "=",
-                            "0"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
+              "events": []
             }
           ],
           "parameters": []
@@ -10961,64 +10974,7 @@
                   ]
                 }
               ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BooleanGlobalVariable"
-                      },
-                      "parameters": [
-                        "InventoryInitialized",
-                        "False",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetBooleanGlobalVariable"
-                      },
-                      "parameters": [
-                        "InventoryInitialized",
-                        "True",
-                        ""
-                      ]
-                    }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::ForEach",
-                      "object": "InventorySlot",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetStringGlobalVariable"
-                          },
-                          "parameters": [
-                            "Inventory[InventorySlot.SlotNumber].Name",
-                            "=",
-                            "\"Empty\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberGlobalVariable"
-                          },
-                          "parameters": [
-                            "Inventory[InventorySlot.SlotNumber].Quantity",
-                            "=",
-                            "0"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
+              "events": []
             }
           ],
           "parameters": []
@@ -16289,64 +16245,7 @@
                   ]
                 }
               ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BooleanGlobalVariable"
-                      },
-                      "parameters": [
-                        "InventoryInitialized",
-                        "False",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetBooleanGlobalVariable"
-                      },
-                      "parameters": [
-                        "InventoryInitialized",
-                        "True",
-                        ""
-                      ]
-                    }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::ForEach",
-                      "object": "InventorySlot",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetStringGlobalVariable"
-                          },
-                          "parameters": [
-                            "Inventory[InventorySlot.SlotNumber].Name",
-                            "=",
-                            "\"Empty\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberGlobalVariable"
-                          },
-                          "parameters": [
-                            "Inventory[InventorySlot.SlotNumber].Quantity",
-                            "=",
-                            "0"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
+              "events": []
             }
           ],
           "parameters": []
