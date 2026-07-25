@@ -948,7 +948,7 @@
       "name": "AncientDigsSchemaVersion",
       "persistentUuid": "6c86c901-374f-43f8-94c9-f82bcf91eb32",
       "type": "number",
-      "value": 1
+      "value": 2
     },
     {
       "name": "Inventory",
@@ -959,12 +959,47 @@
           "type": "structure",
           "children": [
             {
+              "name": "ItemId",
+              "type": "string",
+              "value": ""
+            },
+            {
               "name": "Name",
               "type": "string",
               "value": "Empty"
             },
             {
+              "name": "DisplayName",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "Category",
+              "type": "string",
+              "value": ""
+            },
+            {
               "name": "Quantity",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "Stackable",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "MaxStack",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "Usable",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "QuestItem",
               "type": "number",
               "value": 0
             }
@@ -974,12 +1009,47 @@
           "type": "structure",
           "children": [
             {
+              "name": "ItemId",
+              "type": "string",
+              "value": ""
+            },
+            {
               "name": "Name",
               "type": "string",
               "value": "Empty"
             },
             {
+              "name": "DisplayName",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "Category",
+              "type": "string",
+              "value": ""
+            },
+            {
               "name": "Quantity",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "Stackable",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "MaxStack",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "Usable",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "QuestItem",
               "type": "number",
               "value": 0
             }
@@ -989,12 +1059,47 @@
           "type": "structure",
           "children": [
             {
+              "name": "ItemId",
+              "type": "string",
+              "value": ""
+            },
+            {
               "name": "Name",
               "type": "string",
               "value": "Empty"
             },
             {
+              "name": "DisplayName",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "Category",
+              "type": "string",
+              "value": ""
+            },
+            {
               "name": "Quantity",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "Stackable",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "MaxStack",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "Usable",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "QuestItem",
               "type": "number",
               "value": 0
             }
@@ -1004,12 +1109,47 @@
           "type": "structure",
           "children": [
             {
+              "name": "ItemId",
+              "type": "string",
+              "value": ""
+            },
+            {
               "name": "Name",
               "type": "string",
               "value": "Empty"
             },
             {
+              "name": "DisplayName",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "Category",
+              "type": "string",
+              "value": ""
+            },
+            {
               "name": "Quantity",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "Stackable",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "MaxStack",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "Usable",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "QuestItem",
               "type": "number",
               "value": 0
             }
@@ -1019,12 +1159,47 @@
           "type": "structure",
           "children": [
             {
+              "name": "ItemId",
+              "type": "string",
+              "value": ""
+            },
+            {
               "name": "Name",
               "type": "string",
               "value": "Empty"
             },
             {
+              "name": "DisplayName",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "Category",
+              "type": "string",
+              "value": ""
+            },
+            {
               "name": "Quantity",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "Stackable",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "MaxStack",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "Usable",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "QuestItem",
               "type": "number",
               "value": 0
             }
@@ -1067,6 +1242,60 @@
       "persistentUuid": "07c27285-ecea-40a9-aec6-fabdf6d184c8",
       "type": "string",
       "value": "Egypt"
+    },
+    {
+      "name": "InventoryCapacity",
+      "persistentUuid": "f03364db-ea9a-468b-9b2f-9673604c013c",
+      "type": "number",
+      "value": 5
+    },
+    {
+      "name": "ItemCatalog",
+      "persistentUuid": "f19f7580-02ad-451d-b6cf-1bf546c6900d",
+      "type": "structure",
+      "children": [
+        {
+          "name": "artifact",
+          "type": "structure",
+          "children": [
+            {
+              "name": "ItemId",
+              "type": "string",
+              "value": "ancient_jar"
+            },
+            {
+              "name": "DisplayName",
+              "type": "string",
+              "value": "Ancient Jar"
+            },
+            {
+              "name": "Category",
+              "type": "string",
+              "value": "Artifact"
+            },
+            {
+              "name": "Stackable",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "MaxStack",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "Usable",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "QuestItem",
+              "type": "number",
+              "value": 1
+            }
+          ]
+        }
+      ]
     }
   ],
   "layouts": [
@@ -7932,6 +8161,18 @@
           "persistentUuid": "2db1c62c-2f75-4230-9e1c-b6e21b6c5eaf",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "InventoryFull",
+          "persistentUuid": "753e5aff-0097-4182-85ad-ec1d5c239576",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "InventoryStatus",
+          "persistentUuid": "a2e693de-917d-4aa3-9c6d-36eeee6b56e5",
+          "type": "string",
+          "value": ""
         }
       ],
       "instances": [
@@ -10463,6 +10704,48 @@
               "persistentUuid": "6e596b54-e4d5-4292-97f6-c13151b28991",
               "type": "boolean",
               "value": false
+            },
+            {
+              "name": "ItemId",
+              "persistentUuid": "e8d445bd-be30-4572-9c66-3f77c6ce952b",
+              "type": "string",
+              "value": "ancient_jar"
+            },
+            {
+              "name": "DisplayName",
+              "persistentUuid": "bebba880-89b8-4d4f-87d2-3eb57dfc1436",
+              "type": "string",
+              "value": "Ancient Jar"
+            },
+            {
+              "name": "Category",
+              "persistentUuid": "d3bdb094-9c4b-4638-a85d-5def0d3d36d4",
+              "type": "string",
+              "value": "Artifact"
+            },
+            {
+              "name": "Stackable",
+              "persistentUuid": "471867dc-8c64-44f4-a1e6-17b5d93aa93f",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "name": "MaxStack",
+              "persistentUuid": "087f2824-cfab-42cc-8100-29e8586b8a72",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "Usable",
+              "persistentUuid": "28b2286c-7440-4390-b1a7-124b279083f6",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "name": "QuestItem",
+              "persistentUuid": "e7f03214-9cf8-4ecd-beca-2550867302a6",
+              "type": "boolean",
+              "value": true
             }
           ],
           "effects": [],
@@ -11908,12 +12191,24 @@
           "parameters": []
         },
         {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "SYSTEM 4: Five persistent slots with identity, display name, category, quantity, stacking rules, usability, quest protection, safe full-inventory feedback, and no template world-placement behavior."
+        },
+        {
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
-          "name": "Declare initial inventory variables",
+          "name": "Ancient Digs Inventory - Initialize Display",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
@@ -11951,7 +12246,7 @@
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
-          "name": "Select inventory slot",
+          "name": "Ancient Digs Inventory - Select Slot",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
@@ -12126,7 +12421,7 @@
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
-          "name": "Perform action",
+          "name": "Legacy template action/placement system (disabled)",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
@@ -12673,7 +12968,8 @@
               ]
             }
           ],
-          "parameters": []
+          "parameters": [],
+          "disabled": true
         },
         {
           "colorB": 228,
@@ -12681,7 +12977,7 @@
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
-          "name": "Add item to inventory",
+          "name": "Ancient Digs Inventory - Add Item",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
@@ -12700,7 +12996,48 @@
                   ]
                 }
               ],
-              "actions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "SlotFound",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "SlotCrawler",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "InventoryFull",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringVariable"
+                  },
+                  "parameters": [
+                    "InventoryStatus",
+                    "=",
+                    "\"\""
+                  ]
+                }
+              ],
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Comment",
@@ -12727,6 +13064,17 @@
                         "=",
                         ""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Item",
+                        "Stackable",
+                        "True",
+                        ""
+                      ]
                     }
                   ],
                   "actions": [],
@@ -12742,6 +13090,16 @@
                             "Inventory[SlotCrawler].Name",
                             "=",
                             "Item.ObjectName()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "VarGlobal"
+                          },
+                          "parameters": [
+                            "Inventory[SlotCrawler].Quantity",
+                            "<",
+                            "Item.Variable(MaxStack)"
                           ]
                         }
                       ],
@@ -12990,9 +13348,79 @@
                         "value": "ModVarGlobalTxt"
                       },
                       "parameters": [
+                        "Inventory[SlotCrawler].ItemId",
+                        "=",
+                        "Item.VariableString(ItemId)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarGlobalTxt"
+                      },
+                      "parameters": [
                         "Inventory[SlotCrawler].Name",
                         "=",
                         "Item.ObjectName()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarGlobalTxt"
+                      },
+                      "parameters": [
+                        "Inventory[SlotCrawler].DisplayName",
+                        "=",
+                        "Item.VariableString(DisplayName)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarGlobalTxt"
+                      },
+                      "parameters": [
+                        "Inventory[SlotCrawler].Category",
+                        "=",
+                        "Item.VariableString(Category)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "Inventory[SlotCrawler].Stackable",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "Inventory[SlotCrawler].MaxStack",
+                        "=",
+                        "Item.Variable(MaxStack)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "Inventory[SlotCrawler].Usable",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "Inventory[SlotCrawler].QuestItem",
+                        "=",
+                        "1"
                       ]
                     },
                     {
@@ -13003,6 +13431,16 @@
                         "Inventory[SlotCrawler].Quantity",
                         "+",
                         "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "InventoryStatus",
+                        "=",
+                        "\"Ancient Jar added\""
                       ]
                     },
                     {
@@ -13020,6 +13458,95 @@
                       },
                       "parameters": [
                         "UpdateInventoryDisplay",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "If all five slots are occupied, keep the world item and explain why pickup failed."
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "SlotFound",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "InventoryFull",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "InventoryStatus",
+                        "=",
+                        "\"Inventory full\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "DialogueTextValue",
+                        "=",
+                        "\"Inventory full.\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "DialogueNextText",
+                        "=",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "DialogueInputDelay",
+                        "=",
+                        "8"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "DialogueActive",
                         "True",
                         ""
                       ]
@@ -13066,7 +13593,7 @@
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
-          "name": "Place item from inventory",
+          "name": "Legacy template world placement (disabled)",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
@@ -13238,14 +13765,15 @@
               ]
             }
           ],
-          "parameters": []
+          "parameters": [],
+          "disabled": true
         },
         {
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "name": "Update inventory display",
+          "name": "Ancient Digs Inventory - Refresh Display",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
@@ -13454,70 +13982,7 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Delete/Create held item"
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "Item",
-                        "Held",
-                        "True",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "Item",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "VarGlobalTxt"
-                      },
-                      "parameters": [
-                        "Inventory[SelectedSlot].Name",
-                        "!=",
-                        "\"Empty\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetBooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "Item",
-                        "Held",
-                        "True",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Cache"
-                      },
-                      "parameters": [
-                        "Item"
-                      ]
-                    }
-                  ]
+                  "comment": "Ancient Digs inventory stores protected data and icons only; artifacts are never auto-created as held world objects."
                 }
               ],
               "variables": [
@@ -13853,6 +14318,18 @@
           "persistentUuid": "215e40f8-7dea-41d5-9b4b-b48e7f5922b9",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "InventoryFull",
+          "persistentUuid": "03c7dfbc-09ae-49f3-aa6a-bf8c2d8bab65",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "InventoryStatus",
+          "persistentUuid": "80e0c068-0652-40c9-ae05-5f7fb6a71d81",
+          "type": "string",
+          "value": ""
         }
       ],
       "instances": [
@@ -16368,6 +16845,48 @@
               "persistentUuid": "6e596b54-e4d5-4292-97f6-c13151b28991",
               "type": "boolean",
               "value": false
+            },
+            {
+              "name": "ItemId",
+              "persistentUuid": "e42cd77c-4982-4a50-84d9-32c9d14524d0",
+              "type": "string",
+              "value": "ancient_jar"
+            },
+            {
+              "name": "DisplayName",
+              "persistentUuid": "8fe1d58b-766b-48f3-94c1-744ddc7d5436",
+              "type": "string",
+              "value": "Ancient Jar"
+            },
+            {
+              "name": "Category",
+              "persistentUuid": "ad40b4e2-2163-4e4c-9822-a8aec030367d",
+              "type": "string",
+              "value": "Artifact"
+            },
+            {
+              "name": "Stackable",
+              "persistentUuid": "0133ff15-bc96-4877-8e7b-378a7021ec64",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "name": "MaxStack",
+              "persistentUuid": "79dfcbb5-1a0c-45c0-abc3-21f098e687e5",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "Usable",
+              "persistentUuid": "8d6df7fa-0724-47b4-9a59-d043adbb2734",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "name": "QuestItem",
+              "persistentUuid": "dc627f4a-0619-43f7-9476-f1c672610942",
+              "type": "boolean",
+              "value": true
             }
           ],
           "effects": [],
@@ -17394,12 +17913,24 @@
           "parameters": []
         },
         {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "SYSTEM 4: Five persistent slots with identity, display name, category, quantity, stacking rules, usability, quest protection, safe full-inventory feedback, and no template world-placement behavior."
+        },
+        {
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
-          "name": "Declare initial inventory variables",
+          "name": "Ancient Digs Inventory - Initialize Display",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
@@ -17437,7 +17968,7 @@
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
-          "name": "Select inventory slot",
+          "name": "Ancient Digs Inventory - Select Slot",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
@@ -17612,7 +18143,7 @@
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
-          "name": "Perform action",
+          "name": "Legacy template action/placement system (disabled)",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
@@ -18159,7 +18690,8 @@
               ]
             }
           ],
-          "parameters": []
+          "parameters": [],
+          "disabled": true
         },
         {
           "colorB": 228,
@@ -18167,7 +18699,7 @@
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
-          "name": "Add item to inventory",
+          "name": "Ancient Digs Inventory - Add Item",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
@@ -18186,7 +18718,48 @@
                   ]
                 }
               ],
-              "actions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "SlotFound",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "SlotCrawler",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "InventoryFull",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringVariable"
+                  },
+                  "parameters": [
+                    "InventoryStatus",
+                    "=",
+                    "\"\""
+                  ]
+                }
+              ],
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Comment",
@@ -18213,6 +18786,17 @@
                         "=",
                         ""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Item",
+                        "Stackable",
+                        "True",
+                        ""
+                      ]
                     }
                   ],
                   "actions": [],
@@ -18228,6 +18812,16 @@
                             "Inventory[SlotCrawler].Name",
                             "=",
                             "Item.ObjectName()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "VarGlobal"
+                          },
+                          "parameters": [
+                            "Inventory[SlotCrawler].Quantity",
+                            "<",
+                            "Item.Variable(MaxStack)"
                           ]
                         }
                       ],
@@ -18476,9 +19070,79 @@
                         "value": "ModVarGlobalTxt"
                       },
                       "parameters": [
+                        "Inventory[SlotCrawler].ItemId",
+                        "=",
+                        "Item.VariableString(ItemId)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarGlobalTxt"
+                      },
+                      "parameters": [
                         "Inventory[SlotCrawler].Name",
                         "=",
                         "Item.ObjectName()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarGlobalTxt"
+                      },
+                      "parameters": [
+                        "Inventory[SlotCrawler].DisplayName",
+                        "=",
+                        "Item.VariableString(DisplayName)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarGlobalTxt"
+                      },
+                      "parameters": [
+                        "Inventory[SlotCrawler].Category",
+                        "=",
+                        "Item.VariableString(Category)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "Inventory[SlotCrawler].Stackable",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "Inventory[SlotCrawler].MaxStack",
+                        "=",
+                        "Item.Variable(MaxStack)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "Inventory[SlotCrawler].Usable",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "Inventory[SlotCrawler].QuestItem",
+                        "=",
+                        "1"
                       ]
                     },
                     {
@@ -18489,6 +19153,16 @@
                         "Inventory[SlotCrawler].Quantity",
                         "+",
                         "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "InventoryStatus",
+                        "=",
+                        "\"Ancient Jar added\""
                       ]
                     },
                     {
@@ -18506,6 +19180,95 @@
                       },
                       "parameters": [
                         "UpdateInventoryDisplay",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "If all five slots are occupied, keep the world item and explain why pickup failed."
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "SlotFound",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "InventoryFull",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "InventoryStatus",
+                        "=",
+                        "\"Inventory full\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "DialogueTextValue",
+                        "=",
+                        "\"Inventory full.\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "DialogueNextText",
+                        "=",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "DialogueInputDelay",
+                        "=",
+                        "8"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "DialogueActive",
                         "True",
                         ""
                       ]
@@ -18552,7 +19315,7 @@
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
-          "name": "Update inventory display",
+          "name": "Ancient Digs Inventory - Refresh Display",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
@@ -18750,6 +19513,18 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Ancient Digs inventory stores protected data and icons only; artifacts are never auto-created as held world objects."
                 }
               ],
               "variables": [
