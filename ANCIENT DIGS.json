@@ -947,7 +947,7 @@
       "name": "AncientDigsSchemaVersion",
       "persistentUuid": "6c86c901-374f-43f8-94c9-f82bcf91eb32",
       "type": "number",
-      "value": 3
+      "value": 4
     },
     {
       "name": "Inventory",
@@ -1216,17 +1216,17 @@
           "type": "structure",
           "children": [
             {
+              "name": "CollectionOrder",
+              "type": "number",
+              "value": 0
+            },
+            {
               "name": "Discovered",
               "type": "number",
               "value": 0
             },
             {
               "name": "DiscoveryCount",
-              "type": "number",
-              "value": 0
-            },
-            {
-              "name": "CollectionOrder",
               "type": "number",
               "value": 0
             },
@@ -1333,6 +1333,21 @@
           "type": "structure",
           "children": [
             {
+              "name": "Culture",
+              "type": "string",
+              "value": "Unknown"
+            },
+            {
+              "name": "Description",
+              "type": "string",
+              "value": "Details not yet catalogued."
+            },
+            {
+              "name": "IconAnimation",
+              "type": "string",
+              "value": "artifact"
+            },
+            {
               "name": "ItemId",
               "type": "string",
               "value": "ancient_jar"
@@ -1348,29 +1363,14 @@
               "value": "artifact"
             },
             {
-              "name": "IconAnimation",
-              "type": "string",
-              "value": "artifact"
-            },
-            {
-              "name": "Culture",
-              "type": "string",
-              "value": "Unknown"
-            },
-            {
-              "name": "Period",
-              "type": "string",
-              "value": "Unknown"
-            },
-            {
               "name": "Origin",
               "type": "string",
               "value": "Egypt"
             },
             {
-              "name": "Description",
+              "name": "Period",
               "type": "string",
-              "value": "Details not yet catalogued."
+              "value": "Unknown"
             },
             {
               "name": "Unique",
@@ -1392,6 +1392,30 @@
       "persistentUuid": "35b70a76-28b0-41e9-8d0a-b901fde25734",
       "type": "number",
       "value": 1
+    },
+    {
+      "name": "CurrentRoom",
+      "persistentUuid": "f7a3d4cc-8fe2-4f50-a405-9ae26e65d899",
+      "type": "string",
+      "value": "Base camp 2"
+    },
+    {
+      "name": "PreviousRoom",
+      "persistentUuid": "1497121c-0391-494f-99b9-058290858e3b",
+      "type": "string",
+      "value": ""
+    },
+    {
+      "name": "NextSpawn",
+      "persistentUuid": "1231d44e-36dc-43e4-8ae7-6c0997a69e6a",
+      "type": "string",
+      "value": ""
+    },
+    {
+      "name": "LastDoorUsed",
+      "persistentUuid": "f886e3a7-e2d1-4b54-97f5-c7ba06246069",
+      "type": "string",
+      "value": ""
     }
   ],
   "layouts": [
@@ -8269,6 +8293,12 @@
           "persistentUuid": "a2e693de-917d-4aa3-9c6d-36eeee6b56e5",
           "type": "string",
           "value": ""
+        },
+        {
+          "name": "TransitionLockFrames",
+          "persistentUuid": "a2bf758f-8565-42d8-8dd7-36ed9124430a",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -11233,6 +11263,152 @@
           "parameters": []
         },
         {
+          "colorB": 186,
+          "colorG": 120,
+          "colorR": 56,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Ancient Digs Scene Transition System",
+          "source": "Reusable room state, arrival positioning, facing, and bounce prevention",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Every doorway records its destination and arrival marker before changing rooms. Arrival locks prevent immediate return loops."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "DepartScene"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "TransitionLockFrames",
+                    "=",
+                    "20"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "DepartScene"
+                  },
+                  "parameters": []
+                },
+                {
+                  "type": {
+                    "value": "VarGlobalTxt"
+                  },
+                  "parameters": [
+                    "NextSpawn",
+                    "=",
+                    "\"Camp_FromTemple\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "=",
+                    "1088",
+                    "=",
+                    "400"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "Animation",
+                    "=",
+                    "\"Walk1\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarGlobalTxt"
+                  },
+                  "parameters": [
+                    "CurrentRoom",
+                    "=",
+                    "\"Base camp 2\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarGlobalTxt"
+                  },
+                  "parameters": [
+                    "NextSpawn",
+                    "=",
+                    "\"\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "TransitionLockFrames",
+                    ">",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "TransitionLockFrames",
+                    "-",
+                    "1"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
           "colorB": 99,
           "colorG": 184,
           "colorR": 56,
@@ -11406,6 +11582,16 @@
                     "",
                     "",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "TransitionLockFrames",
+                    "<=",
+                    "0"
                   ]
                 }
               ],
@@ -11732,6 +11918,46 @@
                     "InteractionConsumed",
                     "True",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarGlobalTxt"
+                  },
+                  "parameters": [
+                    "PreviousRoom",
+                    "=",
+                    "GlobalVariableString(CurrentRoom)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarGlobalTxt"
+                  },
+                  "parameters": [
+                    "CurrentRoom",
+                    "=",
+                    "\"Temple Room 1\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarGlobalTxt"
+                  },
+                  "parameters": [
+                    "NextSpawn",
+                    "=",
+                    "\"Temple_FromCamp\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarGlobalTxt"
+                  },
+                  "parameters": [
+                    "LastDoorUsed",
+                    "=",
+                    "\"CampTempleEntrance\""
                   ]
                 },
                 {
@@ -14652,6 +14878,12 @@
           "persistentUuid": "80e0c068-0652-40c9-ae05-5f7fb6a71d81",
           "type": "string",
           "value": ""
+        },
+        {
+          "name": "TransitionLockFrames",
+          "persistentUuid": "718ca9bb-6bd5-40a2-97ba-695d2801e142",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -14976,6 +15208,23 @@
           "x": 900,
           "y": 478,
           "zOrder": 112,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "locked": true,
+          "name": "TempleExit",
+          "persistentUuid": "da31dc37-d6c9-4a33-9728-9519738a905a",
+          "width": 64,
+          "x": 272,
+          "y": 528,
+          "zOrder": 14,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -17388,6 +17637,67 @@
             "lineHeight": 0,
             "color": "255;244;214"
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "TempleExit",
+          "persistentUuid": "2de9aa26-39df-4e9c-bba3-56a28a743ba6",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "support3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 1
+                          },
+                          {
+                            "x": 32,
+                            "y": 1
+                          },
+                          {
+                            "x": 32,
+                            "y": 32
+                          },
+                          {
+                            "x": 0,
+                            "y": 32
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -17502,6 +17812,159 @@
                   "parameters": [
                     "artifact",
                     ""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 186,
+          "colorG": 120,
+          "colorR": 56,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Ancient Digs Scene Transition System",
+          "source": "Reusable room state, arrival positioning, facing, and bounce prevention",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Every doorway records its destination and arrival marker before changing rooms. Arrival locks prevent immediate return loops."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "TempleExit is a visible carved-stone threshold for now; replace its artwork later without changing the transition logic."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "DepartScene"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "TransitionLockFrames",
+                    "=",
+                    "20"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "DepartScene"
+                  },
+                  "parameters": []
+                },
+                {
+                  "type": {
+                    "value": "VarGlobalTxt"
+                  },
+                  "parameters": [
+                    "NextSpawn",
+                    "=",
+                    "\"Temple_FromCamp\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "=",
+                    "288",
+                    "=",
+                    "416"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "Animation",
+                    "=",
+                    "\"Walk3\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarGlobalTxt"
+                  },
+                  "parameters": [
+                    "CurrentRoom",
+                    "=",
+                    "\"Temple Room 1\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarGlobalTxt"
+                  },
+                  "parameters": [
+                    "NextSpawn",
+                    "=",
+                    "\"\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "TransitionLockFrames",
+                    ">",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "TransitionLockFrames",
+                    "-",
+                    "1"
                   ]
                 }
               ]
@@ -17646,6 +18109,75 @@
                     "InteractionPromptText",
                     "=",
                     "\"A: Pick up artifact\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringVariable"
+                  },
+                  "parameters": [
+                    "InteractionTarget",
+                    "=",
+                    "\"\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "TransitionLockFrames",
+                    "<=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "TempleExit",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetStringVariable"
+                  },
+                  "parameters": [
+                    "InteractionTarget",
+                    "=",
+                    "\"LeaveTemple\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringVariable"
+                  },
+                  "parameters": [
+                    "InteractionPromptText",
+                    "=",
+                    "\"A: Return to camp\""
                   ]
                 }
               ]
@@ -17823,6 +18355,123 @@
                   "parameters": [
                     "InteractionConsumed",
                     "True",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "InteractionRequested",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "InteractionConsumed",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringVariable"
+                  },
+                  "parameters": [
+                    "InteractionTarget",
+                    "=",
+                    "\"LeaveTemple\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "TransitionLockFrames",
+                    "<=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "InteractionConsumed",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarGlobalTxt"
+                  },
+                  "parameters": [
+                    "PreviousRoom",
+                    "=",
+                    "GlobalVariableString(CurrentRoom)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarGlobalTxt"
+                  },
+                  "parameters": [
+                    "CurrentRoom",
+                    "=",
+                    "\"Base camp 2\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarGlobalTxt"
+                  },
+                  "parameters": [
+                    "NextSpawn",
+                    "=",
+                    "\"Camp_FromTemple\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarGlobalTxt"
+                  },
+                  "parameters": [
+                    "LastDoorUsed",
+                    "=",
+                    "\"TempleCampExit\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Base camp 2\"",
                     ""
                   ]
                 }
