@@ -947,7 +947,7 @@
       "name": "AncientDigsSchemaVersion",
       "persistentUuid": "6c86c901-374f-43f8-94c9-f82bcf91eb32",
       "type": "number",
-      "value": 4
+      "value": 5
     },
     {
       "name": "Inventory",
@@ -1416,6 +1416,68 @@
       "persistentUuid": "f886e3a7-e2d1-4b54-97f5-c7ba06246069",
       "type": "string",
       "value": ""
+    },
+    {
+      "name": "PlayerState",
+      "persistentUuid": "dbcf90ed-2dfa-4fe6-b00e-dc6fa9d85c4f",
+      "type": "structure",
+      "children": [
+        {
+          "name": "CharacterId",
+          "type": "string",
+          "value": "player_01"
+        },
+        {
+          "name": "Health",
+          "type": "number",
+          "value": 100
+        },
+        {
+          "name": "MaxHealth",
+          "type": "number",
+          "value": 100
+        },
+        {
+          "name": "MoveSpeed",
+          "type": "number",
+          "value": 200
+        },
+        {
+          "name": "FacingAnimation",
+          "type": "string",
+          "value": "Walk1"
+        },
+        {
+          "name": "MovementEnabled",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "EquippedItemId",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "EquippedSlot",
+          "type": "number",
+          "value": -1
+        },
+        {
+          "name": "CurrentX",
+          "type": "number",
+          "value": 288
+        },
+        {
+          "name": "CurrentY",
+          "type": "number",
+          "value": 416
+        },
+        {
+          "name": "InputMode",
+          "type": "string",
+          "value": "Auto"
+        }
+      ]
     }
   ],
   "layouts": [
@@ -10296,7 +10358,32 @@
           "persistentUuid": "6c7ca939-fd35-4906-9566-0453a4ebd761",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "CharacterId",
+              "persistentUuid": "86f37931-a7e1-48e7-a10e-86c9a938239b",
+              "type": "string",
+              "value": "player_01"
+            },
+            {
+              "name": "MovementLocked",
+              "persistentUuid": "7807d0f5-879a-4ea8-8a63-8ab91bdea3be",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "name": "EquippedItemId",
+              "persistentUuid": "1b0f6288-9edf-4289-9104-d38317b22908",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "EquippedSlot",
+              "persistentUuid": "b144f73c-1c5c-447e-bd8e-8bbdb5b8cfed",
+              "type": "number",
+              "value": -1
+            }
+          ],
           "effects": [],
           "behaviors": [
             {
@@ -11255,6 +11342,266 @@
                   "parameters": [
                     "DigSpot",
                     ""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 76,
+          "colorG": 139,
+          "colorR": 204,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Ancient Digs Player System",
+          "source": "Persistent character state and consistent control locking",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "One player record now owns health, movement settings, facing, equipment references, position, and input state across every room."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "DepartScene"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Health::Health::SetHealth"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "Health",
+                    "GlobalVariable(PlayerState.Health)",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "Animation",
+                    "=",
+                    "GlobalVariableString(PlayerState.FacingAnimation)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "PlayerState.Health",
+                    "=",
+                    "TopDown_Character.Health::Health()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarGlobalTxt"
+                  },
+                  "parameters": [
+                    "PlayerState.FacingAnimation",
+                    "=",
+                    "TopDown_Character.AnimationName()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "PlayerState.CurrentX",
+                    "=",
+                    "TopDown_Character.X()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "PlayerState.CurrentY",
+                    "=",
+                    "TopDown_Character.Y()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "TransitionLockFrames",
+                    "<=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "TopDownMovement",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "MovementLocked",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "PlayerState.MovementEnabled",
+                    "=",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "TopDownMovement",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "MovementLocked",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "PlayerState.MovementEnabled",
+                    "=",
+                    "0"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "TransitionLockFrames",
+                    ">",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "TopDownMovement",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "MovementLocked",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "PlayerState.MovementEnabled",
+                    "=",
+                    "0"
                   ]
                 }
               ]
@@ -14572,7 +14919,9 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "name": "Legacy template death reset (disabled)",
+          "disabled": true
         }
       ],
       "layers": [
@@ -16882,7 +17231,32 @@
           "persistentUuid": "6c7ca939-fd35-4906-9566-0453a4ebd761",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "CharacterId",
+              "persistentUuid": "9c8b6178-3d51-42cf-9de5-5c651e5000dc",
+              "type": "string",
+              "value": "player_01"
+            },
+            {
+              "name": "MovementLocked",
+              "persistentUuid": "0ae413e2-4bad-4a88-81a5-8c05ed2f08c6",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "name": "EquippedItemId",
+              "persistentUuid": "11326160-7430-429c-80e9-ae4c5aa94292",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "EquippedSlot",
+              "persistentUuid": "d9a35909-a035-4edb-8470-a52d6c9b676b",
+              "type": "number",
+              "value": -1
+            }
+          ],
           "effects": [],
           "behaviors": [
             {
@@ -17764,6 +18138,9 @@
           },
           {
             "objectName": "DialogueContinuePrompt"
+          },
+          {
+            "objectName": "TempleExit"
           }
         ]
       },
@@ -17812,6 +18189,266 @@
                   "parameters": [
                     "artifact",
                     ""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 76,
+          "colorG": 139,
+          "colorR": 204,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Ancient Digs Player System",
+          "source": "Persistent character state and consistent control locking",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "One player record now owns health, movement settings, facing, equipment references, position, and input state across every room."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "DepartScene"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Health::Health::SetHealth"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "Health",
+                    "GlobalVariable(PlayerState.Health)",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "Animation",
+                    "=",
+                    "GlobalVariableString(PlayerState.FacingAnimation)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "PlayerState.Health",
+                    "=",
+                    "TopDown_Character.Health::Health()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarGlobalTxt"
+                  },
+                  "parameters": [
+                    "PlayerState.FacingAnimation",
+                    "=",
+                    "TopDown_Character.AnimationName()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "PlayerState.CurrentX",
+                    "=",
+                    "TopDown_Character.X()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "PlayerState.CurrentY",
+                    "=",
+                    "TopDown_Character.Y()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "TransitionLockFrames",
+                    "<=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "TopDownMovement",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "MovementLocked",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "PlayerState.MovementEnabled",
+                    "=",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "TopDownMovement",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "MovementLocked",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "PlayerState.MovementEnabled",
+                    "=",
+                    "0"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "TransitionLockFrames",
+                    ">",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "TopDownMovement",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "MovementLocked",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "PlayerState.MovementEnabled",
+                    "=",
+                    "0"
                   ]
                 }
               ]
@@ -20727,7 +21364,9 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "name": "Legacy template death reset (disabled)",
+          "disabled": true
         }
       ],
       "layers": [
