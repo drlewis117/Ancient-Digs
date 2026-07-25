@@ -6023,7 +6023,7 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "StringGlobalVariable"
+                            "value": "VarGlobalTxt"
                           },
                           "parameters": [
                             "Inventory[SlotCrawler].Name",
@@ -6128,7 +6128,7 @@
                     },
                     {
                       "type": {
-                        "value": "StringGlobalVariable"
+                        "value": "VarGlobalTxt"
                       },
                       "parameters": [
                         "Inventory[SelectedSlot].Name",
@@ -6194,7 +6194,7 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "StringGlobalVariable"
+                            "value": "VarGlobalTxt"
                           },
                           "parameters": [
                             "Inventory[SlotCrawler].Name",
@@ -6274,7 +6274,7 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "SetStringGlobalVariable"
+                        "value": "ModVarGlobalTxt"
                       },
                       "parameters": [
                         "Inventory[SlotCrawler].Name",
@@ -6284,7 +6284,7 @@
                     },
                     {
                       "type": {
-                        "value": "SetNumberGlobalVariable"
+                        "value": "ModVarGlobal"
                       },
                       "parameters": [
                         "Inventory[SlotCrawler].Quantity",
@@ -6459,7 +6459,7 @@
                             },
                             {
                               "type": {
-                                "value": "SetNumberGlobalVariable"
+                                "value": "ModVarGlobal"
                               },
                               "parameters": [
                                 "Inventory[SelectedSlot].Quantity",
@@ -6494,7 +6494,7 @@
                               "conditions": [
                                 {
                                   "type": {
-                                    "value": "NumberGlobalVariable"
+                                    "value": "VarGlobal"
                                   },
                                   "parameters": [
                                     "Inventory[SelectedSlot].Quantity",
@@ -6506,7 +6506,7 @@
                               "actions": [
                                 {
                                   "type": {
-                                    "value": "SetStringGlobalVariable"
+                                    "value": "ModVarGlobalTxt"
                                   },
                                   "parameters": [
                                     "Inventory[SelectedSlot].Name",
@@ -6626,7 +6626,7 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "StringGlobalVariable"
+                            "value": "VarGlobalTxt"
                           },
                           "parameters": [
                             "Inventory[SlotCrawler].Name",
@@ -6776,7 +6776,7 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "StringGlobalVariable"
+                        "value": "VarGlobalTxt"
                       },
                       "parameters": [
                         "Inventory[SelectedSlot].Name",
@@ -11816,7 +11816,7 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "StringGlobalVariable"
+                            "value": "VarGlobalTxt"
                           },
                           "parameters": [
                             "Inventory[SlotCrawler].Name",
@@ -11921,7 +11921,7 @@
                     },
                     {
                       "type": {
-                        "value": "StringGlobalVariable"
+                        "value": "VarGlobalTxt"
                       },
                       "parameters": [
                         "Inventory[SelectedSlot].Name",
@@ -11987,7 +11987,7 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "StringGlobalVariable"
+                            "value": "VarGlobalTxt"
                           },
                           "parameters": [
                             "Inventory[SlotCrawler].Name",
@@ -12067,7 +12067,7 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "SetStringGlobalVariable"
+                        "value": "ModVarGlobalTxt"
                       },
                       "parameters": [
                         "Inventory[SlotCrawler].Name",
@@ -12077,7 +12077,7 @@
                     },
                     {
                       "type": {
-                        "value": "SetNumberGlobalVariable"
+                        "value": "ModVarGlobal"
                       },
                       "parameters": [
                         "Inventory[SlotCrawler].Quantity",
@@ -12252,7 +12252,7 @@
                             },
                             {
                               "type": {
-                                "value": "SetNumberGlobalVariable"
+                                "value": "ModVarGlobal"
                               },
                               "parameters": [
                                 "Inventory[SelectedSlot].Quantity",
@@ -12287,7 +12287,7 @@
                               "conditions": [
                                 {
                                   "type": {
-                                    "value": "NumberGlobalVariable"
+                                    "value": "VarGlobal"
                                   },
                                   "parameters": [
                                     "Inventory[SelectedSlot].Quantity",
@@ -12299,7 +12299,7 @@
                               "actions": [
                                 {
                                   "type": {
-                                    "value": "SetStringGlobalVariable"
+                                    "value": "ModVarGlobalTxt"
                                   },
                                   "parameters": [
                                     "Inventory[SelectedSlot].Name",
@@ -12418,7 +12418,7 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "StringGlobalVariable"
+                            "value": "VarGlobalTxt"
                           },
                           "parameters": [
                             "Inventory[SlotCrawler].Name",
@@ -12568,7 +12568,7 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "StringGlobalVariable"
+                        "value": "VarGlobalTxt"
                       },
                       "parameters": [
                         "Inventory[SelectedSlot].Name",
@@ -17087,7 +17087,7 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "StringGlobalVariable"
+                            "value": "VarGlobalTxt"
                           },
                           "parameters": [
                             "Inventory[SlotCrawler].Name",
@@ -17192,7 +17192,7 @@
                     },
                     {
                       "type": {
-                        "value": "StringGlobalVariable"
+                        "value": "VarGlobalTxt"
                       },
                       "parameters": [
                         "Inventory[SelectedSlot].Name",
@@ -17258,7 +17258,7 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "StringGlobalVariable"
+                            "value": "VarGlobalTxt"
                           },
                           "parameters": [
                             "Inventory[SlotCrawler].Name",
@@ -17338,7 +17338,7 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "SetStringGlobalVariable"
+                        "value": "ModVarGlobalTxt"
                       },
                       "parameters": [
                         "Inventory[SlotCrawler].Name",
@@ -17348,7 +17348,7 @@
                     },
                     {
                       "type": {
-                        "value": "SetNumberGlobalVariable"
+                        "value": "ModVarGlobal"
                       },
                       "parameters": [
                         "Inventory[SlotCrawler].Quantity",
@@ -17522,7 +17522,7 @@
                             },
                             {
                               "type": {
-                                "value": "SetNumberGlobalVariable"
+                                "value": "ModVarGlobal"
                               },
                               "parameters": [
                                 "Inventory[SelectedSlot].Quantity",
@@ -17557,7 +17557,7 @@
                               "conditions": [
                                 {
                                   "type": {
-                                    "value": "NumberGlobalVariable"
+                                    "value": "VarGlobal"
                                   },
                                   "parameters": [
                                     "Inventory[SelectedSlot].Quantity",
@@ -17569,7 +17569,7 @@
                               "actions": [
                                 {
                                   "type": {
-                                    "value": "SetStringGlobalVariable"
+                                    "value": "ModVarGlobalTxt"
                                   },
                                   "parameters": [
                                     "Inventory[SelectedSlot].Name",
@@ -17689,7 +17689,7 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "StringGlobalVariable"
+                            "value": "VarGlobalTxt"
                           },
                           "parameters": [
                             "Inventory[SlotCrawler].Name",
@@ -17839,7 +17839,7 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "StringGlobalVariable"
+                        "value": "VarGlobalTxt"
                       },
                       "parameters": [
                         "Inventory[SelectedSlot].Name",
