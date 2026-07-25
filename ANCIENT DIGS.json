@@ -921,8 +921,7 @@
         "userAdded": false
       },
       {
-        "alwaysLoaded": false,
-        "file": "assets\\interaction-prompt-retro.png",
+        "file": "assets/interaction-prompt-retro.png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\interaction-prompt-retro.png",
@@ -948,7 +947,7 @@
       "name": "AncientDigsSchemaVersion",
       "persistentUuid": "6c86c901-374f-43f8-94c9-f82bcf91eb32",
       "type": "number",
-      "value": 2
+      "value": 3
     },
     {
       "name": "Inventory",
@@ -959,14 +958,9 @@
           "type": "structure",
           "children": [
             {
-              "name": "ItemId",
+              "name": "Category",
               "type": "string",
               "value": ""
-            },
-            {
-              "name": "Name",
-              "type": "string",
-              "value": "Empty"
             },
             {
               "name": "DisplayName",
@@ -974,12 +968,27 @@
               "value": ""
             },
             {
-              "name": "Category",
+              "name": "ItemId",
               "type": "string",
               "value": ""
             },
             {
+              "name": "MaxStack",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "Name",
+              "type": "string",
+              "value": "Empty"
+            },
+            {
               "name": "Quantity",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "QuestItem",
               "type": "number",
               "value": 0
             },
@@ -989,17 +998,7 @@
               "value": 0
             },
             {
-              "name": "MaxStack",
-              "type": "number",
-              "value": 1
-            },
-            {
               "name": "Usable",
-              "type": "number",
-              "value": 0
-            },
-            {
-              "name": "QuestItem",
               "type": "number",
               "value": 0
             }
@@ -1009,14 +1008,9 @@
           "type": "structure",
           "children": [
             {
-              "name": "ItemId",
+              "name": "Category",
               "type": "string",
               "value": ""
-            },
-            {
-              "name": "Name",
-              "type": "string",
-              "value": "Empty"
             },
             {
               "name": "DisplayName",
@@ -1024,12 +1018,27 @@
               "value": ""
             },
             {
-              "name": "Category",
+              "name": "ItemId",
               "type": "string",
               "value": ""
             },
             {
+              "name": "MaxStack",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "Name",
+              "type": "string",
+              "value": "Empty"
+            },
+            {
               "name": "Quantity",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "QuestItem",
               "type": "number",
               "value": 0
             },
@@ -1039,17 +1048,7 @@
               "value": 0
             },
             {
-              "name": "MaxStack",
-              "type": "number",
-              "value": 1
-            },
-            {
               "name": "Usable",
-              "type": "number",
-              "value": 0
-            },
-            {
-              "name": "QuestItem",
               "type": "number",
               "value": 0
             }
@@ -1059,14 +1058,9 @@
           "type": "structure",
           "children": [
             {
-              "name": "ItemId",
+              "name": "Category",
               "type": "string",
               "value": ""
-            },
-            {
-              "name": "Name",
-              "type": "string",
-              "value": "Empty"
             },
             {
               "name": "DisplayName",
@@ -1074,12 +1068,27 @@
               "value": ""
             },
             {
-              "name": "Category",
+              "name": "ItemId",
               "type": "string",
               "value": ""
             },
             {
+              "name": "MaxStack",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "Name",
+              "type": "string",
+              "value": "Empty"
+            },
+            {
               "name": "Quantity",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "QuestItem",
               "type": "number",
               "value": 0
             },
@@ -1089,17 +1098,7 @@
               "value": 0
             },
             {
-              "name": "MaxStack",
-              "type": "number",
-              "value": 1
-            },
-            {
               "name": "Usable",
-              "type": "number",
-              "value": 0
-            },
-            {
-              "name": "QuestItem",
               "type": "number",
               "value": 0
             }
@@ -1109,14 +1108,9 @@
           "type": "structure",
           "children": [
             {
-              "name": "ItemId",
+              "name": "Category",
               "type": "string",
               "value": ""
-            },
-            {
-              "name": "Name",
-              "type": "string",
-              "value": "Empty"
             },
             {
               "name": "DisplayName",
@@ -1124,12 +1118,27 @@
               "value": ""
             },
             {
-              "name": "Category",
+              "name": "ItemId",
               "type": "string",
               "value": ""
             },
             {
+              "name": "MaxStack",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "Name",
+              "type": "string",
+              "value": "Empty"
+            },
+            {
               "name": "Quantity",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "QuestItem",
               "type": "number",
               "value": 0
             },
@@ -1139,17 +1148,7 @@
               "value": 0
             },
             {
-              "name": "MaxStack",
-              "type": "number",
-              "value": 1
-            },
-            {
               "name": "Usable",
-              "type": "number",
-              "value": 0
-            },
-            {
-              "name": "QuestItem",
               "type": "number",
               "value": 0
             }
@@ -1159,14 +1158,9 @@
           "type": "structure",
           "children": [
             {
-              "name": "ItemId",
+              "name": "Category",
               "type": "string",
               "value": ""
-            },
-            {
-              "name": "Name",
-              "type": "string",
-              "value": "Empty"
             },
             {
               "name": "DisplayName",
@@ -1174,12 +1168,27 @@
               "value": ""
             },
             {
-              "name": "Category",
+              "name": "ItemId",
               "type": "string",
               "value": ""
             },
             {
+              "name": "MaxStack",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "Name",
+              "type": "string",
+              "value": "Empty"
+            },
+            {
               "name": "Quantity",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "QuestItem",
               "type": "number",
               "value": 0
             },
@@ -1189,17 +1198,7 @@
               "value": 0
             },
             {
-              "name": "MaxStack",
-              "type": "number",
-              "value": 1
-            },
-            {
               "name": "Usable",
-              "type": "number",
-              "value": 0
-            },
-            {
-              "name": "QuestItem",
               "type": "number",
               "value": 0
             }
@@ -1211,7 +1210,34 @@
       "name": "CollectedArtifacts",
       "persistentUuid": "6ac1606d-caec-414f-b2b6-d308dd24a7ce",
       "type": "structure",
-      "children": []
+      "children": [
+        {
+          "name": "ancient_jar",
+          "type": "structure",
+          "children": [
+            {
+              "name": "Discovered",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "DiscoveryCount",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "CollectionOrder",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "FirstDiscoveredSite",
+              "type": "string",
+              "value": ""
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "StoryProgress",
@@ -1259,9 +1285,9 @@
           "type": "structure",
           "children": [
             {
-              "name": "ItemId",
+              "name": "Category",
               "type": "string",
-              "value": "ancient_jar"
+              "value": "Artifact"
             },
             {
               "name": "DisplayName",
@@ -1269,14 +1295,9 @@
               "value": "Ancient Jar"
             },
             {
-              "name": "Category",
+              "name": "ItemId",
               "type": "string",
-              "value": "Artifact"
-            },
-            {
-              "name": "Stackable",
-              "type": "number",
-              "value": 0
+              "value": "ancient_jar"
             },
             {
               "name": "MaxStack",
@@ -1284,18 +1305,93 @@
               "value": 1
             },
             {
-              "name": "Usable",
+              "name": "QuestItem",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "Stackable",
               "type": "number",
               "value": 0
             },
             {
-              "name": "QuestItem",
+              "name": "Usable",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ArtifactCatalog",
+      "persistentUuid": "f4b22823-4b80-4f77-bf44-489382f2b361",
+      "type": "structure",
+      "children": [
+        {
+          "name": "ancient_jar",
+          "type": "structure",
+          "children": [
+            {
+              "name": "ItemId",
+              "type": "string",
+              "value": "ancient_jar"
+            },
+            {
+              "name": "Name",
+              "type": "string",
+              "value": "Ancient Jar"
+            },
+            {
+              "name": "ObjectName",
+              "type": "string",
+              "value": "artifact"
+            },
+            {
+              "name": "IconAnimation",
+              "type": "string",
+              "value": "artifact"
+            },
+            {
+              "name": "Culture",
+              "type": "string",
+              "value": "Unknown"
+            },
+            {
+              "name": "Period",
+              "type": "string",
+              "value": "Unknown"
+            },
+            {
+              "name": "Origin",
+              "type": "string",
+              "value": "Egypt"
+            },
+            {
+              "name": "Description",
+              "type": "string",
+              "value": "Details not yet catalogued."
+            },
+            {
+              "name": "Unique",
               "type": "number",
               "value": 1
             }
           ]
         }
       ]
+    },
+    {
+      "name": "ArtifactsDiscovered",
+      "persistentUuid": "90e90ec0-52b9-458b-ad3b-49da1319047a",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "ArtifactsTotal",
+      "persistentUuid": "35b70a76-28b0-41e9-8d0a-b901fde25734",
+      "type": "number",
+      "value": 1
     }
   ],
   "layouts": [
@@ -8454,7 +8550,6 @@
           "customSize": true,
           "depth": 1,
           "height": 64,
-          "keepRatio": false,
           "layer": "UI",
           "locked": true,
           "name": "InteractionPromptBox",
@@ -8472,7 +8567,6 @@
           "customSize": true,
           "depth": 1,
           "height": 128,
-          "keepRatio": false,
           "layer": "UI",
           "locked": true,
           "name": "DialogueBox",
@@ -10122,9 +10216,9 @@
           "textAlignment": "left",
           "characterSize": 16,
           "color": {
-            "r": 255,
+            "b": 214,
             "g": 244,
-            "b": 214
+            "r": 255
           },
           "content": {
             "bold": false,
@@ -10884,9 +10978,9 @@
           "textAlignment": "center",
           "characterSize": 16,
           "color": {
-            "r": 255,
+            "b": 214,
             "g": 244,
-            "b": 214
+            "r": 255
           },
           "content": {
             "bold": false,
@@ -10959,12 +11053,12 @@
           "behaviors": [],
           "string": "A: Continue",
           "font": "assets\\PressStart2P-Regular.ttf",
-          "textAlignment": "center",
+          "textAlignment": "right",
           "characterSize": 10,
           "color": {
-            "r": 255,
+            "b": 214,
             "g": 244,
-            "b": 214
+            "r": 255
           },
           "content": {
             "bold": false,
@@ -11061,6 +11155,83 @@
         ]
       },
       "events": [
+        {
+          "colorB": 64,
+          "colorG": 158,
+          "colorR": 209,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Ancient Digs Artifact Discovery System",
+          "source": "Persistent unique discovery registry and collection metadata",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "A unique artifact is recorded only after inventory pickup succeeds. Its discovery record persists across every room."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "CollectedArtifacts.ancient_jar.Discovered",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "artifact",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "CollectedArtifacts.ancient_jar.Discovered",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "DigSpot",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
         {
           "colorB": 99,
           "colorG": 184,
@@ -11166,6 +11337,16 @@
                     "ShowMessage",
                     "False",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "CollectedArtifacts.ancient_jar.Discovered",
+                    "=",
+                    "0"
                   ]
                 }
               ],
@@ -11284,6 +11465,16 @@
                     "",
                     "",
                     "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "CollectedArtifacts.ancient_jar.Discovered",
+                    "=",
+                    "0"
                   ]
                 }
               ],
@@ -12420,6 +12611,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "disabled": true,
           "folded": true,
           "name": "Legacy template action/placement system (disabled)",
           "source": "",
@@ -12968,8 +13160,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "disabled": true
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -13462,6 +13653,137 @@
                         ""
                       ]
                     }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "First successful pickup registers the unique artifact and opens discovery dialogue."
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarGlobal"
+                          },
+                          "parameters": [
+                            "CollectedArtifacts.ancient_jar.Discovered",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "VarGlobalTxt"
+                          },
+                          "parameters": [
+                            "Inventory[SlotCrawler].ItemId",
+                            "=",
+                            "\"ancient_jar\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "CollectedArtifacts.ancient_jar.Discovered",
+                            "=",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "CollectedArtifacts.ancient_jar.DiscoveryCount",
+                            "+",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "ArtifactsDiscovered",
+                            "+",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "CollectedArtifacts.ancient_jar.CollectionOrder",
+                            "=",
+                            "GlobalVariable(ArtifactsDiscovered)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarGlobalTxt"
+                          },
+                          "parameters": [
+                            "CollectedArtifacts.ancient_jar.FirstDiscoveredSite",
+                            "=",
+                            "GlobalVariableString(CurrentSite)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "DialogueTextValue",
+                            "=",
+                            "\"Artifact discovered: Ancient Jar\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "DialogueNextText",
+                            "=",
+                            "\"Added to your collection.\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "DialogueInputDelay",
+                            "=",
+                            "8"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanVariable"
+                          },
+                          "parameters": [
+                            "DialogueActive",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 },
                 {
@@ -13592,6 +13914,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "disabled": true,
           "folded": true,
           "name": "Legacy template world placement (disabled)",
           "source": "",
@@ -13765,8 +14088,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "disabled": true
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -14595,7 +14917,6 @@
           "customSize": true,
           "depth": 1,
           "height": 64,
-          "keepRatio": false,
           "layer": "UI",
           "locked": true,
           "name": "InteractionPromptBox",
@@ -14613,7 +14934,6 @@
           "customSize": true,
           "depth": 1,
           "height": 128,
-          "keepRatio": false,
           "layer": "UI",
           "locked": true,
           "name": "DialogueBox",
@@ -16263,9 +16583,9 @@
           "textAlignment": "left",
           "characterSize": 16,
           "color": {
-            "r": 255,
+            "b": 214,
             "g": 244,
-            "b": 214
+            "r": 255
           },
           "content": {
             "bold": false,
@@ -16964,9 +17284,9 @@
           "textAlignment": "center",
           "characterSize": 16,
           "color": {
-            "r": 255,
+            "b": 214,
             "g": 244,
-            "b": 214
+            "r": 255
           },
           "content": {
             "bold": false,
@@ -17039,12 +17359,12 @@
           "behaviors": [],
           "string": "A: Continue",
           "font": "assets\\PressStart2P-Regular.ttf",
-          "textAlignment": "center",
+          "textAlignment": "right",
           "characterSize": 10,
           "color": {
-            "r": 255,
+            "b": 214,
             "g": 244,
-            "b": 214
+            "r": 255
           },
           "content": {
             "bold": false,
@@ -17138,6 +17458,57 @@
         ]
       },
       "events": [
+        {
+          "colorB": 64,
+          "colorG": 158,
+          "colorR": 209,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Ancient Digs Artifact Discovery System",
+          "source": "Persistent unique discovery registry and collection metadata",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "A unique artifact is recorded only after inventory pickup succeeds. Its discovery record persists across every room."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "CollectedArtifacts.ancient_jar.Discovered",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "artifact",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
         {
           "colorB": 99,
           "colorG": 184,
@@ -17243,6 +17614,16 @@
                     "ShowMessage",
                     "False",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "CollectedArtifacts.ancient_jar.Discovered",
+                    "=",
+                    "0"
                   ]
                 }
               ],
@@ -18142,6 +18523,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "disabled": true,
           "folded": true,
           "name": "Legacy template action/placement system (disabled)",
           "source": "",
@@ -18690,8 +19072,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "disabled": true
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -19182,6 +19563,137 @@
                         "UpdateInventoryDisplay",
                         "True",
                         ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "First successful pickup registers the unique artifact and opens discovery dialogue."
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarGlobal"
+                          },
+                          "parameters": [
+                            "CollectedArtifacts.ancient_jar.Discovered",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "VarGlobalTxt"
+                          },
+                          "parameters": [
+                            "Inventory[SlotCrawler].ItemId",
+                            "=",
+                            "\"ancient_jar\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "CollectedArtifacts.ancient_jar.Discovered",
+                            "=",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "CollectedArtifacts.ancient_jar.DiscoveryCount",
+                            "+",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "ArtifactsDiscovered",
+                            "+",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "CollectedArtifacts.ancient_jar.CollectionOrder",
+                            "=",
+                            "GlobalVariable(ArtifactsDiscovered)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarGlobalTxt"
+                          },
+                          "parameters": [
+                            "CollectedArtifacts.ancient_jar.FirstDiscoveredSite",
+                            "=",
+                            "GlobalVariableString(CurrentSite)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "DialogueTextValue",
+                            "=",
+                            "\"Artifact discovered: Ancient Jar\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "DialogueNextText",
+                            "=",
+                            "\"Added to your collection.\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "DialogueInputDelay",
+                            "=",
+                            "8"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanVariable"
+                          },
+                          "parameters": [
+                            "DialogueActive",
+                            "True",
+                            ""
+                          ]
+                        }
                       ]
                     }
                   ]
