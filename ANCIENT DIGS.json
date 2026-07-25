@@ -947,7 +947,7 @@
       "name": "AncientDigsSchemaVersion",
       "persistentUuid": "6c86c901-374f-43f8-94c9-f82bcf91eb32",
       "type": "number",
-      "value": 6
+      "value": 7
     },
     {
       "name": "Inventory",
@@ -1476,6 +1476,55 @@
           "name": "InputMode",
           "type": "string",
           "value": "Auto"
+        }
+      ]
+    },
+    {
+      "name": "SaveSystem",
+      "persistentUuid": "f8903d9d-8d5b-43ed-95e3-96e00128b144",
+      "type": "structure",
+      "children": [
+        {
+          "name": "FormatVersion",
+          "persistentUuid": "ff041219-216b-4d29-97da-0b0e5dd0bd6a",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "LoadAttempted",
+          "persistentUuid": "f2acdd8b-2ad2-4ba6-9419-885c373bab48",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "SaveRequested",
+          "persistentUuid": "0fca6aff-43a9-4d74-90a6-04f42d356dad",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "HasSaveData",
+          "persistentUuid": "32b605f7-a610-4655-8fe1-6fd18a5b2d0a",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "LastSaveStatus",
+          "persistentUuid": "9d561e8c-1f4d-4554-a9f4-ec445730e746",
+          "type": "string",
+          "value": "NOT SAVED"
+        },
+        {
+          "name": "ResetRequested",
+          "persistentUuid": "1c11a2e8-17f2-437b-aee2-0ecccb5a9b2a",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "ResetArmed",
+          "persistentUuid": "89724000-0998-4d25-9721-a34f8e892f3f",
+          "type": "boolean",
+          "value": false
         }
       ]
     }
@@ -9221,6 +9270,91 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 58,
+          "keepRatio": true,
+          "layer": "UI",
+          "locked": true,
+          "name": "MenuSaveButton",
+          "persistentUuid": "1d0d8587-f64e-4c9f-8696-1e7919d62276",
+          "width": 280,
+          "x": 220,
+          "y": 555,
+          "zOrder": 205,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 22,
+          "keepRatio": true,
+          "layer": "UI",
+          "locked": true,
+          "name": "MenuSaveButtonText",
+          "persistentUuid": "3a5275b4-aa4c-4823-99ca-61e30229a9ad",
+          "width": 250,
+          "x": 235,
+          "y": 573,
+          "zOrder": 206,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "keepRatio": true,
+          "layer": "UI",
+          "locked": true,
+          "name": "MenuSaveStatus",
+          "persistentUuid": "064d4184-8628-47c6-8736-825ea37b1b35",
+          "width": 300,
+          "x": 845,
+          "y": 574,
+          "zOrder": 206,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 58,
+          "keepRatio": true,
+          "layer": "UI",
+          "locked": true,
+          "name": "MenuNewGameButton",
+          "persistentUuid": "c64947fe-f243-45ff-afc2-efedabacebc7",
+          "width": 280,
+          "x": 535,
+          "y": 555,
+          "zOrder": 205,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 22,
+          "keepRatio": true,
+          "layer": "UI",
+          "locked": true,
+          "name": "MenuNewGameButtonText",
+          "persistentUuid": "9546281b-0d96-4a33-ac82-2a4fe1b5bec2",
+          "width": 250,
+          "x": 550,
+          "y": 573,
+          "zOrder": 206,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -12972,6 +13106,194 @@
             "lineHeight": 0,
             "color": "255;244;214"
           }
+        },
+        {
+          "assetStoreId": "",
+          "bottomMargin": 8,
+          "height": 58,
+          "leftMargin": 8,
+          "name": "MenuSaveButton",
+          "persistentUuid": "31113f7c-c7bb-449e-b927-55bf34dd6c5c",
+          "rightMargin": 8,
+          "texture": "assets\\interaction-prompt-retro.png",
+          "tiled": false,
+          "topMargin": 8,
+          "type": "PanelSpriteObject::PanelSprite",
+          "width": 280,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "ButtonFSM",
+              "type": "ButtonStates::ButtonFSM",
+              "ShouldCheckHovering": true,
+              "State": "Idle",
+              "TouchId": 0,
+              "TouchIsInside": false,
+              "MouseIsInside": false,
+              "Index": 2.0247e-320
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "MenuSaveButtonText",
+          "persistentUuid": "82120154-dc6e-4d1d-9aed-f71b5f5de5e8",
+          "smoothed": false,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "SAVE GAME",
+          "font": "assets\\PressStart2P-Regular.ttf",
+          "textAlignment": "center",
+          "characterSize": 12,
+          "color": {
+            "b": 214,
+            "g": 244,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 3,
+            "shadowOpacity": 180,
+            "smoothed": false,
+            "underlined": false,
+            "text": "SAVE GAME",
+            "font": "assets\\PressStart2P-Regular.ttf",
+            "textAlignment": "center",
+            "verticalTextAlignment": "center",
+            "characterSize": 12,
+            "lineHeight": 0,
+            "color": "255;244;214"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "MenuSaveStatus",
+          "persistentUuid": "d85732b7-04ed-4f6b-ba72-ca3d15da1219",
+          "smoothed": false,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "AUTOSAVE READY",
+          "font": "assets\\PressStart2P-Regular.ttf",
+          "textAlignment": "left",
+          "characterSize": 9,
+          "color": {
+            "b": 214,
+            "g": 244,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 3,
+            "shadowOpacity": 180,
+            "smoothed": false,
+            "underlined": false,
+            "text": "AUTOSAVE READY",
+            "font": "assets\\PressStart2P-Regular.ttf",
+            "textAlignment": "left",
+            "verticalTextAlignment": "center",
+            "characterSize": 9,
+            "lineHeight": 0,
+            "color": "255;244;214"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bottomMargin": 8,
+          "height": 58,
+          "leftMargin": 8,
+          "name": "MenuNewGameButton",
+          "persistentUuid": "995aa83e-12b9-4d28-a2cb-6a2276b3b579",
+          "rightMargin": 8,
+          "texture": "assets\\interaction-prompt-retro.png",
+          "tiled": false,
+          "topMargin": 8,
+          "type": "PanelSpriteObject::PanelSprite",
+          "width": 280,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "ButtonFSM",
+              "type": "ButtonStates::ButtonFSM",
+              "ShouldCheckHovering": true,
+              "State": "Idle",
+              "TouchId": 0,
+              "TouchIsInside": false,
+              "MouseIsInside": false,
+              "Index": 2.0247e-320
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "MenuNewGameButtonText",
+          "persistentUuid": "8326b4bd-4cc0-47f8-a942-6b7546061442",
+          "smoothed": false,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "NEW GAME",
+          "font": "assets\\PressStart2P-Regular.ttf",
+          "textAlignment": "center",
+          "characterSize": 12,
+          "color": {
+            "b": 214,
+            "g": 244,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 3,
+            "shadowOpacity": 180,
+            "smoothed": false,
+            "underlined": false,
+            "text": "NEW GAME",
+            "font": "assets\\PressStart2P-Regular.ttf",
+            "textAlignment": "center",
+            "verticalTextAlignment": "center",
+            "characterSize": 12,
+            "lineHeight": 0,
+            "color": "255;244;214"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -14852,6 +15174,14 @@
                     "value": "Hide"
                   },
                   "parameters": [
+                    "MenuProgress"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
                     "MenuArtifactFrame"
                   ]
                 },
@@ -15120,6 +15450,100 @@
                     "Text",
                     "=",
                     "\"OBJECTIVE: Explore the temple ruins.\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "MenuOpen",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringVariable"
+                  },
+                  "parameters": [
+                    "MenuPage",
+                    "=",
+                    "\"Journal\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsClicked"
+                  },
+                  "parameters": [
+                    "MenuSaveButton",
+                    "ButtonFSM",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "SaveSystem.SaveRequested",
+                    "=",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "MenuOpen",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringVariable"
+                  },
+                  "parameters": [
+                    "MenuPage",
+                    "=",
+                    "\"Journal\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsClicked"
+                  },
+                  "parameters": [
+                    "MenuNewGameButton",
+                    "ButtonFSM",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "SaveSystem.ResetRequested",
+                    "=",
+                    "1"
                   ]
                 }
               ]
@@ -18937,6 +19361,79 @@
           ],
           "name": "Legacy template death reset (disabled)",
           "disabled": true
+        },
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": [
+            "// SYSTEM 9: Versioned save/load, room-entry autosave, and journal manual save.",
+            "const gameVariables = runtimeScene.getGame().getVariables();",
+            "const saveSystem = gameVariables.get(\"SaveSystem\");",
+            "const sceneState = runtimeScene.__ancientDigsSaveState || (runtimeScene.__ancientDigsSaveState = { frames: 0, autosaved: false });",
+            "sceneState.frames += 1;",
+            "const savedFields = [\"Inventory\",\"CollectedArtifacts\",\"StoryProgress\",\"OpenedDoors\",\"CompletedPuzzles\",\"Upgrades\",\"CurrentSite\",\"ArtifactsDiscovered\",\"CurrentRoom\",\"PreviousRoom\",\"NextSpawn\",\"LastDoorUsed\",\"PlayerState\"];",
+            "const newGameDefaults = {\"Inventory\":[{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0}],\"CollectedArtifacts\":{\"ancient_jar\":{\"CollectionOrder\":0,\"Discovered\":0,\"DiscoveryCount\":0,\"FirstDiscoveredSite\":\"\"}},\"StoryProgress\":{},\"OpenedDoors\":{},\"CompletedPuzzles\":{},\"Upgrades\":{},\"CurrentSite\":\"Egypt\",\"ArtifactsDiscovered\":0,\"CurrentRoom\":\"Base camp 2\",\"PreviousRoom\":\"\",\"NextSpawn\":\"\",\"LastDoorUsed\":\"\",\"PlayerState\":{\"CharacterId\":\"player_01\",\"Health\":100,\"MaxHealth\":100,\"MoveSpeed\":200,\"FacingAnimation\":\"Walk1\",\"MovementEnabled\":1,\"EquippedItemId\":\"\",\"EquippedSlot\":-1,\"CurrentX\":288,\"CurrentY\":416,\"InputMode\":\"Auto\"}};",
+            "const validRooms = [\"Base camp 2\", \"Temple Room 1\"];",
+            "const writeSave = (label) => {",
+            "  try {",
+            "    const state = {};",
+            "    for (const name of savedFields) state[name] = gameVariables.get(name).toJSObject();",
+            "    const payload = { formatVersion: 1, schemaVersion: gameVariables.get(\"AncientDigsSchemaVersion\").getAsNumber(), savedAt: new Date().toISOString(), state };",
+            "    gdjs.evtTools.storage.writeStringInJSONFile(\"AncientDigsSave\", \"slot1\", JSON.stringify(payload));",
+            "    saveSystem.getChild(\"HasSaveData\").setBoolean(true);",
+            "    saveSystem.getChild(\"LastSaveStatus\").setString(label);",
+            "  } catch (error) { saveSystem.getChild(\"LastSaveStatus\").setString(\"SAVE FAILED\"); }",
+            "};",
+            "if (!saveSystem.getChild(\"LoadAttempted\").getAsBoolean()) {",
+            "  saveSystem.getChild(\"LoadAttempted\").setBoolean(true);",
+            "  const storedText = new gdjs.Variable();",
+            "  const found = gdjs.evtTools.storage.readStringFromJSONFile(\"AncientDigsSave\", \"slot1\", runtimeScene, storedText);",
+            "  if (found && storedText.getAsString()) {",
+            "    try {",
+            "      const payload = JSON.parse(storedText.getAsString());",
+            "      if (payload && payload.formatVersion === 1 && payload.state) {",
+            "        for (const name of savedFields) if (Object.prototype.hasOwnProperty.call(payload.state, name)) gameVariables.get(name).fromJSObject(payload.state[name]);",
+            "        runtimeScene.getVariables().get(\"UpdateInventoryDisplay\").setBoolean(true);",
+            "        saveSystem.getChild(\"HasSaveData\").setBoolean(true);",
+            "        saveSystem.getChild(\"LastSaveStatus\").setString(\"SAVE LOADED\");",
+            "        const savedRoom = gameVariables.get(\"CurrentRoom\").getAsString();",
+            "        if (validRooms.includes(savedRoom) && savedRoom !== runtimeScene.getName()) gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, savedRoom, false);",
+            "      }",
+            "    } catch (error) { saveSystem.getChild(\"LastSaveStatus\").setString(\"SAVE UNREADABLE\"); }",
+            "  }",
+            "}",
+            "if (saveSystem.getChild(\"ResetRequested\").getAsBoolean()) {",
+            "  saveSystem.getChild(\"ResetRequested\").setBoolean(false);",
+            "  if (!saveSystem.getChild(\"ResetArmed\").getAsBoolean()) {",
+            "    saveSystem.getChild(\"ResetArmed\").setBoolean(true);",
+            "    sceneState.resetConfirmFrames = 300;",
+            "    saveSystem.getChild(\"LastSaveStatus\").setString(\"PRESS AGAIN TO ERASE\");",
+            "  } else {",
+            "    gdjs.evtTools.storage.clearJSONFile(\"AncientDigsSave\");",
+            "    for (const name of savedFields) gameVariables.get(name).fromJSObject(newGameDefaults[name]);",
+            "    saveSystem.getChild(\"ResetArmed\").setBoolean(false);",
+            "    saveSystem.getChild(\"HasSaveData\").setBoolean(false);",
+            "    saveSystem.getChild(\"LastSaveStatus\").setString(\"NEW GAME STARTED\");",
+            "    runtimeScene.getVariables().get(\"UpdateInventoryDisplay\").setBoolean(true);",
+            "    gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, \"Base camp 2\", false);",
+            "  }",
+            "}",
+            "if (saveSystem.getChild(\"SaveRequested\").getAsBoolean()) { saveSystem.getChild(\"SaveRequested\").setBoolean(false); saveSystem.getChild(\"ResetArmed\").setBoolean(false); writeSave(\"GAME SAVED!\"); }",
+            "if (saveSystem.getChild(\"ResetArmed\").getAsBoolean()) {",
+            "  sceneState.resetConfirmFrames = (sceneState.resetConfirmFrames || 0) - 1;",
+            "  if (sceneState.resetConfirmFrames <= 0) { saveSystem.getChild(\"ResetArmed\").setBoolean(false); saveSystem.getChild(\"LastSaveStatus\").setString(\"ERASE CANCELLED\"); }",
+            "}",
+            "if (!sceneState.autosaved && sceneState.frames >= 30) { sceneState.autosaved = true; writeSave(\"AUTOSAVED\"); }",
+            "const menuOpen = runtimeScene.getVariables().get(\"MenuOpen\").getAsBoolean();",
+            "const journalOpen = menuOpen && runtimeScene.getVariables().get(\"MenuPage\").getAsString() === \"Journal\";",
+            "for (const object of runtimeScene.getObjects(\"MenuSaveButton\")) object.hide(!journalOpen);",
+            "for (const object of runtimeScene.getObjects(\"MenuSaveButtonText\")) object.hide(!journalOpen);",
+            "for (const object of runtimeScene.getObjects(\"MenuNewGameButton\")) object.hide(!journalOpen);",
+            "for (const object of runtimeScene.getObjects(\"MenuNewGameButtonText\")) object.hide(!journalOpen);",
+            "for (const object of runtimeScene.getObjects(\"MenuSaveStatus\")) { object.hide(!journalOpen); object.setString(saveSystem.getChild(\"LastSaveStatus\").getAsString()); }"
+          ],
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
         }
       ],
       "layers": [
@@ -20106,6 +20603,91 @@
           "x": 220,
           "y": 470,
           "zOrder": 202,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 58,
+          "keepRatio": true,
+          "layer": "UI",
+          "locked": true,
+          "name": "MenuSaveButton",
+          "persistentUuid": "f047e68d-72cf-41ce-bde3-ff3e5563d29d",
+          "width": 280,
+          "x": 220,
+          "y": 555,
+          "zOrder": 205,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 22,
+          "keepRatio": true,
+          "layer": "UI",
+          "locked": true,
+          "name": "MenuSaveButtonText",
+          "persistentUuid": "55108b8d-b0f7-42ad-9d98-dc99d9767419",
+          "width": 250,
+          "x": 235,
+          "y": 573,
+          "zOrder": 206,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "keepRatio": true,
+          "layer": "UI",
+          "locked": true,
+          "name": "MenuSaveStatus",
+          "persistentUuid": "e03f4090-0b66-424e-b162-1e41e22edac2",
+          "width": 300,
+          "x": 845,
+          "y": 574,
+          "zOrder": 206,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 58,
+          "keepRatio": true,
+          "layer": "UI",
+          "locked": true,
+          "name": "MenuNewGameButton",
+          "persistentUuid": "4d7e4db0-be9f-4e0e-8acb-b57ad38aebf5",
+          "width": 280,
+          "x": 535,
+          "y": 555,
+          "zOrder": 205,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 22,
+          "keepRatio": true,
+          "layer": "UI",
+          "locked": true,
+          "name": "MenuNewGameButtonText",
+          "persistentUuid": "e2c3c232-7d8c-4bcd-bae5-baeb4b7f5dbc",
+          "width": 250,
+          "x": 550,
+          "y": 573,
+          "zOrder": 206,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -23860,6 +24442,194 @@
             "lineHeight": 0,
             "color": "255;244;214"
           }
+        },
+        {
+          "assetStoreId": "",
+          "bottomMargin": 8,
+          "height": 58,
+          "leftMargin": 8,
+          "name": "MenuSaveButton",
+          "persistentUuid": "afd2f5dd-57b3-4c8e-a802-dcbcf6083a21",
+          "rightMargin": 8,
+          "texture": "assets\\interaction-prompt-retro.png",
+          "tiled": false,
+          "topMargin": 8,
+          "type": "PanelSpriteObject::PanelSprite",
+          "width": 280,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "ButtonFSM",
+              "type": "ButtonStates::ButtonFSM",
+              "ShouldCheckHovering": true,
+              "State": "Idle",
+              "TouchId": 0,
+              "TouchIsInside": false,
+              "MouseIsInside": false,
+              "Index": 2.0247e-320
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "MenuSaveButtonText",
+          "persistentUuid": "4def8380-560d-42bc-8b33-df3c0e9a7f9d",
+          "smoothed": false,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "SAVE GAME",
+          "font": "assets\\PressStart2P-Regular.ttf",
+          "textAlignment": "center",
+          "characterSize": 12,
+          "color": {
+            "b": 214,
+            "g": 244,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 3,
+            "shadowOpacity": 180,
+            "smoothed": false,
+            "underlined": false,
+            "text": "SAVE GAME",
+            "font": "assets\\PressStart2P-Regular.ttf",
+            "textAlignment": "center",
+            "verticalTextAlignment": "center",
+            "characterSize": 12,
+            "lineHeight": 0,
+            "color": "255;244;214"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "MenuSaveStatus",
+          "persistentUuid": "7f6b0863-c0c5-48a5-87d0-721ef781aa47",
+          "smoothed": false,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "AUTOSAVE READY",
+          "font": "assets\\PressStart2P-Regular.ttf",
+          "textAlignment": "left",
+          "characterSize": 9,
+          "color": {
+            "b": 214,
+            "g": 244,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 3,
+            "shadowOpacity": 180,
+            "smoothed": false,
+            "underlined": false,
+            "text": "AUTOSAVE READY",
+            "font": "assets\\PressStart2P-Regular.ttf",
+            "textAlignment": "left",
+            "verticalTextAlignment": "center",
+            "characterSize": 9,
+            "lineHeight": 0,
+            "color": "255;244;214"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bottomMargin": 8,
+          "height": 58,
+          "leftMargin": 8,
+          "name": "MenuNewGameButton",
+          "persistentUuid": "46a6cee1-f227-411d-9a93-6049a9573c43",
+          "rightMargin": 8,
+          "texture": "assets\\interaction-prompt-retro.png",
+          "tiled": false,
+          "topMargin": 8,
+          "type": "PanelSpriteObject::PanelSprite",
+          "width": 280,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "ButtonFSM",
+              "type": "ButtonStates::ButtonFSM",
+              "ShouldCheckHovering": true,
+              "State": "Idle",
+              "TouchId": 0,
+              "TouchIsInside": false,
+              "MouseIsInside": false,
+              "Index": 2.0247e-320
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "MenuNewGameButtonText",
+          "persistentUuid": "220df5ee-da51-4af6-9156-6a366fa7c989",
+          "smoothed": false,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "NEW GAME",
+          "font": "assets\\PressStart2P-Regular.ttf",
+          "textAlignment": "center",
+          "characterSize": 12,
+          "color": {
+            "b": 214,
+            "g": 244,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 3,
+            "shadowOpacity": 180,
+            "smoothed": false,
+            "underlined": false,
+            "text": "NEW GAME",
+            "font": "assets\\PressStart2P-Regular.ttf",
+            "textAlignment": "center",
+            "verticalTextAlignment": "center",
+            "characterSize": 12,
+            "lineHeight": 0,
+            "color": "255;244;214"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -25714,6 +26484,14 @@
                     "value": "Hide"
                   },
                   "parameters": [
+                    "MenuProgress"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
                     "MenuArtifactFrame"
                   ]
                 },
@@ -25982,6 +26760,100 @@
                     "Text",
                     "=",
                     "\"OBJECTIVE: Explore the temple ruins.\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "MenuOpen",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringVariable"
+                  },
+                  "parameters": [
+                    "MenuPage",
+                    "=",
+                    "\"Journal\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsClicked"
+                  },
+                  "parameters": [
+                    "MenuSaveButton",
+                    "ButtonFSM",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "SaveSystem.SaveRequested",
+                    "=",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "MenuOpen",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringVariable"
+                  },
+                  "parameters": [
+                    "MenuPage",
+                    "=",
+                    "\"Journal\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsClicked"
+                  },
+                  "parameters": [
+                    "MenuNewGameButton",
+                    "ButtonFSM",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "SaveSystem.ResetRequested",
+                    "=",
+                    "1"
                   ]
                 }
               ]
@@ -29377,6 +30249,79 @@
           ],
           "name": "Legacy template death reset (disabled)",
           "disabled": true
+        },
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": [
+            "// SYSTEM 9: Versioned save/load, room-entry autosave, and journal manual save.",
+            "const gameVariables = runtimeScene.getGame().getVariables();",
+            "const saveSystem = gameVariables.get(\"SaveSystem\");",
+            "const sceneState = runtimeScene.__ancientDigsSaveState || (runtimeScene.__ancientDigsSaveState = { frames: 0, autosaved: false });",
+            "sceneState.frames += 1;",
+            "const savedFields = [\"Inventory\",\"CollectedArtifacts\",\"StoryProgress\",\"OpenedDoors\",\"CompletedPuzzles\",\"Upgrades\",\"CurrentSite\",\"ArtifactsDiscovered\",\"CurrentRoom\",\"PreviousRoom\",\"NextSpawn\",\"LastDoorUsed\",\"PlayerState\"];",
+            "const newGameDefaults = {\"Inventory\":[{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0}],\"CollectedArtifacts\":{\"ancient_jar\":{\"CollectionOrder\":0,\"Discovered\":0,\"DiscoveryCount\":0,\"FirstDiscoveredSite\":\"\"}},\"StoryProgress\":{},\"OpenedDoors\":{},\"CompletedPuzzles\":{},\"Upgrades\":{},\"CurrentSite\":\"Egypt\",\"ArtifactsDiscovered\":0,\"CurrentRoom\":\"Base camp 2\",\"PreviousRoom\":\"\",\"NextSpawn\":\"\",\"LastDoorUsed\":\"\",\"PlayerState\":{\"CharacterId\":\"player_01\",\"Health\":100,\"MaxHealth\":100,\"MoveSpeed\":200,\"FacingAnimation\":\"Walk1\",\"MovementEnabled\":1,\"EquippedItemId\":\"\",\"EquippedSlot\":-1,\"CurrentX\":288,\"CurrentY\":416,\"InputMode\":\"Auto\"}};",
+            "const validRooms = [\"Base camp 2\", \"Temple Room 1\"];",
+            "const writeSave = (label) => {",
+            "  try {",
+            "    const state = {};",
+            "    for (const name of savedFields) state[name] = gameVariables.get(name).toJSObject();",
+            "    const payload = { formatVersion: 1, schemaVersion: gameVariables.get(\"AncientDigsSchemaVersion\").getAsNumber(), savedAt: new Date().toISOString(), state };",
+            "    gdjs.evtTools.storage.writeStringInJSONFile(\"AncientDigsSave\", \"slot1\", JSON.stringify(payload));",
+            "    saveSystem.getChild(\"HasSaveData\").setBoolean(true);",
+            "    saveSystem.getChild(\"LastSaveStatus\").setString(label);",
+            "  } catch (error) { saveSystem.getChild(\"LastSaveStatus\").setString(\"SAVE FAILED\"); }",
+            "};",
+            "if (!saveSystem.getChild(\"LoadAttempted\").getAsBoolean()) {",
+            "  saveSystem.getChild(\"LoadAttempted\").setBoolean(true);",
+            "  const storedText = new gdjs.Variable();",
+            "  const found = gdjs.evtTools.storage.readStringFromJSONFile(\"AncientDigsSave\", \"slot1\", runtimeScene, storedText);",
+            "  if (found && storedText.getAsString()) {",
+            "    try {",
+            "      const payload = JSON.parse(storedText.getAsString());",
+            "      if (payload && payload.formatVersion === 1 && payload.state) {",
+            "        for (const name of savedFields) if (Object.prototype.hasOwnProperty.call(payload.state, name)) gameVariables.get(name).fromJSObject(payload.state[name]);",
+            "        runtimeScene.getVariables().get(\"UpdateInventoryDisplay\").setBoolean(true);",
+            "        saveSystem.getChild(\"HasSaveData\").setBoolean(true);",
+            "        saveSystem.getChild(\"LastSaveStatus\").setString(\"SAVE LOADED\");",
+            "        const savedRoom = gameVariables.get(\"CurrentRoom\").getAsString();",
+            "        if (validRooms.includes(savedRoom) && savedRoom !== runtimeScene.getName()) gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, savedRoom, false);",
+            "      }",
+            "    } catch (error) { saveSystem.getChild(\"LastSaveStatus\").setString(\"SAVE UNREADABLE\"); }",
+            "  }",
+            "}",
+            "if (saveSystem.getChild(\"ResetRequested\").getAsBoolean()) {",
+            "  saveSystem.getChild(\"ResetRequested\").setBoolean(false);",
+            "  if (!saveSystem.getChild(\"ResetArmed\").getAsBoolean()) {",
+            "    saveSystem.getChild(\"ResetArmed\").setBoolean(true);",
+            "    sceneState.resetConfirmFrames = 300;",
+            "    saveSystem.getChild(\"LastSaveStatus\").setString(\"PRESS AGAIN TO ERASE\");",
+            "  } else {",
+            "    gdjs.evtTools.storage.clearJSONFile(\"AncientDigsSave\");",
+            "    for (const name of savedFields) gameVariables.get(name).fromJSObject(newGameDefaults[name]);",
+            "    saveSystem.getChild(\"ResetArmed\").setBoolean(false);",
+            "    saveSystem.getChild(\"HasSaveData\").setBoolean(false);",
+            "    saveSystem.getChild(\"LastSaveStatus\").setString(\"NEW GAME STARTED\");",
+            "    runtimeScene.getVariables().get(\"UpdateInventoryDisplay\").setBoolean(true);",
+            "    gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, \"Base camp 2\", false);",
+            "  }",
+            "}",
+            "if (saveSystem.getChild(\"SaveRequested\").getAsBoolean()) { saveSystem.getChild(\"SaveRequested\").setBoolean(false); saveSystem.getChild(\"ResetArmed\").setBoolean(false); writeSave(\"GAME SAVED!\"); }",
+            "if (saveSystem.getChild(\"ResetArmed\").getAsBoolean()) {",
+            "  sceneState.resetConfirmFrames = (sceneState.resetConfirmFrames || 0) - 1;",
+            "  if (sceneState.resetConfirmFrames <= 0) { saveSystem.getChild(\"ResetArmed\").setBoolean(false); saveSystem.getChild(\"LastSaveStatus\").setString(\"ERASE CANCELLED\"); }",
+            "}",
+            "if (!sceneState.autosaved && sceneState.frames >= 30) { sceneState.autosaved = true; writeSave(\"AUTOSAVED\"); }",
+            "const menuOpen = runtimeScene.getVariables().get(\"MenuOpen\").getAsBoolean();",
+            "const journalOpen = menuOpen && runtimeScene.getVariables().get(\"MenuPage\").getAsString() === \"Journal\";",
+            "for (const object of runtimeScene.getObjects(\"MenuSaveButton\")) object.hide(!journalOpen);",
+            "for (const object of runtimeScene.getObjects(\"MenuSaveButtonText\")) object.hide(!journalOpen);",
+            "for (const object of runtimeScene.getObjects(\"MenuNewGameButton\")) object.hide(!journalOpen);",
+            "for (const object of runtimeScene.getObjects(\"MenuNewGameButtonText\")) object.hide(!journalOpen);",
+            "for (const object of runtimeScene.getObjects(\"MenuSaveStatus\")) { object.hide(!journalOpen); object.setString(saveSystem.getChild(\"LastSaveStatus\").getAsString()); }"
+          ],
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
         }
       ],
       "layers": [
