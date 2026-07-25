@@ -927,7 +927,62 @@
     "folderName": "__ROOT"
   },
   "objectsGroups": [],
-  "variables": [],
+  "variables": [
+    {
+      "name": "AncientDigsSchemaVersion",
+      "persistentUuid": "6c86c901-374f-43f8-94c9-f82bcf91eb32",
+      "type": "number",
+      "value": 1
+    },
+    {
+      "name": "InventoryInitialized",
+      "persistentUuid": "e2e6ba70-0903-4423-a25c-5851757e021e",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "Inventory",
+      "persistentUuid": "a359fb72-ba71-4c5f-ac25-b3f2e3aaf087",
+      "type": "array",
+      "children": []
+    },
+    {
+      "name": "CollectedArtifacts",
+      "persistentUuid": "6ac1606d-caec-414f-b2b6-d308dd24a7ce",
+      "type": "structure",
+      "children": []
+    },
+    {
+      "name": "StoryProgress",
+      "persistentUuid": "9d596d46-1394-4505-98cc-e646b3f2ec99",
+      "type": "structure",
+      "children": []
+    },
+    {
+      "name": "OpenedDoors",
+      "persistentUuid": "89ef6f8d-0e6f-45de-a31e-e3b452731394",
+      "type": "structure",
+      "children": []
+    },
+    {
+      "name": "CompletedPuzzles",
+      "persistentUuid": "4d903d44-92b0-4fb7-8d73-e719af574751",
+      "type": "structure",
+      "children": []
+    },
+    {
+      "name": "Upgrades",
+      "persistentUuid": "a7c6c860-52d6-416b-979a-d8a6649db48f",
+      "type": "structure",
+      "children": []
+    },
+    {
+      "name": "CurrentSite",
+      "persistentUuid": "07c27285-ecea-40a9-aec6-fabdf6d184c8",
+      "type": "string",
+      "value": "Egypt"
+    }
+  ],
   "layouts": [
     {
       "b": 255,
@@ -1057,12 +1112,6 @@
           "persistentUuid": "26f98cc1-91eb-434f-957a-ae8150240ae8",
           "type": "number",
           "value": 640
-        },
-        {
-          "name": "Inventory",
-          "persistentUuid": "a359fb72-ba71-4c5f-ac25-b3f2e3aaf087",
-          "type": "array",
-          "children": []
         },
         {
           "name": "UpdateInventoryDisplay",
@@ -4746,31 +4795,71 @@
                   ]
                 }
               ],
-              "actions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "UpdateInventoryDisplay",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "InventorySlot",
-                  "conditions": [],
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanGlobalVariable"
+                      },
+                      "parameters": [
+                        "InventoryInitialized",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
                   "actions": [
                     {
                       "type": {
-                        "value": "SetStringVariable"
+                        "value": "SetBooleanGlobalVariable"
                       },
                       "parameters": [
-                        "Inventory[InventorySlot.SlotNumber].Name",
-                        "=",
-                        "\"Empty\""
+                        "InventoryInitialized",
+                        "True",
+                        ""
                       ]
-                    },
+                    }
+                  ],
+                  "events": [
                     {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "Inventory[InventorySlot.SlotNumber].Quantity",
-                        "=",
-                        "0"
+                      "type": "BuiltinCommonInstructions::ForEach",
+                      "object": "InventorySlot",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringGlobalVariable"
+                          },
+                          "parameters": [
+                            "Inventory[InventorySlot.SlotNumber].Name",
+                            "=",
+                            "\"Empty\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberGlobalVariable"
+                          },
+                          "parameters": [
+                            "Inventory[InventorySlot.SlotNumber].Quantity",
+                            "=",
+                            "0"
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -5921,7 +6010,7 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "StringVariable"
+                            "value": "StringGlobalVariable"
                           },
                           "parameters": [
                             "Inventory[SlotCrawler].Name",
@@ -6026,7 +6115,7 @@
                     },
                     {
                       "type": {
-                        "value": "StringVariable"
+                        "value": "StringGlobalVariable"
                       },
                       "parameters": [
                         "Inventory[SelectedSlot].Name",
@@ -6092,7 +6181,7 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "StringVariable"
+                            "value": "StringGlobalVariable"
                           },
                           "parameters": [
                             "Inventory[SlotCrawler].Name",
@@ -6172,7 +6261,7 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "SetStringVariable"
+                        "value": "SetStringGlobalVariable"
                       },
                       "parameters": [
                         "Inventory[SlotCrawler].Name",
@@ -6182,7 +6271,7 @@
                     },
                     {
                       "type": {
-                        "value": "SetNumberVariable"
+                        "value": "SetNumberGlobalVariable"
                       },
                       "parameters": [
                         "Inventory[SlotCrawler].Quantity",
@@ -6357,7 +6446,7 @@
                             },
                             {
                               "type": {
-                                "value": "SetNumberVariable"
+                                "value": "SetNumberGlobalVariable"
                               },
                               "parameters": [
                                 "Inventory[SelectedSlot].Quantity",
@@ -6392,7 +6481,7 @@
                               "conditions": [
                                 {
                                   "type": {
-                                    "value": "NumberVariable"
+                                    "value": "NumberGlobalVariable"
                                   },
                                   "parameters": [
                                     "Inventory[SelectedSlot].Quantity",
@@ -6404,7 +6493,7 @@
                               "actions": [
                                 {
                                   "type": {
-                                    "value": "SetStringVariable"
+                                    "value": "SetStringGlobalVariable"
                                   },
                                   "parameters": [
                                     "Inventory[SelectedSlot].Name",
@@ -6524,7 +6613,7 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "StringVariable"
+                            "value": "StringGlobalVariable"
                           },
                           "parameters": [
                             "Inventory[SlotCrawler].Name",
@@ -6554,7 +6643,7 @@
                             "InventoryIcons",
                             "Animation",
                             "=",
-                            "Inventory[SlotCrawler].Name"
+                            "GlobalVariableString(Inventory[SlotCrawler].Name)"
                           ]
                         },
                         {
@@ -6577,7 +6666,7 @@
                             "SlotText",
                             "Text",
                             "=",
-                            "Inventory[SlotCrawler].Quantity"
+                            "GlobalVariable(Inventory[SlotCrawler].Quantity)"
                           ]
                         }
                       ]
@@ -6674,7 +6763,7 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "StringVariable"
+                        "value": "StringGlobalVariable"
                       },
                       "parameters": [
                         "Inventory[SelectedSlot].Name",
@@ -6691,7 +6780,7 @@
                       "parameters": [
                         "",
                         "Item",
-                        "Inventory[SelectedSlot].Name",
+                        "GlobalVariableString(Inventory[SelectedSlot].Name)",
                         "0",
                         "0",
                         ""
@@ -7755,12 +7844,6 @@
           "persistentUuid": "26f98cc1-91eb-434f-957a-ae8150240ae8",
           "type": "number",
           "value": 640
-        },
-        {
-          "name": "Inventory",
-          "persistentUuid": "a359fb72-ba71-4c5f-ac25-b3f2e3aaf087",
-          "type": "array",
-          "children": []
         },
         {
           "name": "UpdateInventoryDisplay",
@@ -10866,31 +10949,71 @@
                   ]
                 }
               ],
-              "actions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "UpdateInventoryDisplay",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "InventorySlot",
-                  "conditions": [],
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanGlobalVariable"
+                      },
+                      "parameters": [
+                        "InventoryInitialized",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
                   "actions": [
                     {
                       "type": {
-                        "value": "SetStringVariable"
+                        "value": "SetBooleanGlobalVariable"
                       },
                       "parameters": [
-                        "Inventory[InventorySlot.SlotNumber].Name",
-                        "=",
-                        "\"Empty\""
+                        "InventoryInitialized",
+                        "True",
+                        ""
                       ]
-                    },
+                    }
+                  ],
+                  "events": [
                     {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "Inventory[InventorySlot.SlotNumber].Quantity",
-                        "=",
-                        "0"
+                      "type": "BuiltinCommonInstructions::ForEach",
+                      "object": "InventorySlot",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringGlobalVariable"
+                          },
+                          "parameters": [
+                            "Inventory[InventorySlot.SlotNumber].Name",
+                            "=",
+                            "\"Empty\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberGlobalVariable"
+                          },
+                          "parameters": [
+                            "Inventory[InventorySlot.SlotNumber].Quantity",
+                            "=",
+                            "0"
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -11737,7 +11860,7 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "StringVariable"
+                            "value": "StringGlobalVariable"
                           },
                           "parameters": [
                             "Inventory[SlotCrawler].Name",
@@ -11842,7 +11965,7 @@
                     },
                     {
                       "type": {
-                        "value": "StringVariable"
+                        "value": "StringGlobalVariable"
                       },
                       "parameters": [
                         "Inventory[SelectedSlot].Name",
@@ -11908,7 +12031,7 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "StringVariable"
+                            "value": "StringGlobalVariable"
                           },
                           "parameters": [
                             "Inventory[SlotCrawler].Name",
@@ -11988,7 +12111,7 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "SetStringVariable"
+                        "value": "SetStringGlobalVariable"
                       },
                       "parameters": [
                         "Inventory[SlotCrawler].Name",
@@ -11998,7 +12121,7 @@
                     },
                     {
                       "type": {
-                        "value": "SetNumberVariable"
+                        "value": "SetNumberGlobalVariable"
                       },
                       "parameters": [
                         "Inventory[SlotCrawler].Quantity",
@@ -12173,7 +12296,7 @@
                             },
                             {
                               "type": {
-                                "value": "SetNumberVariable"
+                                "value": "SetNumberGlobalVariable"
                               },
                               "parameters": [
                                 "Inventory[SelectedSlot].Quantity",
@@ -12208,7 +12331,7 @@
                               "conditions": [
                                 {
                                   "type": {
-                                    "value": "NumberVariable"
+                                    "value": "NumberGlobalVariable"
                                   },
                                   "parameters": [
                                     "Inventory[SelectedSlot].Quantity",
@@ -12220,7 +12343,7 @@
                               "actions": [
                                 {
                                   "type": {
-                                    "value": "SetStringVariable"
+                                    "value": "SetStringGlobalVariable"
                                   },
                                   "parameters": [
                                     "Inventory[SelectedSlot].Name",
@@ -12339,7 +12462,7 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "StringVariable"
+                            "value": "StringGlobalVariable"
                           },
                           "parameters": [
                             "Inventory[SlotCrawler].Name",
@@ -12369,7 +12492,7 @@
                             "InventoryIcons",
                             "Animation",
                             "=",
-                            "Inventory[SlotCrawler].Name"
+                            "GlobalVariableString(Inventory[SlotCrawler].Name)"
                           ]
                         },
                         {
@@ -12392,7 +12515,7 @@
                             "SlotText",
                             "Text",
                             "=",
-                            "Inventory[SlotCrawler].Quantity"
+                            "GlobalVariable(Inventory[SlotCrawler].Quantity)"
                           ]
                         }
                       ]
@@ -12489,7 +12612,7 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "StringVariable"
+                        "value": "StringGlobalVariable"
                       },
                       "parameters": [
                         "Inventory[SelectedSlot].Name",
@@ -13174,12 +13297,6 @@
           "persistentUuid": "26f98cc1-91eb-434f-957a-ae8150240ae8",
           "type": "number",
           "value": 640
-        },
-        {
-          "name": "Inventory",
-          "persistentUuid": "a359fb72-ba71-4c5f-ac25-b3f2e3aaf087",
-          "type": "array",
-          "children": []
         },
         {
           "name": "UpdateInventoryDisplay",
@@ -16160,31 +16277,71 @@
                   ]
                 }
               ],
-              "actions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "UpdateInventoryDisplay",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "InventorySlot",
-                  "conditions": [],
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanGlobalVariable"
+                      },
+                      "parameters": [
+                        "InventoryInitialized",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
                   "actions": [
                     {
                       "type": {
-                        "value": "SetStringVariable"
+                        "value": "SetBooleanGlobalVariable"
                       },
                       "parameters": [
-                        "Inventory[InventorySlot.SlotNumber].Name",
-                        "=",
-                        "\"Empty\""
+                        "InventoryInitialized",
+                        "True",
+                        ""
                       ]
-                    },
+                    }
+                  ],
+                  "events": [
                     {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "Inventory[InventorySlot.SlotNumber].Quantity",
-                        "=",
-                        "0"
+                      "type": "BuiltinCommonInstructions::ForEach",
+                      "object": "InventorySlot",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringGlobalVariable"
+                          },
+                          "parameters": [
+                            "Inventory[InventorySlot.SlotNumber].Name",
+                            "=",
+                            "\"Empty\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberGlobalVariable"
+                          },
+                          "parameters": [
+                            "Inventory[InventorySlot.SlotNumber].Quantity",
+                            "=",
+                            "0"
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -17031,7 +17188,7 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "StringVariable"
+                            "value": "StringGlobalVariable"
                           },
                           "parameters": [
                             "Inventory[SlotCrawler].Name",
@@ -17136,7 +17293,7 @@
                     },
                     {
                       "type": {
-                        "value": "StringVariable"
+                        "value": "StringGlobalVariable"
                       },
                       "parameters": [
                         "Inventory[SelectedSlot].Name",
@@ -17202,7 +17359,7 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "StringVariable"
+                            "value": "StringGlobalVariable"
                           },
                           "parameters": [
                             "Inventory[SlotCrawler].Name",
@@ -17282,7 +17439,7 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "SetStringVariable"
+                        "value": "SetStringGlobalVariable"
                       },
                       "parameters": [
                         "Inventory[SlotCrawler].Name",
@@ -17292,7 +17449,7 @@
                     },
                     {
                       "type": {
-                        "value": "SetNumberVariable"
+                        "value": "SetNumberGlobalVariable"
                       },
                       "parameters": [
                         "Inventory[SlotCrawler].Quantity",
@@ -17466,7 +17623,7 @@
                             },
                             {
                               "type": {
-                                "value": "SetNumberVariable"
+                                "value": "SetNumberGlobalVariable"
                               },
                               "parameters": [
                                 "Inventory[SelectedSlot].Quantity",
@@ -17501,7 +17658,7 @@
                               "conditions": [
                                 {
                                   "type": {
-                                    "value": "NumberVariable"
+                                    "value": "NumberGlobalVariable"
                                   },
                                   "parameters": [
                                     "Inventory[SelectedSlot].Quantity",
@@ -17513,7 +17670,7 @@
                               "actions": [
                                 {
                                   "type": {
-                                    "value": "SetStringVariable"
+                                    "value": "SetStringGlobalVariable"
                                   },
                                   "parameters": [
                                     "Inventory[SelectedSlot].Name",
@@ -17633,7 +17790,7 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "StringVariable"
+                            "value": "StringGlobalVariable"
                           },
                           "parameters": [
                             "Inventory[SlotCrawler].Name",
@@ -17663,7 +17820,7 @@
                             "InventoryIcons",
                             "Animation",
                             "=",
-                            "Inventory[SlotCrawler].Name"
+                            "GlobalVariableString(Inventory[SlotCrawler].Name)"
                           ]
                         },
                         {
@@ -17686,7 +17843,7 @@
                             "SlotText",
                             "Text",
                             "=",
-                            "Inventory[SlotCrawler].Quantity"
+                            "GlobalVariable(Inventory[SlotCrawler].Quantity)"
                           ]
                         }
                       ]
@@ -17783,7 +17940,7 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "StringVariable"
+                        "value": "StringGlobalVariable"
                       },
                       "parameters": [
                         "Inventory[SelectedSlot].Name",
@@ -17800,7 +17957,7 @@
                       "parameters": [
                         "",
                         "Item",
-                        "Inventory[SelectedSlot].Name",
+                        "GlobalVariableString(Inventory[SelectedSlot].Name)",
                         "0",
                         "0",
                         ""
