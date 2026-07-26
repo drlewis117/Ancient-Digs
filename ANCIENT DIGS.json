@@ -934,6 +934,342 @@
         "metadata": "",
         "name": "assets\\PressStart2P-Regular.ttf",
         "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_Base_Walk_Down_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_Base_Walk_Down_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_Base_Walk_Down_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_Base_Walk_Down_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_Base_Walk_Down_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_Base_Walk_Down_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_Base_Walk_Left_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_Base_Walk_Left_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_Base_Walk_Left_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_Base_Walk_Left_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_Base_Walk_Left_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_Base_Walk_Left_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_Base_Walk_Right_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_Base_Walk_Right_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_Base_Walk_Right_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_Base_Walk_Right_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_Base_Walk_Right_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_Base_Walk_Right_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_Base_Walk_Up_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_Base_Walk_Up_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_Base_Walk_Up_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_Base_Walk_Up_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_Base_Walk_Up_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_Base_Walk_Up_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_GuitarCarried_Walk_Down_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_GuitarCarried_Walk_Down_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_GuitarCarried_Walk_Down_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_GuitarCarried_Walk_Down_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_GuitarCarried_Walk_Down_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_GuitarCarried_Walk_Down_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_GuitarCarried_Walk_Left_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_GuitarCarried_Walk_Left_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_GuitarCarried_Walk_Left_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_GuitarCarried_Walk_Left_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_GuitarCarried_Walk_Left_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_GuitarCarried_Walk_Left_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_GuitarCarried_Walk_Right_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_GuitarCarried_Walk_Right_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_GuitarCarried_Walk_Right_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_GuitarCarried_Walk_Right_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_GuitarCarried_Walk_Right_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_GuitarCarried_Walk_Right_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_GuitarCarried_Walk_Up_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_GuitarCarried_Walk_Up_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_GuitarCarried_Walk_Up_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_GuitarCarried_Walk_Up_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_GuitarCarried_Walk_Up_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_GuitarCarried_Walk_Up_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_GuitarCarried_Walk_Left_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_GuitarCarried_Walk_Left_4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_GuitarCarried_Walk_Right_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_GuitarCarried_Walk_Right_4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_GuitarCarried_RelaxedWalk_Left_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_GuitarCarried_RelaxedWalk_Left_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_GuitarCarried_RelaxedWalk_Left_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_GuitarCarried_RelaxedWalk_Left_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_GuitarCarried_RelaxedWalk_Left_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_GuitarCarried_RelaxedWalk_Left_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_GuitarCarried_RelaxedWalk_Left_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_GuitarCarried_RelaxedWalk_Left_4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_GuitarCarried_RelaxedWalk_Right_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_GuitarCarried_RelaxedWalk_Right_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_GuitarCarried_RelaxedWalk_Right_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_GuitarCarried_RelaxedWalk_Right_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_GuitarCarried_RelaxedWalk_Right_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_GuitarCarried_RelaxedWalk_Right_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_GuitarCarried_RelaxedWalk_Right_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_GuitarCarried_RelaxedWalk_Right_4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_GuitarCarried_AlignedWalk_Left_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_GuitarCarried_AlignedWalk_Left_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_GuitarCarried_AlignedWalk_Left_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_GuitarCarried_AlignedWalk_Left_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_GuitarCarried_AlignedWalk_Left_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_GuitarCarried_AlignedWalk_Left_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_GuitarCarried_AlignedWalk_Left_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_GuitarCarried_AlignedWalk_Left_4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_GuitarCarried_AlignedWalk_Right_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_GuitarCarried_AlignedWalk_Right_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_GuitarCarried_AlignedWalk_Right_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_GuitarCarried_AlignedWalk_Right_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_GuitarCarried_AlignedWalk_Right_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_GuitarCarried_AlignedWalk_Right_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/Explorer_GuitarCarried_AlignedWalk_Right_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\Explorer_GuitarCarried_AlignedWalk_Right_4.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ]
   },
@@ -1428,29 +1764,14 @@
           "value": "player_01"
         },
         {
-          "name": "Health",
+          "name": "CurrentX",
           "type": "number",
-          "value": 100
+          "value": 288
         },
         {
-          "name": "MaxHealth",
+          "name": "CurrentY",
           "type": "number",
-          "value": 100
-        },
-        {
-          "name": "MoveSpeed",
-          "type": "number",
-          "value": 200
-        },
-        {
-          "name": "FacingAnimation",
-          "type": "string",
-          "value": "Walk1"
-        },
-        {
-          "name": "MovementEnabled",
-          "type": "number",
-          "value": 1
+          "value": 416
         },
         {
           "name": "EquippedItemId",
@@ -1463,19 +1784,34 @@
           "value": -1
         },
         {
-          "name": "CurrentX",
-          "type": "number",
-          "value": 288
+          "name": "FacingAnimation",
+          "type": "string",
+          "value": "Walk1"
         },
         {
-          "name": "CurrentY",
+          "name": "Health",
           "type": "number",
-          "value": 416
+          "value": 100
         },
         {
           "name": "InputMode",
           "type": "string",
           "value": "Auto"
+        },
+        {
+          "name": "MaxHealth",
+          "type": "number",
+          "value": 100
+        },
+        {
+          "name": "MoveSpeed",
+          "type": "number",
+          "value": 200
+        },
+        {
+          "name": "MovementEnabled",
+          "type": "number",
+          "value": 1
         }
       ]
     },
@@ -1491,18 +1827,6 @@
           "value": 1
         },
         {
-          "name": "LoadAttempted",
-          "persistentUuid": "f2acdd8b-2ad2-4ba6-9419-885c373bab48",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "SaveRequested",
-          "persistentUuid": "0fca6aff-43a9-4d74-90a6-04f42d356dad",
-          "type": "boolean",
-          "value": false
-        },
-        {
           "name": "HasSaveData",
           "persistentUuid": "32b605f7-a610-4655-8fe1-6fd18a5b2d0a",
           "type": "boolean",
@@ -1515,14 +1839,26 @@
           "value": "NOT SAVED"
         },
         {
-          "name": "ResetRequested",
-          "persistentUuid": "1c11a2e8-17f2-437b-aee2-0ecccb5a9b2a",
+          "name": "LoadAttempted",
+          "persistentUuid": "f2acdd8b-2ad2-4ba6-9419-885c373bab48",
           "type": "boolean",
           "value": false
         },
         {
           "name": "ResetArmed",
           "persistentUuid": "89724000-0998-4d25-9721-a34f8e892f3f",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "ResetRequested",
+          "persistentUuid": "1c11a2e8-17f2-437b-aee2-0ecccb5a9b2a",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "SaveRequested",
+          "persistentUuid": "0fca6aff-43a9-4d74-90a6-04f42d356dad",
           "type": "boolean",
           "value": false
         }
@@ -1539,10 +1875,10 @@
           "type": "structure",
           "children": [
             {
-              "name": "Enabled",
-              "persistentUuid": "4ee6eda1-d6e8-4c0d-8327-7f7b01213067",
-              "type": "number",
-              "value": 1
+              "name": "DefaultSpawn",
+              "persistentUuid": "9e5011ef-2307-4096-b816-70e027590af0",
+              "type": "string",
+              "value": "Camp_Default"
             },
             {
               "name": "DisplayName",
@@ -1551,45 +1887,14 @@
               "value": "Base Camp"
             },
             {
-              "name": "DefaultSpawn",
-              "persistentUuid": "9e5011ef-2307-4096-b816-70e027590af0",
-              "type": "string",
-              "value": "Camp_Default"
-            },
-            {
-              "name": "IsTemplate",
-              "persistentUuid": "a617cf7b-11d9-4f71-a598-13e766006259",
-              "type": "number",
-              "value": 0
-            }
-          ]
-        },
-        {
-          "name": "Temple Room 1",
-          "persistentUuid": "11e3295e-9d63-485a-ac74-e7d50aeffc25",
-          "type": "structure",
-          "children": [
-            {
               "name": "Enabled",
-              "persistentUuid": "18abd8dd-2ac3-46fd-a05f-d178253f425d",
+              "persistentUuid": "4ee6eda1-d6e8-4c0d-8327-7f7b01213067",
               "type": "number",
               "value": 1
             },
             {
-              "name": "DisplayName",
-              "persistentUuid": "5f34067e-3682-4a4e-aeba-61c8149ec844",
-              "type": "string",
-              "value": "Temple Room 1"
-            },
-            {
-              "name": "DefaultSpawn",
-              "persistentUuid": "939ecbae-282b-4e5e-847f-e14f21ec5120",
-              "type": "string",
-              "value": "Temple_Default"
-            },
-            {
               "name": "IsTemplate",
-              "persistentUuid": "7a9783e4-961c-4137-8ea4-b48995c410a9",
+              "persistentUuid": "a617cf7b-11d9-4f71-a598-13e766006259",
               "type": "number",
               "value": 0
             }
@@ -1601,10 +1906,10 @@
           "type": "structure",
           "children": [
             {
-              "name": "Enabled",
-              "persistentUuid": "3504ea85-095b-4170-a074-7e59658ff440",
-              "type": "number",
-              "value": 0
+              "name": "DefaultSpawn",
+              "persistentUuid": "5b365d74-5b63-4b78-b274-58e93eb3d3b1",
+              "type": "string",
+              "value": "Room_Default"
             },
             {
               "name": "DisplayName",
@@ -1613,16 +1918,47 @@
               "value": "New Room"
             },
             {
-              "name": "DefaultSpawn",
-              "persistentUuid": "5b365d74-5b63-4b78-b274-58e93eb3d3b1",
-              "type": "string",
-              "value": "Room_Default"
+              "name": "Enabled",
+              "persistentUuid": "3504ea85-095b-4170-a074-7e59658ff440",
+              "type": "number",
+              "value": 0
             },
             {
               "name": "IsTemplate",
               "persistentUuid": "6d930352-4273-40d3-9280-6083f08d8fae",
               "type": "number",
               "value": 1
+            }
+          ]
+        },
+        {
+          "name": "Temple Room 1",
+          "persistentUuid": "11e3295e-9d63-485a-ac74-e7d50aeffc25",
+          "type": "structure",
+          "children": [
+            {
+              "name": "DefaultSpawn",
+              "persistentUuid": "939ecbae-282b-4e5e-847f-e14f21ec5120",
+              "type": "string",
+              "value": "Temple_Default"
+            },
+            {
+              "name": "DisplayName",
+              "persistentUuid": "5f34067e-3682-4a4e-aeba-61c8149ec844",
+              "type": "string",
+              "value": "Temple Room 1"
+            },
+            {
+              "name": "Enabled",
+              "persistentUuid": "18abd8dd-2ac3-46fd-a05f-d178253f425d",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "IsTemplate",
+              "persistentUuid": "7a9783e4-961c-4137-8ea4-b48995c410a9",
+              "type": "number",
+              "value": 0
             }
           ]
         }
@@ -3015,7 +3351,7 @@
           "italic": false,
           "name": "SlotText",
           "persistentUuid": "1d5f99ac-320e-4eed-861a-beca6d68eec0",
-          "smoothed": true,
+          "smoothed": false,
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [
@@ -4538,7 +4874,7 @@
               "Animation": "Animation",
               "TopDownMovement": "TopDownMovement",
               "IsScalingAnimation": false,
-              "IsPausingAnimation": false,
+              "IsPausingAnimation": true,
               "AnimationName": "Walk",
               "DirectionCount": 4,
               "AngleOffset": 0,
@@ -4564,12 +4900,120 @@
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "looping": true,
+                  "timeBetweenFrames": 0.12,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "assets\\StartingPlayer_Right.png",
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_AlignedWalk_Right_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 64
+                          },
+                          {
+                            "x": 64,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_AlignedWalk_Right_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 64
+                          },
+                          {
+                            "x": 64,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_AlignedWalk_Right_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 64
+                          },
+                          {
+                            "x": 64,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_AlignedWalk_Right_4.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -4612,12 +5056,84 @@
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "assets\\StartingPlayer_Down.png",
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_Walk_Down_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 64
+                          },
+                          {
+                            "x": 64,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_Walk_Down_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 64
+                          },
+                          {
+                            "x": 64,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_Walk_Down_3.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -4660,12 +5176,120 @@
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "looping": true,
+                  "timeBetweenFrames": 0.12,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "assets\\StartingPlayer_Left.png",
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_AlignedWalk_Left_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 64
+                          },
+                          {
+                            "x": 64,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_AlignedWalk_Left_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 64
+                          },
+                          {
+                            "x": 64,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_AlignedWalk_Left_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 64
+                          },
+                          {
+                            "x": 64,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_AlignedWalk_Left_4.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -4708,12 +5332,84 @@
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "assets\\StartingPlayer_Up.png",
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_Walk_Up_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 64
+                          },
+                          {
+                            "x": 64,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_Walk_Up_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 64
+                          },
+                          {
+                            "x": 64,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_Walk_Up_3.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -6760,6 +7456,108 @@
           },
           {
             "objectName": "DialogueContinuePrompt"
+          },
+          {
+            "objectName": "MenuBackdrop"
+          },
+          {
+            "objectName": "MenuDivider"
+          },
+          {
+            "objectName": "MenuArtifactFrame"
+          },
+          {
+            "objectName": "MenuButton"
+          },
+          {
+            "objectName": "MenuArtifactIcon"
+          },
+          {
+            "objectName": "MenuTitle"
+          },
+          {
+            "objectName": "MenuTabs"
+          },
+          {
+            "objectName": "MenuArtifactName"
+          },
+          {
+            "objectName": "MenuArtifactCulture"
+          },
+          {
+            "objectName": "MenuArtifactPeriod"
+          },
+          {
+            "objectName": "MenuArtifactOrigin"
+          },
+          {
+            "objectName": "MenuArtifactDescription"
+          },
+          {
+            "objectName": "MenuProgress"
+          },
+          {
+            "objectName": "MenuHint"
+          },
+          {
+            "objectName": "MenuButtonText"
+          },
+          {
+            "objectName": "MenuTabArtifacts"
+          },
+          {
+            "objectName": "MenuTabEquipment"
+          },
+          {
+            "objectName": "MenuTabJournal"
+          },
+          {
+            "objectName": "MenuTabArtifactsText"
+          },
+          {
+            "objectName": "MenuTabEquipmentText"
+          },
+          {
+            "objectName": "MenuTabJournalText"
+          },
+          {
+            "objectName": "MenuEquipmentHeader"
+          },
+          {
+            "objectName": "MenuHeldItem"
+          },
+          {
+            "objectName": "MenuEquippedSlot"
+          },
+          {
+            "objectName": "MenuEquipmentNote"
+          },
+          {
+            "objectName": "MenuJournalHeader"
+          },
+          {
+            "objectName": "MenuJournalLocation"
+          },
+          {
+            "objectName": "MenuJournalCollection"
+          },
+          {
+            "objectName": "MenuJournalObjective"
+          },
+          {
+            "objectName": "MenuSaveButton"
+          },
+          {
+            "objectName": "MenuSaveButtonText"
+          },
+          {
+            "objectName": "MenuSaveStatus"
+          },
+          {
+            "objectName": "MenuNewGameButton"
+          },
+          {
+            "objectName": "MenuNewGameButtonText"
           }
         ]
       },
@@ -9499,8 +10297,8 @@
                 },
                 {
                   "type": {
-                    "value": "ButtonStates::ButtonFSM::IsPressed",
-                    "inverted": true
+                    "inverted": true,
+                    "value": "ButtonStates::ButtonFSM::IsPressed"
                   },
                   "parameters": [
                     "ActionButton",
@@ -10558,6 +11356,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "disabled": true,
           "folded": true,
           "name": "Legacy template ground cursor (disabled)",
           "source": "",
@@ -10747,8 +11546,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "disabled": true
+          "parameters": []
         },
         {
           "type": "BuiltinCommonInstructions::Comment",
@@ -14319,7 +15117,7 @@
           "italic": false,
           "name": "SlotText",
           "persistentUuid": "1d5f99ac-320e-4eed-861a-beca6d68eec0",
-          "smoothed": true,
+          "smoothed": false,
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [
@@ -15842,7 +16640,7 @@
               "Animation": "Animation",
               "TopDownMovement": "TopDownMovement",
               "IsScalingAnimation": false,
-              "IsPausingAnimation": false,
+              "IsPausingAnimation": true,
               "AnimationName": "Walk",
               "DirectionCount": 4,
               "AngleOffset": 0,
@@ -15868,12 +16666,120 @@
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "looping": true,
+                  "timeBetweenFrames": 0.12,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "assets\\StartingPlayer_Right.png",
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_AlignedWalk_Right_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 64
+                          },
+                          {
+                            "x": 64,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_AlignedWalk_Right_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 64
+                          },
+                          {
+                            "x": 64,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_AlignedWalk_Right_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 64
+                          },
+                          {
+                            "x": 64,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_AlignedWalk_Right_4.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -15916,12 +16822,84 @@
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "assets\\StartingPlayer_Down.png",
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_Walk_Down_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 64
+                          },
+                          {
+                            "x": 64,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_Walk_Down_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 64
+                          },
+                          {
+                            "x": 64,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_Walk_Down_3.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -15964,12 +16942,120 @@
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "looping": true,
+                  "timeBetweenFrames": 0.12,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "assets\\StartingPlayer_Left.png",
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_AlignedWalk_Left_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 64
+                          },
+                          {
+                            "x": 64,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_AlignedWalk_Left_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 64
+                          },
+                          {
+                            "x": 64,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_AlignedWalk_Left_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 64
+                          },
+                          {
+                            "x": 64,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_AlignedWalk_Left_4.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -16012,12 +17098,84 @@
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "assets\\StartingPlayer_Up.png",
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_Walk_Up_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 64
+                          },
+                          {
+                            "x": 64,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_Walk_Up_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 64
+                          },
+                          {
+                            "x": 64,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_Walk_Up_3.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -18064,6 +19222,108 @@
           },
           {
             "objectName": "TempleExit"
+          },
+          {
+            "objectName": "MenuBackdrop"
+          },
+          {
+            "objectName": "MenuDivider"
+          },
+          {
+            "objectName": "MenuArtifactFrame"
+          },
+          {
+            "objectName": "MenuButton"
+          },
+          {
+            "objectName": "MenuArtifactIcon"
+          },
+          {
+            "objectName": "MenuTitle"
+          },
+          {
+            "objectName": "MenuTabs"
+          },
+          {
+            "objectName": "MenuArtifactName"
+          },
+          {
+            "objectName": "MenuArtifactCulture"
+          },
+          {
+            "objectName": "MenuArtifactPeriod"
+          },
+          {
+            "objectName": "MenuArtifactOrigin"
+          },
+          {
+            "objectName": "MenuArtifactDescription"
+          },
+          {
+            "objectName": "MenuProgress"
+          },
+          {
+            "objectName": "MenuHint"
+          },
+          {
+            "objectName": "MenuButtonText"
+          },
+          {
+            "objectName": "MenuTabArtifacts"
+          },
+          {
+            "objectName": "MenuTabEquipment"
+          },
+          {
+            "objectName": "MenuTabJournal"
+          },
+          {
+            "objectName": "MenuTabArtifactsText"
+          },
+          {
+            "objectName": "MenuTabEquipmentText"
+          },
+          {
+            "objectName": "MenuTabJournalText"
+          },
+          {
+            "objectName": "MenuEquipmentHeader"
+          },
+          {
+            "objectName": "MenuHeldItem"
+          },
+          {
+            "objectName": "MenuEquippedSlot"
+          },
+          {
+            "objectName": "MenuEquipmentNote"
+          },
+          {
+            "objectName": "MenuJournalHeader"
+          },
+          {
+            "objectName": "MenuJournalLocation"
+          },
+          {
+            "objectName": "MenuJournalCollection"
+          },
+          {
+            "objectName": "MenuJournalObjective"
+          },
+          {
+            "objectName": "MenuSaveButton"
+          },
+          {
+            "objectName": "MenuSaveButtonText"
+          },
+          {
+            "objectName": "MenuSaveStatus"
+          },
+          {
+            "objectName": "MenuNewGameButton"
+          },
+          {
+            "objectName": "MenuNewGameButtonText"
           }
         ]
       },
@@ -20784,8 +22044,8 @@
                 },
                 {
                   "type": {
-                    "value": "ButtonStates::ButtonFSM::IsPressed",
-                    "inverted": true
+                    "inverted": true,
+                    "value": "ButtonStates::ButtonFSM::IsPressed"
                   },
                   "parameters": [
                     "ActionButton",
@@ -21594,6 +22854,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "disabled": true,
           "folded": true,
           "name": "Legacy template ground cursor (disabled)",
           "source": "",
@@ -21783,8 +23044,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "disabled": true
+          "parameters": []
         },
         {
           "type": "BuiltinCommonInstructions::Comment",
@@ -23792,7 +25052,7 @@
     {
       "b": 255,
       "disableInputWhenNotFocused": true,
-      "mangledName": "ROOM_32TEMPLATE_32-_32Duplicate_32Me",
+      "mangledName": "ROOM_32TEMPLATE_32_45_32Duplicate_32Me",
       "name": "ROOM TEMPLATE - Duplicate Me",
       "r": 255,
       "standardSortMethod": true,
@@ -25166,7 +26426,7 @@
           "italic": false,
           "name": "SlotText",
           "persistentUuid": "70a06a7b-b60e-4410-b3e7-136766827ae4",
-          "smoothed": true,
+          "smoothed": false,
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [
@@ -26689,7 +27949,7 @@
               "Animation": "Animation",
               "TopDownMovement": "TopDownMovement",
               "IsScalingAnimation": false,
-              "IsPausingAnimation": false,
+              "IsPausingAnimation": true,
               "AnimationName": "Walk",
               "DirectionCount": 4,
               "AngleOffset": 0,
@@ -26715,12 +27975,120 @@
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "looping": true,
+                  "timeBetweenFrames": 0.12,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "assets\\StartingPlayer_Right.png",
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_AlignedWalk_Right_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 64
+                          },
+                          {
+                            "x": 64,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_AlignedWalk_Right_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 64
+                          },
+                          {
+                            "x": 64,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_AlignedWalk_Right_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 64
+                          },
+                          {
+                            "x": 64,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_AlignedWalk_Right_4.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -26763,12 +28131,84 @@
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "assets\\StartingPlayer_Down.png",
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_Walk_Down_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 64
+                          },
+                          {
+                            "x": 64,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_Walk_Down_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 64
+                          },
+                          {
+                            "x": 64,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_Walk_Down_3.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -26811,12 +28251,120 @@
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "looping": true,
+                  "timeBetweenFrames": 0.12,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "assets\\StartingPlayer_Left.png",
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_AlignedWalk_Left_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 64
+                          },
+                          {
+                            "x": 64,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_AlignedWalk_Left_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 64
+                          },
+                          {
+                            "x": 64,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_AlignedWalk_Left_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 64
+                          },
+                          {
+                            "x": 64,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_AlignedWalk_Left_4.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -26859,12 +28407,84 @@
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "assets\\StartingPlayer_Up.png",
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_Walk_Up_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 64
+                          },
+                          {
+                            "x": 64,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_Walk_Up_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 64
+                          },
+                          {
+                            "x": 64,
+                            "y": 80
+                          },
+                          {
+                            "x": 32,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\Explorer_GuitarCarried_Walk_Up_3.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -28911,6 +30531,108 @@
           },
           {
             "objectName": "TempleExit"
+          },
+          {
+            "objectName": "MenuBackdrop"
+          },
+          {
+            "objectName": "MenuDivider"
+          },
+          {
+            "objectName": "MenuArtifactFrame"
+          },
+          {
+            "objectName": "MenuButton"
+          },
+          {
+            "objectName": "MenuArtifactIcon"
+          },
+          {
+            "objectName": "MenuTitle"
+          },
+          {
+            "objectName": "MenuTabs"
+          },
+          {
+            "objectName": "MenuArtifactName"
+          },
+          {
+            "objectName": "MenuArtifactCulture"
+          },
+          {
+            "objectName": "MenuArtifactPeriod"
+          },
+          {
+            "objectName": "MenuArtifactOrigin"
+          },
+          {
+            "objectName": "MenuArtifactDescription"
+          },
+          {
+            "objectName": "MenuProgress"
+          },
+          {
+            "objectName": "MenuHint"
+          },
+          {
+            "objectName": "MenuButtonText"
+          },
+          {
+            "objectName": "MenuTabArtifacts"
+          },
+          {
+            "objectName": "MenuTabEquipment"
+          },
+          {
+            "objectName": "MenuTabJournal"
+          },
+          {
+            "objectName": "MenuTabArtifactsText"
+          },
+          {
+            "objectName": "MenuTabEquipmentText"
+          },
+          {
+            "objectName": "MenuTabJournalText"
+          },
+          {
+            "objectName": "MenuEquipmentHeader"
+          },
+          {
+            "objectName": "MenuHeldItem"
+          },
+          {
+            "objectName": "MenuEquippedSlot"
+          },
+          {
+            "objectName": "MenuEquipmentNote"
+          },
+          {
+            "objectName": "MenuJournalHeader"
+          },
+          {
+            "objectName": "MenuJournalLocation"
+          },
+          {
+            "objectName": "MenuJournalCollection"
+          },
+          {
+            "objectName": "MenuJournalObjective"
+          },
+          {
+            "objectName": "MenuSaveButton"
+          },
+          {
+            "objectName": "MenuSaveButtonText"
+          },
+          {
+            "objectName": "MenuSaveStatus"
+          },
+          {
+            "objectName": "MenuNewGameButton"
+          },
+          {
+            "objectName": "MenuNewGameButtonText"
           }
         ]
       },
@@ -28920,7 +30642,6 @@
           "colorG": 190,
           "colorR": 232,
           "creationTime": 0,
-          "folded": false,
           "name": "SYSTEM 10 - ROOM TEMPLATE INSTRUCTIONS",
           "source": "Duplicate this scene to create every future Ancient Digs room.",
           "type": "BuiltinCommonInstructions::Group",
@@ -28993,6 +30714,7 @@
           "colorG": 158,
           "colorR": 209,
           "creationTime": 0,
+          "disabled": true,
           "folded": true,
           "name": "ROOM-SPECIFIC Artifact Discovery (example disabled)",
           "source": "Copy and adapt for artifacts used by this room only",
@@ -29037,8 +30759,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "disabled": true
+          "parameters": []
         },
         {
           "colorB": 42,
@@ -31639,8 +33360,8 @@
                 },
                 {
                   "type": {
-                    "value": "ButtonStates::ButtonFSM::IsPressed",
-                    "inverted": true
+                    "inverted": true,
+                    "value": "ButtonStates::ButtonFSM::IsPressed"
                   },
                   "parameters": [
                     "ActionButton",
@@ -32099,6 +33820,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "disabled": true,
           "folded": true,
           "name": "Legacy template ground cursor (disabled)",
           "source": "",
@@ -32288,8 +34010,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "disabled": true
+          "parameters": []
         },
         {
           "type": "BuiltinCommonInstructions::Comment",
@@ -33117,6 +34838,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "disabled": true,
           "folded": true,
           "name": "ROOM-SPECIFIC Item Pickup (example disabled)",
           "source": "Enable and adapt only when this room contains a collectible",
@@ -33857,8 +35579,7 @@
               ]
             }
           ],
-          "parameters": [],
-          "disabled": true
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -34099,7 +35820,8 @@
             "sceneState.frames += 1;",
             "const savedFields = [\"Inventory\",\"CollectedArtifacts\",\"StoryProgress\",\"OpenedDoors\",\"CompletedPuzzles\",\"Upgrades\",\"CurrentSite\",\"ArtifactsDiscovered\",\"CurrentRoom\",\"PreviousRoom\",\"NextSpawn\",\"LastDoorUsed\",\"PlayerState\"];",
             "const newGameDefaults = {\"Inventory\":[{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0}],\"CollectedArtifacts\":{\"ancient_jar\":{\"CollectionOrder\":0,\"Discovered\":0,\"DiscoveryCount\":0,\"FirstDiscoveredSite\":\"\"}},\"StoryProgress\":{},\"OpenedDoors\":{},\"CompletedPuzzles\":{},\"Upgrades\":{},\"CurrentSite\":\"Egypt\",\"ArtifactsDiscovered\":0,\"CurrentRoom\":\"Base camp 2\",\"PreviousRoom\":\"\",\"NextSpawn\":\"\",\"LastDoorUsed\":\"\",\"PlayerState\":{\"CharacterId\":\"player_01\",\"Health\":100,\"MaxHealth\":100,\"MoveSpeed\":200,\"FacingAnimation\":\"Walk1\",\"MovementEnabled\":1,\"EquippedItemId\":\"\",\"EquippedSlot\":-1,\"CurrentX\":288,\"CurrentY\":416,\"InputMode\":\"Auto\"}};",
-            "const isValidRoom = roomName => gameVariables.get(\"RoomRegistry\").getChild(roomName).getChild(\"Enabled\").getAsBoolean();\nconst isTemplatePreview = runtimeScene.getVariables().get(\"IsRoomTemplate\").getAsBoolean();",
+            "const isValidRoom = roomName => gameVariables.get(\"RoomRegistry\").getChild(roomName).getChild(\"Enabled\").getAsBoolean();",
+            "const isTemplatePreview = runtimeScene.getVariables().get(\"IsRoomTemplate\").getAsBoolean();",
             "const writeSave = (label) => {",
             "  try {",
             "    const state = {};",
