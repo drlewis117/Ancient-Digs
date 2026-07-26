@@ -1302,6 +1302,102 @@
         "name": "assets\\Explorer\\GuitarEquipment\\Explorer_GuitarEquipment_Up.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/GuitarPlaying/Explorer_GuitarPlay_Down_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Down_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/GuitarPlaying/Explorer_GuitarPlay_Down_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Down_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/GuitarPlaying/Explorer_GuitarPlay_Down_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Down_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/GuitarPlaying/Explorer_GuitarPlay_Right_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Right_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/GuitarPlaying/Explorer_GuitarPlay_Right_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Right_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/GuitarPlaying/Explorer_GuitarPlay_Right_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Right_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/GuitarPlaying/Explorer_GuitarPlay_Up_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Up_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/GuitarPlaying/Explorer_GuitarPlay_Up_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Up_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/GuitarPlaying/Explorer_GuitarPlay_Up_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Up_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/GuitarPlaying/Explorer_GuitarPlay_Left_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Left_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/GuitarPlaying/Explorer_GuitarPlay_Left_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Left_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/GuitarPlaying/Explorer_GuitarPlay_Left_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Left_3.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ]
   },
@@ -1315,7 +1411,7 @@
       "name": "AncientDigsSchemaVersion",
       "persistentUuid": "6c86c901-374f-43f8-94c9-f82bcf91eb32",
       "type": "number",
-      "value": 9
+      "value": 10
     },
     {
       "name": "Inventory",
@@ -2261,6 +2357,18 @@
           "persistentUuid": "63c28eee-8136-4301-b0b5-d1ad2ca62dad",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "GuitarPlayActive",
+          "persistentUuid": "e3736588-64d3-4804-92d2-ac320a83a7a8",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "GuitarPlayReturnAnimation",
+          "persistentUuid": "5e74e95d-bd14-4ce3-9eb9-b1bcdc46e7d8",
+          "type": "string",
+          "value": "Walk1"
         }
       ],
       "instances": [
@@ -5549,6 +5657,630 @@
                           },
                           {
                             "x": 32,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Play0",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Right_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Right_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Right_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Right_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Play1",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Down_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Down_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Down_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Down_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Play2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Left_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Left_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Left_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Left_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Play3",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Up_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Up_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Up_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Up_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
                             "y": 96
                           }
                         ]
@@ -10682,6 +11414,83 @@
           "parameters": []
         },
         {
+          "colorB": 94,
+          "colorG": 126,
+          "colorR": 238,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Ancient Digs Guitar Playing Test",
+          "source": "Hold P to preview the position-locked four-direction guitar-playing animation",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Hold P while the menu and dialogue are closed. Walking locks during the performance and resumes in the same facing direction when P is released."
+            },
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "// SYSTEM 12: Guitar-playing test action (hold P).",
+                "const sceneVariables = runtimeScene.getVariables();",
+                "const playerState = runtimeScene.getGame().getVariables().get(\"PlayerState\");",
+                "const players = runtimeScene.getObjects(\"TopDown_Character\");",
+                "if (players.length) {",
+                "  const player = players[0];",
+                "  const activeVariable = sceneVariables.get(\"GuitarPlayActive\");",
+                "  const returnVariable = sceneVariables.get(\"GuitarPlayReturnAnimation\");",
+                "  const dialogueActive = sceneVariables.get(\"DialogueActive\").getAsBoolean();",
+                "  const menuOpen = sceneVariables.get(\"MenuOpen\").getAsBoolean();",
+                "  const transitionLocked = sceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
+                "  const playPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"p\");",
+                "  const playAllowed = !dialogueActive && !menuOpen && !transitionLocked;",
+                "  if (playPressed && playAllowed) {",
+                "    if (!activeVariable.getAsBoolean()) {",
+                "      const currentAnimation = player.getAnimationName();",
+                "      const directionMatch = /^(?:Walk|Play)([0-3])$/.exec(currentAnimation);",
+                "      const direction = directionMatch ? directionMatch[1] : \"1\";",
+                "      const returnAnimation = `Walk${direction}`;",
+                "      returnVariable.setString(returnAnimation);",
+                "      player.setAnimationName(`Play${direction}`);",
+                "      player.setAnimationElapsedTime(0);",
+                "      activeVariable.setBoolean(true);",
+                "    }",
+                "    player.activateBehavior(\"TopDownMovement\", false);",
+                "    player.activateBehavior(\"TopDownMovementAnimator\", false);",
+                "    player.getVariables().get(\"MovementLocked\").setBoolean(true);",
+                "    playerState.getChild(\"MovementEnabled\").setNumber(0);",
+                "    playerState.getChild(\"FacingAnimation\").setString(returnVariable.getAsString());",
+                "  } else if (activeVariable.getAsBoolean()) {",
+                "    const storedReturn = returnVariable.getAsString();",
+                "    const returnAnimation = /^Walk[0-3]$/.test(storedReturn) ? storedReturn : \"Walk1\";",
+                "    player.setAnimationName(returnAnimation);",
+                "    player.setAnimationElapsedTime(0);",
+                "    player.activateBehavior(\"TopDownMovementAnimator\", true);",
+                "    if (playAllowed) {",
+                "      player.activateBehavior(\"TopDownMovement\", true);",
+                "      player.getVariables().get(\"MovementLocked\").setBoolean(false);",
+                "      playerState.getChild(\"MovementEnabled\").setNumber(1);",
+                "    }",
+                "    playerState.getChild(\"FacingAnimation\").setString(returnAnimation);",
+                "    activeVariable.setBoolean(false);",
+                "  }",
+                "}"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ],
+          "parameters": []
+        },
+        {
           "colorB": 186,
           "colorG": 120,
           "colorR": 56,
@@ -14549,6 +15358,18 @@
           "persistentUuid": "cca5f999-c06a-4608-8df1-e6b76428137a",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "GuitarPlayActive",
+          "persistentUuid": "1c1ea3b6-a9dd-4496-9ae9-ba73a303764f",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "GuitarPlayReturnAnimation",
+          "persistentUuid": "a7962b1d-b491-4a73-ab28-816cce532780",
+          "type": "string",
+          "value": "Walk1"
         }
       ],
       "instances": [
@@ -17838,6 +18659,630 @@
                           },
                           {
                             "x": 32,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Play0",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Right_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Right_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Right_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Right_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Play1",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Down_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Down_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Down_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Down_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Play2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Left_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Left_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Left_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Left_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Play3",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Up_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Up_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Up_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Up_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
                             "y": 96
                           }
                         ]
@@ -22945,6 +24390,83 @@
           "parameters": []
         },
         {
+          "colorB": 94,
+          "colorG": 126,
+          "colorR": 238,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Ancient Digs Guitar Playing Test",
+          "source": "Hold P to preview the position-locked four-direction guitar-playing animation",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Hold P while the menu and dialogue are closed. Walking locks during the performance and resumes in the same facing direction when P is released."
+            },
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "// SYSTEM 12: Guitar-playing test action (hold P).",
+                "const sceneVariables = runtimeScene.getVariables();",
+                "const playerState = runtimeScene.getGame().getVariables().get(\"PlayerState\");",
+                "const players = runtimeScene.getObjects(\"TopDown_Character\");",
+                "if (players.length) {",
+                "  const player = players[0];",
+                "  const activeVariable = sceneVariables.get(\"GuitarPlayActive\");",
+                "  const returnVariable = sceneVariables.get(\"GuitarPlayReturnAnimation\");",
+                "  const dialogueActive = sceneVariables.get(\"DialogueActive\").getAsBoolean();",
+                "  const menuOpen = sceneVariables.get(\"MenuOpen\").getAsBoolean();",
+                "  const transitionLocked = sceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
+                "  const playPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"p\");",
+                "  const playAllowed = !dialogueActive && !menuOpen && !transitionLocked;",
+                "  if (playPressed && playAllowed) {",
+                "    if (!activeVariable.getAsBoolean()) {",
+                "      const currentAnimation = player.getAnimationName();",
+                "      const directionMatch = /^(?:Walk|Play)([0-3])$/.exec(currentAnimation);",
+                "      const direction = directionMatch ? directionMatch[1] : \"1\";",
+                "      const returnAnimation = `Walk${direction}`;",
+                "      returnVariable.setString(returnAnimation);",
+                "      player.setAnimationName(`Play${direction}`);",
+                "      player.setAnimationElapsedTime(0);",
+                "      activeVariable.setBoolean(true);",
+                "    }",
+                "    player.activateBehavior(\"TopDownMovement\", false);",
+                "    player.activateBehavior(\"TopDownMovementAnimator\", false);",
+                "    player.getVariables().get(\"MovementLocked\").setBoolean(true);",
+                "    playerState.getChild(\"MovementEnabled\").setNumber(0);",
+                "    playerState.getChild(\"FacingAnimation\").setString(returnVariable.getAsString());",
+                "  } else if (activeVariable.getAsBoolean()) {",
+                "    const storedReturn = returnVariable.getAsString();",
+                "    const returnAnimation = /^Walk[0-3]$/.test(storedReturn) ? storedReturn : \"Walk1\";",
+                "    player.setAnimationName(returnAnimation);",
+                "    player.setAnimationElapsedTime(0);",
+                "    player.activateBehavior(\"TopDownMovementAnimator\", true);",
+                "    if (playAllowed) {",
+                "      player.activateBehavior(\"TopDownMovement\", true);",
+                "      player.getVariables().get(\"MovementLocked\").setBoolean(false);",
+                "      playerState.getChild(\"MovementEnabled\").setNumber(1);",
+                "    }",
+                "    playerState.getChild(\"FacingAnimation\").setString(returnAnimation);",
+                "    activeVariable.setBoolean(false);",
+                "  }",
+                "}"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ],
+          "parameters": []
+        },
+        {
           "colorB": 186,
           "colorG": 120,
           "colorR": 56,
@@ -26414,6 +27936,18 @@
           "persistentUuid": "324f2fda-47eb-43ba-9a9c-0b084902162a",
           "type": "boolean",
           "value": true
+        },
+        {
+          "name": "GuitarPlayActive",
+          "persistentUuid": "3643c8ca-abf9-4daa-83f7-dff4c9df387a",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "GuitarPlayReturnAnimation",
+          "persistentUuid": "6f8878b0-fe45-4dc3-a891-9968862aab77",
+          "type": "string",
+          "value": "Walk1"
         }
       ],
       "instances": [
@@ -29670,6 +31204,630 @@
                           },
                           {
                             "x": 32,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Play0",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Right_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Right_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Right_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Right_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Play1",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Down_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Down_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Down_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Down_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Play2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Left_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Left_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Left_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Left_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Play3",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Up_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Up_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Up_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Up_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
                             "y": 96
                           }
                         ]
@@ -34840,6 +36998,83 @@
                 "  variables.get(\"UpgradeLevel\").setNumber(guitarState.getChild(\"UpgradeLevel\").getAsNumber());",
                 "  variables.get(\"BaseDamage\").setNumber(guitarState.getChild(\"BaseDamage\").getAsNumber());",
                 "  variables.get(\"ChordTier\").setNumber(guitarState.getChild(\"ChordTier\").getAsNumber());",
+                "}"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 94,
+          "colorG": 126,
+          "colorR": 238,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Ancient Digs Guitar Playing Test",
+          "source": "Hold P to preview the position-locked four-direction guitar-playing animation",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Hold P while the menu and dialogue are closed. Walking locks during the performance and resumes in the same facing direction when P is released."
+            },
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "// SYSTEM 12: Guitar-playing test action (hold P).",
+                "const sceneVariables = runtimeScene.getVariables();",
+                "const playerState = runtimeScene.getGame().getVariables().get(\"PlayerState\");",
+                "const players = runtimeScene.getObjects(\"TopDown_Character\");",
+                "if (players.length) {",
+                "  const player = players[0];",
+                "  const activeVariable = sceneVariables.get(\"GuitarPlayActive\");",
+                "  const returnVariable = sceneVariables.get(\"GuitarPlayReturnAnimation\");",
+                "  const dialogueActive = sceneVariables.get(\"DialogueActive\").getAsBoolean();",
+                "  const menuOpen = sceneVariables.get(\"MenuOpen\").getAsBoolean();",
+                "  const transitionLocked = sceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
+                "  const playPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"p\");",
+                "  const playAllowed = !dialogueActive && !menuOpen && !transitionLocked;",
+                "  if (playPressed && playAllowed) {",
+                "    if (!activeVariable.getAsBoolean()) {",
+                "      const currentAnimation = player.getAnimationName();",
+                "      const directionMatch = /^(?:Walk|Play)([0-3])$/.exec(currentAnimation);",
+                "      const direction = directionMatch ? directionMatch[1] : \"1\";",
+                "      const returnAnimation = `Walk${direction}`;",
+                "      returnVariable.setString(returnAnimation);",
+                "      player.setAnimationName(`Play${direction}`);",
+                "      player.setAnimationElapsedTime(0);",
+                "      activeVariable.setBoolean(true);",
+                "    }",
+                "    player.activateBehavior(\"TopDownMovement\", false);",
+                "    player.activateBehavior(\"TopDownMovementAnimator\", false);",
+                "    player.getVariables().get(\"MovementLocked\").setBoolean(true);",
+                "    playerState.getChild(\"MovementEnabled\").setNumber(0);",
+                "    playerState.getChild(\"FacingAnimation\").setString(returnVariable.getAsString());",
+                "  } else if (activeVariable.getAsBoolean()) {",
+                "    const storedReturn = returnVariable.getAsString();",
+                "    const returnAnimation = /^Walk[0-3]$/.test(storedReturn) ? storedReturn : \"Walk1\";",
+                "    player.setAnimationName(returnAnimation);",
+                "    player.setAnimationElapsedTime(0);",
+                "    player.activateBehavior(\"TopDownMovementAnimator\", true);",
+                "    if (playAllowed) {",
+                "      player.activateBehavior(\"TopDownMovement\", true);",
+                "      player.getVariables().get(\"MovementLocked\").setBoolean(false);",
+                "      playerState.getChild(\"MovementEnabled\").setNumber(1);",
+                "    }",
+                "    playerState.getChild(\"FacingAnimation\").setString(returnAnimation);",
+                "    activeVariable.setBoolean(false);",
+                "  }",
                 "}"
               ],
               "parameterObjects": "",
