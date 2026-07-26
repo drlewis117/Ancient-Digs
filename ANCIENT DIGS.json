@@ -100,6 +100,14 @@
         "userAdded": false
       },
       {
+        "file": "assets/Environment/Surface_Desert_Backdrop_ColorMatched_v3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Environment\\Surface_Desert_Backdrop_ColorMatched_v3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
         "file": "assets/StartingWall.png",
         "kind": "image",
         "metadata": "",
@@ -1752,7 +1760,7 @@
       "type": "structure",
       "children": [
         {
-          "name": "ancient_jar",
+          "name": "ancient_bones",
           "type": "structure",
           "children": [
             {
@@ -1778,7 +1786,7 @@
           ]
         },
         {
-          "name": "ancient_bones",
+          "name": "ancient_jar",
           "type": "structure",
           "children": [
             {
@@ -1905,67 +1913,6 @@
       "type": "structure",
       "children": [
         {
-          "name": "ancient_jar",
-          "type": "structure",
-          "children": [
-            {
-              "name": "AppraisedValue",
-              "type": "number",
-              "value": 100
-            },
-            {
-              "name": "Culture",
-              "type": "string",
-              "value": "Unknown"
-            },
-            {
-              "name": "Description",
-              "type": "string",
-              "value": "Details not yet catalogued."
-            },
-            {
-              "name": "IconAnimation",
-              "type": "string",
-              "value": "artifact"
-            },
-            {
-              "name": "ItemId",
-              "type": "string",
-              "value": "ancient_jar"
-            },
-            {
-              "name": "Name",
-              "type": "string",
-              "value": "Ancient Jar"
-            },
-            {
-              "name": "ObjectName",
-              "type": "string",
-              "value": "artifact"
-            },
-            {
-              "name": "Origin",
-              "type": "string",
-              "value": "Egypt"
-            },
-            {
-              "name": "Period",
-              "type": "string",
-              "value": "Unknown"
-            },
-            {
-              "name": "Sellable",
-              "type": "number",
-              "value": 1
-            },
-            {
-              "name": "Unique",
-              "type": "number",
-              "value": 0
-            }
-          ]
-        },
-        {
           "name": "ancient_bones",
           "type": "structure",
           "children": [
@@ -2018,6 +1965,67 @@
               "name": "Sellable",
               "type": "number",
               "value": 0
+            },
+            {
+              "name": "Unique",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "ancient_jar",
+          "type": "structure",
+          "children": [
+            {
+              "name": "AppraisedValue",
+              "type": "number",
+              "value": 100
+            },
+            {
+              "name": "Culture",
+              "type": "string",
+              "value": "Unknown"
+            },
+            {
+              "name": "Description",
+              "type": "string",
+              "value": "Details not yet catalogued."
+            },
+            {
+              "name": "IconAnimation",
+              "type": "string",
+              "value": "artifact"
+            },
+            {
+              "name": "ItemId",
+              "type": "string",
+              "value": "ancient_jar"
+            },
+            {
+              "name": "Name",
+              "type": "string",
+              "value": "Ancient Jar"
+            },
+            {
+              "name": "ObjectName",
+              "type": "string",
+              "value": "artifact"
+            },
+            {
+              "name": "Origin",
+              "type": "string",
+              "value": "Egypt"
+            },
+            {
+              "name": "Period",
+              "type": "string",
+              "value": "Unknown"
+            },
+            {
+              "name": "Sellable",
+              "type": "number",
+              "value": 1
             },
             {
               "name": "Unique",
@@ -2172,6 +2180,21 @@
           "value": "Auto"
         },
         {
+          "name": "MaxHealth",
+          "type": "number",
+          "value": 100
+        },
+        {
+          "name": "MoveSpeed",
+          "type": "number",
+          "value": 200
+        },
+        {
+          "name": "MovementEnabled",
+          "type": "number",
+          "value": 1
+        },
+        {
           "name": "Shovel",
           "persistentUuid": "1ece95a1-3d55-4467-9da4-10edf99970e1",
           "type": "structure",
@@ -2187,31 +2210,16 @@
               "value": false
             },
             {
-              "name": "UpgradeLevel",
-              "type": "number",
-              "value": 0
-            },
-            {
               "name": "PurchaseCost",
               "type": "number",
               "value": 2500
+            },
+            {
+              "name": "UpgradeLevel",
+              "type": "number",
+              "value": 0
             }
           ]
-        },
-        {
-          "name": "MaxHealth",
-          "type": "number",
-          "value": 100
-        },
-        {
-          "name": "MoveSpeed",
-          "type": "number",
-          "value": 200
-        },
-        {
-          "name": "MovementEnabled",
-          "type": "number",
-          "value": 1
         }
       ]
     },
@@ -2246,6 +2254,36 @@
               "type": "structure",
               "children": [
                 {
+                  "name": "BoneTotal",
+                  "type": "number",
+                  "value": 20
+                },
+                {
+                  "name": "BuriedContents",
+                  "type": "structure",
+                  "children": []
+                },
+                {
+                  "name": "CompletedTileCount",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "CompletionBonusAwarded",
+                  "type": "boolean",
+                  "value": false
+                },
+                {
+                  "name": "DiggableTileTotal",
+                  "type": "number",
+                  "value": 798
+                },
+                {
+                  "name": "DistributionVersion",
+                  "type": "number",
+                  "value": 0
+                },
+                {
                   "name": "DugTiles",
                   "type": "structure",
                   "children": []
@@ -2256,39 +2294,9 @@
                   "value": ""
                 },
                 {
-                  "name": "BuriedContents",
-                  "type": "structure",
-                  "children": []
-                },
-                {
-                  "name": "DistributionVersion",
-                  "type": "number",
-                  "value": 0
-                },
-                {
-                  "name": "CompletionBonusAwarded",
-                  "type": "boolean",
-                  "value": false
-                },
-                {
-                  "name": "CompletedTileCount",
-                  "type": "number",
-                  "value": 0
-                },
-                {
-                  "name": "DiggableTileTotal",
-                  "type": "number",
-                  "value": 798
-                },
-                {
                   "name": "JarTotal",
                   "type": "number",
                   "value": 25
-                },
-                {
-                  "name": "BoneTotal",
-                  "type": "number",
-                  "value": 20
                 }
               ]
             }
@@ -2458,15 +2466,15 @@
   ],
   "layouts": [
     {
-      "b": 255,
+      "b": 58,
       "disableInputWhenNotFocused": true,
       "mangledName": "Base_32camp_322",
       "name": "Base camp 2",
-      "r": 255,
+      "r": 181,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
       "title": "",
-      "v": 255,
+      "v": 122,
       "uiSettings": {
         "grid": true,
         "gridType": "rectangular",
@@ -2840,6 +2848,45 @@
           "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 1512,
+          "keepRatio": true,
+          "layer": "",
+          "locked": true,
+          "name": "SurfaceDesertBackdrop",
+          "persistentUuid": "d2200dfc-a059-41f6-921f-1f19dd744c1d",
+          "width": 2688,
+          "x": -704,
+          "y": -400,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "locked": true,
+          "name": "SurfaceSandBlend",
+          "persistentUuid": "ff6bb3ce-1e24-48af-bd8c-68e5824bc1e1",
+          "width": 0,
+          "x": -64,
+          "y": -64,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [
+            {
+              "name": "tilemap",
+              "value": "{\"tileWidth\":32,\"tileHeight\":32,\"dimX\":44,\"dimY\":27,\"layers\":[{\"id\":0,\"alpha\":0.72,\"tiles\":[[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,-1],[-1,9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9,-1],[-1,9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9,-1],[-1,9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9,-1],[-1,9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9,-1],[-1,9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9,-1],[-1,9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9,-1],[-1,9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9,-1],[-1,9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9,-1],[-1,9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9,-1],[-1,9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9,-1],[-1,9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9,-1],[-1,9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9,-1],[-1,9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9,-1],[-1,9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9,-1],[-1,9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9,-1],[-1,9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9,-1],[-1,9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9,-1],[-1,9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9,-1],[-1,9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9,-1],[-1,9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9,-1],[-1,9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9,-1],[-1,9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9,-1],[-1,9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9,-1],[-1,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,-1],[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]]},{\"id\":1,\"alpha\":0.3,\"tiles\":[[9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9],[9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9],[9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9],[9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9],[9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9],[9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9],[9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9],[9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9],[9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9],[9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9],[9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9],[9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9],[9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9],[9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9],[9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9],[9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9],[9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9],[9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9],[9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9],[9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9],[9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9],[9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9],[9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9],[9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9],[9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9],[9,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9],[9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9]]}]}"
+            }
+          ],
           "initialVariables": []
         },
         {
@@ -3905,7 +3952,7 @@
         },
         {
           "assetStoreId": "",
-          "bold": false,
+          "bold": true,
           "italic": false,
           "name": "SlotText",
           "persistentUuid": "1d5f99ac-320e-4eed-861a-beca6d68eec0",
@@ -3922,13 +3969,13 @@
           ],
           "effects": [],
           "behaviors": [],
-          "string": "Slot text",
+          "string": "x1",
           "font": "assets\\PressStart2P-Regular.ttf",
           "textAlignment": "left",
-          "characterSize": 10,
+          "characterSize": 14,
           "color": {
-            "b": 214,
-            "g": 244,
+            "b": 70,
+            "g": 194,
             "r": 255
           },
           "content": {
@@ -5323,6 +5370,64 @@
             "characterSize": 16,
             "lineHeight": 0,
             "color": "255;244;214"
+          }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "SurfaceDesertBackdrop",
+          "persistentUuid": "1b982e85-2ae6-442e-9e7a-bc11b141cd22",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Environment\\Surface_Desert_Backdrop_ColorMatched_v3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "SurfaceSandBlend",
+          "persistentUuid": "a9cee05e-f02b-464b-918a-8dfbb772e434",
+          "type": "TileMap::SimpleTileMap",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "atlasImage": "tilesets.png",
+            "rowCount": 42,
+            "columnCount": 42,
+            "tileSize": 32,
+            "tilesWithHitBox": ""
           }
         },
         {
@@ -7593,7 +7698,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "UNDISCOVERED",
+          "string": "FIELD SATCHEL",
           "font": "assets\\PressStart2P-Regular.ttf",
           "textAlignment": "left",
           "characterSize": 18,
@@ -7637,7 +7742,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "CULTURE: ???",
+          "string": "ANCIENT JARS: x0",
           "font": "assets\\PressStart2P-Regular.ttf",
           "textAlignment": "left",
           "characterSize": 11,
@@ -7681,7 +7786,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "PERIOD: ???",
+          "string": "VALUE: 100 COINS EACH",
           "font": "assets\\PressStart2P-Regular.ttf",
           "textAlignment": "left",
           "characterSize": 11,
@@ -7725,7 +7830,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "ORIGIN: ???",
+          "string": "ANCIENT BONES: x0",
           "font": "assets\\PressStart2P-Regular.ttf",
           "textAlignment": "left",
           "characterSize": 11,
@@ -7769,7 +7874,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "Find artifacts to fill your journal.",
+          "string": "Matching finds with the same value stack together.",
           "font": "assets\\PressStart2P-Regular.ttf",
           "textAlignment": "left",
           "characterSize": 12,
@@ -9139,7 +9244,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "APPRAISED VALUE: ???",
+          "string": "BONE USE: UNDECIDED",
           "font": "assets\\PressStart2P-Regular.ttf",
           "textAlignment": "left",
           "characterSize": 11,
@@ -9620,6 +9725,18 @@
           },
           {
             "objectName": "MenuNewGameButtonText"
+          },
+          {
+            "objectName": "MenuArtifactValue"
+          },
+          {
+            "objectName": "HudCoinsText"
+          },
+          {
+            "objectName": "AncientBones"
+          },
+          {
+            "objectName": "MenuBoneIcon"
           }
         ]
       },
@@ -9699,8 +9816,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "SYSTEM 8: A reusable old-school menu shell. Artifacts are live now; equipment and journal tabs are reserved for later content. The obsolete template ground cursor is disabled and hidden.",
-              "actions": []
+              "comment": "SYSTEM 8: A reusable old-school menu shell. Artifacts are live now; equipment and journal tabs are reserved for later content. The obsolete template ground cursor is disabled and hidden."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -11874,6 +11990,32 @@
               "comment": "One player record now owns health, movement settings, facing, equipment references, position, and input state across every room."
             },
             {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "// Keep the explorer safely inside the base-camp wall while scenery continues beyond it.",
+                "const players = runtimeScene.getObjects(\"TopDown_Character\");",
+                "const minCenterX = 64;",
+                "const maxCenterX = 1216;",
+                "const minCenterY = 16;",
+                "const maxCenterY = 672;",
+                "for (const player of players) {",
+                "  const centerX = player.getCenterXInScene();",
+                "  const centerY = player.getCenterYInScene();",
+                "  const targetCenterX = Math.min(maxCenterX, Math.max(minCenterX, centerX));",
+                "  const targetCenterY = Math.min(maxCenterY, Math.max(minCenterY, centerY));",
+                "  if (targetCenterX !== centerX || targetCenterY !== centerY) {",
+                "    player.setPosition(",
+                "      player.getX() + targetCenterX - centerX,",
+                "      player.getY() + targetCenterY - centerY",
+                "    );",
+                "  }",
+                "}"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            },
+            {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -13062,8 +13204,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Add future interactions in three steps: register the nearby target, set its prompt, then handle it only when InteractionRequested is true and InteractionConsumed is false.",
-              "conditions": []
+              "comment": "Add future interactions in three steps: register the nearby target, set its prompt, then handle it only when InteractionRequested is true and InteractionConsumed is false."
             }
           ],
           "parameters": []
@@ -15170,15 +15311,15 @@
       ]
     },
     {
-      "b": 255,
+      "b": 20,
       "disableInputWhenNotFocused": true,
       "mangledName": "Temple_32Room_321",
       "name": "Temple Room 1",
-      "r": 255,
+      "r": 34,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
       "title": "",
-      "v": 255,
+      "v": 25,
       "uiSettings": {
         "grid": true,
         "gridType": "rectangular",
@@ -16648,7 +16789,7 @@
         },
         {
           "assetStoreId": "",
-          "bold": false,
+          "bold": true,
           "italic": false,
           "name": "SlotText",
           "persistentUuid": "1d5f99ac-320e-4eed-861a-beca6d68eec0",
@@ -16665,13 +16806,13 @@
           ],
           "effects": [],
           "behaviors": [],
-          "string": "Slot text",
+          "string": "x1",
           "font": "assets\\PressStart2P-Regular.ttf",
           "textAlignment": "left",
-          "characterSize": 10,
+          "characterSize": 14,
           "color": {
-            "b": 214,
-            "g": 244,
+            "b": 70,
+            "g": 194,
             "r": 255
           },
           "content": {
@@ -20336,7 +20477,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "UNDISCOVERED",
+          "string": "FIELD SATCHEL",
           "font": "assets\\PressStart2P-Regular.ttf",
           "textAlignment": "left",
           "characterSize": 18,
@@ -20380,7 +20521,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "CULTURE: ???",
+          "string": "ANCIENT JARS: x0",
           "font": "assets\\PressStart2P-Regular.ttf",
           "textAlignment": "left",
           "characterSize": 11,
@@ -20424,7 +20565,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "PERIOD: ???",
+          "string": "VALUE: 100 COINS EACH",
           "font": "assets\\PressStart2P-Regular.ttf",
           "textAlignment": "left",
           "characterSize": 11,
@@ -20468,7 +20609,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "ORIGIN: ???",
+          "string": "ANCIENT BONES: x0",
           "font": "assets\\PressStart2P-Regular.ttf",
           "textAlignment": "left",
           "characterSize": 11,
@@ -20512,7 +20653,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "Find artifacts to fill your journal.",
+          "string": "Matching finds with the same value stack together.",
           "font": "assets\\PressStart2P-Regular.ttf",
           "textAlignment": "left",
           "characterSize": 12,
@@ -21882,7 +22023,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "APPRAISED VALUE: ???",
+          "string": "BONE USE: UNDECIDED",
           "font": "assets\\PressStart2P-Regular.ttf",
           "textAlignment": "left",
           "characterSize": 11,
@@ -22363,6 +22504,18 @@
           },
           {
             "objectName": "MenuNewGameButtonText"
+          },
+          {
+            "objectName": "MenuArtifactValue"
+          },
+          {
+            "objectName": "HudCoinsText"
+          },
+          {
+            "objectName": "AncientBones"
+          },
+          {
+            "objectName": "MenuBoneIcon"
           }
         ]
       },
@@ -22442,8 +22595,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "SYSTEM 8: A reusable old-school menu shell. Artifacts are live now; equipment and journal tabs are reserved for later content. The obsolete template ground cursor is disabled and hidden.",
-              "actions": []
+              "comment": "SYSTEM 8: A reusable old-school menu shell. Artifacts are live now; equipment and journal tabs are reserved for later content. The obsolete template ground cursor is disabled and hidden."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -24617,6 +24769,32 @@
               "comment": "One player record now owns health, movement settings, facing, equipment references, position, and input state across every room."
             },
             {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "// Keep the explorer inside the temple walls while allowing his upper body to overlap the top border.",
+                "const players = runtimeScene.getObjects(\"TopDown_Character\");",
+                "const minCenterX = 64;",
+                "const maxCenterX = 1216;",
+                "const minCenterY = 16;",
+                "const maxCenterY = 672;",
+                "for (const player of players) {",
+                "  const centerX = player.getCenterXInScene();",
+                "  const centerY = player.getCenterYInScene();",
+                "  const targetCenterX = Math.min(maxCenterX, Math.max(minCenterX, centerX));",
+                "  const targetCenterY = Math.min(maxCenterY, Math.max(minCenterY, centerY));",
+                "  if (targetCenterX !== centerX || targetCenterY !== centerY) {",
+                "    player.setPosition(",
+                "      player.getX() + targetCenterX - centerX,",
+                "      player.getY() + targetCenterY - centerY",
+                "    );",
+                "  }",
+                "}"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            },
+            {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -25988,8 +26166,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Add future interactions in three steps: register the nearby target, set its prompt, then handle it only when InteractionRequested is true and InteractionConsumed is false.",
-              "conditions": []
+              "comment": "Add future interactions in three steps: register the nearby target, set its prompt, then handle it only when InteractionRequested is true and InteractionConsumed is false."
             }
           ],
           "parameters": []
@@ -28124,15 +28301,15 @@
       ]
     },
     {
-      "b": 255,
+      "b": 20,
       "disableInputWhenNotFocused": true,
       "mangledName": "ROOM_32TEMPLATE_32_45_32Duplicate_32Me",
       "name": "ROOM TEMPLATE - Duplicate Me",
-      "r": 255,
+      "r": 34,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
       "title": "Ancient Digs Room Template",
-      "v": 255,
+      "v": 25,
       "uiSettings": {
         "grid": true,
         "gridType": "rectangular",
@@ -29609,7 +29786,7 @@
         },
         {
           "assetStoreId": "",
-          "bold": false,
+          "bold": true,
           "italic": false,
           "name": "SlotText",
           "persistentUuid": "70a06a7b-b60e-4410-b3e7-136766827ae4",
@@ -29626,13 +29803,13 @@
           ],
           "effects": [],
           "behaviors": [],
-          "string": "Slot text",
+          "string": "x1",
           "font": "assets\\PressStart2P-Regular.ttf",
           "textAlignment": "left",
-          "characterSize": 10,
+          "characterSize": 14,
           "color": {
-            "b": 214,
-            "g": 244,
+            "b": 70,
+            "g": 194,
             "r": 255
           },
           "content": {
@@ -33297,7 +33474,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "UNDISCOVERED",
+          "string": "FIELD SATCHEL",
           "font": "assets\\PressStart2P-Regular.ttf",
           "textAlignment": "left",
           "characterSize": 18,
@@ -33341,7 +33518,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "CULTURE: ???",
+          "string": "ANCIENT JARS: x0",
           "font": "assets\\PressStart2P-Regular.ttf",
           "textAlignment": "left",
           "characterSize": 11,
@@ -33385,7 +33562,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "PERIOD: ???",
+          "string": "VALUE: 100 COINS EACH",
           "font": "assets\\PressStart2P-Regular.ttf",
           "textAlignment": "left",
           "characterSize": 11,
@@ -33429,7 +33606,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "ORIGIN: ???",
+          "string": "ANCIENT BONES: x0",
           "font": "assets\\PressStart2P-Regular.ttf",
           "textAlignment": "left",
           "characterSize": 11,
@@ -33473,7 +33650,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "Find artifacts to fill your journal.",
+          "string": "Matching finds with the same value stack together.",
           "font": "assets\\PressStart2P-Regular.ttf",
           "textAlignment": "left",
           "characterSize": 12,
@@ -34843,7 +35020,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "APPRAISED VALUE: ???",
+          "string": "BONE USE: UNDECIDED",
           "font": "assets\\PressStart2P-Regular.ttf",
           "textAlignment": "left",
           "characterSize": 11,
@@ -35324,6 +35501,18 @@
           },
           {
             "objectName": "MenuNewGameButtonText"
+          },
+          {
+            "objectName": "MenuArtifactValue"
+          },
+          {
+            "objectName": "HudCoinsText"
+          },
+          {
+            "objectName": "AncientBones"
+          },
+          {
+            "objectName": "MenuBoneIcon"
           }
         ]
       },
@@ -35502,8 +35691,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "SYSTEM 8: A reusable old-school menu shell. Artifacts are live now; equipment and journal tabs are reserved for later content. The obsolete template ground cursor is disabled and hidden.",
-              "actions": []
+              "comment": "SYSTEM 8: A reusable old-school menu shell. Artifacts are live now; equipment and journal tabs are reserved for later content. The obsolete template ground cursor is disabled and hidden."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -37677,6 +37865,32 @@
               "comment": "One player record now owns health, movement settings, facing, equipment references, position, and input state across every room."
             },
             {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "// Keep the explorer inside room-template walls while allowing his upper body to overlap the top border.",
+                "const players = runtimeScene.getObjects(\"TopDown_Character\");",
+                "const minCenterX = 64;",
+                "const maxCenterX = 1216;",
+                "const minCenterY = 16;",
+                "const maxCenterY = 672;",
+                "for (const player of players) {",
+                "  const centerX = player.getCenterXInScene();",
+                "  const centerY = player.getCenterYInScene();",
+                "  const targetCenterX = Math.min(maxCenterX, Math.max(minCenterX, centerX));",
+                "  const targetCenterY = Math.min(maxCenterY, Math.max(minCenterY, centerY));",
+                "  if (targetCenterX !== centerX || targetCenterY !== centerY) {",
+                "    player.setPosition(",
+                "      player.getX() + targetCenterX - centerX,",
+                "      player.getY() + targetCenterY - centerY",
+                "    );",
+                "  }",
+                "}"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            },
+            {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -38469,8 +38683,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "ROOM-SPECIFIC REGISTRATION: add collision/proximity checks here that set InteractionTarget and InteractionPromptText.",
-              "conditions": []
+              "comment": "ROOM-SPECIFIC REGISTRATION: add collision/proximity checks here that set InteractionTarget and InteractionPromptText."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -38777,8 +38990,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "ROOM-SPECIFIC HANDLERS: consume InteractionRequested exactly once, then perform the target action.",
-              "conditions": []
+              "comment": "ROOM-SPECIFIC HANDLERS: consume InteractionRequested exactly once, then perform the target action."
             },
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -38790,8 +39002,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Add future interactions in three steps: register the nearby target, set its prompt, then handle it only when InteractionRequested is true and InteractionConsumed is false.",
-              "conditions": []
+              "comment": "Add future interactions in three steps: register the nearby target, set its prompt, then handle it only when InteractionRequested is true and InteractionConsumed is false."
             }
           ],
           "parameters": []
