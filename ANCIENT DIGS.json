@@ -1270,6 +1270,38 @@
         "name": "assets\\Explorer\\Explorer_GuitarCarried_AlignedWalk_Right_4.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/GuitarEquipment/Explorer_GuitarEquipment_Right.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\GuitarEquipment\\Explorer_GuitarEquipment_Right.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/GuitarEquipment/Explorer_GuitarEquipment_Down.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\GuitarEquipment\\Explorer_GuitarEquipment_Down.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/GuitarEquipment/Explorer_GuitarEquipment_Left.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\GuitarEquipment\\Explorer_GuitarEquipment_Left.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/GuitarEquipment/Explorer_GuitarEquipment_Up.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\GuitarEquipment\\Explorer_GuitarEquipment_Up.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ]
   },
@@ -1283,7 +1315,7 @@
       "name": "AncientDigsSchemaVersion",
       "persistentUuid": "6c86c901-374f-43f8-94c9-f82bcf91eb32",
       "type": "number",
-      "value": 8
+      "value": 9
     },
     {
       "name": "Inventory",
@@ -1812,6 +1844,68 @@
           "name": "MovementEnabled",
           "type": "number",
           "value": 1
+        },
+        {
+          "name": "Guitar",
+          "persistentUuid": "27f82c46-9941-4446-a5f5-f8f42bfe9b63",
+          "type": "structure",
+          "children": [
+            {
+              "name": "EquipmentId",
+              "type": "string",
+              "value": "explorer_guitar"
+            },
+            {
+              "name": "State",
+              "type": "string",
+              "value": "OnBackBaked"
+            },
+            {
+              "name": "RenderMode",
+              "type": "string",
+              "value": "BakedCompatibility"
+            },
+            {
+              "name": "UpgradeLevel",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "MaxUpgradeLevel",
+              "type": "number",
+              "value": 5
+            },
+            {
+              "name": "BaseDamage",
+              "type": "number",
+              "value": 10
+            },
+            {
+              "name": "DamageMultiplier",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "ChordTier",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "KnownChordCount",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "AttackEnabled",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "name": "DrawEnabled",
+              "type": "boolean",
+              "value": false
+            }
+          ]
         }
       ]
     },
@@ -3085,6 +3179,23 @@
           "x": 550,
           "y": 573,
           "zOrder": 206,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "locked": true,
+          "name": "ExplorerGuitar",
+          "persistentUuid": "57e06b13-85f5-4674-8343-f79138d327bd",
+          "width": 0,
+          "x": 288,
+          "y": 416,
+          "zOrder": 15,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -7387,6 +7498,444 @@
             "lineHeight": 0,
             "color": "255;244;214"
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "ExplorerBody",
+          "persistentUuid": "37f7d0f7-96a7-4739-a2a9-c9ac3dc7c23e",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "CharacterId",
+              "persistentUuid": "e518a2ee-25cc-4679-ae10-f5c622bb1f54",
+              "type": "string",
+              "value": "player_01"
+            },
+            {
+              "name": "RenderRole",
+              "persistentUuid": "7508d35e-8a2e-4254-a979-e83186b52ffb",
+              "type": "string",
+              "value": "LayeredBody"
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Walk0",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Right_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Right_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Right_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Walk1",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Down_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Down_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Down_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Walk2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Left_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Left_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Left_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Walk3",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Up_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Up_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Up_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "ExplorerGuitar",
+          "persistentUuid": "b72a50ac-864c-4376-a39c-a563d5b469d1",
+          "type": "Sprite",
+          "updateIfNotVisible": true,
+          "variables": [
+            {
+              "name": "EquipmentId",
+              "persistentUuid": "3ee96ae0-9007-490d-8d56-ba0a92b4607f",
+              "type": "string",
+              "value": "explorer_guitar"
+            },
+            {
+              "name": "State",
+              "persistentUuid": "c2b3bf7c-87f8-4a27-a431-0f22f9649131",
+              "type": "string",
+              "value": "OnBackBaked"
+            },
+            {
+              "name": "UpgradeLevel",
+              "persistentUuid": "3313f082-dbc9-4ea0-8751-4ed33fddc9f3",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "BaseDamage",
+              "persistentUuid": "f9625f3a-150b-4a05-a529-80d92333f423",
+              "type": "number",
+              "value": 10
+            },
+            {
+              "name": "ChordTier",
+              "persistentUuid": "860533e3-3830-467b-8a4b-6ffd4dd1ded4",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Walk0",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\GuitarEquipment\\Explorer_GuitarEquipment_Right.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Walk1",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\GuitarEquipment\\Explorer_GuitarEquipment_Down.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Walk2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\GuitarEquipment\\Explorer_GuitarEquipment_Left.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Walk3",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\GuitarEquipment\\Explorer_GuitarEquipment_Up.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -7394,6 +7943,17 @@
         "children": [
           {
             "objectName": "TopDown_Character"
+          },
+          {
+            "folderName": "Explorer Equipment Foundation",
+            "children": [
+              {
+                "objectName": "ExplorerBody"
+              },
+              {
+                "objectName": "ExplorerGuitar"
+              }
+            ]
           },
           {
             "objectName": "artifact"
@@ -10060,6 +10620,63 @@
                   ]
                 }
               ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 83,
+          "colorG": 173,
+          "colorR": 93,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Ancient Digs Guitar Equipment Foundation",
+          "source": "Separate explorer body and upgrade-ready guitar equipment with baked-visual compatibility",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "The approved baked guitar remains visible while State=OnBackBaked. ExplorerBody and ExplorerGuitar are separate production objects ready for later draw, attack, chord, and upgrade systems."
+            },
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "// SYSTEM 11: Separate explorer/guitar equipment foundation.",
+                "const guitarState = runtimeScene.getGame().getVariables().get(\"PlayerState\").getChild(\"Guitar\");",
+                "if (!guitarState.getChild(\"EquipmentId\").getAsString()) guitarState.getChild(\"EquipmentId\").setString(\"explorer_guitar\");",
+                "if (!guitarState.getChild(\"State\").getAsString()) guitarState.getChild(\"State\").setString(\"OnBackBaked\");",
+                "if (!guitarState.getChild(\"RenderMode\").getAsString()) guitarState.getChild(\"RenderMode\").setString(\"BakedCompatibility\");",
+                "if (guitarState.getChild(\"UpgradeLevel\").getAsNumber() < 1) guitarState.getChild(\"UpgradeLevel\").setNumber(1);",
+                "if (guitarState.getChild(\"MaxUpgradeLevel\").getAsNumber() < 1) guitarState.getChild(\"MaxUpgradeLevel\").setNumber(5);",
+                "if (guitarState.getChild(\"BaseDamage\").getAsNumber() < 1) guitarState.getChild(\"BaseDamage\").setNumber(10);",
+                "if (guitarState.getChild(\"DamageMultiplier\").getAsNumber() <= 0) guitarState.getChild(\"DamageMultiplier\").setNumber(1);",
+                "const players = runtimeScene.getObjects(\"TopDown_Character\");",
+                "const guitars = runtimeScene.getObjects(\"ExplorerGuitar\");",
+                "if (players.length && guitars.length) {",
+                "  const player = players[0];",
+                "  const guitar = guitars[0];",
+                "  guitar.setPosition(player.getX(), player.getY());",
+                "  guitar.setZOrder(Math.max(0, player.getZOrder() - 1));",
+                "  guitar.hide(true); // Current approved sprite already includes the guitar on his back.",
+                "  const variables = guitar.getVariables();",
+                "  variables.get(\"EquipmentId\").setString(guitarState.getChild(\"EquipmentId\").getAsString());",
+                "  variables.get(\"State\").setString(guitarState.getChild(\"State\").getAsString());",
+                "  variables.get(\"UpgradeLevel\").setNumber(guitarState.getChild(\"UpgradeLevel\").getAsNumber());",
+                "  variables.get(\"BaseDamage\").setNumber(guitarState.getChild(\"BaseDamage\").getAsNumber());",
+                "  variables.get(\"ChordTier\").setNumber(guitarState.getChild(\"ChordTier\").getAsNumber());",
+                "}"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
             }
           ],
           "parameters": []
@@ -13534,7 +14151,7 @@
             "const sceneState = runtimeScene.__ancientDigsSaveState || (runtimeScene.__ancientDigsSaveState = { frames: 0, autosaved: false });",
             "sceneState.frames += 1;",
             "const savedFields = [\"Inventory\",\"CollectedArtifacts\",\"StoryProgress\",\"OpenedDoors\",\"CompletedPuzzles\",\"Upgrades\",\"CurrentSite\",\"ArtifactsDiscovered\",\"CurrentRoom\",\"PreviousRoom\",\"NextSpawn\",\"LastDoorUsed\",\"PlayerState\"];",
-            "const newGameDefaults = {\"Inventory\":[{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0}],\"CollectedArtifacts\":{\"ancient_jar\":{\"CollectionOrder\":0,\"Discovered\":0,\"DiscoveryCount\":0,\"FirstDiscoveredSite\":\"\"}},\"StoryProgress\":{},\"OpenedDoors\":{},\"CompletedPuzzles\":{},\"Upgrades\":{},\"CurrentSite\":\"Egypt\",\"ArtifactsDiscovered\":0,\"CurrentRoom\":\"Base camp 2\",\"PreviousRoom\":\"\",\"NextSpawn\":\"\",\"LastDoorUsed\":\"\",\"PlayerState\":{\"CharacterId\":\"player_01\",\"Health\":100,\"MaxHealth\":100,\"MoveSpeed\":200,\"FacingAnimation\":\"Walk1\",\"MovementEnabled\":1,\"EquippedItemId\":\"\",\"EquippedSlot\":-1,\"CurrentX\":288,\"CurrentY\":416,\"InputMode\":\"Auto\"}};",
+            "const newGameDefaults = {\"Inventory\":[{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0}],\"CollectedArtifacts\":{\"ancient_jar\":{\"CollectionOrder\":0,\"Discovered\":0,\"DiscoveryCount\":0,\"FirstDiscoveredSite\":\"\"}},\"StoryProgress\":{},\"OpenedDoors\":{},\"CompletedPuzzles\":{},\"Upgrades\":{},\"CurrentSite\":\"Egypt\",\"ArtifactsDiscovered\":0,\"CurrentRoom\":\"Base camp 2\",\"PreviousRoom\":\"\",\"NextSpawn\":\"\",\"LastDoorUsed\":\"\",\"PlayerState\":{\"CharacterId\":\"player_01\",\"Health\":100,\"MaxHealth\":100,\"MoveSpeed\":200,\"FacingAnimation\":\"Walk1\",\"MovementEnabled\":1,\"EquippedItemId\":\"\",\"EquippedSlot\":-1,\"CurrentX\":288,\"CurrentY\":416,\"InputMode\":\"Auto\",\"Guitar\":{\"EquipmentId\":\"explorer_guitar\",\"State\":\"OnBackBaked\",\"RenderMode\":\"BakedCompatibility\",\"UpgradeLevel\":1,\"MaxUpgradeLevel\":5,\"BaseDamage\":10,\"DamageMultiplier\":1,\"ChordTier\":0,\"KnownChordCount\":0,\"AttackEnabled\":false,\"DrawEnabled\":false}}};",
             "const isValidRoom = roomName => gameVariables.get(\"RoomRegistry\").getChild(roomName).getChild(\"Enabled\").getAsBoolean();",
             "const writeSave = (label) => {",
             "  try {",
@@ -14851,6 +15468,23 @@
           "x": 550,
           "y": 573,
           "zOrder": 206,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "locked": true,
+          "name": "ExplorerGuitar",
+          "persistentUuid": "0f741ede-a90b-4370-a5cf-39d08ba12250",
+          "width": 0,
+          "x": 288,
+          "y": 416,
+          "zOrder": 15,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -19153,6 +19787,444 @@
             "lineHeight": 0,
             "color": "255;244;214"
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "ExplorerBody",
+          "persistentUuid": "c07d5674-48fd-4da1-8f85-6fa785ad407c",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "CharacterId",
+              "persistentUuid": "70e182c0-d144-4ab1-bb38-68584467d05a",
+              "type": "string",
+              "value": "player_01"
+            },
+            {
+              "name": "RenderRole",
+              "persistentUuid": "b8bd51a0-f81f-4652-ae5f-ab4efd626acf",
+              "type": "string",
+              "value": "LayeredBody"
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Walk0",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Right_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Right_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Right_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Walk1",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Down_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Down_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Down_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Walk2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Left_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Left_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Left_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Walk3",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Up_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Up_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Up_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "ExplorerGuitar",
+          "persistentUuid": "d5aeaca0-e4bf-416f-b4ac-0002424434be",
+          "type": "Sprite",
+          "updateIfNotVisible": true,
+          "variables": [
+            {
+              "name": "EquipmentId",
+              "persistentUuid": "824f61e2-35a3-4b0a-a5e7-50621ba9fa7f",
+              "type": "string",
+              "value": "explorer_guitar"
+            },
+            {
+              "name": "State",
+              "persistentUuid": "c5d7686b-0b6d-4bad-8b30-112207632f6c",
+              "type": "string",
+              "value": "OnBackBaked"
+            },
+            {
+              "name": "UpgradeLevel",
+              "persistentUuid": "2cf14b8f-39b0-46da-b380-3cd468069463",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "BaseDamage",
+              "persistentUuid": "55e87f35-a8cd-46aa-b896-61c17173354e",
+              "type": "number",
+              "value": 10
+            },
+            {
+              "name": "ChordTier",
+              "persistentUuid": "d3927f62-9b79-4c44-97ab-bb461ae3a686",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Walk0",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\GuitarEquipment\\Explorer_GuitarEquipment_Right.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Walk1",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\GuitarEquipment\\Explorer_GuitarEquipment_Down.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Walk2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\GuitarEquipment\\Explorer_GuitarEquipment_Left.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Walk3",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\GuitarEquipment\\Explorer_GuitarEquipment_Up.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -19160,6 +20232,17 @@
         "children": [
           {
             "objectName": "TopDown_Character"
+          },
+          {
+            "folderName": "Explorer Equipment Foundation",
+            "children": [
+              {
+                "objectName": "ExplorerBody"
+              },
+              {
+                "objectName": "ExplorerGuitar"
+              }
+            ]
           },
           {
             "objectName": "artifact"
@@ -21800,6 +22883,63 @@
                   ]
                 }
               ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 83,
+          "colorG": 173,
+          "colorR": 93,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Ancient Digs Guitar Equipment Foundation",
+          "source": "Separate explorer body and upgrade-ready guitar equipment with baked-visual compatibility",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "The approved baked guitar remains visible while State=OnBackBaked. ExplorerBody and ExplorerGuitar are separate production objects ready for later draw, attack, chord, and upgrade systems."
+            },
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "// SYSTEM 11: Separate explorer/guitar equipment foundation.",
+                "const guitarState = runtimeScene.getGame().getVariables().get(\"PlayerState\").getChild(\"Guitar\");",
+                "if (!guitarState.getChild(\"EquipmentId\").getAsString()) guitarState.getChild(\"EquipmentId\").setString(\"explorer_guitar\");",
+                "if (!guitarState.getChild(\"State\").getAsString()) guitarState.getChild(\"State\").setString(\"OnBackBaked\");",
+                "if (!guitarState.getChild(\"RenderMode\").getAsString()) guitarState.getChild(\"RenderMode\").setString(\"BakedCompatibility\");",
+                "if (guitarState.getChild(\"UpgradeLevel\").getAsNumber() < 1) guitarState.getChild(\"UpgradeLevel\").setNumber(1);",
+                "if (guitarState.getChild(\"MaxUpgradeLevel\").getAsNumber() < 1) guitarState.getChild(\"MaxUpgradeLevel\").setNumber(5);",
+                "if (guitarState.getChild(\"BaseDamage\").getAsNumber() < 1) guitarState.getChild(\"BaseDamage\").setNumber(10);",
+                "if (guitarState.getChild(\"DamageMultiplier\").getAsNumber() <= 0) guitarState.getChild(\"DamageMultiplier\").setNumber(1);",
+                "const players = runtimeScene.getObjects(\"TopDown_Character\");",
+                "const guitars = runtimeScene.getObjects(\"ExplorerGuitar\");",
+                "if (players.length && guitars.length) {",
+                "  const player = players[0];",
+                "  const guitar = guitars[0];",
+                "  guitar.setPosition(player.getX(), player.getY());",
+                "  guitar.setZOrder(Math.max(0, player.getZOrder() - 1));",
+                "  guitar.hide(true); // Current approved sprite already includes the guitar on his back.",
+                "  const variables = guitar.getVariables();",
+                "  variables.get(\"EquipmentId\").setString(guitarState.getChild(\"EquipmentId\").getAsString());",
+                "  variables.get(\"State\").setString(guitarState.getChild(\"State\").getAsString());",
+                "  variables.get(\"UpgradeLevel\").setNumber(guitarState.getChild(\"UpgradeLevel\").getAsNumber());",
+                "  variables.get(\"BaseDamage\").setNumber(guitarState.getChild(\"BaseDamage\").getAsNumber());",
+                "  variables.get(\"ChordTier\").setNumber(guitarState.getChild(\"ChordTier\").getAsNumber());",
+                "}"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
             }
           ],
           "parameters": []
@@ -24852,7 +25992,7 @@
             "const sceneState = runtimeScene.__ancientDigsSaveState || (runtimeScene.__ancientDigsSaveState = { frames: 0, autosaved: false });",
             "sceneState.frames += 1;",
             "const savedFields = [\"Inventory\",\"CollectedArtifacts\",\"StoryProgress\",\"OpenedDoors\",\"CompletedPuzzles\",\"Upgrades\",\"CurrentSite\",\"ArtifactsDiscovered\",\"CurrentRoom\",\"PreviousRoom\",\"NextSpawn\",\"LastDoorUsed\",\"PlayerState\"];",
-            "const newGameDefaults = {\"Inventory\":[{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0}],\"CollectedArtifacts\":{\"ancient_jar\":{\"CollectionOrder\":0,\"Discovered\":0,\"DiscoveryCount\":0,\"FirstDiscoveredSite\":\"\"}},\"StoryProgress\":{},\"OpenedDoors\":{},\"CompletedPuzzles\":{},\"Upgrades\":{},\"CurrentSite\":\"Egypt\",\"ArtifactsDiscovered\":0,\"CurrentRoom\":\"Base camp 2\",\"PreviousRoom\":\"\",\"NextSpawn\":\"\",\"LastDoorUsed\":\"\",\"PlayerState\":{\"CharacterId\":\"player_01\",\"Health\":100,\"MaxHealth\":100,\"MoveSpeed\":200,\"FacingAnimation\":\"Walk1\",\"MovementEnabled\":1,\"EquippedItemId\":\"\",\"EquippedSlot\":-1,\"CurrentX\":288,\"CurrentY\":416,\"InputMode\":\"Auto\"}};",
+            "const newGameDefaults = {\"Inventory\":[{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0}],\"CollectedArtifacts\":{\"ancient_jar\":{\"CollectionOrder\":0,\"Discovered\":0,\"DiscoveryCount\":0,\"FirstDiscoveredSite\":\"\"}},\"StoryProgress\":{},\"OpenedDoors\":{},\"CompletedPuzzles\":{},\"Upgrades\":{},\"CurrentSite\":\"Egypt\",\"ArtifactsDiscovered\":0,\"CurrentRoom\":\"Base camp 2\",\"PreviousRoom\":\"\",\"NextSpawn\":\"\",\"LastDoorUsed\":\"\",\"PlayerState\":{\"CharacterId\":\"player_01\",\"Health\":100,\"MaxHealth\":100,\"MoveSpeed\":200,\"FacingAnimation\":\"Walk1\",\"MovementEnabled\":1,\"EquippedItemId\":\"\",\"EquippedSlot\":-1,\"CurrentX\":288,\"CurrentY\":416,\"InputMode\":\"Auto\",\"Guitar\":{\"EquipmentId\":\"explorer_guitar\",\"State\":\"OnBackBaked\",\"RenderMode\":\"BakedCompatibility\",\"UpgradeLevel\":1,\"MaxUpgradeLevel\":5,\"BaseDamage\":10,\"DamageMultiplier\":1,\"ChordTier\":0,\"KnownChordCount\":0,\"AttackEnabled\":false,\"DrawEnabled\":false}}};",
             "const isValidRoom = roomName => gameVariables.get(\"RoomRegistry\").getChild(roomName).getChild(\"Enabled\").getAsBoolean();",
             "const writeSave = (label) => {",
             "  try {",
@@ -26160,6 +27300,23 @@
           "x": 550,
           "y": 573,
           "zOrder": 206,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "locked": true,
+          "name": "ExplorerGuitar",
+          "persistentUuid": "29025983-b300-4501-ac84-3bfc7eeb7b2f",
+          "width": 0,
+          "x": 608,
+          "y": 352,
+          "zOrder": 15,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -30462,6 +31619,444 @@
             "lineHeight": 0,
             "color": "255;244;214"
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "ExplorerBody",
+          "persistentUuid": "afd5666a-73e4-4bb5-a159-da5badbf4576",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "CharacterId",
+              "persistentUuid": "31c66955-3bf7-4e07-8f62-7abf776ea0fd",
+              "type": "string",
+              "value": "player_01"
+            },
+            {
+              "name": "RenderRole",
+              "persistentUuid": "81545e68-bb5e-431a-a44a-783d915560af",
+              "type": "string",
+              "value": "LayeredBody"
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Walk0",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Right_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Right_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Right_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Walk1",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Down_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Down_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Down_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Walk2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Left_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Left_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Left_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Walk3",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Up_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Up_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\Explorer_Base_Walk_Up_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "ExplorerGuitar",
+          "persistentUuid": "fb5fb143-7b3f-4ca1-8777-e6e4ece7d17d",
+          "type": "Sprite",
+          "updateIfNotVisible": true,
+          "variables": [
+            {
+              "name": "EquipmentId",
+              "persistentUuid": "3c70fd68-1c2c-4abd-a154-0b00aed512d7",
+              "type": "string",
+              "value": "explorer_guitar"
+            },
+            {
+              "name": "State",
+              "persistentUuid": "61de1976-b1b0-4061-81bf-4190b6ef8b7e",
+              "type": "string",
+              "value": "OnBackBaked"
+            },
+            {
+              "name": "UpgradeLevel",
+              "persistentUuid": "e208c9c1-c8fb-4009-b88d-15641d0c9a44",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "BaseDamage",
+              "persistentUuid": "6705892d-14cd-4cb8-bc8c-688c301359af",
+              "type": "number",
+              "value": 10
+            },
+            {
+              "name": "ChordTier",
+              "persistentUuid": "52ae63c8-0228-4e66-b649-3862c9ae9523",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Walk0",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\GuitarEquipment\\Explorer_GuitarEquipment_Right.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Walk1",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\GuitarEquipment\\Explorer_GuitarEquipment_Down.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Walk2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\GuitarEquipment\\Explorer_GuitarEquipment_Left.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Walk3",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Explorer\\GuitarEquipment\\Explorer_GuitarEquipment_Up.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -30469,6 +32064,17 @@
         "children": [
           {
             "objectName": "TopDown_Character"
+          },
+          {
+            "folderName": "Explorer Equipment Foundation",
+            "children": [
+              {
+                "objectName": "ExplorerBody"
+              },
+              {
+                "objectName": "ExplorerGuitar"
+              }
+            ]
           },
           {
             "objectName": "artifact"
@@ -33187,6 +34793,63 @@
           "parameters": []
         },
         {
+          "colorB": 83,
+          "colorG": 173,
+          "colorR": 93,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Ancient Digs Guitar Equipment Foundation",
+          "source": "Separate explorer body and upgrade-ready guitar equipment with baked-visual compatibility",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "The approved baked guitar remains visible while State=OnBackBaked. ExplorerBody and ExplorerGuitar are separate production objects ready for later draw, attack, chord, and upgrade systems."
+            },
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "// SYSTEM 11: Separate explorer/guitar equipment foundation.",
+                "const guitarState = runtimeScene.getGame().getVariables().get(\"PlayerState\").getChild(\"Guitar\");",
+                "if (!guitarState.getChild(\"EquipmentId\").getAsString()) guitarState.getChild(\"EquipmentId\").setString(\"explorer_guitar\");",
+                "if (!guitarState.getChild(\"State\").getAsString()) guitarState.getChild(\"State\").setString(\"OnBackBaked\");",
+                "if (!guitarState.getChild(\"RenderMode\").getAsString()) guitarState.getChild(\"RenderMode\").setString(\"BakedCompatibility\");",
+                "if (guitarState.getChild(\"UpgradeLevel\").getAsNumber() < 1) guitarState.getChild(\"UpgradeLevel\").setNumber(1);",
+                "if (guitarState.getChild(\"MaxUpgradeLevel\").getAsNumber() < 1) guitarState.getChild(\"MaxUpgradeLevel\").setNumber(5);",
+                "if (guitarState.getChild(\"BaseDamage\").getAsNumber() < 1) guitarState.getChild(\"BaseDamage\").setNumber(10);",
+                "if (guitarState.getChild(\"DamageMultiplier\").getAsNumber() <= 0) guitarState.getChild(\"DamageMultiplier\").setNumber(1);",
+                "const players = runtimeScene.getObjects(\"TopDown_Character\");",
+                "const guitars = runtimeScene.getObjects(\"ExplorerGuitar\");",
+                "if (players.length && guitars.length) {",
+                "  const player = players[0];",
+                "  const guitar = guitars[0];",
+                "  guitar.setPosition(player.getX(), player.getY());",
+                "  guitar.setZOrder(Math.max(0, player.getZOrder() - 1));",
+                "  guitar.hide(true); // Current approved sprite already includes the guitar on his back.",
+                "  const variables = guitar.getVariables();",
+                "  variables.get(\"EquipmentId\").setString(guitarState.getChild(\"EquipmentId\").getAsString());",
+                "  variables.get(\"State\").setString(guitarState.getChild(\"State\").getAsString());",
+                "  variables.get(\"UpgradeLevel\").setNumber(guitarState.getChild(\"UpgradeLevel\").getAsNumber());",
+                "  variables.get(\"BaseDamage\").setNumber(guitarState.getChild(\"BaseDamage\").getAsNumber());",
+                "  variables.get(\"ChordTier\").setNumber(guitarState.getChild(\"ChordTier\").getAsNumber());",
+                "}"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ],
+          "parameters": []
+        },
+        {
           "colorB": 186,
           "colorG": 120,
           "colorR": 56,
@@ -35819,7 +37482,7 @@
             "const sceneState = runtimeScene.__ancientDigsSaveState || (runtimeScene.__ancientDigsSaveState = { frames: 0, autosaved: false });",
             "sceneState.frames += 1;",
             "const savedFields = [\"Inventory\",\"CollectedArtifacts\",\"StoryProgress\",\"OpenedDoors\",\"CompletedPuzzles\",\"Upgrades\",\"CurrentSite\",\"ArtifactsDiscovered\",\"CurrentRoom\",\"PreviousRoom\",\"NextSpawn\",\"LastDoorUsed\",\"PlayerState\"];",
-            "const newGameDefaults = {\"Inventory\":[{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0}],\"CollectedArtifacts\":{\"ancient_jar\":{\"CollectionOrder\":0,\"Discovered\":0,\"DiscoveryCount\":0,\"FirstDiscoveredSite\":\"\"}},\"StoryProgress\":{},\"OpenedDoors\":{},\"CompletedPuzzles\":{},\"Upgrades\":{},\"CurrentSite\":\"Egypt\",\"ArtifactsDiscovered\":0,\"CurrentRoom\":\"Base camp 2\",\"PreviousRoom\":\"\",\"NextSpawn\":\"\",\"LastDoorUsed\":\"\",\"PlayerState\":{\"CharacterId\":\"player_01\",\"Health\":100,\"MaxHealth\":100,\"MoveSpeed\":200,\"FacingAnimation\":\"Walk1\",\"MovementEnabled\":1,\"EquippedItemId\":\"\",\"EquippedSlot\":-1,\"CurrentX\":288,\"CurrentY\":416,\"InputMode\":\"Auto\"}};",
+            "const newGameDefaults = {\"Inventory\":[{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0},{\"Category\":\"\",\"DisplayName\":\"\",\"ItemId\":\"\",\"MaxStack\":1,\"Name\":\"Empty\",\"Quantity\":0,\"QuestItem\":0,\"Stackable\":0,\"Usable\":0}],\"CollectedArtifacts\":{\"ancient_jar\":{\"CollectionOrder\":0,\"Discovered\":0,\"DiscoveryCount\":0,\"FirstDiscoveredSite\":\"\"}},\"StoryProgress\":{},\"OpenedDoors\":{},\"CompletedPuzzles\":{},\"Upgrades\":{},\"CurrentSite\":\"Egypt\",\"ArtifactsDiscovered\":0,\"CurrentRoom\":\"Base camp 2\",\"PreviousRoom\":\"\",\"NextSpawn\":\"\",\"LastDoorUsed\":\"\",\"PlayerState\":{\"CharacterId\":\"player_01\",\"Health\":100,\"MaxHealth\":100,\"MoveSpeed\":200,\"FacingAnimation\":\"Walk1\",\"MovementEnabled\":1,\"EquippedItemId\":\"\",\"EquippedSlot\":-1,\"CurrentX\":288,\"CurrentY\":416,\"InputMode\":\"Auto\",\"Guitar\":{\"EquipmentId\":\"explorer_guitar\",\"State\":\"OnBackBaked\",\"RenderMode\":\"BakedCompatibility\",\"UpgradeLevel\":1,\"MaxUpgradeLevel\":5,\"BaseDamage\":10,\"DamageMultiplier\":1,\"ChordTier\":0,\"KnownChordCount\":0,\"AttackEnabled\":false,\"DrawEnabled\":false}}};",
             "const isValidRoom = roomName => gameVariables.get(\"RoomRegistry\").getChild(roomName).getChild(\"Enabled\").getAsBoolean();",
             "const isTemplatePreview = runtimeScene.getVariables().get(\"IsRoomTemplate\").getAsBoolean();",
             "const writeSave = (label) => {",
