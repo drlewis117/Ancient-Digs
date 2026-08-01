@@ -1442,8 +1442,7 @@
         "userAdded": true
       },
       {
-        "alwaysLoaded": false,
-        "file": "assets\\Environment\\Museum_Exterior_v1.png",
+        "file": "assets/Environment/Museum_Exterior_v1.png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\Environment\\Museum_Exterior_v1.png",
@@ -1451,8 +1450,7 @@
         "userAdded": true
       },
       {
-        "alwaysLoaded": false,
-        "file": "assets\\Items\\Beginner_Shovel_v1.png",
+        "file": "assets/Items/Beginner_Shovel_v1.png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\Items\\Beginner_Shovel_v1.png",
@@ -1460,8 +1458,7 @@
         "userAdded": true
       },
       {
-        "alwaysLoaded": false,
-        "file": "assets\\Characters\\Shop_Merchant_Full_v2.png",
+        "file": "assets/Characters/Shop_Merchant_Full_v2.png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\Characters\\Shop_Merchant_Full_v2.png",
@@ -1469,8 +1466,7 @@
         "userAdded": true
       },
       {
-        "alwaysLoaded": false,
-        "file": "assets\\Characters\\Museum_Curator_Full_v2.png",
+        "file": "assets/Characters/Museum_Curator_Full_v2.png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\Characters\\Museum_Curator_Full_v2.png",
@@ -1478,8 +1474,7 @@
         "userAdded": true
       },
       {
-        "alwaysLoaded": false,
-        "file": "assets\\Environment\\InteriorPieces_v2\\Museum_Floor_Atlas.png",
+        "file": "assets/Environment/InteriorPieces_v2/Museum_Floor_Atlas.png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\Environment\\InteriorPieces_v2\\Museum_Floor_Atlas.png",
@@ -1487,8 +1482,7 @@
         "userAdded": true
       },
       {
-        "alwaysLoaded": false,
-        "file": "assets\\Environment\\InteriorPieces_v2\\Shop_Floor_Atlas.png",
+        "file": "assets/Environment/InteriorPieces_v2/Shop_Floor_Atlas.png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\Environment\\InteriorPieces_v2\\Shop_Floor_Atlas.png",
@@ -1496,8 +1490,7 @@
         "userAdded": true
       },
       {
-        "alwaysLoaded": false,
-        "file": "assets\\Environment\\InteriorPieces_v2\\Interior_Wall_Atlas.png",
+        "file": "assets/Environment/InteriorPieces_v2/Interior_Wall_Atlas.png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\Environment\\InteriorPieces_v2\\Interior_Wall_Atlas.png",
@@ -1505,8 +1498,7 @@
         "userAdded": true
       },
       {
-        "alwaysLoaded": false,
-        "file": "assets\\Environment\\InteriorPieces_v2\\Counter.png",
+        "file": "assets/Environment/InteriorPieces_v2/Counter.png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\Environment\\InteriorPieces_v2\\Counter.png",
@@ -1514,8 +1506,7 @@
         "userAdded": true
       },
       {
-        "alwaysLoaded": false,
-        "file": "assets\\Environment\\InteriorPieces_v2\\Books.png",
+        "file": "assets/Environment/InteriorPieces_v2/Books.png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\Environment\\InteriorPieces_v2\\Books.png",
@@ -1523,8 +1514,7 @@
         "userAdded": true
       },
       {
-        "alwaysLoaded": false,
-        "file": "assets\\Environment\\InteriorPieces_v2\\Shop_Shelf_Green.png",
+        "file": "assets/Environment/InteriorPieces_v2/Shop_Shelf_Green.png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\Environment\\InteriorPieces_v2\\Shop_Shelf_Green.png",
@@ -1532,8 +1522,7 @@
         "userAdded": true
       },
       {
-        "alwaysLoaded": false,
-        "file": "assets\\Environment\\InteriorPieces_v2\\Shop_Shelf_Wood.png",
+        "file": "assets/Environment/InteriorPieces_v2/Shop_Shelf_Wood.png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\Environment\\InteriorPieces_v2\\Shop_Shelf_Wood.png",
@@ -1541,8 +1530,7 @@
         "userAdded": true
       },
       {
-        "alwaysLoaded": false,
-        "file": "assets\\Environment\\InteriorPieces_v2\\Shop_Pot.png",
+        "file": "assets/Environment/InteriorPieces_v2/Shop_Pot.png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\Environment\\InteriorPieces_v2\\Shop_Pot.png",
@@ -1550,8 +1538,7 @@
         "userAdded": true
       },
       {
-        "alwaysLoaded": false,
-        "file": "assets\\Environment\\InteriorPieces_v2\\Shop_Anvil.png",
+        "file": "assets/Environment/InteriorPieces_v2/Shop_Anvil.png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\Environment\\InteriorPieces_v2\\Shop_Anvil.png",
@@ -1559,8 +1546,7 @@
         "userAdded": true
       },
       {
-        "alwaysLoaded": false,
-        "file": "assets\\Environment\\InteriorPieces_v2\\Shop_Rug.png",
+        "file": "assets/Environment/InteriorPieces_v2/Shop_Rug.png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\Environment\\InteriorPieces_v2\\Shop_Rug.png",
@@ -1568,8 +1554,7 @@
         "userAdded": true
       },
       {
-        "alwaysLoaded": false,
-        "file": "assets\\Environment\\InteriorPieces_v2\\Museum_Rug.png",
+        "file": "assets/Environment/InteriorPieces_v2/Museum_Rug.png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\Environment\\InteriorPieces_v2\\Museum_Rug.png",
@@ -1577,8 +1562,7 @@
         "userAdded": true
       },
       {
-        "alwaysLoaded": false,
-        "file": "assets\\Environment\\InteriorPieces_v2\\Museum_Pedestal.png",
+        "file": "assets/Environment/InteriorPieces_v2/Museum_Pedestal.png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\Environment\\InteriorPieces_v2\\Museum_Pedestal.png",
@@ -1586,8 +1570,7 @@
         "userAdded": true
       },
       {
-        "alwaysLoaded": false,
-        "file": "assets\\Environment\\InteriorPieces_v2\\Museum_Pillar.png",
+        "file": "assets/Environment/InteriorPieces_v2/Museum_Pillar.png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\Environment\\InteriorPieces_v2\\Museum_Pillar.png",
@@ -1595,8 +1578,7 @@
         "userAdded": true
       },
       {
-        "alwaysLoaded": false,
-        "file": "assets\\Environment\\InteriorPieces_v2\\Museum_Statue.png",
+        "file": "assets/Environment/InteriorPieces_v2/Museum_Statue.png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\Environment\\InteriorPieces_v2\\Museum_Statue.png",
@@ -2570,68 +2552,6 @@
           ]
         },
         {
-          "name": "ROOM TEMPLATE - Duplicate Me",
-          "persistentUuid": "7b1a4b01-34b4-4e7a-9d77-a6011d824cf2",
-          "type": "structure",
-          "children": [
-            {
-              "name": "DefaultSpawn",
-              "persistentUuid": "5b365d74-5b63-4b78-b274-58e93eb3d3b1",
-              "type": "string",
-              "value": "Room_Default"
-            },
-            {
-              "name": "DisplayName",
-              "persistentUuid": "eae13a7f-263b-4556-8798-0bbc57acba7c",
-              "type": "string",
-              "value": "New Room"
-            },
-            {
-              "name": "Enabled",
-              "persistentUuid": "3504ea85-095b-4170-a074-7e59658ff440",
-              "type": "number",
-              "value": 0
-            },
-            {
-              "name": "IsTemplate",
-              "persistentUuid": "6d930352-4273-40d3-9280-6083f08d8fae",
-              "type": "number",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "name": "Temple Room 1",
-          "persistentUuid": "11e3295e-9d63-485a-ac74-e7d50aeffc25",
-          "type": "structure",
-          "children": [
-            {
-              "name": "DefaultSpawn",
-              "persistentUuid": "939ecbae-282b-4e5e-847f-e14f21ec5120",
-              "type": "string",
-              "value": "Temple_Default"
-            },
-            {
-              "name": "DisplayName",
-              "persistentUuid": "5f34067e-3682-4a4e-aeba-61c8149ec844",
-              "type": "string",
-              "value": "Temple Room 1"
-            },
-            {
-              "name": "Enabled",
-              "persistentUuid": "18abd8dd-2ac3-46fd-a05f-d178253f425d",
-              "type": "number",
-              "value": 1
-            },
-            {
-              "name": "IsTemplate",
-              "persistentUuid": "7a9783e4-961c-4137-8ea4-b48995c410a9",
-              "type": "number",
-              "value": 0
-            }
-          ]
-        },
-        {
           "name": "Museum Interior",
           "persistentUuid": "c7795784-ecde-4624-9855-284a5d33aafb",
           "type": "structure",
@@ -2663,6 +2583,37 @@
           ]
         },
         {
+          "name": "ROOM TEMPLATE - Duplicate Me",
+          "persistentUuid": "7b1a4b01-34b4-4e7a-9d77-a6011d824cf2",
+          "type": "structure",
+          "children": [
+            {
+              "name": "DefaultSpawn",
+              "persistentUuid": "5b365d74-5b63-4b78-b274-58e93eb3d3b1",
+              "type": "string",
+              "value": "Room_Default"
+            },
+            {
+              "name": "DisplayName",
+              "persistentUuid": "eae13a7f-263b-4556-8798-0bbc57acba7c",
+              "type": "string",
+              "value": "New Room"
+            },
+            {
+              "name": "Enabled",
+              "persistentUuid": "3504ea85-095b-4170-a074-7e59658ff440",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "IsTemplate",
+              "persistentUuid": "6d930352-4273-40d3-9280-6083f08d8fae",
+              "type": "number",
+              "value": 1
+            }
+          ]
+        },
+        {
           "name": "Shop Interior",
           "persistentUuid": "04c997e0-8fd8-4c6f-b393-50e99b7833e9",
           "type": "structure",
@@ -2688,6 +2639,37 @@
             {
               "name": "IsTemplate",
               "persistentUuid": "13505b24-729c-464f-a11f-3988dbf0d727",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "Temple Room 1",
+          "persistentUuid": "11e3295e-9d63-485a-ac74-e7d50aeffc25",
+          "type": "structure",
+          "children": [
+            {
+              "name": "DefaultSpawn",
+              "persistentUuid": "939ecbae-282b-4e5e-847f-e14f21ec5120",
+              "type": "string",
+              "value": "Temple_Default"
+            },
+            {
+              "name": "DisplayName",
+              "persistentUuid": "5f34067e-3682-4a4e-aeba-61c8149ec844",
+              "type": "string",
+              "value": "Temple Room 1"
+            },
+            {
+              "name": "Enabled",
+              "persistentUuid": "18abd8dd-2ac3-46fd-a05f-d178253f425d",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "IsTemplate",
+              "persistentUuid": "7a9783e4-961c-4137-8ea4-b48995c410a9",
               "type": "number",
               "value": 0
             }
@@ -3932,7 +3914,6 @@
           "height": 299,
           "keepRatio": true,
           "layer": "",
-          "locked": false,
           "name": "MuseumEntrance",
           "persistentUuid": "cc715046-1eba-4ddb-824f-a90728d6ed88",
           "width": 400,
@@ -3949,7 +3930,6 @@
           "height": 179,
           "keepRatio": true,
           "layer": "",
-          "locked": false,
           "name": "ShopEntrance",
           "persistentUuid": "0d72e7a5-84a3-4f09-b88d-569b990e2205",
           "width": 256,
@@ -10131,6 +10111,12 @@
           },
           {
             "objectName": "SurfaceSandBlend"
+          },
+          {
+            "objectName": "MuseumEntrance"
+          },
+          {
+            "objectName": "ShopEntrance"
           }
         ]
       },
@@ -12758,12 +12744,6 @@
                 "  { name:\"ShopEntrance\", key:\"Shop\", insetX:0.04, top:0.10, bottom:1.04 }",
                 "];",
                 "for (const player of players) {",
-                "  if (!runtimeScene.__commerceArrivalHandled) {",
-                "    const marker = gameVariables.get(\"NextSpawn\").getAsString();",
-                "    if (marker === \"Camp_FromMuseum\") { player.setPosition(184, 382); gameVariables.get(\"NextSpawn\").setString(\"\"); }",
-                "    if (marker === \"Camp_FromShop\") { player.setPosition(492, 535); gameVariables.get(\"NextSpawn\").setString(\"\"); }",
-                "    runtimeScene.__commerceArrivalHandled = true;",
-                "  }",
                 "  for (const structure of structures) {",
                 "    const objects = runtimeScene.getObjects(structure.name);",
                 "    if (!objects.length) continue;",
@@ -12853,7 +12833,7 @@
           "creationTime": 0,
           "folded": true,
           "name": "Ancient Digs Guitar Playing Test",
-          "source": "Hold P to preview the position-locked four-direction guitar-playing animation",
+          "source": "Reliable held-P guitar playback and immediate four-direction movement facing",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
@@ -12866,12 +12846,12 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Hold P while the menu and dialogue are closed. Walking locks during the performance and resumes in the same facing direction when P is released."
+              "comment": "Hold P to play the guitar reliably. The same controller also synchronizes the first movement direction immediately after every room load."
             },
             {
               "type": "BuiltinCommonInstructions::JsCode",
               "inlineCode": [
-                "// SYSTEM 12: Guitar-playing test action (hold P).",
+                "// SYSTEM 12: Reliable guitar-playing and first-movement animation state.",
                 "const sceneVariables = runtimeScene.getVariables();",
                 "const playerState = runtimeScene.getGame().getVariables().get(\"PlayerState\");",
                 "const players = runtimeScene.getObjects(\"TopDown_Character\");",
@@ -12884,11 +12864,19 @@
                 "  const transitionLocked = sceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
                 "  const playPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"p\");",
                 "  const playAllowed = !dialogueActive && !menuOpen && !transitionLocked;",
+                "  const animationState = runtimeScene.__ancientDigsPlayerAnimation || (runtimeScene.__ancientDigsPlayerAnimation = {",
+                "    x: player.getX(),",
+                "    y: player.getY()",
+                "  });",
+                "  const movementX = player.getX() - animationState.x;",
+                "  const movementY = player.getY() - animationState.y;",
+                "",
                 "  if (playPressed && playAllowed) {",
                 "    if (!activeVariable.getAsBoolean()) {",
                 "      const currentAnimation = player.getAnimationName();",
                 "      const directionMatch = /^(?:Walk|Play)([0-3])$/.exec(currentAnimation);",
-                "      const direction = directionMatch ? directionMatch[1] : \"1\";",
+                "      const savedDirectionMatch = /^Walk([0-3])$/.exec(playerState.getChild(\"FacingAnimation\").getAsString());",
+                "      const direction = directionMatch ? directionMatch[1] : (savedDirectionMatch ? savedDirectionMatch[1] : \"1\");",
                 "      const returnAnimation = `Walk${direction}`;",
                 "      returnVariable.setString(returnAnimation);",
                 "      player.setAnimationName(`Play${direction}`);",
@@ -12900,6 +12888,13 @@
                 "    player.getVariables().get(\"MovementLocked\").setBoolean(true);",
                 "    playerState.getChild(\"MovementEnabled\").setNumber(0);",
                 "    playerState.getChild(\"FacingAnimation\").setString(returnVariable.getAsString());",
+                "    const playDirectionMatch = /^Walk([0-3])$/.exec(returnVariable.getAsString());",
+                "    const playAnimation = `Play${playDirectionMatch ? playDirectionMatch[1] : \"1\"}`;",
+                "    if (player.getAnimationName() !== playAnimation) {",
+                "      player.setAnimationName(playAnimation);",
+                "      player.setAnimationElapsedTime(0);",
+                "    }",
+                "    if (typeof player.playAnimation === \"function\") player.playAnimation();",
                 "  } else if (activeVariable.getAsBoolean()) {",
                 "    const storedReturn = returnVariable.getAsString();",
                 "    const returnAnimation = /^Walk[0-3]$/.test(storedReturn) ? storedReturn : \"Walk1\";",
@@ -12914,6 +12909,34 @@
                 "    playerState.getChild(\"FacingAnimation\").setString(returnAnimation);",
                 "    activeVariable.setBoolean(false);",
                 "  }",
+                "",
+                "  if (!activeVariable.getAsBoolean() && playAllowed && playerState.getChild(\"MovementEnabled\").getAsNumber() !== 0) {",
+                "    let direction = null;",
+                "    const rightPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"Right\") || gdjs.evtTools.input.isKeyPressed(runtimeScene, \"d\");",
+                "    const downPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"Down\") || gdjs.evtTools.input.isKeyPressed(runtimeScene, \"s\");",
+                "    const leftPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"Left\") || gdjs.evtTools.input.isKeyPressed(runtimeScene, \"a\");",
+                "    const upPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"Up\") || gdjs.evtTools.input.isKeyPressed(runtimeScene, \"w\");",
+                "    if (rightPressed && !leftPressed) direction = \"0\";",
+                "    else if (downPressed && !upPressed) direction = \"1\";",
+                "    else if (leftPressed && !rightPressed) direction = \"2\";",
+                "    else if (upPressed && !downPressed) direction = \"3\";",
+                "    else if (Math.abs(movementX) > 0.05 || Math.abs(movementY) > 0.05) {",
+                "      if (Math.abs(movementX) >= Math.abs(movementY)) direction = movementX >= 0 ? \"0\" : \"2\";",
+                "      else direction = movementY >= 0 ? \"1\" : \"3\";",
+                "    }",
+                "    if (direction !== null) {",
+                "      const walkAnimation = `Walk${direction}`;",
+                "      if (player.getAnimationName() !== walkAnimation) {",
+                "        player.setAnimationName(walkAnimation);",
+                "        player.setAnimationElapsedTime(0);",
+                "      }",
+                "      if (typeof player.playAnimation === \"function\") player.playAnimation();",
+                "      playerState.getChild(\"FacingAnimation\").setString(walkAnimation);",
+                "    }",
+                "  }",
+                "",
+                "  animationState.x = player.getX();",
+                "  animationState.y = player.getY();",
                 "}"
               ],
               "parameterObjects": "",
@@ -12930,7 +12953,7 @@
           "creationTime": 0,
           "folded": true,
           "name": "Ancient Digs Scene Transition System",
-          "source": "Reusable room state, arrival positioning, facing, and bounce prevention",
+          "source": "Paired doorway arrivals, room state, facing, and bounce prevention",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
@@ -12944,6 +12967,53 @@
                 "textR": 0
               },
               "comment": "Every doorway records its destination and arrival marker before changing rooms. Arrival locks prevent immediate return loops."
+            },
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "// SYSTEM 10: Paired doorway arrivals. Every transition lands just beyond its matching threshold.",
+                "const arrivalGameVariables = runtimeScene.getGame().getVariables();",
+                "const arrivalMarker = arrivalGameVariables.get(\"NextSpawn\").getAsString();",
+                "const arrivalPlayer = runtimeScene.getObjects(\"TopDown_Character\")[0];",
+                "const arrivalTable = {",
+                "  \"Base camp 2\": {",
+                "    Camp_FromTemple: { x: 928, y: 457, animation: \"Walk1\" },",
+                "    Camp_FromMuseum: { x: 184, y: 288, animation: \"Walk1\" },",
+                "    Camp_FromShop: { x: 506, y: 439, animation: \"Walk1\" }",
+                "  },",
+                "  \"Temple Room 1\": {",
+                "    Temple_FromCamp: { x: 272, y: 427, animation: \"Walk3\" }",
+                "  },",
+                "  \"Museum Interior\": {",
+                "    Museum_FromCamp: { x: 608, y: 505, animation: \"Walk3\" }",
+                "  },",
+                "  \"Shop Interior\": {",
+                "    Shop_FromCamp: { x: 608, y: 505, animation: \"Walk3\" }",
+                "  }",
+                "};",
+                "if (!runtimeScene.__doorArrivalApplied && arrivalPlayer) {",
+                "  const roomArrivals = arrivalTable[runtimeScene.getName()];",
+                "  const arrival = roomArrivals && roomArrivals[arrivalMarker];",
+                "  if (arrival) {",
+                "    arrivalPlayer.setPosition(arrival.x, arrival.y);",
+                "    arrivalPlayer.setAnimationName(arrival.animation);",
+                "    arrivalPlayer.setAnimationElapsedTime(0);",
+                "    arrivalGameVariables.get(\"PlayerState\").getChild(\"FacingAnimation\").setString(arrival.animation);",
+                "    arrivalGameVariables.get(\"PlayerState\").getChild(\"CurrentX\").setNumber(arrival.x);",
+                "    arrivalGameVariables.get(\"PlayerState\").getChild(\"CurrentY\").setNumber(arrival.y);",
+                "    arrivalGameVariables.get(\"CurrentRoom\").setString(runtimeScene.getName());",
+                "    arrivalGameVariables.get(\"NextSpawn\").setString(\"\");",
+                "    runtimeScene.__doorArrivalApplied = arrivalMarker;",
+                "    if (runtimeScene.__ancientDigsPlayerAnimation) {",
+                "      runtimeScene.__ancientDigsPlayerAnimation.x = arrival.x;",
+                "      runtimeScene.__ancientDigsPlayerAnimation.y = arrival.y;",
+                "    }",
+                "  }",
+                "}"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -26024,7 +26094,7 @@
           "creationTime": 0,
           "folded": true,
           "name": "Ancient Digs Guitar Playing Test",
-          "source": "Hold P to preview the position-locked four-direction guitar-playing animation",
+          "source": "Reliable held-P guitar playback and immediate four-direction movement facing",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
@@ -26037,12 +26107,12 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Hold P while the menu and dialogue are closed. Walking locks during the performance and resumes in the same facing direction when P is released."
+              "comment": "Hold P to play the guitar reliably. The same controller also synchronizes the first movement direction immediately after every room load."
             },
             {
               "type": "BuiltinCommonInstructions::JsCode",
               "inlineCode": [
-                "// SYSTEM 12: Guitar-playing test action (hold P).",
+                "// SYSTEM 12: Reliable guitar-playing and first-movement animation state.",
                 "const sceneVariables = runtimeScene.getVariables();",
                 "const playerState = runtimeScene.getGame().getVariables().get(\"PlayerState\");",
                 "const players = runtimeScene.getObjects(\"TopDown_Character\");",
@@ -26055,11 +26125,19 @@
                 "  const transitionLocked = sceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
                 "  const playPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"p\");",
                 "  const playAllowed = !dialogueActive && !menuOpen && !transitionLocked;",
+                "  const animationState = runtimeScene.__ancientDigsPlayerAnimation || (runtimeScene.__ancientDigsPlayerAnimation = {",
+                "    x: player.getX(),",
+                "    y: player.getY()",
+                "  });",
+                "  const movementX = player.getX() - animationState.x;",
+                "  const movementY = player.getY() - animationState.y;",
+                "",
                 "  if (playPressed && playAllowed) {",
                 "    if (!activeVariable.getAsBoolean()) {",
                 "      const currentAnimation = player.getAnimationName();",
                 "      const directionMatch = /^(?:Walk|Play)([0-3])$/.exec(currentAnimation);",
-                "      const direction = directionMatch ? directionMatch[1] : \"1\";",
+                "      const savedDirectionMatch = /^Walk([0-3])$/.exec(playerState.getChild(\"FacingAnimation\").getAsString());",
+                "      const direction = directionMatch ? directionMatch[1] : (savedDirectionMatch ? savedDirectionMatch[1] : \"1\");",
                 "      const returnAnimation = `Walk${direction}`;",
                 "      returnVariable.setString(returnAnimation);",
                 "      player.setAnimationName(`Play${direction}`);",
@@ -26071,6 +26149,13 @@
                 "    player.getVariables().get(\"MovementLocked\").setBoolean(true);",
                 "    playerState.getChild(\"MovementEnabled\").setNumber(0);",
                 "    playerState.getChild(\"FacingAnimation\").setString(returnVariable.getAsString());",
+                "    const playDirectionMatch = /^Walk([0-3])$/.exec(returnVariable.getAsString());",
+                "    const playAnimation = `Play${playDirectionMatch ? playDirectionMatch[1] : \"1\"}`;",
+                "    if (player.getAnimationName() !== playAnimation) {",
+                "      player.setAnimationName(playAnimation);",
+                "      player.setAnimationElapsedTime(0);",
+                "    }",
+                "    if (typeof player.playAnimation === \"function\") player.playAnimation();",
                 "  } else if (activeVariable.getAsBoolean()) {",
                 "    const storedReturn = returnVariable.getAsString();",
                 "    const returnAnimation = /^Walk[0-3]$/.test(storedReturn) ? storedReturn : \"Walk1\";",
@@ -26085,6 +26170,34 @@
                 "    playerState.getChild(\"FacingAnimation\").setString(returnAnimation);",
                 "    activeVariable.setBoolean(false);",
                 "  }",
+                "",
+                "  if (!activeVariable.getAsBoolean() && playAllowed && playerState.getChild(\"MovementEnabled\").getAsNumber() !== 0) {",
+                "    let direction = null;",
+                "    const rightPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"Right\") || gdjs.evtTools.input.isKeyPressed(runtimeScene, \"d\");",
+                "    const downPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"Down\") || gdjs.evtTools.input.isKeyPressed(runtimeScene, \"s\");",
+                "    const leftPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"Left\") || gdjs.evtTools.input.isKeyPressed(runtimeScene, \"a\");",
+                "    const upPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"Up\") || gdjs.evtTools.input.isKeyPressed(runtimeScene, \"w\");",
+                "    if (rightPressed && !leftPressed) direction = \"0\";",
+                "    else if (downPressed && !upPressed) direction = \"1\";",
+                "    else if (leftPressed && !rightPressed) direction = \"2\";",
+                "    else if (upPressed && !downPressed) direction = \"3\";",
+                "    else if (Math.abs(movementX) > 0.05 || Math.abs(movementY) > 0.05) {",
+                "      if (Math.abs(movementX) >= Math.abs(movementY)) direction = movementX >= 0 ? \"0\" : \"2\";",
+                "      else direction = movementY >= 0 ? \"1\" : \"3\";",
+                "    }",
+                "    if (direction !== null) {",
+                "      const walkAnimation = `Walk${direction}`;",
+                "      if (player.getAnimationName() !== walkAnimation) {",
+                "        player.setAnimationName(walkAnimation);",
+                "        player.setAnimationElapsedTime(0);",
+                "      }",
+                "      if (typeof player.playAnimation === \"function\") player.playAnimation();",
+                "      playerState.getChild(\"FacingAnimation\").setString(walkAnimation);",
+                "    }",
+                "  }",
+                "",
+                "  animationState.x = player.getX();",
+                "  animationState.y = player.getY();",
                 "}"
               ],
               "parameterObjects": "",
@@ -26101,7 +26214,7 @@
           "creationTime": 0,
           "folded": true,
           "name": "Ancient Digs Scene Transition System",
-          "source": "Reusable room state, arrival positioning, facing, and bounce prevention",
+          "source": "Paired doorway arrivals, room state, facing, and bounce prevention",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
@@ -26115,6 +26228,53 @@
                 "textR": 0
               },
               "comment": "Every doorway records its destination and arrival marker before changing rooms. Arrival locks prevent immediate return loops."
+            },
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "// SYSTEM 10: Paired doorway arrivals. Every transition lands just beyond its matching threshold.",
+                "const arrivalGameVariables = runtimeScene.getGame().getVariables();",
+                "const arrivalMarker = arrivalGameVariables.get(\"NextSpawn\").getAsString();",
+                "const arrivalPlayer = runtimeScene.getObjects(\"TopDown_Character\")[0];",
+                "const arrivalTable = {",
+                "  \"Base camp 2\": {",
+                "    Camp_FromTemple: { x: 928, y: 457, animation: \"Walk1\" },",
+                "    Camp_FromMuseum: { x: 184, y: 288, animation: \"Walk1\" },",
+                "    Camp_FromShop: { x: 506, y: 439, animation: \"Walk1\" }",
+                "  },",
+                "  \"Temple Room 1\": {",
+                "    Temple_FromCamp: { x: 272, y: 427, animation: \"Walk3\" }",
+                "  },",
+                "  \"Museum Interior\": {",
+                "    Museum_FromCamp: { x: 608, y: 505, animation: \"Walk3\" }",
+                "  },",
+                "  \"Shop Interior\": {",
+                "    Shop_FromCamp: { x: 608, y: 505, animation: \"Walk3\" }",
+                "  }",
+                "};",
+                "if (!runtimeScene.__doorArrivalApplied && arrivalPlayer) {",
+                "  const roomArrivals = arrivalTable[runtimeScene.getName()];",
+                "  const arrival = roomArrivals && roomArrivals[arrivalMarker];",
+                "  if (arrival) {",
+                "    arrivalPlayer.setPosition(arrival.x, arrival.y);",
+                "    arrivalPlayer.setAnimationName(arrival.animation);",
+                "    arrivalPlayer.setAnimationElapsedTime(0);",
+                "    arrivalGameVariables.get(\"PlayerState\").getChild(\"FacingAnimation\").setString(arrival.animation);",
+                "    arrivalGameVariables.get(\"PlayerState\").getChild(\"CurrentX\").setNumber(arrival.x);",
+                "    arrivalGameVariables.get(\"PlayerState\").getChild(\"CurrentY\").setNumber(arrival.y);",
+                "    arrivalGameVariables.get(\"CurrentRoom\").setString(runtimeScene.getName());",
+                "    arrivalGameVariables.get(\"NextSpawn\").setString(\"\");",
+                "    runtimeScene.__doorArrivalApplied = arrivalMarker;",
+                "    if (runtimeScene.__ancientDigsPlayerAnimation) {",
+                "      runtimeScene.__ancientDigsPlayerAnimation.x = arrival.x;",
+                "      runtimeScene.__ancientDigsPlayerAnimation.y = arrival.y;",
+                "    }",
+                "  }",
+                "}"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
             },
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -39120,7 +39280,7 @@
           "creationTime": 0,
           "folded": true,
           "name": "Ancient Digs Guitar Playing Test",
-          "source": "Hold P to preview the position-locked four-direction guitar-playing animation",
+          "source": "Reliable held-P guitar playback and immediate four-direction movement facing",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
@@ -39133,12 +39293,12 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Hold P while the menu and dialogue are closed. Walking locks during the performance and resumes in the same facing direction when P is released."
+              "comment": "Hold P to play the guitar reliably. The same controller also synchronizes the first movement direction immediately after every room load."
             },
             {
               "type": "BuiltinCommonInstructions::JsCode",
               "inlineCode": [
-                "// SYSTEM 12: Guitar-playing test action (hold P).",
+                "// SYSTEM 12: Reliable guitar-playing and first-movement animation state.",
                 "const sceneVariables = runtimeScene.getVariables();",
                 "const playerState = runtimeScene.getGame().getVariables().get(\"PlayerState\");",
                 "const players = runtimeScene.getObjects(\"TopDown_Character\");",
@@ -39151,11 +39311,19 @@
                 "  const transitionLocked = sceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
                 "  const playPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"p\");",
                 "  const playAllowed = !dialogueActive && !menuOpen && !transitionLocked;",
+                "  const animationState = runtimeScene.__ancientDigsPlayerAnimation || (runtimeScene.__ancientDigsPlayerAnimation = {",
+                "    x: player.getX(),",
+                "    y: player.getY()",
+                "  });",
+                "  const movementX = player.getX() - animationState.x;",
+                "  const movementY = player.getY() - animationState.y;",
+                "",
                 "  if (playPressed && playAllowed) {",
                 "    if (!activeVariable.getAsBoolean()) {",
                 "      const currentAnimation = player.getAnimationName();",
                 "      const directionMatch = /^(?:Walk|Play)([0-3])$/.exec(currentAnimation);",
-                "      const direction = directionMatch ? directionMatch[1] : \"1\";",
+                "      const savedDirectionMatch = /^Walk([0-3])$/.exec(playerState.getChild(\"FacingAnimation\").getAsString());",
+                "      const direction = directionMatch ? directionMatch[1] : (savedDirectionMatch ? savedDirectionMatch[1] : \"1\");",
                 "      const returnAnimation = `Walk${direction}`;",
                 "      returnVariable.setString(returnAnimation);",
                 "      player.setAnimationName(`Play${direction}`);",
@@ -39167,6 +39335,13 @@
                 "    player.getVariables().get(\"MovementLocked\").setBoolean(true);",
                 "    playerState.getChild(\"MovementEnabled\").setNumber(0);",
                 "    playerState.getChild(\"FacingAnimation\").setString(returnVariable.getAsString());",
+                "    const playDirectionMatch = /^Walk([0-3])$/.exec(returnVariable.getAsString());",
+                "    const playAnimation = `Play${playDirectionMatch ? playDirectionMatch[1] : \"1\"}`;",
+                "    if (player.getAnimationName() !== playAnimation) {",
+                "      player.setAnimationName(playAnimation);",
+                "      player.setAnimationElapsedTime(0);",
+                "    }",
+                "    if (typeof player.playAnimation === \"function\") player.playAnimation();",
                 "  } else if (activeVariable.getAsBoolean()) {",
                 "    const storedReturn = returnVariable.getAsString();",
                 "    const returnAnimation = /^Walk[0-3]$/.test(storedReturn) ? storedReturn : \"Walk1\";",
@@ -39181,6 +39356,34 @@
                 "    playerState.getChild(\"FacingAnimation\").setString(returnAnimation);",
                 "    activeVariable.setBoolean(false);",
                 "  }",
+                "",
+                "  if (!activeVariable.getAsBoolean() && playAllowed && playerState.getChild(\"MovementEnabled\").getAsNumber() !== 0) {",
+                "    let direction = null;",
+                "    const rightPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"Right\") || gdjs.evtTools.input.isKeyPressed(runtimeScene, \"d\");",
+                "    const downPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"Down\") || gdjs.evtTools.input.isKeyPressed(runtimeScene, \"s\");",
+                "    const leftPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"Left\") || gdjs.evtTools.input.isKeyPressed(runtimeScene, \"a\");",
+                "    const upPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"Up\") || gdjs.evtTools.input.isKeyPressed(runtimeScene, \"w\");",
+                "    if (rightPressed && !leftPressed) direction = \"0\";",
+                "    else if (downPressed && !upPressed) direction = \"1\";",
+                "    else if (leftPressed && !rightPressed) direction = \"2\";",
+                "    else if (upPressed && !downPressed) direction = \"3\";",
+                "    else if (Math.abs(movementX) > 0.05 || Math.abs(movementY) > 0.05) {",
+                "      if (Math.abs(movementX) >= Math.abs(movementY)) direction = movementX >= 0 ? \"0\" : \"2\";",
+                "      else direction = movementY >= 0 ? \"1\" : \"3\";",
+                "    }",
+                "    if (direction !== null) {",
+                "      const walkAnimation = `Walk${direction}`;",
+                "      if (player.getAnimationName() !== walkAnimation) {",
+                "        player.setAnimationName(walkAnimation);",
+                "        player.setAnimationElapsedTime(0);",
+                "      }",
+                "      if (typeof player.playAnimation === \"function\") player.playAnimation();",
+                "      playerState.getChild(\"FacingAnimation\").setString(walkAnimation);",
+                "    }",
+                "  }",
+                "",
+                "  animationState.x = player.getX();",
+                "  animationState.y = player.getY();",
                 "}"
               ],
               "parameterObjects": "",
@@ -39197,7 +39400,7 @@
           "creationTime": 0,
           "folded": true,
           "name": "Ancient Digs Scene Transition System",
-          "source": "Reusable room state, arrival positioning, facing, and bounce prevention",
+          "source": "Paired doorway arrivals, room state, facing, and bounce prevention",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
@@ -39211,6 +39414,53 @@
                 "textR": 0
               },
               "comment": "ROOM ARRIVAL: add one event per accepted NextSpawn marker, position the player, set facing, update CurrentRoom, then clear NextSpawn."
+            },
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "// SYSTEM 10: Paired doorway arrivals. Every transition lands just beyond its matching threshold.",
+                "const arrivalGameVariables = runtimeScene.getGame().getVariables();",
+                "const arrivalMarker = arrivalGameVariables.get(\"NextSpawn\").getAsString();",
+                "const arrivalPlayer = runtimeScene.getObjects(\"TopDown_Character\")[0];",
+                "const arrivalTable = {",
+                "  \"Base camp 2\": {",
+                "    Camp_FromTemple: { x: 928, y: 457, animation: \"Walk1\" },",
+                "    Camp_FromMuseum: { x: 184, y: 288, animation: \"Walk1\" },",
+                "    Camp_FromShop: { x: 506, y: 439, animation: \"Walk1\" }",
+                "  },",
+                "  \"Temple Room 1\": {",
+                "    Temple_FromCamp: { x: 272, y: 427, animation: \"Walk3\" }",
+                "  },",
+                "  \"Museum Interior\": {",
+                "    Museum_FromCamp: { x: 608, y: 505, animation: \"Walk3\" }",
+                "  },",
+                "  \"Shop Interior\": {",
+                "    Shop_FromCamp: { x: 608, y: 505, animation: \"Walk3\" }",
+                "  }",
+                "};",
+                "if (!runtimeScene.__doorArrivalApplied && arrivalPlayer) {",
+                "  const roomArrivals = arrivalTable[runtimeScene.getName()];",
+                "  const arrival = roomArrivals && roomArrivals[arrivalMarker];",
+                "  if (arrival) {",
+                "    arrivalPlayer.setPosition(arrival.x, arrival.y);",
+                "    arrivalPlayer.setAnimationName(arrival.animation);",
+                "    arrivalPlayer.setAnimationElapsedTime(0);",
+                "    arrivalGameVariables.get(\"PlayerState\").getChild(\"FacingAnimation\").setString(arrival.animation);",
+                "    arrivalGameVariables.get(\"PlayerState\").getChild(\"CurrentX\").setNumber(arrival.x);",
+                "    arrivalGameVariables.get(\"PlayerState\").getChild(\"CurrentY\").setNumber(arrival.y);",
+                "    arrivalGameVariables.get(\"CurrentRoom\").setString(runtimeScene.getName());",
+                "    arrivalGameVariables.get(\"NextSpawn\").setString(\"\");",
+                "    runtimeScene.__doorArrivalApplied = arrivalMarker;",
+                "    if (runtimeScene.__ancientDigsPlayerAnimation) {",
+                "      runtimeScene.__ancientDigsPlayerAnimation.x = arrival.x;",
+                "      runtimeScene.__ancientDigsPlayerAnimation.y = arrival.y;",
+                "    }",
+                "  }",
+                "}"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -42759,7 +43009,7 @@
     {
       "b": 20,
       "disableInputWhenNotFocused": true,
-      "mangledName": "Base_32camp_322",
+      "mangledName": "Museum_32Interior",
       "name": "Museum Interior",
       "r": 34,
       "standardSortMethod": true,
@@ -44134,7 +44384,6 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "locked": false,
           "name": "InteriorFloor",
           "persistentUuid": "acd2114f-2e44-428a-82a2-459624e44db4",
           "width": 0,
@@ -44156,7 +44405,6 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "locked": false,
           "name": "InteriorWalls",
           "persistentUuid": "80985ff0-d313-4591-a39c-df1b50c7926a",
           "width": 0,
@@ -44178,7 +44426,6 @@
           "height": 128,
           "keepRatio": true,
           "layer": "",
-          "locked": false,
           "name": "MuseumPillar",
           "persistentUuid": "6d9a1f35-6d3d-4df4-9262-73ad7a823044",
           "width": 64,
@@ -44195,7 +44442,6 @@
           "height": 128,
           "keepRatio": true,
           "layer": "",
-          "locked": false,
           "name": "MuseumPillar",
           "persistentUuid": "d5388aa7-6617-40dd-8da6-1bb2fc88d6eb",
           "width": 64,
@@ -44212,7 +44458,6 @@
           "height": 96,
           "keepRatio": true,
           "layer": "",
-          "locked": false,
           "name": "MuseumStatue",
           "persistentUuid": "49e69652-951b-4a8a-947a-1dff98fc8414",
           "width": 64,
@@ -44229,7 +44474,6 @@
           "height": 96,
           "keepRatio": true,
           "layer": "",
-          "locked": false,
           "name": "MuseumStatue",
           "persistentUuid": "2a676cda-a50b-4c86-8ab4-3320843e1284",
           "width": 64,
@@ -44246,7 +44490,6 @@
           "height": 112,
           "keepRatio": true,
           "layer": "",
-          "locked": false,
           "name": "CommerceWorker",
           "persistentUuid": "5670d3fb-e12b-4147-bf2a-8a5dffe8a466",
           "width": 42,
@@ -44261,9 +44504,7 @@
           "angle": 0,
           "customSize": true,
           "height": 128,
-          "keepRatio": false,
           "layer": "",
-          "locked": false,
           "name": "InteriorCounter",
           "persistentUuid": "ea376c78-21a9-43ef-a53c-686e699fd668",
           "width": 192,
@@ -44278,9 +44519,7 @@
           "angle": 0,
           "customSize": true,
           "height": 128,
-          "keepRatio": false,
           "layer": "",
-          "locked": false,
           "name": "InteriorCounter",
           "persistentUuid": "62beb9a2-1592-4349-a0d7-7e613c76a920",
           "width": 192,
@@ -44295,9 +44534,7 @@
           "angle": 0,
           "customSize": true,
           "height": 128,
-          "keepRatio": false,
           "layer": "",
-          "locked": false,
           "name": "InteriorCounter",
           "persistentUuid": "af1be96f-71ec-4938-8c73-2479b4e7ba6d",
           "width": 192,
@@ -44314,7 +44551,6 @@
           "height": 64,
           "keepRatio": true,
           "layer": "",
-          "locked": false,
           "name": "InteriorBooks",
           "persistentUuid": "2d5388b9-55ec-406c-bc6c-546c24dcf059",
           "width": 64,
@@ -44329,9 +44565,7 @@
           "angle": 0,
           "customSize": true,
           "height": 128,
-          "keepRatio": false,
           "layer": "",
-          "locked": false,
           "name": "InteriorRug",
           "persistentUuid": "f1e8f19b-c6cb-42ca-b5bb-0f9c640051b8",
           "width": 192,
@@ -44346,9 +44580,7 @@
           "angle": 0,
           "customSize": true,
           "height": 140,
-          "keepRatio": false,
           "layer": "",
-          "locked": false,
           "name": "WorkerInteractionZone",
           "persistentUuid": "1d964872-1077-462c-b00b-58cd7cfdc92b",
           "width": 420,
@@ -44363,9 +44595,7 @@
           "angle": 0,
           "customSize": true,
           "height": 110,
-          "keepRatio": false,
           "layer": "",
-          "locked": false,
           "name": "InteriorExitZone",
           "persistentUuid": "724516cc-3659-4b66-bb11-ab93807f9dcf",
           "width": 210,
@@ -44380,9 +44610,7 @@
           "angle": 0,
           "customSize": true,
           "height": 64,
-          "keepRatio": false,
           "layer": "",
-          "locked": false,
           "name": "MuseumPedestal",
           "persistentUuid": "8f53ab99-903d-4d0a-a35f-22d3ade5ddde",
           "width": 64,
@@ -44399,7 +44627,6 @@
           "height": 48,
           "keepRatio": true,
           "layer": "",
-          "locked": false,
           "name": "MuseumDisplayArtifact",
           "persistentUuid": "2ef987b3-9a50-4aae-bbb5-1a09b76e12f5",
           "width": 38,
@@ -44414,9 +44641,7 @@
           "angle": 0,
           "customSize": true,
           "height": 64,
-          "keepRatio": false,
           "layer": "",
-          "locked": false,
           "name": "MuseumPedestal",
           "persistentUuid": "4ad3d376-5bf1-4f4a-8b80-0600611f23db",
           "width": 64,
@@ -44433,7 +44658,6 @@
           "height": 48,
           "keepRatio": true,
           "layer": "",
-          "locked": false,
           "name": "MuseumDisplayArtifact",
           "persistentUuid": "7506b349-1f2b-41d6-ac9e-a2978ea38b11",
           "width": 38,
@@ -44448,9 +44672,7 @@
           "angle": 0,
           "customSize": true,
           "height": 64,
-          "keepRatio": false,
           "layer": "",
-          "locked": false,
           "name": "MuseumPedestal",
           "persistentUuid": "ac5649fe-56d1-45cd-9a88-3ce1a6b66aab",
           "width": 64,
@@ -44467,7 +44689,6 @@
           "height": 48,
           "keepRatio": true,
           "layer": "",
-          "locked": false,
           "name": "MuseumDisplayArtifact",
           "persistentUuid": "301926db-25d3-4144-9bc2-5c92d89509c2",
           "width": 38,
@@ -44482,9 +44703,7 @@
           "angle": 0,
           "customSize": true,
           "height": 64,
-          "keepRatio": false,
           "layer": "",
-          "locked": false,
           "name": "MuseumPedestal",
           "persistentUuid": "e3b333d2-856d-4b19-86f8-3a2d926f5762",
           "width": 64,
@@ -44501,7 +44720,6 @@
           "height": 48,
           "keepRatio": true,
           "layer": "",
-          "locked": false,
           "name": "MuseumDisplayArtifact",
           "persistentUuid": "9309810d-d656-4f2b-8150-cc7905eb1979",
           "width": 38,
@@ -44516,9 +44734,7 @@
           "angle": 0,
           "customSize": true,
           "height": 64,
-          "keepRatio": false,
           "layer": "",
-          "locked": false,
           "name": "MuseumPedestal",
           "persistentUuid": "6e8ab6c4-a4ea-4cc6-8276-ea6afe2efc7a",
           "width": 64,
@@ -44535,7 +44751,6 @@
           "height": 48,
           "keepRatio": true,
           "layer": "",
-          "locked": false,
           "name": "MuseumDisplayArtifact",
           "persistentUuid": "1629eee7-a436-42ec-993f-2c0deb2a2bbb",
           "width": 38,
@@ -44550,9 +44765,7 @@
           "angle": 0,
           "customSize": true,
           "height": 64,
-          "keepRatio": false,
           "layer": "",
-          "locked": false,
           "name": "MuseumPedestal",
           "persistentUuid": "55ce17b3-bd04-4564-b027-1e11018e348c",
           "width": 64,
@@ -44569,7 +44782,6 @@
           "height": 48,
           "keepRatio": true,
           "layer": "",
-          "locked": false,
           "name": "MuseumDisplayArtifact",
           "persistentUuid": "6055fe8f-fca6-4b43-aec7-68491fd59730",
           "width": 38,
@@ -44584,9 +44796,7 @@
           "angle": 0,
           "customSize": true,
           "height": 64,
-          "keepRatio": false,
           "layer": "",
-          "locked": false,
           "name": "MuseumPedestal",
           "persistentUuid": "49c1d8dc-51e6-427d-b9bf-f1b31c65ff7a",
           "width": 64,
@@ -44603,7 +44813,6 @@
           "height": 48,
           "keepRatio": true,
           "layer": "",
-          "locked": false,
           "name": "MuseumDisplayArtifact",
           "persistentUuid": "b1017d9c-e91f-4b08-9aba-100df9af324c",
           "width": 38,
@@ -44618,9 +44827,7 @@
           "angle": 0,
           "customSize": true,
           "height": 64,
-          "keepRatio": false,
           "layer": "",
-          "locked": false,
           "name": "MuseumPedestal",
           "persistentUuid": "9a6123b1-65af-46b2-99f4-24521856aa02",
           "width": 64,
@@ -44637,7 +44844,6 @@
           "height": 48,
           "keepRatio": true,
           "layer": "",
-          "locked": false,
           "name": "MuseumDisplayArtifact",
           "persistentUuid": "ea118bfb-36b1-4dc8-8d21-70a1069ffad9",
           "width": 38,
@@ -51886,6 +52092,93 @@
           },
           {
             "objectName": "SurfaceSandBlend"
+          },
+          {
+            "objectName": "CommerceWorker"
+          },
+          {
+            "objectName": "WorkerInteractionZone"
+          },
+          {
+            "objectName": "InteriorExitZone"
+          },
+          {
+            "objectName": "MuseumDisplayArtifact"
+          },
+          {
+            "objectName": "CommercePanel"
+          },
+          {
+            "objectName": "CommerceTitle"
+          },
+          {
+            "objectName": "CommerceCoins"
+          },
+          {
+            "objectName": "CommerceDetail"
+          },
+          {
+            "objectName": "CommerceChoice1Text"
+          },
+          {
+            "objectName": "CommerceChoice2Text"
+          },
+          {
+            "objectName": "CommerceBackText"
+          },
+          {
+            "objectName": "CommerceFooter"
+          },
+          {
+            "objectName": "CommerceChoice1"
+          },
+          {
+            "objectName": "CommerceChoice2"
+          },
+          {
+            "objectName": "CommerceBack"
+          },
+          {
+            "objectName": "CommerceIcon"
+          },
+          {
+            "objectName": "ShopShovelDisplay"
+          },
+          {
+            "objectName": "InteriorFloor"
+          },
+          {
+            "objectName": "InteriorWalls"
+          },
+          {
+            "objectName": "InteriorCounter"
+          },
+          {
+            "objectName": "InteriorBooks"
+          },
+          {
+            "objectName": "InteriorRug"
+          },
+          {
+            "objectName": "ShopShelfGreen"
+          },
+          {
+            "objectName": "ShopShelfWood"
+          },
+          {
+            "objectName": "ShopPot"
+          },
+          {
+            "objectName": "ShopAnvil"
+          },
+          {
+            "objectName": "MuseumPedestal"
+          },
+          {
+            "objectName": "MuseumPillar"
+          },
+          {
+            "objectName": "MuseumStatue"
           }
         ]
       },
@@ -54569,7 +54862,7 @@
           "creationTime": 0,
           "folded": true,
           "name": "Ancient Digs Guitar Playing Test",
-          "source": "Hold P to preview the position-locked four-direction guitar-playing animation",
+          "source": "Reliable held-P guitar playback and immediate four-direction movement facing",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
@@ -54582,12 +54875,12 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Hold P while the menu and dialogue are closed. Walking locks during the performance and resumes in the same facing direction when P is released."
+              "comment": "Hold P to play the guitar reliably. The same controller also synchronizes the first movement direction immediately after every room load."
             },
             {
               "type": "BuiltinCommonInstructions::JsCode",
               "inlineCode": [
-                "// SYSTEM 12: Guitar-playing test action (hold P).",
+                "// SYSTEM 12: Reliable guitar-playing and first-movement animation state.",
                 "const sceneVariables = runtimeScene.getVariables();",
                 "const playerState = runtimeScene.getGame().getVariables().get(\"PlayerState\");",
                 "const players = runtimeScene.getObjects(\"TopDown_Character\");",
@@ -54600,11 +54893,19 @@
                 "  const transitionLocked = sceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
                 "  const playPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"p\");",
                 "  const playAllowed = !dialogueActive && !menuOpen && !transitionLocked;",
+                "  const animationState = runtimeScene.__ancientDigsPlayerAnimation || (runtimeScene.__ancientDigsPlayerAnimation = {",
+                "    x: player.getX(),",
+                "    y: player.getY()",
+                "  });",
+                "  const movementX = player.getX() - animationState.x;",
+                "  const movementY = player.getY() - animationState.y;",
+                "",
                 "  if (playPressed && playAllowed) {",
                 "    if (!activeVariable.getAsBoolean()) {",
                 "      const currentAnimation = player.getAnimationName();",
                 "      const directionMatch = /^(?:Walk|Play)([0-3])$/.exec(currentAnimation);",
-                "      const direction = directionMatch ? directionMatch[1] : \"1\";",
+                "      const savedDirectionMatch = /^Walk([0-3])$/.exec(playerState.getChild(\"FacingAnimation\").getAsString());",
+                "      const direction = directionMatch ? directionMatch[1] : (savedDirectionMatch ? savedDirectionMatch[1] : \"1\");",
                 "      const returnAnimation = `Walk${direction}`;",
                 "      returnVariable.setString(returnAnimation);",
                 "      player.setAnimationName(`Play${direction}`);",
@@ -54616,6 +54917,13 @@
                 "    player.getVariables().get(\"MovementLocked\").setBoolean(true);",
                 "    playerState.getChild(\"MovementEnabled\").setNumber(0);",
                 "    playerState.getChild(\"FacingAnimation\").setString(returnVariable.getAsString());",
+                "    const playDirectionMatch = /^Walk([0-3])$/.exec(returnVariable.getAsString());",
+                "    const playAnimation = `Play${playDirectionMatch ? playDirectionMatch[1] : \"1\"}`;",
+                "    if (player.getAnimationName() !== playAnimation) {",
+                "      player.setAnimationName(playAnimation);",
+                "      player.setAnimationElapsedTime(0);",
+                "    }",
+                "    if (typeof player.playAnimation === \"function\") player.playAnimation();",
                 "  } else if (activeVariable.getAsBoolean()) {",
                 "    const storedReturn = returnVariable.getAsString();",
                 "    const returnAnimation = /^Walk[0-3]$/.test(storedReturn) ? storedReturn : \"Walk1\";",
@@ -54630,6 +54938,34 @@
                 "    playerState.getChild(\"FacingAnimation\").setString(returnAnimation);",
                 "    activeVariable.setBoolean(false);",
                 "  }",
+                "",
+                "  if (!activeVariable.getAsBoolean() && playAllowed && playerState.getChild(\"MovementEnabled\").getAsNumber() !== 0) {",
+                "    let direction = null;",
+                "    const rightPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"Right\") || gdjs.evtTools.input.isKeyPressed(runtimeScene, \"d\");",
+                "    const downPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"Down\") || gdjs.evtTools.input.isKeyPressed(runtimeScene, \"s\");",
+                "    const leftPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"Left\") || gdjs.evtTools.input.isKeyPressed(runtimeScene, \"a\");",
+                "    const upPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"Up\") || gdjs.evtTools.input.isKeyPressed(runtimeScene, \"w\");",
+                "    if (rightPressed && !leftPressed) direction = \"0\";",
+                "    else if (downPressed && !upPressed) direction = \"1\";",
+                "    else if (leftPressed && !rightPressed) direction = \"2\";",
+                "    else if (upPressed && !downPressed) direction = \"3\";",
+                "    else if (Math.abs(movementX) > 0.05 || Math.abs(movementY) > 0.05) {",
+                "      if (Math.abs(movementX) >= Math.abs(movementY)) direction = movementX >= 0 ? \"0\" : \"2\";",
+                "      else direction = movementY >= 0 ? \"1\" : \"3\";",
+                "    }",
+                "    if (direction !== null) {",
+                "      const walkAnimation = `Walk${direction}`;",
+                "      if (player.getAnimationName() !== walkAnimation) {",
+                "        player.setAnimationName(walkAnimation);",
+                "        player.setAnimationElapsedTime(0);",
+                "      }",
+                "      if (typeof player.playAnimation === \"function\") player.playAnimation();",
+                "      playerState.getChild(\"FacingAnimation\").setString(walkAnimation);",
+                "    }",
+                "  }",
+                "",
+                "  animationState.x = player.getX();",
+                "  animationState.y = player.getY();",
                 "}"
               ],
               "parameterObjects": "",
@@ -54646,7 +54982,7 @@
           "creationTime": 0,
           "folded": true,
           "name": "Ancient Digs Scene Transition System",
-          "source": "Reusable room state, arrival positioning, facing, and bounce prevention",
+          "source": "Paired doorway arrivals, room state, facing, and bounce prevention",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
@@ -54660,6 +54996,53 @@
                 "textR": 0
               },
               "comment": "Every doorway records its destination and arrival marker before changing rooms. Arrival locks prevent immediate return loops."
+            },
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "// SYSTEM 10: Paired doorway arrivals. Every transition lands just beyond its matching threshold.",
+                "const arrivalGameVariables = runtimeScene.getGame().getVariables();",
+                "const arrivalMarker = arrivalGameVariables.get(\"NextSpawn\").getAsString();",
+                "const arrivalPlayer = runtimeScene.getObjects(\"TopDown_Character\")[0];",
+                "const arrivalTable = {",
+                "  \"Base camp 2\": {",
+                "    Camp_FromTemple: { x: 928, y: 457, animation: \"Walk1\" },",
+                "    Camp_FromMuseum: { x: 184, y: 288, animation: \"Walk1\" },",
+                "    Camp_FromShop: { x: 506, y: 439, animation: \"Walk1\" }",
+                "  },",
+                "  \"Temple Room 1\": {",
+                "    Temple_FromCamp: { x: 272, y: 427, animation: \"Walk3\" }",
+                "  },",
+                "  \"Museum Interior\": {",
+                "    Museum_FromCamp: { x: 608, y: 505, animation: \"Walk3\" }",
+                "  },",
+                "  \"Shop Interior\": {",
+                "    Shop_FromCamp: { x: 608, y: 505, animation: \"Walk3\" }",
+                "  }",
+                "};",
+                "if (!runtimeScene.__doorArrivalApplied && arrivalPlayer) {",
+                "  const roomArrivals = arrivalTable[runtimeScene.getName()];",
+                "  const arrival = roomArrivals && roomArrivals[arrivalMarker];",
+                "  if (arrival) {",
+                "    arrivalPlayer.setPosition(arrival.x, arrival.y);",
+                "    arrivalPlayer.setAnimationName(arrival.animation);",
+                "    arrivalPlayer.setAnimationElapsedTime(0);",
+                "    arrivalGameVariables.get(\"PlayerState\").getChild(\"FacingAnimation\").setString(arrival.animation);",
+                "    arrivalGameVariables.get(\"PlayerState\").getChild(\"CurrentX\").setNumber(arrival.x);",
+                "    arrivalGameVariables.get(\"PlayerState\").getChild(\"CurrentY\").setNumber(arrival.y);",
+                "    arrivalGameVariables.get(\"CurrentRoom\").setString(runtimeScene.getName());",
+                "    arrivalGameVariables.get(\"NextSpawn\").setString(\"\");",
+                "    runtimeScene.__doorArrivalApplied = arrivalMarker;",
+                "    if (runtimeScene.__ancientDigsPlayerAnimation) {",
+                "      runtimeScene.__ancientDigsPlayerAnimation.x = arrival.x;",
+                "      runtimeScene.__ancientDigsPlayerAnimation.y = arrival.y;",
+                "    }",
+                "  }",
+                "}"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -57817,7 +58200,7 @@
             "  state.initialized = true;",
             "  gameVariables.get(\"CurrentRoom\").setString(runtimeScene.getName());",
             "  const nextSpawn = gameVariables.get(\"NextSpawn\").getAsString();",
-            "  if (player && (nextSpawn === \"Museum_FromCamp\" || nextSpawn === \"Shop_FromCamp\" || nextSpawn === \"\")) player.setPosition(608, 550);",
+            "  if (player && !runtimeScene.__doorArrivalApplied && (nextSpawn === \"Museum_FromCamp\" || nextSpawn === \"Shop_FromCamp\" || nextSpawn === \"\")) player.setPosition(608, 505);",
             "  gameVariables.get(\"NextSpawn\").setString(\"\");",
             "  if (isMuseum) {",
             "    state.displayOrder = [0,1,2,3,4,5,6,7];",
@@ -58132,7 +58515,7 @@
     {
       "b": 20,
       "disableInputWhenNotFocused": true,
-      "mangledName": "Base_32camp_322",
+      "mangledName": "Shop_32Interior",
       "name": "Shop Interior",
       "r": 34,
       "standardSortMethod": true,
@@ -59507,7 +59890,6 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "locked": false,
           "name": "InteriorFloor",
           "persistentUuid": "10f4efe4-d541-42e6-884e-50e80cd1aa70",
           "width": 0,
@@ -59529,7 +59911,6 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "locked": false,
           "name": "InteriorWalls",
           "persistentUuid": "dce101f3-6f3a-435d-a85b-bb5d0253604c",
           "width": 0,
@@ -59549,9 +59930,7 @@
           "angle": 0,
           "customSize": true,
           "height": 64,
-          "keepRatio": false,
           "layer": "",
-          "locked": false,
           "name": "ShopShelfGreen",
           "persistentUuid": "a78d67a7-31d8-4026-afc3-c69c9c9f8e70",
           "width": 128,
@@ -59566,9 +59945,7 @@
           "angle": 0,
           "customSize": true,
           "height": 64,
-          "keepRatio": false,
           "layer": "",
-          "locked": false,
           "name": "ShopShelfWood",
           "persistentUuid": "61e08df2-1527-4197-b6ff-f25ac0e423a0",
           "width": 128,
@@ -59583,9 +59960,7 @@
           "angle": 0,
           "customSize": true,
           "height": 64,
-          "keepRatio": false,
           "layer": "",
-          "locked": false,
           "name": "ShopShelfWood",
           "persistentUuid": "c30a6422-d8cd-41af-9822-c811145c7d60",
           "width": 128,
@@ -59600,9 +59975,7 @@
           "angle": 0,
           "customSize": true,
           "height": 64,
-          "keepRatio": false,
           "layer": "",
-          "locked": false,
           "name": "ShopShelfGreen",
           "persistentUuid": "e2ecd95e-a6c3-4ac5-b169-6c6eb05892d0",
           "width": 128,
@@ -59619,7 +59992,6 @@
           "height": 64,
           "keepRatio": true,
           "layer": "",
-          "locked": false,
           "name": "ShopPot",
           "persistentUuid": "1f943779-8d7c-40a8-8e34-f76c59f1f97d",
           "width": 64,
@@ -59636,7 +60008,6 @@
           "height": 64,
           "keepRatio": true,
           "layer": "",
-          "locked": false,
           "name": "InteriorBooks",
           "persistentUuid": "f9a610d9-86df-4f68-9cd4-6ffbb6f0424f",
           "width": 64,
@@ -59653,7 +60024,6 @@
           "height": 96,
           "keepRatio": true,
           "layer": "",
-          "locked": false,
           "name": "ShopShovelDisplay",
           "persistentUuid": "29d589d6-f4c9-4c1c-9198-2e80e93626cb",
           "width": 48,
@@ -59670,7 +60040,6 @@
           "height": 64,
           "keepRatio": true,
           "layer": "",
-          "locked": false,
           "name": "ShopPot",
           "persistentUuid": "7c14e1fb-d29e-457b-8707-286f02d2312d",
           "width": 64,
@@ -59687,7 +60056,6 @@
           "height": 112,
           "keepRatio": true,
           "layer": "",
-          "locked": false,
           "name": "CommerceWorker",
           "persistentUuid": "b0b1f379-cb3f-4440-bf60-a887fc4cdc4b",
           "width": 48,
@@ -59702,9 +60070,7 @@
           "angle": 0,
           "customSize": true,
           "height": 128,
-          "keepRatio": false,
           "layer": "",
-          "locked": false,
           "name": "InteriorCounter",
           "persistentUuid": "f7c9d2b3-8cc3-428e-b367-4245ff34a88c",
           "width": 192,
@@ -59719,9 +60085,7 @@
           "angle": 0,
           "customSize": true,
           "height": 128,
-          "keepRatio": false,
           "layer": "",
-          "locked": false,
           "name": "InteriorCounter",
           "persistentUuid": "cf45166c-709b-4bd4-84bf-0966e773e532",
           "width": 192,
@@ -59736,9 +60100,7 @@
           "angle": 0,
           "customSize": true,
           "height": 128,
-          "keepRatio": false,
           "layer": "",
-          "locked": false,
           "name": "InteriorCounter",
           "persistentUuid": "8ae7abd5-9a19-4209-a8ed-b804951ab828",
           "width": 192,
@@ -59753,9 +60115,7 @@
           "angle": 0,
           "customSize": true,
           "height": 64,
-          "keepRatio": false,
           "layer": "",
-          "locked": false,
           "name": "ShopAnvil",
           "persistentUuid": "33a8e465-3003-4131-ba88-ecdb21656e25",
           "width": 128,
@@ -59770,9 +60130,7 @@
           "angle": 0,
           "customSize": true,
           "height": 128,
-          "keepRatio": false,
           "layer": "",
-          "locked": false,
           "name": "InteriorRug",
           "persistentUuid": "8668c351-5c75-4055-b1e1-9435605d5ba9",
           "width": 192,
@@ -59787,9 +60145,7 @@
           "angle": 0,
           "customSize": true,
           "height": 140,
-          "keepRatio": false,
           "layer": "",
-          "locked": false,
           "name": "WorkerInteractionZone",
           "persistentUuid": "e41d8675-ab0f-4117-b8fc-81e5eb8cac48",
           "width": 420,
@@ -59804,9 +60160,7 @@
           "angle": 0,
           "customSize": true,
           "height": 110,
-          "keepRatio": false,
           "layer": "",
-          "locked": false,
           "name": "InteriorExitZone",
           "persistentUuid": "8f1f08c3-ef60-4964-9f18-c8efd0dc846a",
           "width": 210,
@@ -66975,6 +67329,90 @@
           },
           {
             "objectName": "SurfaceSandBlend"
+          },
+          {
+            "objectName": "CommerceWorker"
+          },
+          {
+            "objectName": "WorkerInteractionZone"
+          },
+          {
+            "objectName": "InteriorExitZone"
+          },
+          {
+            "objectName": "CommercePanel"
+          },
+          {
+            "objectName": "CommerceTitle"
+          },
+          {
+            "objectName": "CommerceCoins"
+          },
+          {
+            "objectName": "CommerceDetail"
+          },
+          {
+            "objectName": "CommerceChoice1Text"
+          },
+          {
+            "objectName": "CommerceChoice2Text"
+          },
+          {
+            "objectName": "CommerceBackText"
+          },
+          {
+            "objectName": "CommerceFooter"
+          },
+          {
+            "objectName": "CommerceChoice1"
+          },
+          {
+            "objectName": "CommerceChoice2"
+          },
+          {
+            "objectName": "CommerceBack"
+          },
+          {
+            "objectName": "CommerceIcon"
+          },
+          {
+            "objectName": "ShopShovelDisplay"
+          },
+          {
+            "objectName": "InteriorFloor"
+          },
+          {
+            "objectName": "InteriorWalls"
+          },
+          {
+            "objectName": "InteriorCounter"
+          },
+          {
+            "objectName": "InteriorBooks"
+          },
+          {
+            "objectName": "InteriorRug"
+          },
+          {
+            "objectName": "ShopShelfGreen"
+          },
+          {
+            "objectName": "ShopShelfWood"
+          },
+          {
+            "objectName": "ShopPot"
+          },
+          {
+            "objectName": "ShopAnvil"
+          },
+          {
+            "objectName": "MuseumPedestal"
+          },
+          {
+            "objectName": "MuseumPillar"
+          },
+          {
+            "objectName": "MuseumStatue"
           }
         ]
       },
@@ -69658,7 +70096,7 @@
           "creationTime": 0,
           "folded": true,
           "name": "Ancient Digs Guitar Playing Test",
-          "source": "Hold P to preview the position-locked four-direction guitar-playing animation",
+          "source": "Reliable held-P guitar playback and immediate four-direction movement facing",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
@@ -69671,12 +70109,12 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Hold P while the menu and dialogue are closed. Walking locks during the performance and resumes in the same facing direction when P is released."
+              "comment": "Hold P to play the guitar reliably. The same controller also synchronizes the first movement direction immediately after every room load."
             },
             {
               "type": "BuiltinCommonInstructions::JsCode",
               "inlineCode": [
-                "// SYSTEM 12: Guitar-playing test action (hold P).",
+                "// SYSTEM 12: Reliable guitar-playing and first-movement animation state.",
                 "const sceneVariables = runtimeScene.getVariables();",
                 "const playerState = runtimeScene.getGame().getVariables().get(\"PlayerState\");",
                 "const players = runtimeScene.getObjects(\"TopDown_Character\");",
@@ -69689,11 +70127,19 @@
                 "  const transitionLocked = sceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
                 "  const playPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"p\");",
                 "  const playAllowed = !dialogueActive && !menuOpen && !transitionLocked;",
+                "  const animationState = runtimeScene.__ancientDigsPlayerAnimation || (runtimeScene.__ancientDigsPlayerAnimation = {",
+                "    x: player.getX(),",
+                "    y: player.getY()",
+                "  });",
+                "  const movementX = player.getX() - animationState.x;",
+                "  const movementY = player.getY() - animationState.y;",
+                "",
                 "  if (playPressed && playAllowed) {",
                 "    if (!activeVariable.getAsBoolean()) {",
                 "      const currentAnimation = player.getAnimationName();",
                 "      const directionMatch = /^(?:Walk|Play)([0-3])$/.exec(currentAnimation);",
-                "      const direction = directionMatch ? directionMatch[1] : \"1\";",
+                "      const savedDirectionMatch = /^Walk([0-3])$/.exec(playerState.getChild(\"FacingAnimation\").getAsString());",
+                "      const direction = directionMatch ? directionMatch[1] : (savedDirectionMatch ? savedDirectionMatch[1] : \"1\");",
                 "      const returnAnimation = `Walk${direction}`;",
                 "      returnVariable.setString(returnAnimation);",
                 "      player.setAnimationName(`Play${direction}`);",
@@ -69705,6 +70151,13 @@
                 "    player.getVariables().get(\"MovementLocked\").setBoolean(true);",
                 "    playerState.getChild(\"MovementEnabled\").setNumber(0);",
                 "    playerState.getChild(\"FacingAnimation\").setString(returnVariable.getAsString());",
+                "    const playDirectionMatch = /^Walk([0-3])$/.exec(returnVariable.getAsString());",
+                "    const playAnimation = `Play${playDirectionMatch ? playDirectionMatch[1] : \"1\"}`;",
+                "    if (player.getAnimationName() !== playAnimation) {",
+                "      player.setAnimationName(playAnimation);",
+                "      player.setAnimationElapsedTime(0);",
+                "    }",
+                "    if (typeof player.playAnimation === \"function\") player.playAnimation();",
                 "  } else if (activeVariable.getAsBoolean()) {",
                 "    const storedReturn = returnVariable.getAsString();",
                 "    const returnAnimation = /^Walk[0-3]$/.test(storedReturn) ? storedReturn : \"Walk1\";",
@@ -69719,6 +70172,34 @@
                 "    playerState.getChild(\"FacingAnimation\").setString(returnAnimation);",
                 "    activeVariable.setBoolean(false);",
                 "  }",
+                "",
+                "  if (!activeVariable.getAsBoolean() && playAllowed && playerState.getChild(\"MovementEnabled\").getAsNumber() !== 0) {",
+                "    let direction = null;",
+                "    const rightPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"Right\") || gdjs.evtTools.input.isKeyPressed(runtimeScene, \"d\");",
+                "    const downPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"Down\") || gdjs.evtTools.input.isKeyPressed(runtimeScene, \"s\");",
+                "    const leftPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"Left\") || gdjs.evtTools.input.isKeyPressed(runtimeScene, \"a\");",
+                "    const upPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"Up\") || gdjs.evtTools.input.isKeyPressed(runtimeScene, \"w\");",
+                "    if (rightPressed && !leftPressed) direction = \"0\";",
+                "    else if (downPressed && !upPressed) direction = \"1\";",
+                "    else if (leftPressed && !rightPressed) direction = \"2\";",
+                "    else if (upPressed && !downPressed) direction = \"3\";",
+                "    else if (Math.abs(movementX) > 0.05 || Math.abs(movementY) > 0.05) {",
+                "      if (Math.abs(movementX) >= Math.abs(movementY)) direction = movementX >= 0 ? \"0\" : \"2\";",
+                "      else direction = movementY >= 0 ? \"1\" : \"3\";",
+                "    }",
+                "    if (direction !== null) {",
+                "      const walkAnimation = `Walk${direction}`;",
+                "      if (player.getAnimationName() !== walkAnimation) {",
+                "        player.setAnimationName(walkAnimation);",
+                "        player.setAnimationElapsedTime(0);",
+                "      }",
+                "      if (typeof player.playAnimation === \"function\") player.playAnimation();",
+                "      playerState.getChild(\"FacingAnimation\").setString(walkAnimation);",
+                "    }",
+                "  }",
+                "",
+                "  animationState.x = player.getX();",
+                "  animationState.y = player.getY();",
                 "}"
               ],
               "parameterObjects": "",
@@ -69735,7 +70216,7 @@
           "creationTime": 0,
           "folded": true,
           "name": "Ancient Digs Scene Transition System",
-          "source": "Reusable room state, arrival positioning, facing, and bounce prevention",
+          "source": "Paired doorway arrivals, room state, facing, and bounce prevention",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
@@ -69749,6 +70230,53 @@
                 "textR": 0
               },
               "comment": "Every doorway records its destination and arrival marker before changing rooms. Arrival locks prevent immediate return loops."
+            },
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "// SYSTEM 10: Paired doorway arrivals. Every transition lands just beyond its matching threshold.",
+                "const arrivalGameVariables = runtimeScene.getGame().getVariables();",
+                "const arrivalMarker = arrivalGameVariables.get(\"NextSpawn\").getAsString();",
+                "const arrivalPlayer = runtimeScene.getObjects(\"TopDown_Character\")[0];",
+                "const arrivalTable = {",
+                "  \"Base camp 2\": {",
+                "    Camp_FromTemple: { x: 928, y: 457, animation: \"Walk1\" },",
+                "    Camp_FromMuseum: { x: 184, y: 288, animation: \"Walk1\" },",
+                "    Camp_FromShop: { x: 506, y: 439, animation: \"Walk1\" }",
+                "  },",
+                "  \"Temple Room 1\": {",
+                "    Temple_FromCamp: { x: 272, y: 427, animation: \"Walk3\" }",
+                "  },",
+                "  \"Museum Interior\": {",
+                "    Museum_FromCamp: { x: 608, y: 505, animation: \"Walk3\" }",
+                "  },",
+                "  \"Shop Interior\": {",
+                "    Shop_FromCamp: { x: 608, y: 505, animation: \"Walk3\" }",
+                "  }",
+                "};",
+                "if (!runtimeScene.__doorArrivalApplied && arrivalPlayer) {",
+                "  const roomArrivals = arrivalTable[runtimeScene.getName()];",
+                "  const arrival = roomArrivals && roomArrivals[arrivalMarker];",
+                "  if (arrival) {",
+                "    arrivalPlayer.setPosition(arrival.x, arrival.y);",
+                "    arrivalPlayer.setAnimationName(arrival.animation);",
+                "    arrivalPlayer.setAnimationElapsedTime(0);",
+                "    arrivalGameVariables.get(\"PlayerState\").getChild(\"FacingAnimation\").setString(arrival.animation);",
+                "    arrivalGameVariables.get(\"PlayerState\").getChild(\"CurrentX\").setNumber(arrival.x);",
+                "    arrivalGameVariables.get(\"PlayerState\").getChild(\"CurrentY\").setNumber(arrival.y);",
+                "    arrivalGameVariables.get(\"CurrentRoom\").setString(runtimeScene.getName());",
+                "    arrivalGameVariables.get(\"NextSpawn\").setString(\"\");",
+                "    runtimeScene.__doorArrivalApplied = arrivalMarker;",
+                "    if (runtimeScene.__ancientDigsPlayerAnimation) {",
+                "      runtimeScene.__ancientDigsPlayerAnimation.x = arrival.x;",
+                "      runtimeScene.__ancientDigsPlayerAnimation.y = arrival.y;",
+                "    }",
+                "  }",
+                "}"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -72906,7 +73434,7 @@
             "  state.initialized = true;",
             "  gameVariables.get(\"CurrentRoom\").setString(runtimeScene.getName());",
             "  const nextSpawn = gameVariables.get(\"NextSpawn\").getAsString();",
-            "  if (player && (nextSpawn === \"Museum_FromCamp\" || nextSpawn === \"Shop_FromCamp\" || nextSpawn === \"\")) player.setPosition(608, 550);",
+            "  if (player && !runtimeScene.__doorArrivalApplied && (nextSpawn === \"Museum_FromCamp\" || nextSpawn === \"Shop_FromCamp\" || nextSpawn === \"\")) player.setPosition(608, 505);",
             "  gameVariables.get(\"NextSpawn\").setString(\"\");",
             "  if (isMuseum) {",
             "    state.displayOrder = [0,1,2,3,4,5,6,7];",
