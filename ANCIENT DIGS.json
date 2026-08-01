@@ -180,6 +180,14 @@
         "userAdded": false
       },
       {
+        "file": "assets/B button.svg",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\B button.svg",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
         "file": "assets/Ground_SelectionBox.png",
         "kind": "image",
         "metadata": "",
@@ -2895,6 +2903,12 @@
           "persistentUuid": "5e74e95d-bd14-4ce3-9eb9-b1bcdc46e7d8",
           "type": "string",
           "value": "Walk1"
+        },
+        {
+          "name": "GuitarButtonHeld",
+          "persistentUuid": "25a86719-9d00-4a31-90ca-ea980ce10dcc",
+          "type": "boolean",
+          "value": false
         }
       ],
       "instances": [
@@ -2928,6 +2942,24 @@
           "width": 120,
           "x": 1104,
           "y": 576,
+          "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 120,
+          "keepRatio": true,
+          "layer": "MobileControls",
+          "locked": true,
+          "name": "GuitarButton",
+          "persistentUuid": "8be049ee-2f00-4c31-a2ab-eb51836a12ef",
+          "width": 120,
+          "x": 968,
+          "y": 624,
           "zOrder": 8,
           "numberProperties": [],
           "stringProperties": [],
@@ -4056,6 +4088,77 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "assets\\A button.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 40,
+                        "y": 40
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 80,
+                            "y": 0
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 0,
+                            "y": 80
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "GuitarButton",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "ButtonFSM",
+              "type": "ButtonStates::ButtonFSM",
+              "ShouldCheckHovering": true,
+              "State": "Idle",
+              "TouchId": 0,
+              "TouchIsInside": false,
+              "MouseIsInside": false,
+              "Index": 2.0247e-320
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\B button.svg",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -10489,6 +10592,15 @@
                     "value": "Show"
                   },
                   "parameters": [
+                    "GuitarButton",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
                     "InventorySlot",
                     ""
                   ]
@@ -10714,6 +10826,14 @@
                   },
                   "parameters": [
                     "ActionButton"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "GuitarButton"
                   ]
                 },
                 {
@@ -12832,8 +12952,8 @@
           "colorR": 238,
           "creationTime": 0,
           "folded": true,
-          "name": "Ancient Digs Guitar Playing Test",
-          "source": "Reliable held-P guitar playback and immediate four-direction movement facing",
+          "name": "Ancient Digs Guitar Action",
+          "source": "Tap or hold mobile B, keyboard P, or controller B to play the guitar reliably",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
@@ -12846,7 +12966,50 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Hold P to play the guitar reliably. The same controller also synchronizes the first movement direction immediately after every room load."
+              "comment": "Tap B/P for one complete guitar phrase or hold it to continue playing. Movement stays locked during the performance and resumes in the remembered direction."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "GuitarButtonHeld",
+                    "False",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsPressed"
+                  },
+                  "parameters": [
+                    "GuitarButton",
+                    "ButtonFSM",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "GuitarButtonHeld",
+                    "True",
+                    ""
+                  ]
+                }
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::JsCode",
@@ -12862,7 +13025,22 @@
                 "  const dialogueActive = sceneVariables.get(\"DialogueActive\").getAsBoolean();",
                 "  const menuOpen = sceneVariables.get(\"MenuOpen\").getAsBoolean();",
                 "  const transitionLocked = sceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
-                "  const playPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"p\");",
+                "  const keyboardPlayPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"p\");",
+                "  const mobilePlayPressed = sceneVariables.get(\"GuitarButtonHeld\").getAsBoolean();",
+                "  let controllerPlayPressed = false;",
+                "  try {",
+                "    const gamepads = typeof navigator !== \"undefined\" && navigator.getGamepads ? navigator.getGamepads() : [];",
+                "    for (const gamepad of gamepads || []) {",
+                "      if (gamepad && gamepad.buttons && gamepad.buttons[1] && gamepad.buttons[1].pressed) { controllerPlayPressed = true; break; }",
+                "    }",
+                "  } catch (error) { controllerPlayPressed = false; }",
+                "  const rawPlayPressed = keyboardPlayPressed || mobilePlayPressed || controllerPlayPressed;",
+                "  const guitarInputState = runtimeScene.__ancientDigsGuitarInput || (runtimeScene.__ancientDigsGuitarInput = { wasPressed: false, minimumPlayMs: 0 });",
+                "  if (rawPlayPressed && !guitarInputState.wasPressed) guitarInputState.minimumPlayMs = 560;",
+                "  if (!rawPlayPressed && guitarInputState.minimumPlayMs > 0) {",
+                "    guitarInputState.minimumPlayMs = Math.max(0, guitarInputState.minimumPlayMs - runtimeScene.getTimeManager().getElapsedTime());",
+                "  }",
+                "  const playPressed = rawPlayPressed || guitarInputState.minimumPlayMs > 0;",
                 "  const playAllowed = !dialogueActive && !menuOpen && !transitionLocked;",
                 "  const animationState = runtimeScene.__ancientDigsPlayerAnimation || (runtimeScene.__ancientDigsPlayerAnimation = {",
                 "    x: player.getX(),",
@@ -12937,6 +13115,8 @@
                 "",
                 "  animationState.x = player.getX();",
                 "  animationState.y = player.getY();",
+                "  playerState.getChild(\"Guitar\").getChild(\"State\").setString(activeVariable.getAsBoolean() ? \"Playing\" : \"OnBackBaked\");",
+                "  guitarInputState.wasPressed = rawPlayPressed;",
                 "}"
               ],
               "parameterObjects": "",
@@ -16496,6 +16676,12 @@
           "persistentUuid": "312364b2-552d-475b-9e68-f9f8ebbec0fb",
           "type": "number",
           "value": -1
+        },
+        {
+          "name": "GuitarButtonHeld",
+          "persistentUuid": "69ce7e92-b6cd-44e9-b69c-c7f5ebe5effc",
+          "type": "boolean",
+          "value": false
         }
       ],
       "instances": [
@@ -16529,6 +16715,24 @@
           "width": 120,
           "x": 1104,
           "y": 576,
+          "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 120,
+          "keepRatio": true,
+          "layer": "MobileControls",
+          "locked": true,
+          "name": "GuitarButton",
+          "persistentUuid": "8b735608-7151-4fe0-b351-c76652ef8b69",
+          "width": 120,
+          "x": 968,
+          "y": 624,
           "zOrder": 8,
           "numberProperties": [],
           "stringProperties": [],
@@ -17587,6 +17791,77 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "assets\\A button.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 40,
+                        "y": 40
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 80,
+                            "y": 0
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 0,
+                            "y": 80
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "GuitarButton",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "ButtonFSM",
+              "type": "ButtonStates::ButtonFSM",
+              "ShouldCheckHovering": true,
+              "State": "Idle",
+              "TouchId": 0,
+              "TouchIsInside": false,
+              "MouseIsInside": false,
+              "Index": 2.0247e-320
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\B button.svg",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -23828,6 +24103,15 @@
                     "value": "Show"
                   },
                   "parameters": [
+                    "GuitarButton",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
                     "InventorySlot",
                     ""
                   ]
@@ -24053,6 +24337,14 @@
                   },
                   "parameters": [
                     "ActionButton"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "GuitarButton"
                   ]
                 },
                 {
@@ -26093,8 +26385,8 @@
           "colorR": 238,
           "creationTime": 0,
           "folded": true,
-          "name": "Ancient Digs Guitar Playing Test",
-          "source": "Reliable held-P guitar playback and immediate four-direction movement facing",
+          "name": "Ancient Digs Guitar Action",
+          "source": "Tap or hold mobile B, keyboard P, or controller B to play the guitar reliably",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
@@ -26107,7 +26399,50 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Hold P to play the guitar reliably. The same controller also synchronizes the first movement direction immediately after every room load."
+              "comment": "Tap B/P for one complete guitar phrase or hold it to continue playing. Movement stays locked during the performance and resumes in the remembered direction."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "GuitarButtonHeld",
+                    "False",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsPressed"
+                  },
+                  "parameters": [
+                    "GuitarButton",
+                    "ButtonFSM",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "GuitarButtonHeld",
+                    "True",
+                    ""
+                  ]
+                }
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::JsCode",
@@ -26123,7 +26458,22 @@
                 "  const dialogueActive = sceneVariables.get(\"DialogueActive\").getAsBoolean();",
                 "  const menuOpen = sceneVariables.get(\"MenuOpen\").getAsBoolean();",
                 "  const transitionLocked = sceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
-                "  const playPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"p\");",
+                "  const keyboardPlayPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"p\");",
+                "  const mobilePlayPressed = sceneVariables.get(\"GuitarButtonHeld\").getAsBoolean();",
+                "  let controllerPlayPressed = false;",
+                "  try {",
+                "    const gamepads = typeof navigator !== \"undefined\" && navigator.getGamepads ? navigator.getGamepads() : [];",
+                "    for (const gamepad of gamepads || []) {",
+                "      if (gamepad && gamepad.buttons && gamepad.buttons[1] && gamepad.buttons[1].pressed) { controllerPlayPressed = true; break; }",
+                "    }",
+                "  } catch (error) { controllerPlayPressed = false; }",
+                "  const rawPlayPressed = keyboardPlayPressed || mobilePlayPressed || controllerPlayPressed;",
+                "  const guitarInputState = runtimeScene.__ancientDigsGuitarInput || (runtimeScene.__ancientDigsGuitarInput = { wasPressed: false, minimumPlayMs: 0 });",
+                "  if (rawPlayPressed && !guitarInputState.wasPressed) guitarInputState.minimumPlayMs = 560;",
+                "  if (!rawPlayPressed && guitarInputState.minimumPlayMs > 0) {",
+                "    guitarInputState.minimumPlayMs = Math.max(0, guitarInputState.minimumPlayMs - runtimeScene.getTimeManager().getElapsedTime());",
+                "  }",
+                "  const playPressed = rawPlayPressed || guitarInputState.minimumPlayMs > 0;",
                 "  const playAllowed = !dialogueActive && !menuOpen && !transitionLocked;",
                 "  const animationState = runtimeScene.__ancientDigsPlayerAnimation || (runtimeScene.__ancientDigsPlayerAnimation = {",
                 "    x: player.getX(),",
@@ -26198,6 +26548,8 @@
                 "",
                 "  animationState.x = player.getX();",
                 "  animationState.y = player.getY();",
+                "  playerState.getChild(\"Guitar\").getChild(\"State\").setString(activeVariable.getAsBoolean() ? \"Playing\" : \"OnBackBaked\");",
+                "  guitarInputState.wasPressed = rawPlayPressed;",
                 "}"
               ],
               "parameterObjects": "",
@@ -29600,6 +29952,12 @@
           "persistentUuid": "2b77a583-2857-4790-9bc4-476eee1b0c8e",
           "type": "number",
           "value": -1
+        },
+        {
+          "name": "GuitarButtonHeld",
+          "persistentUuid": "20e2ccdb-e9a4-4fbf-8117-121de85f8d11",
+          "type": "boolean",
+          "value": false
         }
       ],
       "instances": [
@@ -29633,6 +29991,24 @@
           "width": 120,
           "x": 1104,
           "y": 576,
+          "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 120,
+          "keepRatio": true,
+          "layer": "MobileControls",
+          "locked": true,
+          "name": "GuitarButton",
+          "persistentUuid": "3109ebfe-c6af-4a6f-8cdd-767824e22cec",
+          "width": 120,
+          "x": 968,
+          "y": 624,
           "zOrder": 8,
           "numberProperties": [],
           "stringProperties": [],
@@ -30674,6 +31050,77 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "assets\\A button.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 40,
+                        "y": 40
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 80,
+                            "y": 0
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 0,
+                            "y": 80
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "GuitarButton",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "ButtonFSM",
+              "type": "ButtonStates::ButtonFSM",
+              "ShouldCheckHovering": true,
+              "State": "Idle",
+              "TouchId": 0,
+              "TouchIsInside": false,
+              "MouseIsInside": false,
+              "Index": 2.0247e-320
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\B button.svg",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -37014,6 +37461,15 @@
                     "value": "Show"
                   },
                   "parameters": [
+                    "GuitarButton",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
                     "InventorySlot",
                     ""
                   ]
@@ -37239,6 +37695,14 @@
                   },
                   "parameters": [
                     "ActionButton"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "GuitarButton"
                   ]
                 },
                 {
@@ -39279,8 +39743,8 @@
           "colorR": 238,
           "creationTime": 0,
           "folded": true,
-          "name": "Ancient Digs Guitar Playing Test",
-          "source": "Reliable held-P guitar playback and immediate four-direction movement facing",
+          "name": "Ancient Digs Guitar Action",
+          "source": "Tap or hold mobile B, keyboard P, or controller B to play the guitar reliably",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
@@ -39293,7 +39757,50 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Hold P to play the guitar reliably. The same controller also synchronizes the first movement direction immediately after every room load."
+              "comment": "Tap B/P for one complete guitar phrase or hold it to continue playing. Movement stays locked during the performance and resumes in the remembered direction."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "GuitarButtonHeld",
+                    "False",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsPressed"
+                  },
+                  "parameters": [
+                    "GuitarButton",
+                    "ButtonFSM",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "GuitarButtonHeld",
+                    "True",
+                    ""
+                  ]
+                }
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::JsCode",
@@ -39309,7 +39816,22 @@
                 "  const dialogueActive = sceneVariables.get(\"DialogueActive\").getAsBoolean();",
                 "  const menuOpen = sceneVariables.get(\"MenuOpen\").getAsBoolean();",
                 "  const transitionLocked = sceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
-                "  const playPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"p\");",
+                "  const keyboardPlayPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"p\");",
+                "  const mobilePlayPressed = sceneVariables.get(\"GuitarButtonHeld\").getAsBoolean();",
+                "  let controllerPlayPressed = false;",
+                "  try {",
+                "    const gamepads = typeof navigator !== \"undefined\" && navigator.getGamepads ? navigator.getGamepads() : [];",
+                "    for (const gamepad of gamepads || []) {",
+                "      if (gamepad && gamepad.buttons && gamepad.buttons[1] && gamepad.buttons[1].pressed) { controllerPlayPressed = true; break; }",
+                "    }",
+                "  } catch (error) { controllerPlayPressed = false; }",
+                "  const rawPlayPressed = keyboardPlayPressed || mobilePlayPressed || controllerPlayPressed;",
+                "  const guitarInputState = runtimeScene.__ancientDigsGuitarInput || (runtimeScene.__ancientDigsGuitarInput = { wasPressed: false, minimumPlayMs: 0 });",
+                "  if (rawPlayPressed && !guitarInputState.wasPressed) guitarInputState.minimumPlayMs = 560;",
+                "  if (!rawPlayPressed && guitarInputState.minimumPlayMs > 0) {",
+                "    guitarInputState.minimumPlayMs = Math.max(0, guitarInputState.minimumPlayMs - runtimeScene.getTimeManager().getElapsedTime());",
+                "  }",
+                "  const playPressed = rawPlayPressed || guitarInputState.minimumPlayMs > 0;",
                 "  const playAllowed = !dialogueActive && !menuOpen && !transitionLocked;",
                 "  const animationState = runtimeScene.__ancientDigsPlayerAnimation || (runtimeScene.__ancientDigsPlayerAnimation = {",
                 "    x: player.getX(),",
@@ -39384,6 +39906,8 @@
                 "",
                 "  animationState.x = player.getX();",
                 "  animationState.y = player.getY();",
+                "  playerState.getChild(\"Guitar\").getChild(\"State\").setString(activeVariable.getAsBoolean() ? \"Playing\" : \"OnBackBaked\");",
+                "  guitarInputState.wasPressed = rawPlayPressed;",
                 "}"
               ],
               "parameterObjects": "",
@@ -43258,6 +43782,12 @@
           "persistentUuid": "4441732a-2cc0-4b79-9750-941dd0a125b3",
           "type": "string",
           "value": ""
+        },
+        {
+          "name": "GuitarButtonHeld",
+          "persistentUuid": "b18b5f7a-3d09-41ac-b3e1-8ebdb4af3eb6",
+          "type": "boolean",
+          "value": false
         }
       ],
       "instances": [
@@ -43291,6 +43821,24 @@
           "width": 120,
           "x": 1104,
           "y": 576,
+          "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 120,
+          "keepRatio": true,
+          "layer": "MobileControls",
+          "locked": true,
+          "name": "GuitarButton",
+          "persistentUuid": "1073ea0b-bdea-4bd4-a2d3-3d27e041424e",
+          "width": 120,
+          "x": 968,
+          "y": 624,
           "zOrder": 8,
           "numberProperties": [],
           "stringProperties": [],
@@ -44970,6 +45518,77 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "assets\\A button.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 40,
+                        "y": 40
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 80,
+                            "y": 0
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 0,
+                            "y": 80
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "GuitarButton",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "ButtonFSM",
+              "type": "ButtonStates::ButtonFSM",
+              "ShouldCheckHovering": true,
+              "State": "Idle",
+              "TouchId": 0,
+              "TouchIsInside": false,
+              "MouseIsInside": false,
+              "Index": 2.0247e-320
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\B button.svg",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -52551,6 +53170,15 @@
                     "value": "Show"
                   },
                   "parameters": [
+                    "GuitarButton",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
                     "InventorySlot",
                     ""
                   ]
@@ -52776,6 +53404,14 @@
                   },
                   "parameters": [
                     "ActionButton"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "GuitarButton"
                   ]
                 },
                 {
@@ -54861,8 +55497,8 @@
           "colorR": 238,
           "creationTime": 0,
           "folded": true,
-          "name": "Ancient Digs Guitar Playing Test",
-          "source": "Reliable held-P guitar playback and immediate four-direction movement facing",
+          "name": "Ancient Digs Guitar Action",
+          "source": "Tap or hold mobile B, keyboard P, or controller B to play the guitar reliably",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
@@ -54875,7 +55511,50 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Hold P to play the guitar reliably. The same controller also synchronizes the first movement direction immediately after every room load."
+              "comment": "Tap B/P for one complete guitar phrase or hold it to continue playing. Movement stays locked during the performance and resumes in the remembered direction."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "GuitarButtonHeld",
+                    "False",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsPressed"
+                  },
+                  "parameters": [
+                    "GuitarButton",
+                    "ButtonFSM",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "GuitarButtonHeld",
+                    "True",
+                    ""
+                  ]
+                }
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::JsCode",
@@ -54891,7 +55570,22 @@
                 "  const dialogueActive = sceneVariables.get(\"DialogueActive\").getAsBoolean();",
                 "  const menuOpen = sceneVariables.get(\"MenuOpen\").getAsBoolean();",
                 "  const transitionLocked = sceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
-                "  const playPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"p\");",
+                "  const keyboardPlayPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"p\");",
+                "  const mobilePlayPressed = sceneVariables.get(\"GuitarButtonHeld\").getAsBoolean();",
+                "  let controllerPlayPressed = false;",
+                "  try {",
+                "    const gamepads = typeof navigator !== \"undefined\" && navigator.getGamepads ? navigator.getGamepads() : [];",
+                "    for (const gamepad of gamepads || []) {",
+                "      if (gamepad && gamepad.buttons && gamepad.buttons[1] && gamepad.buttons[1].pressed) { controllerPlayPressed = true; break; }",
+                "    }",
+                "  } catch (error) { controllerPlayPressed = false; }",
+                "  const rawPlayPressed = keyboardPlayPressed || mobilePlayPressed || controllerPlayPressed;",
+                "  const guitarInputState = runtimeScene.__ancientDigsGuitarInput || (runtimeScene.__ancientDigsGuitarInput = { wasPressed: false, minimumPlayMs: 0 });",
+                "  if (rawPlayPressed && !guitarInputState.wasPressed) guitarInputState.minimumPlayMs = 560;",
+                "  if (!rawPlayPressed && guitarInputState.minimumPlayMs > 0) {",
+                "    guitarInputState.minimumPlayMs = Math.max(0, guitarInputState.minimumPlayMs - runtimeScene.getTimeManager().getElapsedTime());",
+                "  }",
+                "  const playPressed = rawPlayPressed || guitarInputState.minimumPlayMs > 0;",
                 "  const playAllowed = !dialogueActive && !menuOpen && !transitionLocked;",
                 "  const animationState = runtimeScene.__ancientDigsPlayerAnimation || (runtimeScene.__ancientDigsPlayerAnimation = {",
                 "    x: player.getX(),",
@@ -54966,6 +55660,8 @@
                 "",
                 "  animationState.x = player.getX();",
                 "  animationState.y = player.getY();",
+                "  playerState.getChild(\"Guitar\").getChild(\"State\").setString(activeVariable.getAsBoolean() ? \"Playing\" : \"OnBackBaked\");",
+                "  guitarInputState.wasPressed = rawPlayPressed;",
                 "}"
               ],
               "parameterObjects": "",
@@ -58764,6 +59460,12 @@
           "persistentUuid": "6f64dd6c-bfbf-4f46-845c-be4230eb02b8",
           "type": "string",
           "value": ""
+        },
+        {
+          "name": "GuitarButtonHeld",
+          "persistentUuid": "81189eae-1be4-4faf-b01e-8a8b4fc6d2a0",
+          "type": "boolean",
+          "value": false
         }
       ],
       "instances": [
@@ -58797,6 +59499,24 @@
           "width": 120,
           "x": 1104,
           "y": 576,
+          "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 120,
+          "keepRatio": true,
+          "layer": "MobileControls",
+          "locked": true,
+          "name": "GuitarButton",
+          "persistentUuid": "59745deb-e84b-4d6b-bae0-a96ee13f652d",
+          "width": 120,
+          "x": 968,
+          "y": 624,
           "zOrder": 8,
           "numberProperties": [],
           "stringProperties": [],
@@ -60287,6 +61007,77 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "assets\\A button.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 40,
+                        "y": 40
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 80,
+                            "y": 0
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 0,
+                            "y": 80
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "GuitarButton",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "ButtonFSM",
+              "type": "ButtonStates::ButtonFSM",
+              "ShouldCheckHovering": true,
+              "State": "Idle",
+              "TouchId": 0,
+              "TouchIsInside": false,
+              "MouseIsInside": false,
+              "Index": 2.0247e-320
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\B button.svg",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -67785,6 +68576,15 @@
                     "value": "Show"
                   },
                   "parameters": [
+                    "GuitarButton",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
                     "InventorySlot",
                     ""
                   ]
@@ -68010,6 +68810,14 @@
                   },
                   "parameters": [
                     "ActionButton"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "GuitarButton"
                   ]
                 },
                 {
@@ -70095,8 +70903,8 @@
           "colorR": 238,
           "creationTime": 0,
           "folded": true,
-          "name": "Ancient Digs Guitar Playing Test",
-          "source": "Reliable held-P guitar playback and immediate four-direction movement facing",
+          "name": "Ancient Digs Guitar Action",
+          "source": "Tap or hold mobile B, keyboard P, or controller B to play the guitar reliably",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
@@ -70109,7 +70917,50 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Hold P to play the guitar reliably. The same controller also synchronizes the first movement direction immediately after every room load."
+              "comment": "Tap B/P for one complete guitar phrase or hold it to continue playing. Movement stays locked during the performance and resumes in the remembered direction."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "GuitarButtonHeld",
+                    "False",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsPressed"
+                  },
+                  "parameters": [
+                    "GuitarButton",
+                    "ButtonFSM",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "GuitarButtonHeld",
+                    "True",
+                    ""
+                  ]
+                }
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::JsCode",
@@ -70125,7 +70976,22 @@
                 "  const dialogueActive = sceneVariables.get(\"DialogueActive\").getAsBoolean();",
                 "  const menuOpen = sceneVariables.get(\"MenuOpen\").getAsBoolean();",
                 "  const transitionLocked = sceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
-                "  const playPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"p\");",
+                "  const keyboardPlayPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"p\");",
+                "  const mobilePlayPressed = sceneVariables.get(\"GuitarButtonHeld\").getAsBoolean();",
+                "  let controllerPlayPressed = false;",
+                "  try {",
+                "    const gamepads = typeof navigator !== \"undefined\" && navigator.getGamepads ? navigator.getGamepads() : [];",
+                "    for (const gamepad of gamepads || []) {",
+                "      if (gamepad && gamepad.buttons && gamepad.buttons[1] && gamepad.buttons[1].pressed) { controllerPlayPressed = true; break; }",
+                "    }",
+                "  } catch (error) { controllerPlayPressed = false; }",
+                "  const rawPlayPressed = keyboardPlayPressed || mobilePlayPressed || controllerPlayPressed;",
+                "  const guitarInputState = runtimeScene.__ancientDigsGuitarInput || (runtimeScene.__ancientDigsGuitarInput = { wasPressed: false, minimumPlayMs: 0 });",
+                "  if (rawPlayPressed && !guitarInputState.wasPressed) guitarInputState.minimumPlayMs = 560;",
+                "  if (!rawPlayPressed && guitarInputState.minimumPlayMs > 0) {",
+                "    guitarInputState.minimumPlayMs = Math.max(0, guitarInputState.minimumPlayMs - runtimeScene.getTimeManager().getElapsedTime());",
+                "  }",
+                "  const playPressed = rawPlayPressed || guitarInputState.minimumPlayMs > 0;",
                 "  const playAllowed = !dialogueActive && !menuOpen && !transitionLocked;",
                 "  const animationState = runtimeScene.__ancientDigsPlayerAnimation || (runtimeScene.__ancientDigsPlayerAnimation = {",
                 "    x: player.getX(),",
@@ -70200,6 +71066,8 @@
                 "",
                 "  animationState.x = player.getX();",
                 "  animationState.y = player.getY();",
+                "  playerState.getChild(\"Guitar\").getChild(\"State\").setString(activeVariable.getAsBoolean() ? \"Playing\" : \"OnBackBaked\");",
+                "  guitarInputState.wasPressed = rawPlayPressed;",
                 "}"
               ],
               "parameterObjects": "",
