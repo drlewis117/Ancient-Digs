@@ -1704,6 +1704,30 @@
         "name": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_4.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/Song wheel button.svg",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Song wheel button.svg",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Song wheel base.svg",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Song wheel base.svg",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Song wheel highlight.svg",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Song wheel highlight.svg",
+        "smoothed": true,
+        "userAdded": true
       }
     ]
   },
@@ -3021,6 +3045,18 @@
           "persistentUuid": "25a86719-9d00-4a31-90ca-ea980ce10dcc",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "SongWheelButtonHeld",
+          "persistentUuid": "767048e9-5c85-42ee-8298-4e3db2ddbdd0",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "SongWheelOpen",
+          "persistentUuid": "57ba1f12-f049-4113-85e8-61b9f4c4f626",
+          "type": "boolean",
+          "value": false
         }
       ],
       "instances": [
@@ -4080,6 +4116,78 @@
           "x": 410,
           "y": 340,
           "zOrder": 18,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 88,
+          "keepRatio": true,
+          "layer": "MobileControls",
+          "locked": true,
+          "name": "SongWheelButton",
+          "persistentUuid": "5b40e91f-efa0-4754-a0cb-8aa3b0a24f7b",
+          "width": 88,
+          "x": 1008,
+          "y": 496,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 360,
+          "keepRatio": true,
+          "layer": "UI",
+          "locked": true,
+          "name": "SongWheelBase",
+          "persistentUuid": "123013dd-47c8-4b93-8016-f3c7644f19fd",
+          "width": 360,
+          "x": 640,
+          "y": 360,
+          "zOrder": 240,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 360,
+          "keepRatio": true,
+          "layer": "UI",
+          "locked": true,
+          "name": "SongWheelHighlight",
+          "persistentUuid": "b91325a5-04e4-444e-b521-5f2ed5cd4532",
+          "width": 360,
+          "x": 640,
+          "y": 360,
+          "zOrder": 241,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 44,
+          "keepRatio": true,
+          "layer": "UI",
+          "locked": true,
+          "name": "SongWheelLabel",
+          "persistentUuid": "3e8a416e-e1af-4dc8-8466-d301d598ff3b",
+          "width": 240,
+          "x": 520,
+          "y": 338,
+          "zOrder": 242,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -11062,6 +11170,240 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "SongWheelButton",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "ButtonFSM",
+              "type": "ButtonStates::ButtonFSM",
+              "ShouldCheckHovering": true,
+              "State": "Idle",
+              "TouchId": 0,
+              "TouchIsInside": false,
+              "MouseIsInside": false,
+              "Index": 2.0247e-320
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Song wheel button.svg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 40,
+                        "y": 40
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 80,
+                            "y": 0
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 0,
+                            "y": 80
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "SongWheelBase",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Song wheel base.svg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 180,
+                        "y": 180
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 360,
+                            "y": 0
+                          },
+                          {
+                            "x": 360,
+                            "y": 360
+                          },
+                          {
+                            "x": 0,
+                            "y": 360
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "SongWheelHighlight",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Song wheel highlight.svg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 180,
+                        "y": 180
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 360,
+                            "y": 0
+                          },
+                          {
+                            "x": 360,
+                            "y": 360
+                          },
+                          {
+                            "x": 0,
+                            "y": 360
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "SongWheelLabel",
+          "smoothed": false,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "OPEN CHORD",
+          "font": "assets\\PressStart2P-Regular.ttf",
+          "textAlignment": "center",
+          "characterSize": 16,
+          "color": {
+            "b": 154,
+            "g": 217,
+            "r": 255
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "0;0;0",
+            "outlineThickness": 3,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": false,
+            "underlined": false,
+            "text": "OPEN CHORD",
+            "font": "assets\\PressStart2P-Regular.ttf",
+            "textAlignment": "center",
+            "verticalTextAlignment": "center",
+            "characterSize": 16,
+            "lineHeight": 0,
+            "color": "255;217;154"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -11268,6 +11610,21 @@
           },
           {
             "objectName": "ShopEntrance"
+          },
+          {
+            "objectName": "GuitarButton"
+          },
+          {
+            "objectName": "SongWheelButton"
+          },
+          {
+            "objectName": "SongWheelBase"
+          },
+          {
+            "objectName": "SongWheelHighlight"
+          },
+          {
+            "objectName": "SongWheelLabel"
           }
         ]
       },
@@ -14000,6 +14357,176 @@
           "colorR": 238,
           "creationTime": 0,
           "folded": true,
+          "name": "Ancient Digs Song Wheel",
+          "source": "Tap or hold mobile B, keyboard P, or controller B to play the guitar reliably",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Hold the note control, aim toward a song, and release to equip it. The center cancels; B plays the equipped song."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "SongWheelButtonHeld",
+                    "False",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsPressed"
+                  },
+                  "parameters": [
+                    "SongWheelButton",
+                    "ButtonFSM",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "SongWheelButtonHeld",
+                    "True",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "// SYSTEM 13: Hold-aim-release song wheel foundation for keyboard, controller, and mobile.",
+                "const sceneVariables = runtimeScene.getVariables();",
+                "const guitarState = runtimeScene.getGame().getVariables().get(\"PlayerState\").getChild(\"Guitar\");",
+                "if (!guitarState.getChild(\"EquippedSongId\").getAsString()) guitarState.getChild(\"EquippedSongId\").setString(\"open_chord\");",
+                "if (!guitarState.getChild(\"EquippedSongName\").getAsString()) guitarState.getChild(\"EquippedSongName\").setString(\"OPEN CHORD\");",
+                "const noteButtons = runtimeScene.getObjects(\"SongWheelButton\");",
+                "const wheelBases = runtimeScene.getObjects(\"SongWheelBase\");",
+                "const wheelHighlights = runtimeScene.getObjects(\"SongWheelHighlight\");",
+                "const wheelLabels = runtimeScene.getObjects(\"SongWheelLabel\");",
+                "const dialogueActive = sceneVariables.get(\"DialogueActive\").getAsBoolean();",
+                "const menuOpen = sceneVariables.get(\"MenuOpen\").getAsBoolean();",
+                "const transitionLocked = sceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
+                "const blocked = dialogueActive || menuOpen || transitionLocked;",
+                "const keyboardPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"q\");",
+                "const mobilePressed = sceneVariables.get(\"SongWheelButtonHeld\").getAsBoolean();",
+                "let controllerPressed = false;",
+                "let controllerX = 0;",
+                "let controllerY = 0;",
+                "try {",
+                "  const gamepads = typeof navigator !== \"undefined\" && navigator.getGamepads ? navigator.getGamepads() : [];",
+                "  for (const gamepad of gamepads || []) {",
+                "    if (!gamepad) continue;",
+                "    if (gamepad.buttons && gamepad.buttons[4] && gamepad.buttons[4].pressed) controllerPressed = true;",
+                "    if (gamepad.axes && gamepad.axes.length >= 4) {",
+                "      const x = Number(gamepad.axes[2]) || 0;",
+                "      const y = Number(gamepad.axes[3]) || 0;",
+                "      if (Math.hypot(x, y) > Math.hypot(controllerX, controllerY)) { controllerX = x; controllerY = y; }",
+                "    }",
+                "  }",
+                "} catch (error) { controllerPressed = false; controllerX = 0; controllerY = 0; }",
+                "const rawPressed = keyboardPressed || mobilePressed || controllerPressed;",
+                "const state = runtimeScene.__ancientDigsSongWheel || (runtimeScene.__ancientDigsSongWheel = { wasPressed: false, open: false, selected: -1, previousTimeScale: 1 });",
+                "const timeManager = runtimeScene.getTimeManager();",
+                "const hideWheel = () => {",
+                "  for (const object of wheelBases) object.hide();",
+                "  for (const object of wheelHighlights) object.hide();",
+                "  for (const object of wheelLabels) object.hide();",
+                "};",
+                "const closeWheel = (equipSelection) => {",
+                "  if (equipSelection && state.selected === 0) {",
+                "    guitarState.getChild(\"EquippedSongId\").setString(\"open_chord\");",
+                "    guitarState.getChild(\"EquippedSongName\").setString(\"OPEN CHORD\");",
+                "  }",
+                "  state.open = false;",
+                "  state.selected = -1;",
+                "  sceneVariables.get(\"SongWheelOpen\").setBoolean(false);",
+                "  if (typeof timeManager.setTimeScale === \"function\") timeManager.setTimeScale(state.previousTimeScale > 0 ? state.previousTimeScale : 1);",
+                "  hideWheel();",
+                "};",
+                "for (const button of noteButtons) {",
+                "  if (blocked) button.hide(); else button.hide(false);",
+                "}",
+                "if (rawPressed && !state.wasPressed && !blocked) {",
+                "  state.open = true;",
+                "  state.selected = -1;",
+                "  state.previousTimeScale = typeof timeManager.getTimeScale === \"function\" ? timeManager.getTimeScale() : 1;",
+                "  sceneVariables.get(\"SongWheelOpen\").setBoolean(true);",
+                "}",
+                "if (state.open && (blocked || !rawPressed)) closeWheel(!blocked && !rawPressed);",
+                "if (state.open) {",
+                "  sceneVariables.get(\"SongWheelOpen\").setBoolean(true);",
+                "  if (typeof timeManager.setTimeScale === \"function\") timeManager.setTimeScale(0.18);",
+                "  for (const object of wheelBases) object.hide(false);",
+                "  for (const object of wheelLabels) object.hide(false);",
+                "  let vectorX = 0;",
+                "  let vectorY = 0;",
+                "  if (Math.hypot(controllerX, controllerY) > 0.35) {",
+                "    vectorX = controllerX;",
+                "    vectorY = controllerY;",
+                "  } else {",
+                "    const cursorX = gdjs.evtTools.input.getCursorX(runtimeScene, \"UI\", 0);",
+                "    const cursorY = gdjs.evtTools.input.getCursorY(runtimeScene, \"UI\", 0);",
+                "    const referenceX = mobilePressed ? 1008 : 640;",
+                "    const referenceY = mobilePressed ? 496 : 360;",
+                "    vectorX = cursorX - referenceX;",
+                "    vectorY = cursorY - referenceY;",
+                "  }",
+                "  const magnitude = Math.hypot(vectorX, vectorY);",
+                "  state.selected = magnitude >= (mobilePressed ? 24 : 52) ? (Math.floor((Math.atan2(vectorY, vectorX) + Math.PI / 8 + Math.PI * 2) / (Math.PI / 4)) % 8) : -1;",
+                "  for (const highlight of wheelHighlights) {",
+                "    if (state.selected < 0) highlight.hide();",
+                "    else { highlight.setAngle(state.selected * 45); highlight.hide(false); }",
+                "  }",
+                "  const selectedName = state.selected < 0 ? guitarState.getChild(\"EquippedSongName\").getAsString() : (state.selected === 0 ? \"OPEN CHORD\" : \"LOCKED\");",
+                "  for (const label of wheelLabels) {",
+                "    label.setString(selectedName);",
+                "    label.setX(640 - label.getWidth() / 2);",
+                "    label.setY(338);",
+                "  }",
+                "} else {",
+                "  sceneVariables.get(\"SongWheelOpen\").setBoolean(false);",
+                "  hideWheel();",
+                "}",
+                "state.wasPressed = rawPressed;"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 94,
+          "colorG": 126,
+          "colorR": 238,
+          "creationTime": 0,
+          "folded": true,
           "name": "Ancient Digs Guitar Action",
           "source": "Tap or hold mobile B, keyboard P, or controller B to play the guitar reliably",
           "type": "BuiltinCommonInstructions::Group",
@@ -14073,6 +14600,7 @@
                 "  const dialogueActive = sceneVariables.get(\"DialogueActive\").getAsBoolean();",
                 "  const menuOpen = sceneVariables.get(\"MenuOpen\").getAsBoolean();",
                 "  const transitionLocked = sceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
+                "  const songWheelOpen = sceneVariables.get(\"SongWheelOpen\").getAsBoolean();",
                 "  const keyboardPlayPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"p\");",
                 "  const mobilePlayPressed = sceneVariables.get(\"GuitarButtonHeld\").getAsBoolean();",
                 "  let controllerPlayPressed = false;",
@@ -14089,7 +14617,7 @@
                 "    guitarInputState.minimumPlayMs = Math.max(0, guitarInputState.minimumPlayMs - runtimeScene.getTimeManager().getElapsedTime());",
                 "  }",
                 "  const playPressed = rawPlayPressed || guitarInputState.minimumPlayMs > 0;",
-                "  const playAllowed = !dialogueActive && !menuOpen && !transitionLocked;",
+                "  const playAllowed = !dialogueActive && !menuOpen && !transitionLocked && !songWheelOpen;",
                 "  const animationState = runtimeScene.__ancientDigsPlayerAnimation || (runtimeScene.__ancientDigsPlayerAnimation = {",
                 "    x: player.getX(),",
                 "    y: player.getY()",
@@ -17733,6 +18261,18 @@
           "persistentUuid": "69ce7e92-b6cd-44e9-b69c-c7f5ebe5effc",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "SongWheelButtonHeld",
+          "persistentUuid": "8a4d0c06-4999-4226-b8ab-e8bd296ccc5e",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "SongWheelOpen",
+          "persistentUuid": "aed54d7b-c9c8-4c0c-91e9-7beebd798e09",
+          "type": "boolean",
+          "value": false
         }
       ],
       "instances": [
@@ -18722,6 +19262,78 @@
           "x": 278,
           "y": 370,
           "zOrder": 202,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 88,
+          "keepRatio": true,
+          "layer": "MobileControls",
+          "locked": true,
+          "name": "SongWheelButton",
+          "persistentUuid": "0b5dafee-fd6b-4c9a-ab4f-c2a0db3da4c9",
+          "width": 88,
+          "x": 1008,
+          "y": 496,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 360,
+          "keepRatio": true,
+          "layer": "UI",
+          "locked": true,
+          "name": "SongWheelBase",
+          "persistentUuid": "0367d195-6654-403c-ad6b-0a6e331d9a31",
+          "width": 360,
+          "x": 640,
+          "y": 360,
+          "zOrder": 240,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 360,
+          "keepRatio": true,
+          "layer": "UI",
+          "locked": true,
+          "name": "SongWheelHighlight",
+          "persistentUuid": "279c5a63-0612-4a64-add9-6dade3d0e233",
+          "width": 360,
+          "x": 640,
+          "y": 360,
+          "zOrder": 241,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 44,
+          "keepRatio": true,
+          "layer": "UI",
+          "locked": true,
+          "name": "SongWheelLabel",
+          "persistentUuid": "0ac58aea-21f0-4d48-98d0-dd1148885c98",
+          "width": 240,
+          "x": 520,
+          "y": 338,
+          "zOrder": 242,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -25524,6 +26136,240 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "SongWheelButton",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "ButtonFSM",
+              "type": "ButtonStates::ButtonFSM",
+              "ShouldCheckHovering": true,
+              "State": "Idle",
+              "TouchId": 0,
+              "TouchIsInside": false,
+              "MouseIsInside": false,
+              "Index": 2.0247e-320
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Song wheel button.svg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 40,
+                        "y": 40
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 80,
+                            "y": 0
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 0,
+                            "y": 80
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "SongWheelBase",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Song wheel base.svg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 180,
+                        "y": 180
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 360,
+                            "y": 0
+                          },
+                          {
+                            "x": 360,
+                            "y": 360
+                          },
+                          {
+                            "x": 0,
+                            "y": 360
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "SongWheelHighlight",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Song wheel highlight.svg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 180,
+                        "y": 180
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 360,
+                            "y": 0
+                          },
+                          {
+                            "x": 360,
+                            "y": 360
+                          },
+                          {
+                            "x": 0,
+                            "y": 360
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "SongWheelLabel",
+          "smoothed": false,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "OPEN CHORD",
+          "font": "assets\\PressStart2P-Regular.ttf",
+          "textAlignment": "center",
+          "characterSize": 16,
+          "color": {
+            "b": 154,
+            "g": 217,
+            "r": 255
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "0;0;0",
+            "outlineThickness": 3,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": false,
+            "underlined": false,
+            "text": "OPEN CHORD",
+            "font": "assets\\PressStart2P-Regular.ttf",
+            "textAlignment": "center",
+            "verticalTextAlignment": "center",
+            "characterSize": 16,
+            "lineHeight": 0,
+            "color": "255;217;154"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -25718,6 +26564,21 @@
           },
           {
             "objectName": "MenuBoneIcon"
+          },
+          {
+            "objectName": "GuitarButton"
+          },
+          {
+            "objectName": "SongWheelButton"
+          },
+          {
+            "objectName": "SongWheelBase"
+          },
+          {
+            "objectName": "SongWheelHighlight"
+          },
+          {
+            "objectName": "SongWheelLabel"
           }
         ]
       },
@@ -28372,6 +29233,176 @@
           "colorR": 238,
           "creationTime": 0,
           "folded": true,
+          "name": "Ancient Digs Song Wheel",
+          "source": "Tap or hold mobile B, keyboard P, or controller B to play the guitar reliably",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Hold the note control, aim toward a song, and release to equip it. The center cancels; B plays the equipped song."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "SongWheelButtonHeld",
+                    "False",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsPressed"
+                  },
+                  "parameters": [
+                    "SongWheelButton",
+                    "ButtonFSM",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "SongWheelButtonHeld",
+                    "True",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "// SYSTEM 13: Hold-aim-release song wheel foundation for keyboard, controller, and mobile.",
+                "const sceneVariables = runtimeScene.getVariables();",
+                "const guitarState = runtimeScene.getGame().getVariables().get(\"PlayerState\").getChild(\"Guitar\");",
+                "if (!guitarState.getChild(\"EquippedSongId\").getAsString()) guitarState.getChild(\"EquippedSongId\").setString(\"open_chord\");",
+                "if (!guitarState.getChild(\"EquippedSongName\").getAsString()) guitarState.getChild(\"EquippedSongName\").setString(\"OPEN CHORD\");",
+                "const noteButtons = runtimeScene.getObjects(\"SongWheelButton\");",
+                "const wheelBases = runtimeScene.getObjects(\"SongWheelBase\");",
+                "const wheelHighlights = runtimeScene.getObjects(\"SongWheelHighlight\");",
+                "const wheelLabels = runtimeScene.getObjects(\"SongWheelLabel\");",
+                "const dialogueActive = sceneVariables.get(\"DialogueActive\").getAsBoolean();",
+                "const menuOpen = sceneVariables.get(\"MenuOpen\").getAsBoolean();",
+                "const transitionLocked = sceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
+                "const blocked = dialogueActive || menuOpen || transitionLocked;",
+                "const keyboardPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"q\");",
+                "const mobilePressed = sceneVariables.get(\"SongWheelButtonHeld\").getAsBoolean();",
+                "let controllerPressed = false;",
+                "let controllerX = 0;",
+                "let controllerY = 0;",
+                "try {",
+                "  const gamepads = typeof navigator !== \"undefined\" && navigator.getGamepads ? navigator.getGamepads() : [];",
+                "  for (const gamepad of gamepads || []) {",
+                "    if (!gamepad) continue;",
+                "    if (gamepad.buttons && gamepad.buttons[4] && gamepad.buttons[4].pressed) controllerPressed = true;",
+                "    if (gamepad.axes && gamepad.axes.length >= 4) {",
+                "      const x = Number(gamepad.axes[2]) || 0;",
+                "      const y = Number(gamepad.axes[3]) || 0;",
+                "      if (Math.hypot(x, y) > Math.hypot(controllerX, controllerY)) { controllerX = x; controllerY = y; }",
+                "    }",
+                "  }",
+                "} catch (error) { controllerPressed = false; controllerX = 0; controllerY = 0; }",
+                "const rawPressed = keyboardPressed || mobilePressed || controllerPressed;",
+                "const state = runtimeScene.__ancientDigsSongWheel || (runtimeScene.__ancientDigsSongWheel = { wasPressed: false, open: false, selected: -1, previousTimeScale: 1 });",
+                "const timeManager = runtimeScene.getTimeManager();",
+                "const hideWheel = () => {",
+                "  for (const object of wheelBases) object.hide();",
+                "  for (const object of wheelHighlights) object.hide();",
+                "  for (const object of wheelLabels) object.hide();",
+                "};",
+                "const closeWheel = (equipSelection) => {",
+                "  if (equipSelection && state.selected === 0) {",
+                "    guitarState.getChild(\"EquippedSongId\").setString(\"open_chord\");",
+                "    guitarState.getChild(\"EquippedSongName\").setString(\"OPEN CHORD\");",
+                "  }",
+                "  state.open = false;",
+                "  state.selected = -1;",
+                "  sceneVariables.get(\"SongWheelOpen\").setBoolean(false);",
+                "  if (typeof timeManager.setTimeScale === \"function\") timeManager.setTimeScale(state.previousTimeScale > 0 ? state.previousTimeScale : 1);",
+                "  hideWheel();",
+                "};",
+                "for (const button of noteButtons) {",
+                "  if (blocked) button.hide(); else button.hide(false);",
+                "}",
+                "if (rawPressed && !state.wasPressed && !blocked) {",
+                "  state.open = true;",
+                "  state.selected = -1;",
+                "  state.previousTimeScale = typeof timeManager.getTimeScale === \"function\" ? timeManager.getTimeScale() : 1;",
+                "  sceneVariables.get(\"SongWheelOpen\").setBoolean(true);",
+                "}",
+                "if (state.open && (blocked || !rawPressed)) closeWheel(!blocked && !rawPressed);",
+                "if (state.open) {",
+                "  sceneVariables.get(\"SongWheelOpen\").setBoolean(true);",
+                "  if (typeof timeManager.setTimeScale === \"function\") timeManager.setTimeScale(0.18);",
+                "  for (const object of wheelBases) object.hide(false);",
+                "  for (const object of wheelLabels) object.hide(false);",
+                "  let vectorX = 0;",
+                "  let vectorY = 0;",
+                "  if (Math.hypot(controllerX, controllerY) > 0.35) {",
+                "    vectorX = controllerX;",
+                "    vectorY = controllerY;",
+                "  } else {",
+                "    const cursorX = gdjs.evtTools.input.getCursorX(runtimeScene, \"UI\", 0);",
+                "    const cursorY = gdjs.evtTools.input.getCursorY(runtimeScene, \"UI\", 0);",
+                "    const referenceX = mobilePressed ? 1008 : 640;",
+                "    const referenceY = mobilePressed ? 496 : 360;",
+                "    vectorX = cursorX - referenceX;",
+                "    vectorY = cursorY - referenceY;",
+                "  }",
+                "  const magnitude = Math.hypot(vectorX, vectorY);",
+                "  state.selected = magnitude >= (mobilePressed ? 24 : 52) ? (Math.floor((Math.atan2(vectorY, vectorX) + Math.PI / 8 + Math.PI * 2) / (Math.PI / 4)) % 8) : -1;",
+                "  for (const highlight of wheelHighlights) {",
+                "    if (state.selected < 0) highlight.hide();",
+                "    else { highlight.setAngle(state.selected * 45); highlight.hide(false); }",
+                "  }",
+                "  const selectedName = state.selected < 0 ? guitarState.getChild(\"EquippedSongName\").getAsString() : (state.selected === 0 ? \"OPEN CHORD\" : \"LOCKED\");",
+                "  for (const label of wheelLabels) {",
+                "    label.setString(selectedName);",
+                "    label.setX(640 - label.getWidth() / 2);",
+                "    label.setY(338);",
+                "  }",
+                "} else {",
+                "  sceneVariables.get(\"SongWheelOpen\").setBoolean(false);",
+                "  hideWheel();",
+                "}",
+                "state.wasPressed = rawPressed;"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 94,
+          "colorG": 126,
+          "colorR": 238,
+          "creationTime": 0,
+          "folded": true,
           "name": "Ancient Digs Guitar Action",
           "source": "Tap or hold mobile B, keyboard P, or controller B to play the guitar reliably",
           "type": "BuiltinCommonInstructions::Group",
@@ -28445,6 +29476,7 @@
                 "  const dialogueActive = sceneVariables.get(\"DialogueActive\").getAsBoolean();",
                 "  const menuOpen = sceneVariables.get(\"MenuOpen\").getAsBoolean();",
                 "  const transitionLocked = sceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
+                "  const songWheelOpen = sceneVariables.get(\"SongWheelOpen\").getAsBoolean();",
                 "  const keyboardPlayPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"p\");",
                 "  const mobilePlayPressed = sceneVariables.get(\"GuitarButtonHeld\").getAsBoolean();",
                 "  let controllerPlayPressed = false;",
@@ -28461,7 +29493,7 @@
                 "    guitarInputState.minimumPlayMs = Math.max(0, guitarInputState.minimumPlayMs - runtimeScene.getTimeManager().getElapsedTime());",
                 "  }",
                 "  const playPressed = rawPlayPressed || guitarInputState.minimumPlayMs > 0;",
-                "  const playAllowed = !dialogueActive && !menuOpen && !transitionLocked;",
+                "  const playAllowed = !dialogueActive && !menuOpen && !transitionLocked && !songWheelOpen;",
                 "  const animationState = runtimeScene.__ancientDigsPlayerAnimation || (runtimeScene.__ancientDigsPlayerAnimation = {",
                 "    x: player.getX(),",
                 "    y: player.getY()",
@@ -31948,6 +32980,18 @@
           "persistentUuid": "20e2ccdb-e9a4-4fbf-8117-121de85f8d11",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "SongWheelButtonHeld",
+          "persistentUuid": "9d2f32ac-76f2-497d-bbf5-e13331d2e338",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "SongWheelOpen",
+          "persistentUuid": "f90fb4db-8bc2-4b1b-8e55-f1c48ba540eb",
+          "type": "boolean",
+          "value": false
         }
       ],
       "instances": [
@@ -32920,6 +33964,78 @@
           "x": 278,
           "y": 370,
           "zOrder": 202,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 88,
+          "keepRatio": true,
+          "layer": "MobileControls",
+          "locked": true,
+          "name": "SongWheelButton",
+          "persistentUuid": "8793239c-29f8-4004-95a7-850348073e31",
+          "width": 88,
+          "x": 1008,
+          "y": 496,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 360,
+          "keepRatio": true,
+          "layer": "UI",
+          "locked": true,
+          "name": "SongWheelBase",
+          "persistentUuid": "d30ad32c-5a41-4674-a1fe-f768656b0deb",
+          "width": 360,
+          "x": 640,
+          "y": 360,
+          "zOrder": 240,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 360,
+          "keepRatio": true,
+          "layer": "UI",
+          "locked": true,
+          "name": "SongWheelHighlight",
+          "persistentUuid": "1da43ae7-b263-4349-8368-6d3fad45337e",
+          "width": 360,
+          "x": 640,
+          "y": 360,
+          "zOrder": 241,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 44,
+          "keepRatio": true,
+          "layer": "UI",
+          "locked": true,
+          "name": "SongWheelLabel",
+          "persistentUuid": "e7f875e0-d80a-4247-a7e1-adb55857af62",
+          "width": 240,
+          "x": 520,
+          "y": 338,
+          "zOrder": 242,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -39722,6 +40838,240 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "SongWheelButton",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "ButtonFSM",
+              "type": "ButtonStates::ButtonFSM",
+              "ShouldCheckHovering": true,
+              "State": "Idle",
+              "TouchId": 0,
+              "TouchIsInside": false,
+              "MouseIsInside": false,
+              "Index": 2.0247e-320
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Song wheel button.svg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 40,
+                        "y": 40
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 80,
+                            "y": 0
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 0,
+                            "y": 80
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "SongWheelBase",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Song wheel base.svg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 180,
+                        "y": 180
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 360,
+                            "y": 0
+                          },
+                          {
+                            "x": 360,
+                            "y": 360
+                          },
+                          {
+                            "x": 0,
+                            "y": 360
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "SongWheelHighlight",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Song wheel highlight.svg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 180,
+                        "y": 180
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 360,
+                            "y": 0
+                          },
+                          {
+                            "x": 360,
+                            "y": 360
+                          },
+                          {
+                            "x": 0,
+                            "y": 360
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "SongWheelLabel",
+          "smoothed": false,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "OPEN CHORD",
+          "font": "assets\\PressStart2P-Regular.ttf",
+          "textAlignment": "center",
+          "characterSize": 16,
+          "color": {
+            "b": 154,
+            "g": 217,
+            "r": 255
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "0;0;0",
+            "outlineThickness": 3,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": false,
+            "underlined": false,
+            "text": "OPEN CHORD",
+            "font": "assets\\PressStart2P-Regular.ttf",
+            "textAlignment": "center",
+            "verticalTextAlignment": "center",
+            "characterSize": 16,
+            "lineHeight": 0,
+            "color": "255;217;154"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -39916,6 +41266,21 @@
           },
           {
             "objectName": "MenuBoneIcon"
+          },
+          {
+            "objectName": "GuitarButton"
+          },
+          {
+            "objectName": "SongWheelButton"
+          },
+          {
+            "objectName": "SongWheelBase"
+          },
+          {
+            "objectName": "SongWheelHighlight"
+          },
+          {
+            "objectName": "SongWheelLabel"
           }
         ]
       },
@@ -42669,6 +44034,176 @@
           "colorR": 238,
           "creationTime": 0,
           "folded": true,
+          "name": "Ancient Digs Song Wheel",
+          "source": "Tap or hold mobile B, keyboard P, or controller B to play the guitar reliably",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Hold the note control, aim toward a song, and release to equip it. The center cancels; B plays the equipped song."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "SongWheelButtonHeld",
+                    "False",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsPressed"
+                  },
+                  "parameters": [
+                    "SongWheelButton",
+                    "ButtonFSM",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "SongWheelButtonHeld",
+                    "True",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "// SYSTEM 13: Hold-aim-release song wheel foundation for keyboard, controller, and mobile.",
+                "const sceneVariables = runtimeScene.getVariables();",
+                "const guitarState = runtimeScene.getGame().getVariables().get(\"PlayerState\").getChild(\"Guitar\");",
+                "if (!guitarState.getChild(\"EquippedSongId\").getAsString()) guitarState.getChild(\"EquippedSongId\").setString(\"open_chord\");",
+                "if (!guitarState.getChild(\"EquippedSongName\").getAsString()) guitarState.getChild(\"EquippedSongName\").setString(\"OPEN CHORD\");",
+                "const noteButtons = runtimeScene.getObjects(\"SongWheelButton\");",
+                "const wheelBases = runtimeScene.getObjects(\"SongWheelBase\");",
+                "const wheelHighlights = runtimeScene.getObjects(\"SongWheelHighlight\");",
+                "const wheelLabels = runtimeScene.getObjects(\"SongWheelLabel\");",
+                "const dialogueActive = sceneVariables.get(\"DialogueActive\").getAsBoolean();",
+                "const menuOpen = sceneVariables.get(\"MenuOpen\").getAsBoolean();",
+                "const transitionLocked = sceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
+                "const blocked = dialogueActive || menuOpen || transitionLocked;",
+                "const keyboardPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"q\");",
+                "const mobilePressed = sceneVariables.get(\"SongWheelButtonHeld\").getAsBoolean();",
+                "let controllerPressed = false;",
+                "let controllerX = 0;",
+                "let controllerY = 0;",
+                "try {",
+                "  const gamepads = typeof navigator !== \"undefined\" && navigator.getGamepads ? navigator.getGamepads() : [];",
+                "  for (const gamepad of gamepads || []) {",
+                "    if (!gamepad) continue;",
+                "    if (gamepad.buttons && gamepad.buttons[4] && gamepad.buttons[4].pressed) controllerPressed = true;",
+                "    if (gamepad.axes && gamepad.axes.length >= 4) {",
+                "      const x = Number(gamepad.axes[2]) || 0;",
+                "      const y = Number(gamepad.axes[3]) || 0;",
+                "      if (Math.hypot(x, y) > Math.hypot(controllerX, controllerY)) { controllerX = x; controllerY = y; }",
+                "    }",
+                "  }",
+                "} catch (error) { controllerPressed = false; controllerX = 0; controllerY = 0; }",
+                "const rawPressed = keyboardPressed || mobilePressed || controllerPressed;",
+                "const state = runtimeScene.__ancientDigsSongWheel || (runtimeScene.__ancientDigsSongWheel = { wasPressed: false, open: false, selected: -1, previousTimeScale: 1 });",
+                "const timeManager = runtimeScene.getTimeManager();",
+                "const hideWheel = () => {",
+                "  for (const object of wheelBases) object.hide();",
+                "  for (const object of wheelHighlights) object.hide();",
+                "  for (const object of wheelLabels) object.hide();",
+                "};",
+                "const closeWheel = (equipSelection) => {",
+                "  if (equipSelection && state.selected === 0) {",
+                "    guitarState.getChild(\"EquippedSongId\").setString(\"open_chord\");",
+                "    guitarState.getChild(\"EquippedSongName\").setString(\"OPEN CHORD\");",
+                "  }",
+                "  state.open = false;",
+                "  state.selected = -1;",
+                "  sceneVariables.get(\"SongWheelOpen\").setBoolean(false);",
+                "  if (typeof timeManager.setTimeScale === \"function\") timeManager.setTimeScale(state.previousTimeScale > 0 ? state.previousTimeScale : 1);",
+                "  hideWheel();",
+                "};",
+                "for (const button of noteButtons) {",
+                "  if (blocked) button.hide(); else button.hide(false);",
+                "}",
+                "if (rawPressed && !state.wasPressed && !blocked) {",
+                "  state.open = true;",
+                "  state.selected = -1;",
+                "  state.previousTimeScale = typeof timeManager.getTimeScale === \"function\" ? timeManager.getTimeScale() : 1;",
+                "  sceneVariables.get(\"SongWheelOpen\").setBoolean(true);",
+                "}",
+                "if (state.open && (blocked || !rawPressed)) closeWheel(!blocked && !rawPressed);",
+                "if (state.open) {",
+                "  sceneVariables.get(\"SongWheelOpen\").setBoolean(true);",
+                "  if (typeof timeManager.setTimeScale === \"function\") timeManager.setTimeScale(0.18);",
+                "  for (const object of wheelBases) object.hide(false);",
+                "  for (const object of wheelLabels) object.hide(false);",
+                "  let vectorX = 0;",
+                "  let vectorY = 0;",
+                "  if (Math.hypot(controllerX, controllerY) > 0.35) {",
+                "    vectorX = controllerX;",
+                "    vectorY = controllerY;",
+                "  } else {",
+                "    const cursorX = gdjs.evtTools.input.getCursorX(runtimeScene, \"UI\", 0);",
+                "    const cursorY = gdjs.evtTools.input.getCursorY(runtimeScene, \"UI\", 0);",
+                "    const referenceX = mobilePressed ? 1008 : 640;",
+                "    const referenceY = mobilePressed ? 496 : 360;",
+                "    vectorX = cursorX - referenceX;",
+                "    vectorY = cursorY - referenceY;",
+                "  }",
+                "  const magnitude = Math.hypot(vectorX, vectorY);",
+                "  state.selected = magnitude >= (mobilePressed ? 24 : 52) ? (Math.floor((Math.atan2(vectorY, vectorX) + Math.PI / 8 + Math.PI * 2) / (Math.PI / 4)) % 8) : -1;",
+                "  for (const highlight of wheelHighlights) {",
+                "    if (state.selected < 0) highlight.hide();",
+                "    else { highlight.setAngle(state.selected * 45); highlight.hide(false); }",
+                "  }",
+                "  const selectedName = state.selected < 0 ? guitarState.getChild(\"EquippedSongName\").getAsString() : (state.selected === 0 ? \"OPEN CHORD\" : \"LOCKED\");",
+                "  for (const label of wheelLabels) {",
+                "    label.setString(selectedName);",
+                "    label.setX(640 - label.getWidth() / 2);",
+                "    label.setY(338);",
+                "  }",
+                "} else {",
+                "  sceneVariables.get(\"SongWheelOpen\").setBoolean(false);",
+                "  hideWheel();",
+                "}",
+                "state.wasPressed = rawPressed;"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 94,
+          "colorG": 126,
+          "colorR": 238,
+          "creationTime": 0,
+          "folded": true,
           "name": "Ancient Digs Guitar Action",
           "source": "Tap or hold mobile B, keyboard P, or controller B to play the guitar reliably",
           "type": "BuiltinCommonInstructions::Group",
@@ -42742,6 +44277,7 @@
                 "  const dialogueActive = sceneVariables.get(\"DialogueActive\").getAsBoolean();",
                 "  const menuOpen = sceneVariables.get(\"MenuOpen\").getAsBoolean();",
                 "  const transitionLocked = sceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
+                "  const songWheelOpen = sceneVariables.get(\"SongWheelOpen\").getAsBoolean();",
                 "  const keyboardPlayPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"p\");",
                 "  const mobilePlayPressed = sceneVariables.get(\"GuitarButtonHeld\").getAsBoolean();",
                 "  let controllerPlayPressed = false;",
@@ -42758,7 +44294,7 @@
                 "    guitarInputState.minimumPlayMs = Math.max(0, guitarInputState.minimumPlayMs - runtimeScene.getTimeManager().getElapsedTime());",
                 "  }",
                 "  const playPressed = rawPlayPressed || guitarInputState.minimumPlayMs > 0;",
-                "  const playAllowed = !dialogueActive && !menuOpen && !transitionLocked;",
+                "  const playAllowed = !dialogueActive && !menuOpen && !transitionLocked && !songWheelOpen;",
                 "  const animationState = runtimeScene.__ancientDigsPlayerAnimation || (runtimeScene.__ancientDigsPlayerAnimation = {",
                 "    x: player.getX(),",
                 "    y: player.getY()",
@@ -46717,6 +48253,18 @@
           "persistentUuid": "b18b5f7a-3d09-41ac-b3e1-8ebdb4af3eb6",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "SongWheelButtonHeld",
+          "persistentUuid": "7d062ba6-31d6-4e77-af93-7b18e3eabdd5",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "SongWheelOpen",
+          "persistentUuid": "b464e4db-b88d-416b-8acc-92db1ef040bb",
+          "type": "boolean",
+          "value": false
         }
       ],
       "instances": [
@@ -48327,6 +49875,78 @@
           "x": 1133,
           "y": 490,
           "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 88,
+          "keepRatio": true,
+          "layer": "MobileControls",
+          "locked": true,
+          "name": "SongWheelButton",
+          "persistentUuid": "e9eaec70-29e4-4bb5-bc87-b32ab1df3036",
+          "width": 88,
+          "x": 1008,
+          "y": 496,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 360,
+          "keepRatio": true,
+          "layer": "UI",
+          "locked": true,
+          "name": "SongWheelBase",
+          "persistentUuid": "13788330-d7c5-4d21-b5a9-0be8594b87dc",
+          "width": 360,
+          "x": 640,
+          "y": 360,
+          "zOrder": 240,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 360,
+          "keepRatio": true,
+          "layer": "UI",
+          "locked": true,
+          "name": "SongWheelHighlight",
+          "persistentUuid": "efc423e0-9205-497b-8837-4d5c45d57dcb",
+          "width": 360,
+          "x": 640,
+          "y": 360,
+          "zOrder": 241,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 44,
+          "keepRatio": true,
+          "layer": "UI",
+          "locked": true,
+          "name": "SongWheelLabel",
+          "persistentUuid": "d2918112-f6a6-4507-89af-30aa1cec32e7",
+          "width": 240,
+          "x": 520,
+          "y": 338,
+          "zOrder": 242,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -56376,6 +57996,240 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "SongWheelButton",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "ButtonFSM",
+              "type": "ButtonStates::ButtonFSM",
+              "ShouldCheckHovering": true,
+              "State": "Idle",
+              "TouchId": 0,
+              "TouchIsInside": false,
+              "MouseIsInside": false,
+              "Index": 2.0247e-320
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Song wheel button.svg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 40,
+                        "y": 40
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 80,
+                            "y": 0
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 0,
+                            "y": 80
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "SongWheelBase",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Song wheel base.svg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 180,
+                        "y": 180
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 360,
+                            "y": 0
+                          },
+                          {
+                            "x": 360,
+                            "y": 360
+                          },
+                          {
+                            "x": 0,
+                            "y": 360
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "SongWheelHighlight",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Song wheel highlight.svg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 180,
+                        "y": 180
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 360,
+                            "y": 0
+                          },
+                          {
+                            "x": 360,
+                            "y": 360
+                          },
+                          {
+                            "x": 0,
+                            "y": 360
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "SongWheelLabel",
+          "smoothed": false,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "OPEN CHORD",
+          "font": "assets\\PressStart2P-Regular.ttf",
+          "textAlignment": "center",
+          "characterSize": 16,
+          "color": {
+            "b": 154,
+            "g": 217,
+            "r": 255
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "0;0;0",
+            "outlineThickness": 3,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": false,
+            "underlined": false,
+            "text": "OPEN CHORD",
+            "font": "assets\\PressStart2P-Regular.ttf",
+            "textAlignment": "center",
+            "verticalTextAlignment": "center",
+            "characterSize": 16,
+            "lineHeight": 0,
+            "color": "255;217;154"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -56663,6 +58517,21 @@
           },
           {
             "objectName": "MuseumStatue"
+          },
+          {
+            "objectName": "GuitarButton"
+          },
+          {
+            "objectName": "SongWheelButton"
+          },
+          {
+            "objectName": "SongWheelBase"
+          },
+          {
+            "objectName": "SongWheelHighlight"
+          },
+          {
+            "objectName": "SongWheelLabel"
           }
         ]
       },
@@ -59362,6 +61231,176 @@
           "colorR": 238,
           "creationTime": 0,
           "folded": true,
+          "name": "Ancient Digs Song Wheel",
+          "source": "Tap or hold mobile B, keyboard P, or controller B to play the guitar reliably",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Hold the note control, aim toward a song, and release to equip it. The center cancels; B plays the equipped song."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "SongWheelButtonHeld",
+                    "False",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsPressed"
+                  },
+                  "parameters": [
+                    "SongWheelButton",
+                    "ButtonFSM",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "SongWheelButtonHeld",
+                    "True",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "// SYSTEM 13: Hold-aim-release song wheel foundation for keyboard, controller, and mobile.",
+                "const sceneVariables = runtimeScene.getVariables();",
+                "const guitarState = runtimeScene.getGame().getVariables().get(\"PlayerState\").getChild(\"Guitar\");",
+                "if (!guitarState.getChild(\"EquippedSongId\").getAsString()) guitarState.getChild(\"EquippedSongId\").setString(\"open_chord\");",
+                "if (!guitarState.getChild(\"EquippedSongName\").getAsString()) guitarState.getChild(\"EquippedSongName\").setString(\"OPEN CHORD\");",
+                "const noteButtons = runtimeScene.getObjects(\"SongWheelButton\");",
+                "const wheelBases = runtimeScene.getObjects(\"SongWheelBase\");",
+                "const wheelHighlights = runtimeScene.getObjects(\"SongWheelHighlight\");",
+                "const wheelLabels = runtimeScene.getObjects(\"SongWheelLabel\");",
+                "const dialogueActive = sceneVariables.get(\"DialogueActive\").getAsBoolean();",
+                "const menuOpen = sceneVariables.get(\"MenuOpen\").getAsBoolean();",
+                "const transitionLocked = sceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
+                "const blocked = dialogueActive || menuOpen || transitionLocked;",
+                "const keyboardPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"q\");",
+                "const mobilePressed = sceneVariables.get(\"SongWheelButtonHeld\").getAsBoolean();",
+                "let controllerPressed = false;",
+                "let controllerX = 0;",
+                "let controllerY = 0;",
+                "try {",
+                "  const gamepads = typeof navigator !== \"undefined\" && navigator.getGamepads ? navigator.getGamepads() : [];",
+                "  for (const gamepad of gamepads || []) {",
+                "    if (!gamepad) continue;",
+                "    if (gamepad.buttons && gamepad.buttons[4] && gamepad.buttons[4].pressed) controllerPressed = true;",
+                "    if (gamepad.axes && gamepad.axes.length >= 4) {",
+                "      const x = Number(gamepad.axes[2]) || 0;",
+                "      const y = Number(gamepad.axes[3]) || 0;",
+                "      if (Math.hypot(x, y) > Math.hypot(controllerX, controllerY)) { controllerX = x; controllerY = y; }",
+                "    }",
+                "  }",
+                "} catch (error) { controllerPressed = false; controllerX = 0; controllerY = 0; }",
+                "const rawPressed = keyboardPressed || mobilePressed || controllerPressed;",
+                "const state = runtimeScene.__ancientDigsSongWheel || (runtimeScene.__ancientDigsSongWheel = { wasPressed: false, open: false, selected: -1, previousTimeScale: 1 });",
+                "const timeManager = runtimeScene.getTimeManager();",
+                "const hideWheel = () => {",
+                "  for (const object of wheelBases) object.hide();",
+                "  for (const object of wheelHighlights) object.hide();",
+                "  for (const object of wheelLabels) object.hide();",
+                "};",
+                "const closeWheel = (equipSelection) => {",
+                "  if (equipSelection && state.selected === 0) {",
+                "    guitarState.getChild(\"EquippedSongId\").setString(\"open_chord\");",
+                "    guitarState.getChild(\"EquippedSongName\").setString(\"OPEN CHORD\");",
+                "  }",
+                "  state.open = false;",
+                "  state.selected = -1;",
+                "  sceneVariables.get(\"SongWheelOpen\").setBoolean(false);",
+                "  if (typeof timeManager.setTimeScale === \"function\") timeManager.setTimeScale(state.previousTimeScale > 0 ? state.previousTimeScale : 1);",
+                "  hideWheel();",
+                "};",
+                "for (const button of noteButtons) {",
+                "  if (blocked) button.hide(); else button.hide(false);",
+                "}",
+                "if (rawPressed && !state.wasPressed && !blocked) {",
+                "  state.open = true;",
+                "  state.selected = -1;",
+                "  state.previousTimeScale = typeof timeManager.getTimeScale === \"function\" ? timeManager.getTimeScale() : 1;",
+                "  sceneVariables.get(\"SongWheelOpen\").setBoolean(true);",
+                "}",
+                "if (state.open && (blocked || !rawPressed)) closeWheel(!blocked && !rawPressed);",
+                "if (state.open) {",
+                "  sceneVariables.get(\"SongWheelOpen\").setBoolean(true);",
+                "  if (typeof timeManager.setTimeScale === \"function\") timeManager.setTimeScale(0.18);",
+                "  for (const object of wheelBases) object.hide(false);",
+                "  for (const object of wheelLabels) object.hide(false);",
+                "  let vectorX = 0;",
+                "  let vectorY = 0;",
+                "  if (Math.hypot(controllerX, controllerY) > 0.35) {",
+                "    vectorX = controllerX;",
+                "    vectorY = controllerY;",
+                "  } else {",
+                "    const cursorX = gdjs.evtTools.input.getCursorX(runtimeScene, \"UI\", 0);",
+                "    const cursorY = gdjs.evtTools.input.getCursorY(runtimeScene, \"UI\", 0);",
+                "    const referenceX = mobilePressed ? 1008 : 640;",
+                "    const referenceY = mobilePressed ? 496 : 360;",
+                "    vectorX = cursorX - referenceX;",
+                "    vectorY = cursorY - referenceY;",
+                "  }",
+                "  const magnitude = Math.hypot(vectorX, vectorY);",
+                "  state.selected = magnitude >= (mobilePressed ? 24 : 52) ? (Math.floor((Math.atan2(vectorY, vectorX) + Math.PI / 8 + Math.PI * 2) / (Math.PI / 4)) % 8) : -1;",
+                "  for (const highlight of wheelHighlights) {",
+                "    if (state.selected < 0) highlight.hide();",
+                "    else { highlight.setAngle(state.selected * 45); highlight.hide(false); }",
+                "  }",
+                "  const selectedName = state.selected < 0 ? guitarState.getChild(\"EquippedSongName\").getAsString() : (state.selected === 0 ? \"OPEN CHORD\" : \"LOCKED\");",
+                "  for (const label of wheelLabels) {",
+                "    label.setString(selectedName);",
+                "    label.setX(640 - label.getWidth() / 2);",
+                "    label.setY(338);",
+                "  }",
+                "} else {",
+                "  sceneVariables.get(\"SongWheelOpen\").setBoolean(false);",
+                "  hideWheel();",
+                "}",
+                "state.wasPressed = rawPressed;"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 94,
+          "colorG": 126,
+          "colorR": 238,
+          "creationTime": 0,
+          "folded": true,
           "name": "Ancient Digs Guitar Action",
           "source": "Tap or hold mobile B, keyboard P, or controller B to play the guitar reliably",
           "type": "BuiltinCommonInstructions::Group",
@@ -59435,6 +61474,7 @@
                 "  const dialogueActive = sceneVariables.get(\"DialogueActive\").getAsBoolean();",
                 "  const menuOpen = sceneVariables.get(\"MenuOpen\").getAsBoolean();",
                 "  const transitionLocked = sceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
+                "  const songWheelOpen = sceneVariables.get(\"SongWheelOpen\").getAsBoolean();",
                 "  const keyboardPlayPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"p\");",
                 "  const mobilePlayPressed = sceneVariables.get(\"GuitarButtonHeld\").getAsBoolean();",
                 "  let controllerPlayPressed = false;",
@@ -59451,7 +61491,7 @@
                 "    guitarInputState.minimumPlayMs = Math.max(0, guitarInputState.minimumPlayMs - runtimeScene.getTimeManager().getElapsedTime());",
                 "  }",
                 "  const playPressed = rawPlayPressed || guitarInputState.minimumPlayMs > 0;",
-                "  const playAllowed = !dialogueActive && !menuOpen && !transitionLocked;",
+                "  const playAllowed = !dialogueActive && !menuOpen && !transitionLocked && !songWheelOpen;",
                 "  const animationState = runtimeScene.__ancientDigsPlayerAnimation || (runtimeScene.__ancientDigsPlayerAnimation = {",
                 "    x: player.getX(),",
                 "    y: player.getY()",
@@ -63334,6 +65374,18 @@
           "persistentUuid": "81189eae-1be4-4faf-b01e-8a8b4fc6d2a0",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "SongWheelButtonHeld",
+          "persistentUuid": "1f02ef32-2256-4ca5-9e81-a197a490ab78",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "SongWheelOpen",
+          "persistentUuid": "b49ab214-fc7e-4459-b967-787dc2331429",
+          "type": "boolean",
+          "value": false
         }
       ],
       "instances": [
@@ -64755,6 +66807,78 @@
           "x": 535,
           "y": 610,
           "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 88,
+          "keepRatio": true,
+          "layer": "MobileControls",
+          "locked": true,
+          "name": "SongWheelButton",
+          "persistentUuid": "141d8734-2ea2-4054-90f8-2d7fba95219e",
+          "width": 88,
+          "x": 1008,
+          "y": 496,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 360,
+          "keepRatio": true,
+          "layer": "UI",
+          "locked": true,
+          "name": "SongWheelBase",
+          "persistentUuid": "511db15f-f40f-4e1d-93b5-bc0d2ec71cff",
+          "width": 360,
+          "x": 640,
+          "y": 360,
+          "zOrder": 240,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 360,
+          "keepRatio": true,
+          "layer": "UI",
+          "locked": true,
+          "name": "SongWheelHighlight",
+          "persistentUuid": "1f96cf30-a18b-4be3-9f19-8c31b4b3eb49",
+          "width": 360,
+          "x": 640,
+          "y": 360,
+          "zOrder": 241,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 44,
+          "keepRatio": true,
+          "layer": "UI",
+          "locked": true,
+          "name": "SongWheelLabel",
+          "persistentUuid": "50625960-24d0-496e-9d50-caa0fe0430b0",
+          "width": 240,
+          "x": 520,
+          "y": 338,
+          "zOrder": 242,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -72724,6 +74848,240 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "SongWheelButton",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "ButtonFSM",
+              "type": "ButtonStates::ButtonFSM",
+              "ShouldCheckHovering": true,
+              "State": "Idle",
+              "TouchId": 0,
+              "TouchIsInside": false,
+              "MouseIsInside": false,
+              "Index": 2.0247e-320
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Song wheel button.svg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 40,
+                        "y": 40
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 80,
+                            "y": 0
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 0,
+                            "y": 80
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "SongWheelBase",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Song wheel base.svg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 180,
+                        "y": 180
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 360,
+                            "y": 0
+                          },
+                          {
+                            "x": 360,
+                            "y": 360
+                          },
+                          {
+                            "x": 0,
+                            "y": 360
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "SongWheelHighlight",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Song wheel highlight.svg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 180,
+                        "y": 180
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 360,
+                            "y": 0
+                          },
+                          {
+                            "x": 360,
+                            "y": 360
+                          },
+                          {
+                            "x": 0,
+                            "y": 360
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "SongWheelLabel",
+          "smoothed": false,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "OPEN CHORD",
+          "font": "assets\\PressStart2P-Regular.ttf",
+          "textAlignment": "center",
+          "characterSize": 16,
+          "color": {
+            "b": 154,
+            "g": 217,
+            "r": 255
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "0;0;0",
+            "outlineThickness": 3,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": false,
+            "underlined": false,
+            "text": "OPEN CHORD",
+            "font": "assets\\PressStart2P-Regular.ttf",
+            "textAlignment": "center",
+            "verticalTextAlignment": "center",
+            "characterSize": 16,
+            "lineHeight": 0,
+            "color": "255;217;154"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -73008,6 +75366,21 @@
           },
           {
             "objectName": "MuseumStatue"
+          },
+          {
+            "objectName": "GuitarButton"
+          },
+          {
+            "objectName": "SongWheelButton"
+          },
+          {
+            "objectName": "SongWheelBase"
+          },
+          {
+            "objectName": "SongWheelHighlight"
+          },
+          {
+            "objectName": "SongWheelLabel"
           }
         ]
       },
@@ -75707,6 +78080,176 @@
           "colorR": 238,
           "creationTime": 0,
           "folded": true,
+          "name": "Ancient Digs Song Wheel",
+          "source": "Tap or hold mobile B, keyboard P, or controller B to play the guitar reliably",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Hold the note control, aim toward a song, and release to equip it. The center cancels; B plays the equipped song."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "SongWheelButtonHeld",
+                    "False",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsPressed"
+                  },
+                  "parameters": [
+                    "SongWheelButton",
+                    "ButtonFSM",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "SongWheelButtonHeld",
+                    "True",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "// SYSTEM 13: Hold-aim-release song wheel foundation for keyboard, controller, and mobile.",
+                "const sceneVariables = runtimeScene.getVariables();",
+                "const guitarState = runtimeScene.getGame().getVariables().get(\"PlayerState\").getChild(\"Guitar\");",
+                "if (!guitarState.getChild(\"EquippedSongId\").getAsString()) guitarState.getChild(\"EquippedSongId\").setString(\"open_chord\");",
+                "if (!guitarState.getChild(\"EquippedSongName\").getAsString()) guitarState.getChild(\"EquippedSongName\").setString(\"OPEN CHORD\");",
+                "const noteButtons = runtimeScene.getObjects(\"SongWheelButton\");",
+                "const wheelBases = runtimeScene.getObjects(\"SongWheelBase\");",
+                "const wheelHighlights = runtimeScene.getObjects(\"SongWheelHighlight\");",
+                "const wheelLabels = runtimeScene.getObjects(\"SongWheelLabel\");",
+                "const dialogueActive = sceneVariables.get(\"DialogueActive\").getAsBoolean();",
+                "const menuOpen = sceneVariables.get(\"MenuOpen\").getAsBoolean();",
+                "const transitionLocked = sceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
+                "const blocked = dialogueActive || menuOpen || transitionLocked;",
+                "const keyboardPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"q\");",
+                "const mobilePressed = sceneVariables.get(\"SongWheelButtonHeld\").getAsBoolean();",
+                "let controllerPressed = false;",
+                "let controllerX = 0;",
+                "let controllerY = 0;",
+                "try {",
+                "  const gamepads = typeof navigator !== \"undefined\" && navigator.getGamepads ? navigator.getGamepads() : [];",
+                "  for (const gamepad of gamepads || []) {",
+                "    if (!gamepad) continue;",
+                "    if (gamepad.buttons && gamepad.buttons[4] && gamepad.buttons[4].pressed) controllerPressed = true;",
+                "    if (gamepad.axes && gamepad.axes.length >= 4) {",
+                "      const x = Number(gamepad.axes[2]) || 0;",
+                "      const y = Number(gamepad.axes[3]) || 0;",
+                "      if (Math.hypot(x, y) > Math.hypot(controllerX, controllerY)) { controllerX = x; controllerY = y; }",
+                "    }",
+                "  }",
+                "} catch (error) { controllerPressed = false; controllerX = 0; controllerY = 0; }",
+                "const rawPressed = keyboardPressed || mobilePressed || controllerPressed;",
+                "const state = runtimeScene.__ancientDigsSongWheel || (runtimeScene.__ancientDigsSongWheel = { wasPressed: false, open: false, selected: -1, previousTimeScale: 1 });",
+                "const timeManager = runtimeScene.getTimeManager();",
+                "const hideWheel = () => {",
+                "  for (const object of wheelBases) object.hide();",
+                "  for (const object of wheelHighlights) object.hide();",
+                "  for (const object of wheelLabels) object.hide();",
+                "};",
+                "const closeWheel = (equipSelection) => {",
+                "  if (equipSelection && state.selected === 0) {",
+                "    guitarState.getChild(\"EquippedSongId\").setString(\"open_chord\");",
+                "    guitarState.getChild(\"EquippedSongName\").setString(\"OPEN CHORD\");",
+                "  }",
+                "  state.open = false;",
+                "  state.selected = -1;",
+                "  sceneVariables.get(\"SongWheelOpen\").setBoolean(false);",
+                "  if (typeof timeManager.setTimeScale === \"function\") timeManager.setTimeScale(state.previousTimeScale > 0 ? state.previousTimeScale : 1);",
+                "  hideWheel();",
+                "};",
+                "for (const button of noteButtons) {",
+                "  if (blocked) button.hide(); else button.hide(false);",
+                "}",
+                "if (rawPressed && !state.wasPressed && !blocked) {",
+                "  state.open = true;",
+                "  state.selected = -1;",
+                "  state.previousTimeScale = typeof timeManager.getTimeScale === \"function\" ? timeManager.getTimeScale() : 1;",
+                "  sceneVariables.get(\"SongWheelOpen\").setBoolean(true);",
+                "}",
+                "if (state.open && (blocked || !rawPressed)) closeWheel(!blocked && !rawPressed);",
+                "if (state.open) {",
+                "  sceneVariables.get(\"SongWheelOpen\").setBoolean(true);",
+                "  if (typeof timeManager.setTimeScale === \"function\") timeManager.setTimeScale(0.18);",
+                "  for (const object of wheelBases) object.hide(false);",
+                "  for (const object of wheelLabels) object.hide(false);",
+                "  let vectorX = 0;",
+                "  let vectorY = 0;",
+                "  if (Math.hypot(controllerX, controllerY) > 0.35) {",
+                "    vectorX = controllerX;",
+                "    vectorY = controllerY;",
+                "  } else {",
+                "    const cursorX = gdjs.evtTools.input.getCursorX(runtimeScene, \"UI\", 0);",
+                "    const cursorY = gdjs.evtTools.input.getCursorY(runtimeScene, \"UI\", 0);",
+                "    const referenceX = mobilePressed ? 1008 : 640;",
+                "    const referenceY = mobilePressed ? 496 : 360;",
+                "    vectorX = cursorX - referenceX;",
+                "    vectorY = cursorY - referenceY;",
+                "  }",
+                "  const magnitude = Math.hypot(vectorX, vectorY);",
+                "  state.selected = magnitude >= (mobilePressed ? 24 : 52) ? (Math.floor((Math.atan2(vectorY, vectorX) + Math.PI / 8 + Math.PI * 2) / (Math.PI / 4)) % 8) : -1;",
+                "  for (const highlight of wheelHighlights) {",
+                "    if (state.selected < 0) highlight.hide();",
+                "    else { highlight.setAngle(state.selected * 45); highlight.hide(false); }",
+                "  }",
+                "  const selectedName = state.selected < 0 ? guitarState.getChild(\"EquippedSongName\").getAsString() : (state.selected === 0 ? \"OPEN CHORD\" : \"LOCKED\");",
+                "  for (const label of wheelLabels) {",
+                "    label.setString(selectedName);",
+                "    label.setX(640 - label.getWidth() / 2);",
+                "    label.setY(338);",
+                "  }",
+                "} else {",
+                "  sceneVariables.get(\"SongWheelOpen\").setBoolean(false);",
+                "  hideWheel();",
+                "}",
+                "state.wasPressed = rawPressed;"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 94,
+          "colorG": 126,
+          "colorR": 238,
+          "creationTime": 0,
+          "folded": true,
           "name": "Ancient Digs Guitar Action",
           "source": "Tap or hold mobile B, keyboard P, or controller B to play the guitar reliably",
           "type": "BuiltinCommonInstructions::Group",
@@ -75780,6 +78323,7 @@
                 "  const dialogueActive = sceneVariables.get(\"DialogueActive\").getAsBoolean();",
                 "  const menuOpen = sceneVariables.get(\"MenuOpen\").getAsBoolean();",
                 "  const transitionLocked = sceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
+                "  const songWheelOpen = sceneVariables.get(\"SongWheelOpen\").getAsBoolean();",
                 "  const keyboardPlayPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"p\");",
                 "  const mobilePlayPressed = sceneVariables.get(\"GuitarButtonHeld\").getAsBoolean();",
                 "  let controllerPlayPressed = false;",
@@ -75796,7 +78340,7 @@
                 "    guitarInputState.minimumPlayMs = Math.max(0, guitarInputState.minimumPlayMs - runtimeScene.getTimeManager().getElapsedTime());",
                 "  }",
                 "  const playPressed = rawPlayPressed || guitarInputState.minimumPlayMs > 0;",
-                "  const playAllowed = !dialogueActive && !menuOpen && !transitionLocked;",
+                "  const playAllowed = !dialogueActive && !menuOpen && !transitionLocked && !songWheelOpen;",
                 "  const animationState = runtimeScene.__ancientDigsPlayerAnimation || (runtimeScene.__ancientDigsPlayerAnimation = {",
                 "    x: player.getX(),",
                 "    y: player.getY()",
