@@ -1592,6 +1592,118 @@
         "name": "assets\\Environment\\InteriorPieces_v2\\Museum_Statue.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/GuitarPlayingMovement/PlayMove_Right_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/GuitarPlayingMovement/PlayMove_Right_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/GuitarPlayingMovement/PlayMove_Right_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/GuitarPlayingMovement/PlayMove_Down_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Down_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/GuitarPlayingMovement/PlayMove_Down_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Down_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/GuitarPlayingMovement/PlayMove_Down_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Down_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/GuitarPlayingMovement/PlayMove_Left_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/GuitarPlayingMovement/PlayMove_Left_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/GuitarPlayingMovement/PlayMove_Left_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/GuitarPlayingMovement/PlayMove_Up_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Up_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/GuitarPlayingMovement/PlayMove_Up_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Up_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/GuitarPlayingMovement/PlayMove_Up_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Up_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/GuitarPlayingMovement/PlayMove_Right_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Explorer/GuitarPlayingMovement/PlayMove_Left_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_4.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ]
   },
@@ -7094,6 +7206,942 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "assets\\Explorer\\GuitarPlaying\\Explorer_GuitarPlay_Up_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "PlayMove0",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "PlayBack0",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "PlayMove1",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Down_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Down_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Down_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Down_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "PlayMove2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "PlayBack2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "PlayMove3",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Up_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Up_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Up_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Up_2.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -12966,7 +14014,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Tap B/P for one complete guitar phrase or hold it to continue playing. Movement stays locked during the performance and resumes in the remembered direction."
+              "comment": "Tap B/P for one complete guitar phrase or hold it to continue playing. Movement remains available while the performance stays aimed in the captured facing direction. Moving play uses approved explorer footwork."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -13052,7 +14100,7 @@
                 "  if (playPressed && playAllowed) {",
                 "    if (!activeVariable.getAsBoolean()) {",
                 "      const currentAnimation = player.getAnimationName();",
-                "      const directionMatch = /^(?:Walk|Play)([0-3])$/.exec(currentAnimation);",
+                "      const directionMatch = /^(?:Walk|Play(?:Move)?)([0-3])$/.exec(currentAnimation);",
                 "      const savedDirectionMatch = /^Walk([0-3])$/.exec(playerState.getChild(\"FacingAnimation\").getAsString());",
                 "      const direction = directionMatch ? directionMatch[1] : (savedDirectionMatch ? savedDirectionMatch[1] : \"1\");",
                 "      const returnAnimation = `Walk${direction}`;",
@@ -13061,13 +14109,16 @@
                 "      player.setAnimationElapsedTime(0);",
                 "      activeVariable.setBoolean(true);",
                 "    }",
-                "    player.activateBehavior(\"TopDownMovement\", false);",
+                "    player.activateBehavior(\"TopDownMovement\", true);",
                 "    player.activateBehavior(\"TopDownMovementAnimator\", false);",
-                "    player.getVariables().get(\"MovementLocked\").setBoolean(true);",
-                "    playerState.getChild(\"MovementEnabled\").setNumber(0);",
+                "    player.getVariables().get(\"MovementLocked\").setBoolean(false);",
+                "    playerState.getChild(\"MovementEnabled\").setNumber(1);",
                 "    playerState.getChild(\"FacingAnimation\").setString(returnVariable.getAsString());",
                 "    const playDirectionMatch = /^Walk([0-3])$/.exec(returnVariable.getAsString());",
-                "    const playAnimation = `Play${playDirectionMatch ? playDirectionMatch[1] : \"1\"}`;",
+                "    const movingWhilePlaying = Math.abs(movementX) > 0.05 || Math.abs(movementY) > 0.05;",
+                "    const lockedPlayDirection = playDirectionMatch ? playDirectionMatch[1] : \"1\";",
+                "    const backingAlongSideFacing = movingWhilePlaying && Math.abs(movementX) >= Math.abs(movementY) && ((lockedPlayDirection === \"0\" && movementX < -0.05) || (lockedPlayDirection === \"2\" && movementX > 0.05));",
+                "    const playAnimation = movingWhilePlaying ? `${backingAlongSideFacing ? \"PlayBack\" : \"PlayMove\"}${lockedPlayDirection}` : `Play${lockedPlayDirection}`;",
                 "    if (player.getAnimationName() !== playAnimation) {",
                 "      player.setAnimationName(playAnimation);",
                 "      player.setAnimationElapsedTime(0);",
@@ -20775,6 +21826,942 @@
                   ]
                 }
               ]
+            },
+            {
+              "name": "PlayMove0",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "PlayBack0",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "PlayMove1",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Down_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Down_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Down_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Down_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "PlayMove2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "PlayBack2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "PlayMove3",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Up_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Up_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Up_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Up_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -26399,7 +28386,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Tap B/P for one complete guitar phrase or hold it to continue playing. Movement stays locked during the performance and resumes in the remembered direction."
+              "comment": "Tap B/P for one complete guitar phrase or hold it to continue playing. Movement remains available while the performance stays aimed in the captured facing direction. Moving play uses approved explorer footwork."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -26485,7 +28472,7 @@
                 "  if (playPressed && playAllowed) {",
                 "    if (!activeVariable.getAsBoolean()) {",
                 "      const currentAnimation = player.getAnimationName();",
-                "      const directionMatch = /^(?:Walk|Play)([0-3])$/.exec(currentAnimation);",
+                "      const directionMatch = /^(?:Walk|Play(?:Move)?)([0-3])$/.exec(currentAnimation);",
                 "      const savedDirectionMatch = /^Walk([0-3])$/.exec(playerState.getChild(\"FacingAnimation\").getAsString());",
                 "      const direction = directionMatch ? directionMatch[1] : (savedDirectionMatch ? savedDirectionMatch[1] : \"1\");",
                 "      const returnAnimation = `Walk${direction}`;",
@@ -26494,13 +28481,16 @@
                 "      player.setAnimationElapsedTime(0);",
                 "      activeVariable.setBoolean(true);",
                 "    }",
-                "    player.activateBehavior(\"TopDownMovement\", false);",
+                "    player.activateBehavior(\"TopDownMovement\", true);",
                 "    player.activateBehavior(\"TopDownMovementAnimator\", false);",
-                "    player.getVariables().get(\"MovementLocked\").setBoolean(true);",
-                "    playerState.getChild(\"MovementEnabled\").setNumber(0);",
+                "    player.getVariables().get(\"MovementLocked\").setBoolean(false);",
+                "    playerState.getChild(\"MovementEnabled\").setNumber(1);",
                 "    playerState.getChild(\"FacingAnimation\").setString(returnVariable.getAsString());",
                 "    const playDirectionMatch = /^Walk([0-3])$/.exec(returnVariable.getAsString());",
-                "    const playAnimation = `Play${playDirectionMatch ? playDirectionMatch[1] : \"1\"}`;",
+                "    const movingWhilePlaying = Math.abs(movementX) > 0.05 || Math.abs(movementY) > 0.05;",
+                "    const lockedPlayDirection = playDirectionMatch ? playDirectionMatch[1] : \"1\";",
+                "    const backingAlongSideFacing = movingWhilePlaying && Math.abs(movementX) >= Math.abs(movementY) && ((lockedPlayDirection === \"0\" && movementX < -0.05) || (lockedPlayDirection === \"2\" && movementX > 0.05));",
+                "    const playAnimation = movingWhilePlaying ? `${backingAlongSideFacing ? \"PlayBack\" : \"PlayMove\"}${lockedPlayDirection}` : `Play${lockedPlayDirection}`;",
                 "    if (player.getAnimationName() !== playAnimation) {",
                 "      player.setAnimationName(playAnimation);",
                 "      player.setAnimationElapsedTime(0);",
@@ -34034,6 +36024,942 @@
                   ]
                 }
               ]
+            },
+            {
+              "name": "PlayMove0",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "PlayBack0",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "PlayMove1",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Down_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Down_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Down_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Down_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "PlayMove2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "PlayBack2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "PlayMove3",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Up_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Up_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Up_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Up_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -39757,7 +42683,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Tap B/P for one complete guitar phrase or hold it to continue playing. Movement stays locked during the performance and resumes in the remembered direction."
+              "comment": "Tap B/P for one complete guitar phrase or hold it to continue playing. Movement remains available while the performance stays aimed in the captured facing direction. Moving play uses approved explorer footwork."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -39843,7 +42769,7 @@
                 "  if (playPressed && playAllowed) {",
                 "    if (!activeVariable.getAsBoolean()) {",
                 "      const currentAnimation = player.getAnimationName();",
-                "      const directionMatch = /^(?:Walk|Play)([0-3])$/.exec(currentAnimation);",
+                "      const directionMatch = /^(?:Walk|Play(?:Move)?)([0-3])$/.exec(currentAnimation);",
                 "      const savedDirectionMatch = /^Walk([0-3])$/.exec(playerState.getChild(\"FacingAnimation\").getAsString());",
                 "      const direction = directionMatch ? directionMatch[1] : (savedDirectionMatch ? savedDirectionMatch[1] : \"1\");",
                 "      const returnAnimation = `Walk${direction}`;",
@@ -39852,13 +42778,16 @@
                 "      player.setAnimationElapsedTime(0);",
                 "      activeVariable.setBoolean(true);",
                 "    }",
-                "    player.activateBehavior(\"TopDownMovement\", false);",
+                "    player.activateBehavior(\"TopDownMovement\", true);",
                 "    player.activateBehavior(\"TopDownMovementAnimator\", false);",
-                "    player.getVariables().get(\"MovementLocked\").setBoolean(true);",
-                "    playerState.getChild(\"MovementEnabled\").setNumber(0);",
+                "    player.getVariables().get(\"MovementLocked\").setBoolean(false);",
+                "    playerState.getChild(\"MovementEnabled\").setNumber(1);",
                 "    playerState.getChild(\"FacingAnimation\").setString(returnVariable.getAsString());",
                 "    const playDirectionMatch = /^Walk([0-3])$/.exec(returnVariable.getAsString());",
-                "    const playAnimation = `Play${playDirectionMatch ? playDirectionMatch[1] : \"1\"}`;",
+                "    const movingWhilePlaying = Math.abs(movementX) > 0.05 || Math.abs(movementY) > 0.05;",
+                "    const lockedPlayDirection = playDirectionMatch ? playDirectionMatch[1] : \"1\";",
+                "    const backingAlongSideFacing = movingWhilePlaying && Math.abs(movementX) >= Math.abs(movementY) && ((lockedPlayDirection === \"0\" && movementX < -0.05) || (lockedPlayDirection === \"2\" && movementX > 0.05));",
+                "    const playAnimation = movingWhilePlaying ? `${backingAlongSideFacing ? \"PlayBack\" : \"PlayMove\"}${lockedPlayDirection}` : `Play${lockedPlayDirection}`;",
                 "    if (player.getAnimationName() !== playAnimation) {",
                 "      player.setAnimationName(playAnimation);",
                 "      player.setAnimationElapsedTime(0);",
@@ -48560,6 +51489,942 @@
                   ]
                 }
               ]
+            },
+            {
+              "name": "PlayMove0",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "PlayBack0",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "PlayMove1",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Down_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Down_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Down_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Down_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "PlayMove2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "PlayBack2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "PlayMove3",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Up_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Up_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Up_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Up_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -55511,7 +59376,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Tap B/P for one complete guitar phrase or hold it to continue playing. Movement stays locked during the performance and resumes in the remembered direction."
+              "comment": "Tap B/P for one complete guitar phrase or hold it to continue playing. Movement remains available while the performance stays aimed in the captured facing direction. Moving play uses approved explorer footwork."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -55597,7 +59462,7 @@
                 "  if (playPressed && playAllowed) {",
                 "    if (!activeVariable.getAsBoolean()) {",
                 "      const currentAnimation = player.getAnimationName();",
-                "      const directionMatch = /^(?:Walk|Play)([0-3])$/.exec(currentAnimation);",
+                "      const directionMatch = /^(?:Walk|Play(?:Move)?)([0-3])$/.exec(currentAnimation);",
                 "      const savedDirectionMatch = /^Walk([0-3])$/.exec(playerState.getChild(\"FacingAnimation\").getAsString());",
                 "      const direction = directionMatch ? directionMatch[1] : (savedDirectionMatch ? savedDirectionMatch[1] : \"1\");",
                 "      const returnAnimation = `Walk${direction}`;",
@@ -55606,13 +59471,16 @@
                 "      player.setAnimationElapsedTime(0);",
                 "      activeVariable.setBoolean(true);",
                 "    }",
-                "    player.activateBehavior(\"TopDownMovement\", false);",
+                "    player.activateBehavior(\"TopDownMovement\", true);",
                 "    player.activateBehavior(\"TopDownMovementAnimator\", false);",
-                "    player.getVariables().get(\"MovementLocked\").setBoolean(true);",
-                "    playerState.getChild(\"MovementEnabled\").setNumber(0);",
+                "    player.getVariables().get(\"MovementLocked\").setBoolean(false);",
+                "    playerState.getChild(\"MovementEnabled\").setNumber(1);",
                 "    playerState.getChild(\"FacingAnimation\").setString(returnVariable.getAsString());",
                 "    const playDirectionMatch = /^Walk([0-3])$/.exec(returnVariable.getAsString());",
-                "    const playAnimation = `Play${playDirectionMatch ? playDirectionMatch[1] : \"1\"}`;",
+                "    const movingWhilePlaying = Math.abs(movementX) > 0.05 || Math.abs(movementY) > 0.05;",
+                "    const lockedPlayDirection = playDirectionMatch ? playDirectionMatch[1] : \"1\";",
+                "    const backingAlongSideFacing = movingWhilePlaying && Math.abs(movementX) >= Math.abs(movementY) && ((lockedPlayDirection === \"0\" && movementX < -0.05) || (lockedPlayDirection === \"2\" && movementX > 0.05));",
+                "    const playAnimation = movingWhilePlaying ? `${backingAlongSideFacing ? \"PlayBack\" : \"PlayMove\"}${lockedPlayDirection}` : `Play${lockedPlayDirection}`;",
                 "    if (player.getAnimationName() !== playAnimation) {",
                 "      player.setAnimationName(playAnimation);",
                 "      player.setAnimationElapsedTime(0);",
@@ -64049,6 +67917,942 @@
                   ]
                 }
               ]
+            },
+            {
+              "name": "PlayMove0",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "PlayBack0",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Right_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "PlayMove1",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Down_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Down_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Down_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Down_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "PlayMove2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "PlayBack2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Left_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "PlayMove3",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.14,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Up_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Up_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Up_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Explorer\\GuitarPlayingMovement\\PlayMove_Up_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 80
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 48,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 64
+                          },
+                          {
+                            "x": 80,
+                            "y": 80
+                          },
+                          {
+                            "x": 48,
+                            "y": 96
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -70917,7 +75721,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Tap B/P for one complete guitar phrase or hold it to continue playing. Movement stays locked during the performance and resumes in the remembered direction."
+              "comment": "Tap B/P for one complete guitar phrase or hold it to continue playing. Movement remains available while the performance stays aimed in the captured facing direction. Moving play uses approved explorer footwork."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -71003,7 +75807,7 @@
                 "  if (playPressed && playAllowed) {",
                 "    if (!activeVariable.getAsBoolean()) {",
                 "      const currentAnimation = player.getAnimationName();",
-                "      const directionMatch = /^(?:Walk|Play)([0-3])$/.exec(currentAnimation);",
+                "      const directionMatch = /^(?:Walk|Play(?:Move)?)([0-3])$/.exec(currentAnimation);",
                 "      const savedDirectionMatch = /^Walk([0-3])$/.exec(playerState.getChild(\"FacingAnimation\").getAsString());",
                 "      const direction = directionMatch ? directionMatch[1] : (savedDirectionMatch ? savedDirectionMatch[1] : \"1\");",
                 "      const returnAnimation = `Walk${direction}`;",
@@ -71012,13 +75816,16 @@
                 "      player.setAnimationElapsedTime(0);",
                 "      activeVariable.setBoolean(true);",
                 "    }",
-                "    player.activateBehavior(\"TopDownMovement\", false);",
+                "    player.activateBehavior(\"TopDownMovement\", true);",
                 "    player.activateBehavior(\"TopDownMovementAnimator\", false);",
-                "    player.getVariables().get(\"MovementLocked\").setBoolean(true);",
-                "    playerState.getChild(\"MovementEnabled\").setNumber(0);",
+                "    player.getVariables().get(\"MovementLocked\").setBoolean(false);",
+                "    playerState.getChild(\"MovementEnabled\").setNumber(1);",
                 "    playerState.getChild(\"FacingAnimation\").setString(returnVariable.getAsString());",
                 "    const playDirectionMatch = /^Walk([0-3])$/.exec(returnVariable.getAsString());",
-                "    const playAnimation = `Play${playDirectionMatch ? playDirectionMatch[1] : \"1\"}`;",
+                "    const movingWhilePlaying = Math.abs(movementX) > 0.05 || Math.abs(movementY) > 0.05;",
+                "    const lockedPlayDirection = playDirectionMatch ? playDirectionMatch[1] : \"1\";",
+                "    const backingAlongSideFacing = movingWhilePlaying && Math.abs(movementX) >= Math.abs(movementY) && ((lockedPlayDirection === \"0\" && movementX < -0.05) || (lockedPlayDirection === \"2\" && movementX > 0.05));",
+                "    const playAnimation = movingWhilePlaying ? `${backingAlongSideFacing ? \"PlayBack\" : \"PlayMove\"}${lockedPlayDirection}` : `Play${lockedPlayDirection}`;",
                 "    if (player.getAnimationName() !== playAnimation) {",
                 "      player.setAnimationName(playAnimation);",
                 "      player.setAnimationElapsedTime(0);",
