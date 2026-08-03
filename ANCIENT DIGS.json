@@ -1728,6 +1728,22 @@
         "name": "assets\\Song wheel highlight.svg",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "file": "assets/Items/Echo_Core.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Items\\Echo_Core.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Items/Echo_Core_Installed.svg",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Items\\Echo_Core_Installed.svg",
+        "smoothed": true,
+        "userAdded": true
       }
     ]
   },
@@ -11404,6 +11420,67 @@
             "lineHeight": 0,
             "color": "255;217;154"
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "EchoCoreGlow",
+          "persistentUuid": "51e18779-7da7-4ab7-a322-6414e7e75a12",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Items\\Echo_Core_Installed.svg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 26,
+                            "y": 0
+                          },
+                          {
+                            "x": 26,
+                            "y": 30
+                          },
+                          {
+                            "x": 0,
+                            "y": 30
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -14358,7 +14435,7 @@
           "creationTime": 0,
           "folded": true,
           "name": "Ancient Digs Song Wheel",
-          "source": "Tap or hold mobile B, keyboard P, or controller B to play the guitar reliably",
+          "source": "Locked until the Echo Core is installed; hold-aim-release on keyboard, controller, and mobile",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
@@ -14431,7 +14508,10 @@
                 "const dialogueActive = sceneVariables.get(\"DialogueActive\").getAsBoolean();",
                 "const menuOpen = sceneVariables.get(\"MenuOpen\").getAsBoolean();",
                 "const transitionLocked = sceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
-                "const blocked = dialogueActive || menuOpen || transitionLocked;",
+                "const echoCoreInstalled = guitarState.getChild(\"EchoCoreInstalled\").getAsBoolean();",
+                "const songWheelUnlocked = guitarState.getChild(\"SongWheelUnlocked\").getAsBoolean() || echoCoreInstalled;",
+                "if (echoCoreInstalled && !guitarState.getChild(\"SongWheelUnlocked\").getAsBoolean()) guitarState.getChild(\"SongWheelUnlocked\").setBoolean(true);",
+                "const blocked = !songWheelUnlocked || dialogueActive || menuOpen || transitionLocked;",
                 "const keyboardPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"q\");",
                 "const mobilePressed = sceneVariables.get(\"SongWheelButtonHeld\").getAsBoolean();",
                 "let controllerPressed = false;",
@@ -14695,6 +14775,22 @@
                 "  animationState.x = player.getX();",
                 "  animationState.y = player.getY();",
                 "  playerState.getChild(\"Guitar\").getChild(\"State\").setString(activeVariable.getAsBoolean() ? \"Playing\" : \"OnBackBaked\");",
+                "  const echoCoreInstalled = playerState.getChild(\"Guitar\").getChild(\"EchoCoreInstalled\").getAsBoolean();",
+                "  let echoCoreGlows = runtimeScene.getObjects(\"EchoCoreGlow\");",
+                "  if (echoCoreInstalled && !echoCoreGlows.length) {",
+                "    const createdGlow = runtimeScene.createObject(\"EchoCoreGlow\");",
+                "    if (createdGlow) echoCoreGlows = [createdGlow];",
+                "  }",
+                "  const glowDirectionMatch = /^Walk([0-3])$/.exec(returnVariable.getAsString());",
+                "  const glowDirection = glowDirectionMatch ? glowDirectionMatch[1] : \"1\";",
+                "  const glowOffsets = { \"0\": [-5, -32], \"1\": [-8, -33], \"2\": [-14, -33] };",
+                "  const glowVisible = echoCoreInstalled && activeVariable.getAsBoolean() && glowDirection !== \"3\" && !!glowOffsets[glowDirection];",
+                "  for (const glow of echoCoreGlows) {",
+                "    if (!glowVisible) { glow.hide(); continue; }",
+                "    const offset = glowOffsets[glowDirection];",
+                "    glow.setScale(0.38); glow.setPosition(player.getX() + offset[0], player.getY() + offset[1]);",
+                "    glow.setZOrder(player.getZOrder() + 1000); glow.setOpacity(245); glow.hide(false);",
+                "  }",
                 "  guitarInputState.wasPressed = rawPlayPressed;",
                 "}"
               ],
@@ -18273,6 +18369,12 @@
           "persistentUuid": "aed54d7b-c9c8-4c0c-91e9-7beebd798e09",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "EchoCoreInstallRequested",
+          "persistentUuid": "e7ae85b2-ddcb-437f-9c3b-7b1f48e25a62",
+          "type": "boolean",
+          "value": false
         }
       ],
       "instances": [
@@ -19334,6 +19436,23 @@
           "x": 520,
           "y": 338,
           "zOrder": 242,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "locked": true,
+          "name": "EchoCore",
+          "persistentUuid": "d97d7975-1eb8-4d3a-a2dc-bf39d7ce1bef",
+          "width": 0,
+          "x": 160,
+          "y": 214,
+          "zOrder": 20,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -26370,6 +26489,128 @@
             "lineHeight": 0,
             "color": "255;217;154"
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "EchoCore",
+          "persistentUuid": "7ff4caab-d6bd-40ca-9e9c-0f5497601b41",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Items\\Echo_Core.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 26,
+                            "y": 0
+                          },
+                          {
+                            "x": 26,
+                            "y": 30
+                          },
+                          {
+                            "x": 0,
+                            "y": 30
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "EchoCoreGlow",
+          "persistentUuid": "f4fa6b82-4f9c-4557-9f1e-b979f8a1b7a7",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Items\\Echo_Core_Installed.svg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 26,
+                            "y": 0
+                          },
+                          {
+                            "x": 26,
+                            "y": 30
+                          },
+                          {
+                            "x": 0,
+                            "y": 30
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -29234,7 +29475,7 @@
           "creationTime": 0,
           "folded": true,
           "name": "Ancient Digs Song Wheel",
-          "source": "Tap or hold mobile B, keyboard P, or controller B to play the guitar reliably",
+          "source": "Locked until the Echo Core is installed; hold-aim-release on keyboard, controller, and mobile",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
@@ -29307,7 +29548,10 @@
                 "const dialogueActive = sceneVariables.get(\"DialogueActive\").getAsBoolean();",
                 "const menuOpen = sceneVariables.get(\"MenuOpen\").getAsBoolean();",
                 "const transitionLocked = sceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
-                "const blocked = dialogueActive || menuOpen || transitionLocked;",
+                "const echoCoreInstalled = guitarState.getChild(\"EchoCoreInstalled\").getAsBoolean();",
+                "const songWheelUnlocked = guitarState.getChild(\"SongWheelUnlocked\").getAsBoolean() || echoCoreInstalled;",
+                "if (echoCoreInstalled && !guitarState.getChild(\"SongWheelUnlocked\").getAsBoolean()) guitarState.getChild(\"SongWheelUnlocked\").setBoolean(true);",
+                "const blocked = !songWheelUnlocked || dialogueActive || menuOpen || transitionLocked;",
                 "const keyboardPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"q\");",
                 "const mobilePressed = sceneVariables.get(\"SongWheelButtonHeld\").getAsBoolean();",
                 "let controllerPressed = false;",
@@ -29571,6 +29815,22 @@
                 "  animationState.x = player.getX();",
                 "  animationState.y = player.getY();",
                 "  playerState.getChild(\"Guitar\").getChild(\"State\").setString(activeVariable.getAsBoolean() ? \"Playing\" : \"OnBackBaked\");",
+                "  const echoCoreInstalled = playerState.getChild(\"Guitar\").getChild(\"EchoCoreInstalled\").getAsBoolean();",
+                "  let echoCoreGlows = runtimeScene.getObjects(\"EchoCoreGlow\");",
+                "  if (echoCoreInstalled && !echoCoreGlows.length) {",
+                "    const createdGlow = runtimeScene.createObject(\"EchoCoreGlow\");",
+                "    if (createdGlow) echoCoreGlows = [createdGlow];",
+                "  }",
+                "  const glowDirectionMatch = /^Walk([0-3])$/.exec(returnVariable.getAsString());",
+                "  const glowDirection = glowDirectionMatch ? glowDirectionMatch[1] : \"1\";",
+                "  const glowOffsets = { \"0\": [-5, -32], \"1\": [-8, -33], \"2\": [-14, -33] };",
+                "  const glowVisible = echoCoreInstalled && activeVariable.getAsBoolean() && glowDirection !== \"3\" && !!glowOffsets[glowDirection];",
+                "  for (const glow of echoCoreGlows) {",
+                "    if (!glowVisible) { glow.hide(); continue; }",
+                "    const offset = glowOffsets[glowDirection];",
+                "    glow.setScale(0.38); glow.setPosition(player.getX() + offset[0], player.getY() + offset[1]);",
+                "    glow.setZOrder(player.getZOrder() + 1000); glow.setOpacity(245); glow.hide(false);",
+                "  }",
                 "  guitarInputState.wasPressed = rawPlayPressed;",
                 "}"
               ],
@@ -30064,6 +30324,75 @@
                 },
                 {
                   "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "EchoCore",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "MenuOpen",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetStringVariable"
+                  },
+                  "parameters": [
+                    "InteractionTarget",
+                    "=",
+                    "\"InstallEchoCore\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringVariable"
+                  },
+                  "parameters": [
+                    "InteractionPromptText",
+                    "=",
+                    "\"A: Take Echo Core\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringVariable"
+                  },
+                  "parameters": [
+                    "InteractionTarget",
+                    "=",
+                    "\"\""
+                  ]
+                },
+                {
+                  "type": {
                     "value": "BooleanVariable"
                   },
                   "parameters": [
@@ -30501,6 +30830,83 @@
                   "parameters": [
                     "InteractionTarget",
                     "=",
+                    "\"InstallEchoCore\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "MenuOpen",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "InteractionConsumed",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "EchoCoreInstallRequested",
+                    "True",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "InteractionRequested",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "InteractionConsumed",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringVariable"
+                  },
+                  "parameters": [
+                    "InteractionTarget",
+                    "=",
                     "\"Excavate\""
                   ]
                 },
@@ -30571,6 +30977,78 @@
                 "textR": 0
               },
               "comment": "Add future interactions in three steps: register the nearby target, set its prompt, then handle it only when InteractionRequested is true and InteractionConsumed is false."
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 245,
+          "colorG": 184,
+          "colorR": 56,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Ancient Digs Echo Core Test",
+          "source": "Temporary upper-left test pickup, guitar installation, persistent unlock",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "// SYSTEM 16: Temporary Echo Core pickup and installation sequence.",
+                "const echoSceneVariables = runtimeScene.getVariables();",
+                "const echoGameVariables = runtimeScene.getGame().getVariables();",
+                "const echoGuitar = echoGameVariables.get(\"PlayerState\").getChild(\"Guitar\");",
+                "const echoCores = runtimeScene.getObjects(\"EchoCore\");",
+                "const echoPlayers = runtimeScene.getObjects(\"TopDown_Character\");",
+                "const echoState = runtimeScene.__ancientDigsEchoCore || (runtimeScene.__ancientDigsEchoCore = { phase: \"idle\", elapsed: 0, pulse: 0, startX: 0, startY: 0 });",
+                "const echoInstalled = echoGuitar.getChild(\"EchoCoreInstalled\").getAsBoolean();",
+                "if (echoInstalled && echoState.phase === \"idle\") { for (const core of echoCores) core.deleteFromScene(runtimeScene); }",
+                "if (!echoInstalled && echoState.phase === \"idle\") {",
+                "  echoState.pulse += runtimeScene.getTimeManager().getElapsedTime() / 220;",
+                "  for (const core of echoCores) { core.setScale(1.45 + Math.sin(echoState.pulse) * 0.08); core.setOpacity(220 + Math.round((Math.sin(echoState.pulse) + 1) * 17)); }",
+                "}",
+                "if (echoSceneVariables.get(\"EchoCoreInstallRequested\").getAsBoolean() && !echoInstalled && echoCores.length && echoPlayers.length) {",
+                "  echoSceneVariables.get(\"EchoCoreInstallRequested\").setBoolean(false);",
+                "  echoState.phase = \"installing\"; echoState.elapsed = 0; echoState.startX = echoCores[0].getX(); echoState.startY = echoCores[0].getY();",
+                "  echoGuitar.getChild(\"EchoCoreFound\").setBoolean(true);",
+                "  echoSceneVariables.get(\"DialogueActive\").setBoolean(true);",
+                "  try { gdjs.evtTools.sound.playSound(runtimeScene, \"assets/Artifact Pickup Chime.wav\", false, 85, 1); } catch (error) {}",
+                "}",
+                "const echoShowMessage = text => {",
+                "  for (const box of runtimeScene.getObjects(\"InteractionPromptBox\")) box.hide(false);",
+                "  for (const label of runtimeScene.getObjects(\"InteractionPrompt\")) { label.setString(text); label.hide(false); }",
+                "};",
+                "if (echoState.phase === \"installing\" && echoCores.length && echoPlayers.length) {",
+                "  const core = echoCores[0]; const player = echoPlayers[0];",
+                "  echoState.elapsed += runtimeScene.getTimeManager().getElapsedTime();",
+                "  const t = Math.min(1, echoState.elapsed / 760); const eased = 1 - Math.pow(1 - t, 3);",
+                "  if (typeof player.setAnimationName === \"function\") player.setAnimationName(\"Play1\");",
+                "  if (typeof player.setAnimationFrame === \"function\") player.setAnimationFrame(1);",
+                "  const targetX = player.getX() + 50; const targetY = player.getY() + 50;",
+                "  core.setPosition(echoState.startX + (targetX - echoState.startX) * eased, echoState.startY + (targetY - echoState.startY) * eased);",
+                "  core.setScale(1.45 + (0.17 - 1.45) * eased); core.setOpacity(255); core.setZOrder(player.getZOrder() + 4);",
+                "  echoShowMessage(\"THE ECHO CORE ANSWERS...\");",
+                "  if (t >= 1) {",
+                "    echoGuitar.getChild(\"EchoCoreInstalled\").setBoolean(true); echoGuitar.getChild(\"SongWheelUnlocked\").setBoolean(true);",
+                "    if (echoGuitar.getChild(\"KnownChordCount\").getAsNumber() < 1) echoGuitar.getChild(\"KnownChordCount\").setNumber(1);",
+                "    if (echoGuitar.getChild(\"ChordTier\").getAsNumber() < 1) echoGuitar.getChild(\"ChordTier\").setNumber(1);",
+                "    echoGameVariables.get(\"SaveSystem\").getChild(\"SaveRequested\").setBoolean(true);",
+                "    core.deleteFromScene(runtimeScene); echoState.phase = \"message\"; echoState.elapsed = 0;",
+                "  }",
+                "}",
+                "if (echoState.phase === \"message\") {",
+                "  echoState.elapsed += runtimeScene.getTimeManager().getElapsedTime();",
+                "  echoShowMessage(\"ECHO CORE INSTALLED - SONG WHEEL UNLOCKED\");",
+                "  if (echoState.elapsed >= 1500) {",
+                "    echoState.phase = \"done\"; echoSceneVariables.get(\"DialogueActive\").setBoolean(false);",
+                "    for (const box of runtimeScene.getObjects(\"InteractionPromptBox\")) box.hide();",
+                "    for (const label of runtimeScene.getObjects(\"InteractionPrompt\")) label.hide();",
+                "  }",
+                "}"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
             }
           ],
           "parameters": []
@@ -41072,6 +41550,67 @@
             "lineHeight": 0,
             "color": "255;217;154"
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "EchoCoreGlow",
+          "persistentUuid": "eb6e24ff-e75b-4216-a2c2-5f0d07cb397f",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Items\\Echo_Core_Installed.svg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 26,
+                            "y": 0
+                          },
+                          {
+                            "x": 26,
+                            "y": 30
+                          },
+                          {
+                            "x": 0,
+                            "y": 30
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -44035,7 +44574,7 @@
           "creationTime": 0,
           "folded": true,
           "name": "Ancient Digs Song Wheel",
-          "source": "Tap or hold mobile B, keyboard P, or controller B to play the guitar reliably",
+          "source": "Locked until the Echo Core is installed; hold-aim-release on keyboard, controller, and mobile",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
@@ -44108,7 +44647,10 @@
                 "const dialogueActive = sceneVariables.get(\"DialogueActive\").getAsBoolean();",
                 "const menuOpen = sceneVariables.get(\"MenuOpen\").getAsBoolean();",
                 "const transitionLocked = sceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
-                "const blocked = dialogueActive || menuOpen || transitionLocked;",
+                "const echoCoreInstalled = guitarState.getChild(\"EchoCoreInstalled\").getAsBoolean();",
+                "const songWheelUnlocked = guitarState.getChild(\"SongWheelUnlocked\").getAsBoolean() || echoCoreInstalled;",
+                "if (echoCoreInstalled && !guitarState.getChild(\"SongWheelUnlocked\").getAsBoolean()) guitarState.getChild(\"SongWheelUnlocked\").setBoolean(true);",
+                "const blocked = !songWheelUnlocked || dialogueActive || menuOpen || transitionLocked;",
                 "const keyboardPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"q\");",
                 "const mobilePressed = sceneVariables.get(\"SongWheelButtonHeld\").getAsBoolean();",
                 "let controllerPressed = false;",
@@ -44372,6 +44914,22 @@
                 "  animationState.x = player.getX();",
                 "  animationState.y = player.getY();",
                 "  playerState.getChild(\"Guitar\").getChild(\"State\").setString(activeVariable.getAsBoolean() ? \"Playing\" : \"OnBackBaked\");",
+                "  const echoCoreInstalled = playerState.getChild(\"Guitar\").getChild(\"EchoCoreInstalled\").getAsBoolean();",
+                "  let echoCoreGlows = runtimeScene.getObjects(\"EchoCoreGlow\");",
+                "  if (echoCoreInstalled && !echoCoreGlows.length) {",
+                "    const createdGlow = runtimeScene.createObject(\"EchoCoreGlow\");",
+                "    if (createdGlow) echoCoreGlows = [createdGlow];",
+                "  }",
+                "  const glowDirectionMatch = /^Walk([0-3])$/.exec(returnVariable.getAsString());",
+                "  const glowDirection = glowDirectionMatch ? glowDirectionMatch[1] : \"1\";",
+                "  const glowOffsets = { \"0\": [-5, -32], \"1\": [-8, -33], \"2\": [-14, -33] };",
+                "  const glowVisible = echoCoreInstalled && activeVariable.getAsBoolean() && glowDirection !== \"3\" && !!glowOffsets[glowDirection];",
+                "  for (const glow of echoCoreGlows) {",
+                "    if (!glowVisible) { glow.hide(); continue; }",
+                "    const offset = glowOffsets[glowDirection];",
+                "    glow.setScale(0.38); glow.setPosition(player.getX() + offset[0], player.getY() + offset[1]);",
+                "    glow.setZOrder(player.getZOrder() + 1000); glow.setOpacity(245); glow.hide(false);",
+                "  }",
                 "  guitarInputState.wasPressed = rawPlayPressed;",
                 "}"
               ],
@@ -58230,6 +58788,67 @@
             "lineHeight": 0,
             "color": "255;217;154"
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "EchoCoreGlow",
+          "persistentUuid": "e1329cbc-a043-4133-9e54-67a6d7b147a1",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Items\\Echo_Core_Installed.svg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 26,
+                            "y": 0
+                          },
+                          {
+                            "x": 26,
+                            "y": 30
+                          },
+                          {
+                            "x": 0,
+                            "y": 30
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -61232,7 +61851,7 @@
           "creationTime": 0,
           "folded": true,
           "name": "Ancient Digs Song Wheel",
-          "source": "Tap or hold mobile B, keyboard P, or controller B to play the guitar reliably",
+          "source": "Locked until the Echo Core is installed; hold-aim-release on keyboard, controller, and mobile",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
@@ -61305,7 +61924,10 @@
                 "const dialogueActive = sceneVariables.get(\"DialogueActive\").getAsBoolean();",
                 "const menuOpen = sceneVariables.get(\"MenuOpen\").getAsBoolean();",
                 "const transitionLocked = sceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
-                "const blocked = dialogueActive || menuOpen || transitionLocked;",
+                "const echoCoreInstalled = guitarState.getChild(\"EchoCoreInstalled\").getAsBoolean();",
+                "const songWheelUnlocked = guitarState.getChild(\"SongWheelUnlocked\").getAsBoolean() || echoCoreInstalled;",
+                "if (echoCoreInstalled && !guitarState.getChild(\"SongWheelUnlocked\").getAsBoolean()) guitarState.getChild(\"SongWheelUnlocked\").setBoolean(true);",
+                "const blocked = !songWheelUnlocked || dialogueActive || menuOpen || transitionLocked;",
                 "const keyboardPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"q\");",
                 "const mobilePressed = sceneVariables.get(\"SongWheelButtonHeld\").getAsBoolean();",
                 "let controllerPressed = false;",
@@ -61569,6 +62191,22 @@
                 "  animationState.x = player.getX();",
                 "  animationState.y = player.getY();",
                 "  playerState.getChild(\"Guitar\").getChild(\"State\").setString(activeVariable.getAsBoolean() ? \"Playing\" : \"OnBackBaked\");",
+                "  const echoCoreInstalled = playerState.getChild(\"Guitar\").getChild(\"EchoCoreInstalled\").getAsBoolean();",
+                "  let echoCoreGlows = runtimeScene.getObjects(\"EchoCoreGlow\");",
+                "  if (echoCoreInstalled && !echoCoreGlows.length) {",
+                "    const createdGlow = runtimeScene.createObject(\"EchoCoreGlow\");",
+                "    if (createdGlow) echoCoreGlows = [createdGlow];",
+                "  }",
+                "  const glowDirectionMatch = /^Walk([0-3])$/.exec(returnVariable.getAsString());",
+                "  const glowDirection = glowDirectionMatch ? glowDirectionMatch[1] : \"1\";",
+                "  const glowOffsets = { \"0\": [-5, -32], \"1\": [-8, -33], \"2\": [-14, -33] };",
+                "  const glowVisible = echoCoreInstalled && activeVariable.getAsBoolean() && glowDirection !== \"3\" && !!glowOffsets[glowDirection];",
+                "  for (const glow of echoCoreGlows) {",
+                "    if (!glowVisible) { glow.hide(); continue; }",
+                "    const offset = glowOffsets[glowDirection];",
+                "    glow.setScale(0.38); glow.setPosition(player.getX() + offset[0], player.getY() + offset[1]);",
+                "    glow.setZOrder(player.getZOrder() + 1000); glow.setOpacity(245); glow.hide(false);",
+                "  }",
                 "  guitarInputState.wasPressed = rawPlayPressed;",
                 "}"
               ],
@@ -75082,6 +75720,67 @@
             "lineHeight": 0,
             "color": "255;217;154"
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "EchoCoreGlow",
+          "persistentUuid": "18f57e18-88ae-42e3-82e2-8fc2b120dc98",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Items\\Echo_Core_Installed.svg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 26,
+                            "y": 0
+                          },
+                          {
+                            "x": 26,
+                            "y": 30
+                          },
+                          {
+                            "x": 0,
+                            "y": 30
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -78081,7 +78780,7 @@
           "creationTime": 0,
           "folded": true,
           "name": "Ancient Digs Song Wheel",
-          "source": "Tap or hold mobile B, keyboard P, or controller B to play the guitar reliably",
+          "source": "Locked until the Echo Core is installed; hold-aim-release on keyboard, controller, and mobile",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
@@ -78154,7 +78853,10 @@
                 "const dialogueActive = sceneVariables.get(\"DialogueActive\").getAsBoolean();",
                 "const menuOpen = sceneVariables.get(\"MenuOpen\").getAsBoolean();",
                 "const transitionLocked = sceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
-                "const blocked = dialogueActive || menuOpen || transitionLocked;",
+                "const echoCoreInstalled = guitarState.getChild(\"EchoCoreInstalled\").getAsBoolean();",
+                "const songWheelUnlocked = guitarState.getChild(\"SongWheelUnlocked\").getAsBoolean() || echoCoreInstalled;",
+                "if (echoCoreInstalled && !guitarState.getChild(\"SongWheelUnlocked\").getAsBoolean()) guitarState.getChild(\"SongWheelUnlocked\").setBoolean(true);",
+                "const blocked = !songWheelUnlocked || dialogueActive || menuOpen || transitionLocked;",
                 "const keyboardPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"q\");",
                 "const mobilePressed = sceneVariables.get(\"SongWheelButtonHeld\").getAsBoolean();",
                 "let controllerPressed = false;",
@@ -78418,6 +79120,22 @@
                 "  animationState.x = player.getX();",
                 "  animationState.y = player.getY();",
                 "  playerState.getChild(\"Guitar\").getChild(\"State\").setString(activeVariable.getAsBoolean() ? \"Playing\" : \"OnBackBaked\");",
+                "  const echoCoreInstalled = playerState.getChild(\"Guitar\").getChild(\"EchoCoreInstalled\").getAsBoolean();",
+                "  let echoCoreGlows = runtimeScene.getObjects(\"EchoCoreGlow\");",
+                "  if (echoCoreInstalled && !echoCoreGlows.length) {",
+                "    const createdGlow = runtimeScene.createObject(\"EchoCoreGlow\");",
+                "    if (createdGlow) echoCoreGlows = [createdGlow];",
+                "  }",
+                "  const glowDirectionMatch = /^Walk([0-3])$/.exec(returnVariable.getAsString());",
+                "  const glowDirection = glowDirectionMatch ? glowDirectionMatch[1] : \"1\";",
+                "  const glowOffsets = { \"0\": [-5, -32], \"1\": [-8, -33], \"2\": [-14, -33] };",
+                "  const glowVisible = echoCoreInstalled && activeVariable.getAsBoolean() && glowDirection !== \"3\" && !!glowOffsets[glowDirection];",
+                "  for (const glow of echoCoreGlows) {",
+                "    if (!glowVisible) { glow.hide(); continue; }",
+                "    const offset = glowOffsets[glowDirection];",
+                "    glow.setScale(0.38); glow.setPosition(player.getX() + offset[0], player.getY() + offset[1]);",
+                "    glow.setZOrder(player.getZOrder() + 1000); glow.setOpacity(245); glow.hide(false);",
+                "  }",
                 "  guitarInputState.wasPressed = rawPlayPressed;",
                 "}"
               ],
