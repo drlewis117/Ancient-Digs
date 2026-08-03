@@ -14442,6 +14442,238 @@
               "parameterObjects": "",
               "useStrict": true,
               "eventsSheetExpanded": false
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "W/A/S/D keyboard movement. Arrow keys, mobile joystick, and controller movement remain supported."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "MenuOpen",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "TransitionLockFrames",
+                    "<=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "w"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TopDownMovementBehavior::SimulateUpKey"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "TopDownMovement"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "MenuOpen",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "TransitionLockFrames",
+                    "<=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "a"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TopDownMovementBehavior::SimulateLeftKey"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "TopDownMovement"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "MenuOpen",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "TransitionLockFrames",
+                    "<=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "s"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TopDownMovementBehavior::SimulateDownKey"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "TopDownMovement"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "MenuOpen",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "TransitionLockFrames",
+                    "<=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "d"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TopDownMovementBehavior::SimulateRightKey"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "TopDownMovement"
+                  ]
+                }
+              ]
             }
           ],
           "parameters": []
@@ -14696,7 +14928,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Tap B/P for one complete guitar phrase or hold it to continue playing. Movement remains available while the performance stays aimed in the captured facing direction. Moving play uses approved explorer footwork."
+              "comment": "Tap B/E for one complete guitar phrase or hold it to continue playing. Movement remains available while the performance stays aimed in the captured facing direction. Moving play uses approved explorer footwork."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -14756,7 +14988,7 @@
                 "  const menuOpen = sceneVariables.get(\"MenuOpen\").getAsBoolean();",
                 "  const transitionLocked = sceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
                 "  const songWheelOpen = sceneVariables.get(\"SongWheelOpen\").getAsBoolean();",
-                "  const keyboardPlayPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"p\");",
+                "  const keyboardPlayPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"e\");",
                 "  const mobilePlayPressed = sceneVariables.get(\"GuitarButtonHeld\").getAsBoolean();",
                 "  let controllerPlayPressed = false;",
                 "  try {",
@@ -29590,6 +29822,238 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "W/A/S/D keyboard movement. Arrow keys, mobile joystick, and controller movement remain supported."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "MenuOpen",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "TransitionLockFrames",
+                    "<=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "w"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TopDownMovementBehavior::SimulateUpKey"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "TopDownMovement"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "MenuOpen",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "TransitionLockFrames",
+                    "<=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "a"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TopDownMovementBehavior::SimulateLeftKey"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "TopDownMovement"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "MenuOpen",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "TransitionLockFrames",
+                    "<=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "s"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TopDownMovementBehavior::SimulateDownKey"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "TopDownMovement"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "MenuOpen",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "TransitionLockFrames",
+                    "<=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "d"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TopDownMovementBehavior::SimulateRightKey"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "TopDownMovement"
+                  ]
+                }
+              ]
             }
           ],
           "parameters": []
@@ -29844,7 +30308,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Tap B/P for one complete guitar phrase or hold it to continue playing. Movement remains available while the performance stays aimed in the captured facing direction. Moving play uses approved explorer footwork."
+              "comment": "Tap B/E for one complete guitar phrase or hold it to continue playing. Movement remains available while the performance stays aimed in the captured facing direction. Moving play uses approved explorer footwork."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -29904,7 +30368,7 @@
                 "  const menuOpen = sceneVariables.get(\"MenuOpen\").getAsBoolean();",
                 "  const transitionLocked = sceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
                 "  const songWheelOpen = sceneVariables.get(\"SongWheelOpen\").getAsBoolean();",
-                "  const keyboardPlayPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"p\");",
+                "  const keyboardPlayPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"e\");",
                 "  const mobilePlayPressed = sceneVariables.get(\"GuitarButtonHeld\").getAsBoolean();",
                 "  let controllerPlayPressed = false;",
                 "  try {",
@@ -44794,6 +45258,238 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "W/A/S/D keyboard movement. Arrow keys, mobile joystick, and controller movement remain supported."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "MenuOpen",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "TransitionLockFrames",
+                    "<=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "w"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TopDownMovementBehavior::SimulateUpKey"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "TopDownMovement"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "MenuOpen",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "TransitionLockFrames",
+                    "<=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "a"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TopDownMovementBehavior::SimulateLeftKey"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "TopDownMovement"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "MenuOpen",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "TransitionLockFrames",
+                    "<=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "s"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TopDownMovementBehavior::SimulateDownKey"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "TopDownMovement"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "MenuOpen",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "TransitionLockFrames",
+                    "<=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "d"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TopDownMovementBehavior::SimulateRightKey"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "TopDownMovement"
+                  ]
+                }
+              ]
             }
           ],
           "parameters": []
@@ -45048,7 +45744,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Tap B/P for one complete guitar phrase or hold it to continue playing. Movement remains available while the performance stays aimed in the captured facing direction. Moving play uses approved explorer footwork."
+              "comment": "Tap B/E for one complete guitar phrase or hold it to continue playing. Movement remains available while the performance stays aimed in the captured facing direction. Moving play uses approved explorer footwork."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -45108,7 +45804,7 @@
                 "  const menuOpen = sceneVariables.get(\"MenuOpen\").getAsBoolean();",
                 "  const transitionLocked = sceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
                 "  const songWheelOpen = sceneVariables.get(\"SongWheelOpen\").getAsBoolean();",
-                "  const keyboardPlayPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"p\");",
+                "  const keyboardPlayPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"e\");",
                 "  const mobilePlayPressed = sceneVariables.get(\"GuitarButtonHeld\").getAsBoolean();",
                 "  let controllerPlayPressed = false;",
                 "  try {",
@@ -62176,6 +62872,238 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "W/A/S/D keyboard movement. Arrow keys, mobile joystick, and controller movement remain supported."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "MenuOpen",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "TransitionLockFrames",
+                    "<=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "w"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TopDownMovementBehavior::SimulateUpKey"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "TopDownMovement"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "MenuOpen",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "TransitionLockFrames",
+                    "<=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "a"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TopDownMovementBehavior::SimulateLeftKey"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "TopDownMovement"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "MenuOpen",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "TransitionLockFrames",
+                    "<=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "s"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TopDownMovementBehavior::SimulateDownKey"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "TopDownMovement"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "MenuOpen",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "TransitionLockFrames",
+                    "<=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "d"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TopDownMovementBehavior::SimulateRightKey"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "TopDownMovement"
+                  ]
+                }
+              ]
             }
           ],
           "parameters": []
@@ -62430,7 +63358,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Tap B/P for one complete guitar phrase or hold it to continue playing. Movement remains available while the performance stays aimed in the captured facing direction. Moving play uses approved explorer footwork."
+              "comment": "Tap B/E for one complete guitar phrase or hold it to continue playing. Movement remains available while the performance stays aimed in the captured facing direction. Moving play uses approved explorer footwork."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -62490,7 +63418,7 @@
                 "  const menuOpen = sceneVariables.get(\"MenuOpen\").getAsBoolean();",
                 "  const transitionLocked = sceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
                 "  const songWheelOpen = sceneVariables.get(\"SongWheelOpen\").getAsBoolean();",
-                "  const keyboardPlayPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"p\");",
+                "  const keyboardPlayPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"e\");",
                 "  const mobilePlayPressed = sceneVariables.get(\"GuitarButtonHeld\").getAsBoolean();",
                 "  let controllerPlayPressed = false;",
                 "  try {",
@@ -79210,6 +80138,238 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "W/A/S/D keyboard movement. Arrow keys, mobile joystick, and controller movement remain supported."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "MenuOpen",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "TransitionLockFrames",
+                    "<=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "w"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TopDownMovementBehavior::SimulateUpKey"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "TopDownMovement"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "MenuOpen",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "TransitionLockFrames",
+                    "<=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "a"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TopDownMovementBehavior::SimulateLeftKey"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "TopDownMovement"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "MenuOpen",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "TransitionLockFrames",
+                    "<=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "s"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TopDownMovementBehavior::SimulateDownKey"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "TopDownMovement"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DialogueActive",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "MenuOpen",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "TransitionLockFrames",
+                    "<=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "d"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TopDownMovementBehavior::SimulateRightKey"
+                  },
+                  "parameters": [
+                    "TopDown_Character",
+                    "TopDownMovement"
+                  ]
+                }
+              ]
             }
           ],
           "parameters": []
@@ -79464,7 +80624,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Tap B/P for one complete guitar phrase or hold it to continue playing. Movement remains available while the performance stays aimed in the captured facing direction. Moving play uses approved explorer footwork."
+              "comment": "Tap B/E for one complete guitar phrase or hold it to continue playing. Movement remains available while the performance stays aimed in the captured facing direction. Moving play uses approved explorer footwork."
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -79524,7 +80684,7 @@
                 "  const menuOpen = sceneVariables.get(\"MenuOpen\").getAsBoolean();",
                 "  const transitionLocked = sceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
                 "  const songWheelOpen = sceneVariables.get(\"SongWheelOpen\").getAsBoolean();",
-                "  const keyboardPlayPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"p\");",
+                "  const keyboardPlayPressed = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"e\");",
                 "  const mobilePlayPressed = sceneVariables.get(\"GuitarButtonHeld\").getAsBoolean();",
                 "  let controllerPlayPressed = false;",
                 "  try {",
