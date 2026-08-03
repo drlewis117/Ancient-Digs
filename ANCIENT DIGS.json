@@ -1744,6 +1744,14 @@
         "name": "assets\\Items\\Echo_Core_Installed.svg",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "file": "assets/Effects/Echo_Sound_Wave.svg",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Effects\\Echo_Sound_Wave.svg",
+        "smoothed": true,
+        "userAdded": true
       }
     ]
   },
@@ -11481,6 +11489,67 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "EchoSoundWave",
+          "persistentUuid": "649a217d-c7fb-46d5-88b7-460f27a16f5a",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Effects\\Echo_Sound_Wave.svg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 72,
+                            "y": 0
+                          },
+                          {
+                            "x": 72,
+                            "y": 48
+                          },
+                          {
+                            "x": 0,
+                            "y": 48
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -11702,6 +11771,12 @@
           },
           {
             "objectName": "SongWheelLabel"
+          },
+          {
+            "objectName": "EchoCoreGlow"
+          },
+          {
+            "objectName": "EchoSoundWave"
           }
         ]
       },
@@ -14791,6 +14866,44 @@
                 "    glow.setScale(0.38); glow.setPosition(player.getX() + offset[0], player.getY() + offset[1]);",
                 "    glow.setZOrder(player.getZOrder() + 1000); glow.setOpacity(245); glow.hide(false);",
                 "  }",
+                "  const echoWaveState = runtimeScene.__ancientDigsEchoWaves || (runtimeScene.__ancientDigsEchoWaves = { cooldown: 0, waves: [] });",
+                "  const echoWaveDt = runtimeScene.getTimeManager().getElapsedTime();",
+                "  echoWaveState.cooldown = Math.max(0, echoWaveState.cooldown - echoWaveDt);",
+                "  const echoWaveDirections = { \"0\": { x: 1, y: 0, angle: 0 }, \"1\": { x: 0, y: 1, angle: 90 }, \"2\": { x: -1, y: 0, angle: 180 }, \"3\": { x: 0, y: -1, angle: 270 } };",
+                "  const echoWaveDirection = echoWaveDirections[glowDirection];",
+                "  const knownEchoSongs = Math.max(1, playerState.getChild(\"Guitar\").getChild(\"KnownChordCount\").getAsNumber());",
+                "  const echoWaveTier = Math.min(7, knownEchoSongs - 1);",
+                "  const echoWavePlaying = echoCoreInstalled && activeVariable.getAsBoolean() && !!echoWaveDirection;",
+                "  if (echoWavePlaying && echoWaveState.cooldown <= 0) {",
+                "    const echoWave = runtimeScene.createObject(\"EchoSoundWave\");",
+                "    if (echoWave) {",
+                "      const startX = player.getCenterXInScene() + echoWaveDirection.x * 34;",
+                "      const startY = player.getCenterYInScene() + echoWaveDirection.y * 34;",
+                "      echoWave.setScale(0.42 + echoWaveTier * 0.025);",
+                "      echoWave.setAngle(echoWaveDirection.angle);",
+                "      echoWave.setCenterPositionInScene(startX, startY);",
+                "      echoWave.setOpacity(225);",
+                "      echoWave.setZOrder(player.getZOrder() + 900);",
+                "      echoWave.hide(false);",
+                "      echoWaveState.waves.push({ object: echoWave, x: startX, y: startY, dx: echoWaveDirection.x, dy: echoWaveDirection.y, age: 0, life: 650 + echoWaveTier * 45, speed: 118 + echoWaveTier * 9, startScale: 0.42 + echoWaveTier * 0.025, endScale: 0.86 + echoWaveTier * 0.05 });",
+                "    }",
+                "    echoWaveState.cooldown = Math.max(180, 300 - echoWaveTier * 16);",
+                "  }",
+                "  const survivingEchoWaves = [];",
+                "  for (const echoWaveData of echoWaveState.waves) {",
+                "    echoWaveData.age += echoWaveDt;",
+                "    const echoWaveProgress = Math.min(1, echoWaveData.age / echoWaveData.life);",
+                "    echoWaveData.x += echoWaveData.dx * echoWaveData.speed * echoWaveDt / 1000;",
+                "    echoWaveData.y += echoWaveData.dy * echoWaveData.speed * echoWaveDt / 1000;",
+                "    if (echoWaveProgress >= 1) { echoWaveData.object.deleteFromScene(runtimeScene); continue; }",
+                "    const echoWaveScale = echoWaveData.startScale + (echoWaveData.endScale - echoWaveData.startScale) * echoWaveProgress;",
+                "    echoWaveData.object.setScale(echoWaveScale);",
+                "    echoWaveData.object.setCenterPositionInScene(echoWaveData.x, echoWaveData.y);",
+                "    echoWaveData.object.setOpacity(Math.max(0, Math.round(225 * (1 - echoWaveProgress))));",
+                "    echoWaveData.object.setZOrder(player.getZOrder() + 900);",
+                "    survivingEchoWaves.push(echoWaveData);",
+                "  }",
+                "  echoWaveState.waves = survivingEchoWaves;",
                 "  guitarInputState.wasPressed = rawPlayPressed;",
                 "}"
               ],
@@ -26611,6 +26724,67 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "EchoSoundWave",
+          "persistentUuid": "6a003cae-430c-4004-af38-84dc520aa50b",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Effects\\Echo_Sound_Wave.svg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 72,
+                            "y": 0
+                          },
+                          {
+                            "x": 72,
+                            "y": 48
+                          },
+                          {
+                            "x": 0,
+                            "y": 48
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -26820,6 +26994,15 @@
           },
           {
             "objectName": "SongWheelLabel"
+          },
+          {
+            "objectName": "EchoCore"
+          },
+          {
+            "objectName": "EchoCoreGlow"
+          },
+          {
+            "objectName": "EchoSoundWave"
           }
         ]
       },
@@ -29831,6 +30014,44 @@
                 "    glow.setScale(0.38); glow.setPosition(player.getX() + offset[0], player.getY() + offset[1]);",
                 "    glow.setZOrder(player.getZOrder() + 1000); glow.setOpacity(245); glow.hide(false);",
                 "  }",
+                "  const echoWaveState = runtimeScene.__ancientDigsEchoWaves || (runtimeScene.__ancientDigsEchoWaves = { cooldown: 0, waves: [] });",
+                "  const echoWaveDt = runtimeScene.getTimeManager().getElapsedTime();",
+                "  echoWaveState.cooldown = Math.max(0, echoWaveState.cooldown - echoWaveDt);",
+                "  const echoWaveDirections = { \"0\": { x: 1, y: 0, angle: 0 }, \"1\": { x: 0, y: 1, angle: 90 }, \"2\": { x: -1, y: 0, angle: 180 }, \"3\": { x: 0, y: -1, angle: 270 } };",
+                "  const echoWaveDirection = echoWaveDirections[glowDirection];",
+                "  const knownEchoSongs = Math.max(1, playerState.getChild(\"Guitar\").getChild(\"KnownChordCount\").getAsNumber());",
+                "  const echoWaveTier = Math.min(7, knownEchoSongs - 1);",
+                "  const echoWavePlaying = echoCoreInstalled && activeVariable.getAsBoolean() && !!echoWaveDirection;",
+                "  if (echoWavePlaying && echoWaveState.cooldown <= 0) {",
+                "    const echoWave = runtimeScene.createObject(\"EchoSoundWave\");",
+                "    if (echoWave) {",
+                "      const startX = player.getCenterXInScene() + echoWaveDirection.x * 34;",
+                "      const startY = player.getCenterYInScene() + echoWaveDirection.y * 34;",
+                "      echoWave.setScale(0.42 + echoWaveTier * 0.025);",
+                "      echoWave.setAngle(echoWaveDirection.angle);",
+                "      echoWave.setCenterPositionInScene(startX, startY);",
+                "      echoWave.setOpacity(225);",
+                "      echoWave.setZOrder(player.getZOrder() + 900);",
+                "      echoWave.hide(false);",
+                "      echoWaveState.waves.push({ object: echoWave, x: startX, y: startY, dx: echoWaveDirection.x, dy: echoWaveDirection.y, age: 0, life: 650 + echoWaveTier * 45, speed: 118 + echoWaveTier * 9, startScale: 0.42 + echoWaveTier * 0.025, endScale: 0.86 + echoWaveTier * 0.05 });",
+                "    }",
+                "    echoWaveState.cooldown = Math.max(180, 300 - echoWaveTier * 16);",
+                "  }",
+                "  const survivingEchoWaves = [];",
+                "  for (const echoWaveData of echoWaveState.waves) {",
+                "    echoWaveData.age += echoWaveDt;",
+                "    const echoWaveProgress = Math.min(1, echoWaveData.age / echoWaveData.life);",
+                "    echoWaveData.x += echoWaveData.dx * echoWaveData.speed * echoWaveDt / 1000;",
+                "    echoWaveData.y += echoWaveData.dy * echoWaveData.speed * echoWaveDt / 1000;",
+                "    if (echoWaveProgress >= 1) { echoWaveData.object.deleteFromScene(runtimeScene); continue; }",
+                "    const echoWaveScale = echoWaveData.startScale + (echoWaveData.endScale - echoWaveData.startScale) * echoWaveProgress;",
+                "    echoWaveData.object.setScale(echoWaveScale);",
+                "    echoWaveData.object.setCenterPositionInScene(echoWaveData.x, echoWaveData.y);",
+                "    echoWaveData.object.setOpacity(Math.max(0, Math.round(225 * (1 - echoWaveProgress))));",
+                "    echoWaveData.object.setZOrder(player.getZOrder() + 900);",
+                "    survivingEchoWaves.push(echoWaveData);",
+                "  }",
+                "  echoWaveState.waves = survivingEchoWaves;",
                 "  guitarInputState.wasPressed = rawPlayPressed;",
                 "}"
               ],
@@ -41611,6 +41832,67 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "EchoSoundWave",
+          "persistentUuid": "b9cdbd2e-cb88-4d06-864a-35ce6b3d9b00",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Effects\\Echo_Sound_Wave.svg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 72,
+                            "y": 0
+                          },
+                          {
+                            "x": 72,
+                            "y": 48
+                          },
+                          {
+                            "x": 0,
+                            "y": 48
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -41820,6 +42102,12 @@
           },
           {
             "objectName": "SongWheelLabel"
+          },
+          {
+            "objectName": "EchoCoreGlow"
+          },
+          {
+            "objectName": "EchoSoundWave"
           }
         ]
       },
@@ -44930,6 +45218,44 @@
                 "    glow.setScale(0.38); glow.setPosition(player.getX() + offset[0], player.getY() + offset[1]);",
                 "    glow.setZOrder(player.getZOrder() + 1000); glow.setOpacity(245); glow.hide(false);",
                 "  }",
+                "  const echoWaveState = runtimeScene.__ancientDigsEchoWaves || (runtimeScene.__ancientDigsEchoWaves = { cooldown: 0, waves: [] });",
+                "  const echoWaveDt = runtimeScene.getTimeManager().getElapsedTime();",
+                "  echoWaveState.cooldown = Math.max(0, echoWaveState.cooldown - echoWaveDt);",
+                "  const echoWaveDirections = { \"0\": { x: 1, y: 0, angle: 0 }, \"1\": { x: 0, y: 1, angle: 90 }, \"2\": { x: -1, y: 0, angle: 180 }, \"3\": { x: 0, y: -1, angle: 270 } };",
+                "  const echoWaveDirection = echoWaveDirections[glowDirection];",
+                "  const knownEchoSongs = Math.max(1, playerState.getChild(\"Guitar\").getChild(\"KnownChordCount\").getAsNumber());",
+                "  const echoWaveTier = Math.min(7, knownEchoSongs - 1);",
+                "  const echoWavePlaying = echoCoreInstalled && activeVariable.getAsBoolean() && !!echoWaveDirection;",
+                "  if (echoWavePlaying && echoWaveState.cooldown <= 0) {",
+                "    const echoWave = runtimeScene.createObject(\"EchoSoundWave\");",
+                "    if (echoWave) {",
+                "      const startX = player.getCenterXInScene() + echoWaveDirection.x * 34;",
+                "      const startY = player.getCenterYInScene() + echoWaveDirection.y * 34;",
+                "      echoWave.setScale(0.42 + echoWaveTier * 0.025);",
+                "      echoWave.setAngle(echoWaveDirection.angle);",
+                "      echoWave.setCenterPositionInScene(startX, startY);",
+                "      echoWave.setOpacity(225);",
+                "      echoWave.setZOrder(player.getZOrder() + 900);",
+                "      echoWave.hide(false);",
+                "      echoWaveState.waves.push({ object: echoWave, x: startX, y: startY, dx: echoWaveDirection.x, dy: echoWaveDirection.y, age: 0, life: 650 + echoWaveTier * 45, speed: 118 + echoWaveTier * 9, startScale: 0.42 + echoWaveTier * 0.025, endScale: 0.86 + echoWaveTier * 0.05 });",
+                "    }",
+                "    echoWaveState.cooldown = Math.max(180, 300 - echoWaveTier * 16);",
+                "  }",
+                "  const survivingEchoWaves = [];",
+                "  for (const echoWaveData of echoWaveState.waves) {",
+                "    echoWaveData.age += echoWaveDt;",
+                "    const echoWaveProgress = Math.min(1, echoWaveData.age / echoWaveData.life);",
+                "    echoWaveData.x += echoWaveData.dx * echoWaveData.speed * echoWaveDt / 1000;",
+                "    echoWaveData.y += echoWaveData.dy * echoWaveData.speed * echoWaveDt / 1000;",
+                "    if (echoWaveProgress >= 1) { echoWaveData.object.deleteFromScene(runtimeScene); continue; }",
+                "    const echoWaveScale = echoWaveData.startScale + (echoWaveData.endScale - echoWaveData.startScale) * echoWaveProgress;",
+                "    echoWaveData.object.setScale(echoWaveScale);",
+                "    echoWaveData.object.setCenterPositionInScene(echoWaveData.x, echoWaveData.y);",
+                "    echoWaveData.object.setOpacity(Math.max(0, Math.round(225 * (1 - echoWaveProgress))));",
+                "    echoWaveData.object.setZOrder(player.getZOrder() + 900);",
+                "    survivingEchoWaves.push(echoWaveData);",
+                "  }",
+                "  echoWaveState.waves = survivingEchoWaves;",
                 "  guitarInputState.wasPressed = rawPlayPressed;",
                 "}"
               ],
@@ -58849,6 +59175,67 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "EchoSoundWave",
+          "persistentUuid": "23dbb7c2-dcd1-4002-9b2f-56633252fe83",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Effects\\Echo_Sound_Wave.svg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 72,
+                            "y": 0
+                          },
+                          {
+                            "x": 72,
+                            "y": 48
+                          },
+                          {
+                            "x": 0,
+                            "y": 48
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -59151,6 +59538,12 @@
           },
           {
             "objectName": "SongWheelLabel"
+          },
+          {
+            "objectName": "EchoCoreGlow"
+          },
+          {
+            "objectName": "EchoSoundWave"
           }
         ]
       },
@@ -62207,6 +62600,44 @@
                 "    glow.setScale(0.38); glow.setPosition(player.getX() + offset[0], player.getY() + offset[1]);",
                 "    glow.setZOrder(player.getZOrder() + 1000); glow.setOpacity(245); glow.hide(false);",
                 "  }",
+                "  const echoWaveState = runtimeScene.__ancientDigsEchoWaves || (runtimeScene.__ancientDigsEchoWaves = { cooldown: 0, waves: [] });",
+                "  const echoWaveDt = runtimeScene.getTimeManager().getElapsedTime();",
+                "  echoWaveState.cooldown = Math.max(0, echoWaveState.cooldown - echoWaveDt);",
+                "  const echoWaveDirections = { \"0\": { x: 1, y: 0, angle: 0 }, \"1\": { x: 0, y: 1, angle: 90 }, \"2\": { x: -1, y: 0, angle: 180 }, \"3\": { x: 0, y: -1, angle: 270 } };",
+                "  const echoWaveDirection = echoWaveDirections[glowDirection];",
+                "  const knownEchoSongs = Math.max(1, playerState.getChild(\"Guitar\").getChild(\"KnownChordCount\").getAsNumber());",
+                "  const echoWaveTier = Math.min(7, knownEchoSongs - 1);",
+                "  const echoWavePlaying = echoCoreInstalled && activeVariable.getAsBoolean() && !!echoWaveDirection;",
+                "  if (echoWavePlaying && echoWaveState.cooldown <= 0) {",
+                "    const echoWave = runtimeScene.createObject(\"EchoSoundWave\");",
+                "    if (echoWave) {",
+                "      const startX = player.getCenterXInScene() + echoWaveDirection.x * 34;",
+                "      const startY = player.getCenterYInScene() + echoWaveDirection.y * 34;",
+                "      echoWave.setScale(0.42 + echoWaveTier * 0.025);",
+                "      echoWave.setAngle(echoWaveDirection.angle);",
+                "      echoWave.setCenterPositionInScene(startX, startY);",
+                "      echoWave.setOpacity(225);",
+                "      echoWave.setZOrder(player.getZOrder() + 900);",
+                "      echoWave.hide(false);",
+                "      echoWaveState.waves.push({ object: echoWave, x: startX, y: startY, dx: echoWaveDirection.x, dy: echoWaveDirection.y, age: 0, life: 650 + echoWaveTier * 45, speed: 118 + echoWaveTier * 9, startScale: 0.42 + echoWaveTier * 0.025, endScale: 0.86 + echoWaveTier * 0.05 });",
+                "    }",
+                "    echoWaveState.cooldown = Math.max(180, 300 - echoWaveTier * 16);",
+                "  }",
+                "  const survivingEchoWaves = [];",
+                "  for (const echoWaveData of echoWaveState.waves) {",
+                "    echoWaveData.age += echoWaveDt;",
+                "    const echoWaveProgress = Math.min(1, echoWaveData.age / echoWaveData.life);",
+                "    echoWaveData.x += echoWaveData.dx * echoWaveData.speed * echoWaveDt / 1000;",
+                "    echoWaveData.y += echoWaveData.dy * echoWaveData.speed * echoWaveDt / 1000;",
+                "    if (echoWaveProgress >= 1) { echoWaveData.object.deleteFromScene(runtimeScene); continue; }",
+                "    const echoWaveScale = echoWaveData.startScale + (echoWaveData.endScale - echoWaveData.startScale) * echoWaveProgress;",
+                "    echoWaveData.object.setScale(echoWaveScale);",
+                "    echoWaveData.object.setCenterPositionInScene(echoWaveData.x, echoWaveData.y);",
+                "    echoWaveData.object.setOpacity(Math.max(0, Math.round(225 * (1 - echoWaveProgress))));",
+                "    echoWaveData.object.setZOrder(player.getZOrder() + 900);",
+                "    survivingEchoWaves.push(echoWaveData);",
+                "  }",
+                "  echoWaveState.waves = survivingEchoWaves;",
                 "  guitarInputState.wasPressed = rawPlayPressed;",
                 "}"
               ],
@@ -75781,6 +76212,67 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "EchoSoundWave",
+          "persistentUuid": "bacc8ebc-3d0f-48d1-90bf-52d5faa4d131",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Effects\\Echo_Sound_Wave.svg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 72,
+                            "y": 0
+                          },
+                          {
+                            "x": 72,
+                            "y": 48
+                          },
+                          {
+                            "x": 0,
+                            "y": 48
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -76080,6 +76572,12 @@
           },
           {
             "objectName": "SongWheelLabel"
+          },
+          {
+            "objectName": "EchoCoreGlow"
+          },
+          {
+            "objectName": "EchoSoundWave"
           }
         ]
       },
@@ -79136,6 +79634,44 @@
                 "    glow.setScale(0.38); glow.setPosition(player.getX() + offset[0], player.getY() + offset[1]);",
                 "    glow.setZOrder(player.getZOrder() + 1000); glow.setOpacity(245); glow.hide(false);",
                 "  }",
+                "  const echoWaveState = runtimeScene.__ancientDigsEchoWaves || (runtimeScene.__ancientDigsEchoWaves = { cooldown: 0, waves: [] });",
+                "  const echoWaveDt = runtimeScene.getTimeManager().getElapsedTime();",
+                "  echoWaveState.cooldown = Math.max(0, echoWaveState.cooldown - echoWaveDt);",
+                "  const echoWaveDirections = { \"0\": { x: 1, y: 0, angle: 0 }, \"1\": { x: 0, y: 1, angle: 90 }, \"2\": { x: -1, y: 0, angle: 180 }, \"3\": { x: 0, y: -1, angle: 270 } };",
+                "  const echoWaveDirection = echoWaveDirections[glowDirection];",
+                "  const knownEchoSongs = Math.max(1, playerState.getChild(\"Guitar\").getChild(\"KnownChordCount\").getAsNumber());",
+                "  const echoWaveTier = Math.min(7, knownEchoSongs - 1);",
+                "  const echoWavePlaying = echoCoreInstalled && activeVariable.getAsBoolean() && !!echoWaveDirection;",
+                "  if (echoWavePlaying && echoWaveState.cooldown <= 0) {",
+                "    const echoWave = runtimeScene.createObject(\"EchoSoundWave\");",
+                "    if (echoWave) {",
+                "      const startX = player.getCenterXInScene() + echoWaveDirection.x * 34;",
+                "      const startY = player.getCenterYInScene() + echoWaveDirection.y * 34;",
+                "      echoWave.setScale(0.42 + echoWaveTier * 0.025);",
+                "      echoWave.setAngle(echoWaveDirection.angle);",
+                "      echoWave.setCenterPositionInScene(startX, startY);",
+                "      echoWave.setOpacity(225);",
+                "      echoWave.setZOrder(player.getZOrder() + 900);",
+                "      echoWave.hide(false);",
+                "      echoWaveState.waves.push({ object: echoWave, x: startX, y: startY, dx: echoWaveDirection.x, dy: echoWaveDirection.y, age: 0, life: 650 + echoWaveTier * 45, speed: 118 + echoWaveTier * 9, startScale: 0.42 + echoWaveTier * 0.025, endScale: 0.86 + echoWaveTier * 0.05 });",
+                "    }",
+                "    echoWaveState.cooldown = Math.max(180, 300 - echoWaveTier * 16);",
+                "  }",
+                "  const survivingEchoWaves = [];",
+                "  for (const echoWaveData of echoWaveState.waves) {",
+                "    echoWaveData.age += echoWaveDt;",
+                "    const echoWaveProgress = Math.min(1, echoWaveData.age / echoWaveData.life);",
+                "    echoWaveData.x += echoWaveData.dx * echoWaveData.speed * echoWaveDt / 1000;",
+                "    echoWaveData.y += echoWaveData.dy * echoWaveData.speed * echoWaveDt / 1000;",
+                "    if (echoWaveProgress >= 1) { echoWaveData.object.deleteFromScene(runtimeScene); continue; }",
+                "    const echoWaveScale = echoWaveData.startScale + (echoWaveData.endScale - echoWaveData.startScale) * echoWaveProgress;",
+                "    echoWaveData.object.setScale(echoWaveScale);",
+                "    echoWaveData.object.setCenterPositionInScene(echoWaveData.x, echoWaveData.y);",
+                "    echoWaveData.object.setOpacity(Math.max(0, Math.round(225 * (1 - echoWaveProgress))));",
+                "    echoWaveData.object.setZOrder(player.getZOrder() + 900);",
+                "    survivingEchoWaves.push(echoWaveData);",
+                "  }",
+                "  echoWaveState.waves = survivingEchoWaves;",
                 "  guitarInputState.wasPressed = rawPlayPressed;",
                 "}"
               ],
