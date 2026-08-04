@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <rect x="1" y="1" width="30" height="30" rx="3" fill="#1689c9" fill-opacity="0.35" stroke="#66d9ff" stroke-width="2"/>
+  <path d="M6 26L26 6M6 6l20 20" stroke="#d9f6ff" stroke-width="2" stroke-opacity="0.85"/>
+  <text x="16" y="20" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#ffffff">ND</text>
+</svg>
