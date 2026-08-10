@@ -2988,7 +2988,7 @@
               "name": "PreviousRoom",
               "persistentUuid": "62d929df-e6fe-4b0e-9765-fe6fc6770a80",
               "type": "string",
-              "value": "Temple Room 1"
+              "value": "Base camp 2"
             },
             {
               "name": "RoomNumber",
@@ -15958,11 +15958,19 @@
                 "const arrivalTable = {",
                 "  \"Base camp 2\": {",
                 "    Camp_FromTemple: { x: 928, y: 457, animation: \"Walk1\" },",
+                "    Camp_FromExcavation01: { x: 928, y: 457, animation: \"Walk1\" },",
                 "    Camp_FromMuseum: { x: 184, y: 288, animation: \"Walk1\" },",
                 "    Camp_FromShop: { x: 506, y: 439, animation: \"Walk1\" }",
                 "  },",
                 "  \"Temple Room 1\": {",
                 "    Temple_FromCamp: { x: 272, y: 427, animation: \"Walk3\" }",
+                "  },",
+                "  \"Excavation Room 01\": {",
+                "    Room01_FromSurface: { x: 640, y: 552, animation: \"Walk3\" },",
+                "    Room01_FromRoom02: { x: 1184, y: 176, animation: \"Walk1\" }",
+                "  },",
+                "  \"Excavation Room 02\": {",
+                "    Room02_FromRoom01: { x: 640, y: 552, animation: \"Walk3\" }",
                 "  },",
                 "  \"Museum Interior\": {",
                 "    Museum_FromCamp: { x: 608, y: 505, animation: \"Walk3\" }",
@@ -16845,7 +16853,7 @@
                   "parameters": [
                     "CurrentRoom",
                     "=",
-                    "\"Temple Room 1\""
+                    "\"Excavation Room 01\""
                   ]
                 },
                 {
@@ -16855,7 +16863,7 @@
                   "parameters": [
                     "NextSpawn",
                     "=",
-                    "\"Temple_FromCamp\""
+                    "\"Room01_FromSurface\""
                   ]
                 },
                 {
@@ -16874,7 +16882,7 @@
                   },
                   "parameters": [
                     "",
-                    "\"Temple Room 1\"",
+                    "\"Excavation Room 01\"",
                     ""
                   ]
                 }
@@ -31344,11 +31352,19 @@
                 "const arrivalTable = {",
                 "  \"Base camp 2\": {",
                 "    Camp_FromTemple: { x: 928, y: 457, animation: \"Walk1\" },",
+                "    Camp_FromExcavation01: { x: 928, y: 457, animation: \"Walk1\" },",
                 "    Camp_FromMuseum: { x: 184, y: 288, animation: \"Walk1\" },",
                 "    Camp_FromShop: { x: 506, y: 439, animation: \"Walk1\" }",
                 "  },",
                 "  \"Temple Room 1\": {",
                 "    Temple_FromCamp: { x: 272, y: 427, animation: \"Walk3\" }",
+                "  },",
+                "  \"Excavation Room 01\": {",
+                "    Room01_FromSurface: { x: 640, y: 552, animation: \"Walk3\" },",
+                "    Room01_FromRoom02: { x: 1184, y: 176, animation: \"Walk1\" }",
+                "  },",
+                "  \"Excavation Room 02\": {",
+                "    Room02_FromRoom01: { x: 640, y: 552, animation: \"Walk3\" }",
                 "  },",
                 "  \"Museum Interior\": {",
                 "    Museum_FromCamp: { x: 608, y: 505, animation: \"Walk3\" }",
@@ -32728,7 +32744,8 @@
             "      excavationSaveSystem.getChild(\"SaveRequested\").setBoolean(true);",
             "    }",
             "  }",
-            "  const excavationCompletedTiles = Object.values(excavationDugTiles.toJSObject()).filter(content => content && !/^progress[12]$/.test(content)).length;",
+            "  const excavationDugSnapshot = excavationDugTiles.toJSObject();",
+            "  const excavationCompletedTiles = excavationDiggableKeys.filter(key => { const content = excavationDugSnapshot[key]; return content && !/^progress[12]$/.test(content); }).length;",
             "  excavationRoomState.getChild(\"CompletedTileCount\").setNumber(excavationCompletedTiles);",
             "  if (excavationCompletedTiles >= 798 && !excavationRoomState.getChild(\"CompletionBonusAwarded\").getAsBoolean()) {",
             "    excavationRoomState.getChild(\"CompletionBonusAwarded\").setBoolean(true);",
@@ -47749,11 +47766,19 @@
                 "const arrivalTable = {",
                 "  \"Base camp 2\": {",
                 "    Camp_FromTemple: { x: 928, y: 457, animation: \"Walk1\" },",
+                "    Camp_FromExcavation01: { x: 928, y: 457, animation: \"Walk1\" },",
                 "    Camp_FromMuseum: { x: 184, y: 288, animation: \"Walk1\" },",
                 "    Camp_FromShop: { x: 506, y: 439, animation: \"Walk1\" }",
                 "  },",
                 "  \"Temple Room 1\": {",
                 "    Temple_FromCamp: { x: 272, y: 427, animation: \"Walk3\" }",
+                "  },",
+                "  \"Excavation Room 01\": {",
+                "    Room01_FromSurface: { x: 640, y: 552, animation: \"Walk3\" },",
+                "    Room01_FromRoom02: { x: 1184, y: 176, animation: \"Walk1\" }",
+                "  },",
+                "  \"Excavation Room 02\": {",
+                "    Room02_FromRoom01: { x: 640, y: 552, animation: \"Walk3\" }",
                 "  },",
                 "  \"Museum Interior\": {",
                 "    Museum_FromCamp: { x: 608, y: 505, animation: \"Walk3\" }",
@@ -48640,14 +48665,18 @@
             "  const excavationDugTiles = excavationRoomState.getChild(\"DugTiles\");",
             "  const excavationBuriedContents = excavationRoomState.getChild(\"BuriedContents\");",
             "  const excavationDetailMaps = runtimeScene.getObjects(\"AD_DETAILS\");",
-            "  const excavationNoDigObjects = runtimeScene.getObjects(\"RK_NoDigZone\").concat(runtimeScene.getObjects(\"RK_SolidNoDigZone\"), runtimeScene.getObjects(\"RK_SlidingRock\"), runtimeScene.getObjects(\"RK_FixedRock\"));",
-            "  const excavationPointBlocked = (pointX, pointY) => excavationNoDigObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight());",
+            "  const excavationPermanentNoDigObjects = runtimeScene.getObjects(\"RK_NoDigZone\").concat(runtimeScene.getObjects(\"RK_SolidNoDigZone\"), runtimeScene.getObjects(\"RK_FixedRock\"));",
+            "  const excavationActiveNoDigObjects = excavationPermanentNoDigObjects.concat(runtimeScene.getObjects(\"RK_SlidingRock\"));",
+            "  const excavationPointPermanentlyBlocked = (pointX, pointY) => excavationPermanentNoDigObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight());",
+            "  const excavationPointCurrentlyBlocked = (pointX, pointY) => excavationActiveNoDigObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight());",
             "  const excavationDiggableKeys = [];",
             "  for (let tileY = 1; tileY < 22; tileY += 1) for (let tileX = 1; tileX < 39; tileX += 1) {",
             "    const detailTile = excavationDetailMaps.length ? excavationDetailMaps[0].getTileAtGridCoordinates(tileX, tileY) : -1;",
-            "    if (detailTile === -1 && !excavationPointBlocked(tileX * 32 + 16, tileY * 32 + 16)) excavationDiggableKeys.push(String(tileX) + \"_\" + String(tileY));",
+            "    if (detailTile === -1 && !excavationPointPermanentlyBlocked(tileX * 32 + 16, tileY * 32 + 16)) excavationDiggableKeys.push(String(tileX) + \"_\" + String(tileY));",
             "  }",
             "  const excavationDiggableKeySet = new Set(excavationDiggableKeys);",
+            "  const excavationBuriedStructureObjects = runtimeScene.getObjects(\"RK_AncientDoor\").concat(runtimeScene.getObjects(\"RK_PressurePlate\"));",
+            "  const excavationDiscoveryKeys = excavationDiggableKeys.filter(key => { const [tileX, tileY] = key.split(\"_\").map(Number); const pointX = tileX * 32 + 16; const pointY = tileY * 32 + 16; return !excavationBuriedStructureObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight()); });",
             "  excavationRoomState.getChild(\"DiggableTileTotal\").setNumber(excavationDiggableKeys.length);",
             "  excavationRoomState.getChild(\"JarTotal\").setNumber(25);",
             "  excavationRoomState.getChild(\"BoneTotal\").setNumber(20);",
@@ -48662,7 +48691,7 @@
             "  const excavationRequiredHits = excavationShovelLevel <= 0 ? 3 : (excavationShovelLevel === 1 ? 2 : 1);",
             "  excavationShovel.getChild(\"DigHitsRequired\").setNumber(excavationRequiredHits);",
             "  if (excavationShovelInitialized) excavationSaveSystem.getChild(\"SaveRequested\").setBoolean(true);",
-            "  if (excavationRoomState.getChild(\"DistributionVersion\").getAsNumber() < 2) {",
+            "  if (excavationRoomState.getChild(\"DistributionVersion\").getAsNumber() < 3) {",
             "    const excavationExistingTiles = excavationDugTiles.toJSObject();",
             "    const excavationLegacyJarWasCollected = excavationGameVariables.get(\"CollectedArtifacts\").getChild(\"ancient_jar\").getChild(\"Discovered\").getAsBoolean();",
             "    if (excavationLegacyJarWasCollected) {",
@@ -48674,7 +48703,7 @@
             "    const excavationExistingValues = Object.values(excavationExistingTiles);",
             "    const excavationExistingJars = excavationExistingValues.filter(value => value === \"ancient_jar\" || value === \"collected\" || value === \"collected_ancient_jar\").length;",
             "    const excavationExistingBones = excavationExistingValues.filter(value => value === \"ancient_bones\" || value === \"collected_ancient_bones\").length;",
-            "    const excavationAvailableKeys = excavationDiggableKeys.filter(key => !Object.prototype.hasOwnProperty.call(excavationExistingTiles, key));",
+            "    const excavationAvailableKeys = excavationDiscoveryKeys.filter(key => !Object.prototype.hasOwnProperty.call(excavationExistingTiles, key));",
             "    let excavationSeed = (excavationWorldSeedVariable.getAsNumber() >>> 0) || 1;",
             "    for (let index = 0; index < excavationRoomId.length; index += 1) excavationSeed = ((excavationSeed * 31) + excavationRoomId.charCodeAt(index)) >>> 0;",
             "    const excavationRandom = () => { excavationSeed = (1664525 * excavationSeed + 1013904223) >>> 0; return excavationSeed / 4294967296; };",
@@ -48697,7 +48726,7 @@
             "    for (let index = 0; index < excavationBonesNeeded && excavationAvailableKeys.length; index += 1) excavationHidden[excavationAvailableKeys.shift()] = \"ancient_bones\";",
             "    excavationBuriedContents.fromJSObject(excavationHidden);",
             "    if (excavationReservedKeys.length) excavationRoomState.getChild(\"GuaranteedFindKey\").setString(excavationReservedKeys[0]);",
-            "    excavationRoomState.getChild(\"DistributionVersion\").setNumber(2);",
+            "    excavationRoomState.getChild(\"DistributionVersion\").setNumber(3);",
             "    excavationSaveSystem.getChild(\"SaveRequested\").setBoolean(true);",
             "  }",
             "  const excavationRuntime = runtimeScene.__ancientDigsExcavation || (runtimeScene.__ancientDigsExcavation = { restored: false, tiles: {}, introducedJar: false, introducedBones: false });",
@@ -48762,8 +48791,9 @@
             "    const excavationWithinFloor = excavationTargetX >= 1 && excavationTargetX < 39 && excavationTargetY >= 1 && excavationTargetY < 22;",
             "    const excavationTargetContent = excavationDugTiles.toJSObject()[excavationTargetKey] || \"\";",
             "    const excavationTargetIsDiggable = excavationDiggableKeySet.has(excavationTargetKey);",
+            "    const excavationTargetCurrentlyBlocked = excavationPointCurrentlyBlocked(excavationTargetX * 32 + 16, excavationTargetY * 32 + 16);",
             "    const excavationTileCanProgress = !excavationTargetContent || /^progress[12]$/.test(excavationTargetContent);",
-            "    excavationCanDig = excavationWithinFloor && excavationTargetIsDiggable && excavationTileCanProgress && !excavationMenuOpen && !excavationDialogueActive && !excavationTransitionLocked && !excavationGuitarActive;",
+            "    excavationCanDig = excavationWithinFloor && excavationTargetIsDiggable && !excavationTargetCurrentlyBlocked && excavationTileCanProgress && !excavationMenuOpen && !excavationDialogueActive && !excavationTransitionLocked && !excavationGuitarActive;",
             "  }",
             "  excavationSceneVariables.get(\"ExcavationTargetX\").setNumber(excavationTargetX);",
             "  excavationSceneVariables.get(\"ExcavationTargetY\").setNumber(excavationTargetY);",
@@ -48826,7 +48856,8 @@
             "      excavationSaveSystem.getChild(\"SaveRequested\").setBoolean(true);",
             "    }",
             "  }",
-            "  const excavationCompletedTiles = Object.values(excavationDugTiles.toJSObject()).filter(content => content && !/^progress[12]$/.test(content)).length;",
+            "  const excavationDugSnapshot = excavationDugTiles.toJSObject();",
+            "  const excavationCompletedTiles = excavationDiggableKeys.filter(key => { const content = excavationDugSnapshot[key]; return content && !/^progress[12]$/.test(content); }).length;",
             "  excavationRoomState.getChild(\"CompletedTileCount\").setNumber(excavationCompletedTiles);",
             "  if (excavationCompletedTiles >= excavationDiggableKeys.length && !excavationRoomState.getChild(\"CompletionBonusAwarded\").getAsBoolean()) {",
             "    excavationRoomState.getChild(\"CompletionBonusAwarded\").setBoolean(true);",
@@ -51868,7 +51899,7 @@
           "name": "PreviousRoomScene",
           "persistentUuid": "0a0558bf-6076-4668-b153-92f72b179370",
           "type": "string",
-          "value": "Temple Room 1"
+          "value": "Base camp 2"
         },
         {
           "name": "NextRoomScene",
@@ -53251,6 +53282,38 @@
           "x": 1216,
           "y": 352,
           "zOrder": 265,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "RoomEntranceDoor",
+          "persistentUuid": "9aa34cae-a0cf-419a-9d47-435be0ab2eb2",
+          "width": 0,
+          "x": 576,
+          "y": 576,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 128,
+          "keepRatio": true,
+          "layer": "",
+          "name": "RK_NoDigZone",
+          "persistentUuid": "fa403f4b-a9cc-436b-9ddb-cb95189273ee",
+          "width": 128,
+          "x": 576,
+          "y": 576,
+          "zOrder": 258,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -61279,6 +61342,373 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "RoomEntranceDoor",
+          "persistentUuid": "2ad2530a-41b1-4ee9-8422-7ff11e43b863",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "RoomKitType",
+              "persistentUuid": "3fd9825b-ae1d-490c-aab7-a8b3adb4243f",
+              "type": "string",
+              "value": "Buried Ancient Door"
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Sealed",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-00.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Open",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.065,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-00.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-01.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-02.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-03.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-04.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-05.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-06.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-07.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-08.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-09.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-10.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-11.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-12.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-13.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-14.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-15.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-16.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-17.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -61520,6 +61950,9 @@
           },
           {
             "objectName": "EchoSoundWave"
+          },
+          {
+            "objectName": "RoomEntranceDoor"
           }
         ]
       },
@@ -64930,11 +65363,19 @@
                 "const arrivalTable = {",
                 "  \"Base camp 2\": {",
                 "    Camp_FromTemple: { x: 928, y: 457, animation: \"Walk1\" },",
+                "    Camp_FromExcavation01: { x: 928, y: 457, animation: \"Walk1\" },",
                 "    Camp_FromMuseum: { x: 184, y: 288, animation: \"Walk1\" },",
                 "    Camp_FromShop: { x: 506, y: 439, animation: \"Walk1\" }",
                 "  },",
                 "  \"Temple Room 1\": {",
                 "    Temple_FromCamp: { x: 272, y: 427, animation: \"Walk3\" }",
+                "  },",
+                "  \"Excavation Room 01\": {",
+                "    Room01_FromSurface: { x: 640, y: 552, animation: \"Walk3\" },",
+                "    Room01_FromRoom02: { x: 1184, y: 176, animation: \"Walk1\" }",
+                "  },",
+                "  \"Excavation Room 02\": {",
+                "    Room02_FromRoom01: { x: 640, y: 552, animation: \"Walk3\" }",
                 "  },",
                 "  \"Museum Interior\": {",
                 "    Museum_FromCamp: { x: 608, y: 505, animation: \"Walk3\" }",
@@ -65821,14 +66262,18 @@
             "  const excavationDugTiles = excavationRoomState.getChild(\"DugTiles\");",
             "  const excavationBuriedContents = excavationRoomState.getChild(\"BuriedContents\");",
             "  const excavationDetailMaps = runtimeScene.getObjects(\"AD_DETAILS\");",
-            "  const excavationNoDigObjects = runtimeScene.getObjects(\"RK_NoDigZone\").concat(runtimeScene.getObjects(\"RK_SolidNoDigZone\"), runtimeScene.getObjects(\"RK_SlidingRock\"), runtimeScene.getObjects(\"RK_FixedRock\"));",
-            "  const excavationPointBlocked = (pointX, pointY) => excavationNoDigObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight());",
+            "  const excavationPermanentNoDigObjects = runtimeScene.getObjects(\"RK_NoDigZone\").concat(runtimeScene.getObjects(\"RK_SolidNoDigZone\"), runtimeScene.getObjects(\"RK_FixedRock\"));",
+            "  const excavationActiveNoDigObjects = excavationPermanentNoDigObjects.concat(runtimeScene.getObjects(\"RK_SlidingRock\"));",
+            "  const excavationPointPermanentlyBlocked = (pointX, pointY) => excavationPermanentNoDigObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight());",
+            "  const excavationPointCurrentlyBlocked = (pointX, pointY) => excavationActiveNoDigObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight());",
             "  const excavationDiggableKeys = [];",
             "  for (let tileY = 1; tileY < 22; tileY += 1) for (let tileX = 1; tileX < 39; tileX += 1) {",
             "    const detailTile = excavationDetailMaps.length ? excavationDetailMaps[0].getTileAtGridCoordinates(tileX, tileY) : -1;",
-            "    if (detailTile === -1 && !excavationPointBlocked(tileX * 32 + 16, tileY * 32 + 16)) excavationDiggableKeys.push(String(tileX) + \"_\" + String(tileY));",
+            "    if (detailTile === -1 && !excavationPointPermanentlyBlocked(tileX * 32 + 16, tileY * 32 + 16)) excavationDiggableKeys.push(String(tileX) + \"_\" + String(tileY));",
             "  }",
             "  const excavationDiggableKeySet = new Set(excavationDiggableKeys);",
+            "  const excavationBuriedStructureObjects = runtimeScene.getObjects(\"RK_AncientDoor\").concat(runtimeScene.getObjects(\"RK_PressurePlate\"));",
+            "  const excavationDiscoveryKeys = excavationDiggableKeys.filter(key => { const [tileX, tileY] = key.split(\"_\").map(Number); const pointX = tileX * 32 + 16; const pointY = tileY * 32 + 16; return !excavationBuriedStructureObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight()); });",
             "  excavationRoomState.getChild(\"DiggableTileTotal\").setNumber(excavationDiggableKeys.length);",
             "  excavationRoomState.getChild(\"JarTotal\").setNumber(25);",
             "  excavationRoomState.getChild(\"BoneTotal\").setNumber(20);",
@@ -65843,7 +66288,7 @@
             "  const excavationRequiredHits = excavationShovelLevel <= 0 ? 3 : (excavationShovelLevel === 1 ? 2 : 1);",
             "  excavationShovel.getChild(\"DigHitsRequired\").setNumber(excavationRequiredHits);",
             "  if (excavationShovelInitialized) excavationSaveSystem.getChild(\"SaveRequested\").setBoolean(true);",
-            "  if (excavationRoomState.getChild(\"DistributionVersion\").getAsNumber() < 2) {",
+            "  if (excavationRoomState.getChild(\"DistributionVersion\").getAsNumber() < 3) {",
             "    const excavationExistingTiles = excavationDugTiles.toJSObject();",
             "    const excavationLegacyJarWasCollected = excavationGameVariables.get(\"CollectedArtifacts\").getChild(\"ancient_jar\").getChild(\"Discovered\").getAsBoolean();",
             "    if (excavationLegacyJarWasCollected) {",
@@ -65855,7 +66300,7 @@
             "    const excavationExistingValues = Object.values(excavationExistingTiles);",
             "    const excavationExistingJars = excavationExistingValues.filter(value => value === \"ancient_jar\" || value === \"collected\" || value === \"collected_ancient_jar\").length;",
             "    const excavationExistingBones = excavationExistingValues.filter(value => value === \"ancient_bones\" || value === \"collected_ancient_bones\").length;",
-            "    const excavationAvailableKeys = excavationDiggableKeys.filter(key => !Object.prototype.hasOwnProperty.call(excavationExistingTiles, key));",
+            "    const excavationAvailableKeys = excavationDiscoveryKeys.filter(key => !Object.prototype.hasOwnProperty.call(excavationExistingTiles, key));",
             "    let excavationSeed = (excavationWorldSeedVariable.getAsNumber() >>> 0) || 1;",
             "    for (let index = 0; index < excavationRoomId.length; index += 1) excavationSeed = ((excavationSeed * 31) + excavationRoomId.charCodeAt(index)) >>> 0;",
             "    const excavationRandom = () => { excavationSeed = (1664525 * excavationSeed + 1013904223) >>> 0; return excavationSeed / 4294967296; };",
@@ -65878,7 +66323,7 @@
             "    for (let index = 0; index < excavationBonesNeeded && excavationAvailableKeys.length; index += 1) excavationHidden[excavationAvailableKeys.shift()] = \"ancient_bones\";",
             "    excavationBuriedContents.fromJSObject(excavationHidden);",
             "    if (excavationReservedKeys.length) excavationRoomState.getChild(\"GuaranteedFindKey\").setString(excavationReservedKeys[0]);",
-            "    excavationRoomState.getChild(\"DistributionVersion\").setNumber(2);",
+            "    excavationRoomState.getChild(\"DistributionVersion\").setNumber(3);",
             "    excavationSaveSystem.getChild(\"SaveRequested\").setBoolean(true);",
             "  }",
             "  const excavationRuntime = runtimeScene.__ancientDigsExcavation || (runtimeScene.__ancientDigsExcavation = { restored: false, tiles: {}, introducedJar: false, introducedBones: false });",
@@ -65943,8 +66388,9 @@
             "    const excavationWithinFloor = excavationTargetX >= 1 && excavationTargetX < 39 && excavationTargetY >= 1 && excavationTargetY < 22;",
             "    const excavationTargetContent = excavationDugTiles.toJSObject()[excavationTargetKey] || \"\";",
             "    const excavationTargetIsDiggable = excavationDiggableKeySet.has(excavationTargetKey);",
+            "    const excavationTargetCurrentlyBlocked = excavationPointCurrentlyBlocked(excavationTargetX * 32 + 16, excavationTargetY * 32 + 16);",
             "    const excavationTileCanProgress = !excavationTargetContent || /^progress[12]$/.test(excavationTargetContent);",
-            "    excavationCanDig = excavationWithinFloor && excavationTargetIsDiggable && excavationTileCanProgress && !excavationMenuOpen && !excavationDialogueActive && !excavationTransitionLocked && !excavationGuitarActive;",
+            "    excavationCanDig = excavationWithinFloor && excavationTargetIsDiggable && !excavationTargetCurrentlyBlocked && excavationTileCanProgress && !excavationMenuOpen && !excavationDialogueActive && !excavationTransitionLocked && !excavationGuitarActive;",
             "  }",
             "  excavationSceneVariables.get(\"ExcavationTargetX\").setNumber(excavationTargetX);",
             "  excavationSceneVariables.get(\"ExcavationTargetY\").setNumber(excavationTargetY);",
@@ -66007,7 +66453,8 @@
             "      excavationSaveSystem.getChild(\"SaveRequested\").setBoolean(true);",
             "    }",
             "  }",
-            "  const excavationCompletedTiles = Object.values(excavationDugTiles.toJSObject()).filter(content => content && !/^progress[12]$/.test(content)).length;",
+            "  const excavationDugSnapshot = excavationDugTiles.toJSObject();",
+            "  const excavationCompletedTiles = excavationDiggableKeys.filter(key => { const content = excavationDugSnapshot[key]; return content && !/^progress[12]$/.test(content); }).length;",
             "  excavationRoomState.getChild(\"CompletedTileCount\").setNumber(excavationCompletedTiles);",
             "  if (excavationCompletedTiles >= excavationDiggableKeys.length && !excavationRoomState.getChild(\"CompletionBonusAwarded\").getAsBoolean()) {",
             "    excavationRoomState.getChild(\"CompletionBonusAwarded\").setBoolean(true);",
@@ -68582,6 +69029,112 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "colorB": 77,
+          "colorG": 170,
+          "colorR": 210,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Ancient Digs Room Pipeline",
+          "source": "Paired room entrances, puzzle restart choice, and ancient-door travel",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "// ROOM PIPELINE: paired thresholds, Room 01 restart choice, and Room 02 travel.",
+                "const pipelineSceneName = runtimeScene.getName();",
+                "const pipelineGameVariables = runtimeScene.getGame().getVariables();",
+                "const pipelineSceneVariables = runtimeScene.getVariables();",
+                "const pipelinePlayer = runtimeScene.getObjects(\"TopDown_Character\")[0];",
+                "const pipelineEntrance = runtimeScene.getObjects(\"RoomEntranceDoor\")[0];",
+                "const pipelinePrompt = runtimeScene.getObjects(\"InteractionPrompt\")[0];",
+                "const pipelinePromptBox = runtimeScene.getObjects(\"InteractionPromptBox\")[0];",
+                "if (pipelineEntrance) {",
+                "  pipelineEntrance.hide(false);",
+                "  pipelineEntrance.setAnimationName(\"Open\");",
+                "  pipelineEntrance.setAnimationFrame(17);",
+                "}",
+                "const pipelineActionKeyboard = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"Space\") || gdjs.evtTools.input.isKeyPressed(runtimeScene, \"Return\");",
+                "let pipelineActionPointer = false;",
+                "let pipelineBPointer = false;",
+                "try {",
+                "  pipelineActionPointer = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, \"Left\") && runtimeScene.getObjects(\"ActionButton\").some(button => button && !button.isHidden() && button.cursorOnObject());",
+                "  pipelineBPointer = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, \"Left\") && runtimeScene.getObjects(\"GuitarButton\").some(button => button && !button.isHidden() && button.cursorOnObject());",
+                "} catch (error) {}",
+                "let pipelineControllerA = false;",
+                "let pipelineControllerB = false;",
+                "try {",
+                "  const gamepads = typeof navigator !== \"undefined\" && navigator.getGamepads ? navigator.getGamepads() : [];",
+                "  for (const gamepad of gamepads || []) if (gamepad && gamepad.buttons) {",
+                "    pipelineControllerA ||= !!(gamepad.buttons[0] && gamepad.buttons[0].pressed);",
+                "    pipelineControllerB ||= !!(gamepad.buttons[1] && gamepad.buttons[1].pressed);",
+                "  }",
+                "} catch (error) {}",
+                "const pipelineActionHeld = pipelineActionKeyboard || pipelineActionPointer || pipelineControllerA || pipelineSceneVariables.get(\"InteractionRequested\").getAsBoolean();",
+                "const pipelineBHeld = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"e\") || pipelineBPointer || pipelineControllerB;",
+                "const pipelineInput = runtimeScene.__ancientDigsRoomPipelineInput || (runtimeScene.__ancientDigsRoomPipelineInput = { actionHeld: false, bHeld: false });",
+                "const pipelineActionPressed = pipelineActionHeld && !pipelineInput.actionHeld;",
+                "const pipelineBPressed = pipelineBHeld && !pipelineInput.bHeld;",
+                "pipelineInput.actionHeld = pipelineActionHeld;",
+                "pipelineInput.bHeld = pipelineBHeld;",
+                "const pipelineDistance = (object, offsetX = 64, offsetY = 64) => object && pipelinePlayer ? Math.hypot(pipelinePlayer.getX() - (object.getX() + offsetX), pipelinePlayer.getY() - (object.getY() + offsetY)) : 99999;",
+                "const pipelineShowPrompt = text => {",
+                "  if (pipelinePromptBox) pipelinePromptBox.hide(false);",
+                "  if (pipelinePrompt) { pipelinePrompt.setString(text); pipelinePrompt.hide(false); }",
+                "};",
+                "const pipelineQueueScene = (target, spawn, doorId) => {",
+                "  if (runtimeScene.__ancientDigsRoomPipelinePending) return;",
+                "  pipelineGameVariables.get(\"PreviousRoom\").setString(pipelineSceneName);",
+                "  pipelineGameVariables.get(\"CurrentRoom\").setString(target);",
+                "  pipelineGameVariables.get(\"NextSpawn\").setString(spawn);",
+                "  pipelineGameVariables.get(\"LastDoorUsed\").setString(doorId);",
+                "  pipelineGameVariables.get(\"SaveSystem\").getChild(\"SaveRequested\").setBoolean(true);",
+                "  runtimeScene.__ancientDigsRoomPipelinePending = { target, frames: 2 };",
+                "};",
+                "if (runtimeScene.__ancientDigsRoomPipelinePending) {",
+                "  runtimeScene.__ancientDigsRoomPipelinePending.frames -= 1;",
+                "  if (runtimeScene.__ancientDigsRoomPipelinePending.frames <= 0) gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, runtimeScene.__ancientDigsRoomPipelinePending.target, false);",
+                "} else if (pipelinePlayer) {",
+                "  const pipelineEntranceNear = pipelineDistance(pipelineEntrance) <= 112;",
+                "  const pipelinePuzzleState = pipelineGameVariables.get(\"CompletedPuzzles\").getChild(pipelineSceneName).getChild(\"PressurePuzzle\");",
+                "  const pipelinePuzzleUnlocked = pipelinePuzzleState.getChild(\"Unlocked\").getAsBoolean();",
+                "  const pipelineAncientDoor = runtimeScene.getObjects(\"RK_AncientDoor\")[0];",
+                "  const pipelineAncientDoorNear = pipelineAncientDoor && !pipelineAncientDoor.isHidden() && pipelineDistance(pipelineAncientDoor, 64, 128) <= 96;",
+                "  if (runtimeScene.__ancientDigsSurfaceExitChoice) {",
+                "    pipelinePlayer.getVariables().get(\"MovementLocked\").setBoolean(true);",
+                "    pipelineShowPrompt(\"A: RESTART PUZZLE     B: RETURN TO SURFACE\");",
+                "    if (pipelineActionPressed) {",
+                "      pipelineGameVariables.get(\"CompletedPuzzles\").removeChild(pipelineSceneName);",
+                "      pipelineGameVariables.get(\"SaveSystem\").getChild(\"SaveRequested\").setBoolean(true);",
+                "      pipelineGameVariables.get(\"NextSpawn\").setString(\"Room01_FromSurface\");",
+                "      runtimeScene.__ancientDigsRoomPipelinePending = { target: pipelineSceneName, frames: 2 };",
+                "    } else if (pipelineBPressed) {",
+                "      pipelinePlayer.getVariables().get(\"MovementLocked\").setBoolean(false);",
+                "      pipelineQueueScene(\"Base camp 2\", \"Camp_FromExcavation01\", \"Room01SurfaceEntrance\");",
+                "    } else if (!pipelineEntranceNear) {",
+                "      runtimeScene.__ancientDigsSurfaceExitChoice = false;",
+                "      pipelinePlayer.getVariables().get(\"MovementLocked\").setBoolean(false);",
+                "    }",
+                "  } else if (pipelineEntranceNear) {",
+                "    pipelineShowPrompt(pipelinePuzzleUnlocked ? \"A: Return to surface\" : \"A: Leave or restart room\");",
+                "    if (pipelineActionPressed) {",
+                "      if (pipelinePuzzleUnlocked) pipelineQueueScene(\"Base camp 2\", \"Camp_FromExcavation01\", \"Room01SurfaceEntrance\");",
+                "      else runtimeScene.__ancientDigsSurfaceExitChoice = true;",
+                "    }",
+                "  } else if (pipelineAncientDoorNear) {",
+                "    pipelineShowPrompt(pipelinePuzzleUnlocked ? \"A: Enter Excavation Room 02\" : \"The ancient door is still sealed\");",
+                "    if (pipelinePuzzleUnlocked && pipelineActionPressed) pipelineQueueScene(\"Excavation Room 02\", \"Room02_FromRoom01\", \"Room01AncientDoor\");",
+                "  }",
+                "}"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ],
+          "parameters": []
         }
       ],
       "layers": [
@@ -70127,6 +70680,38 @@
           "x": 520,
           "y": 338,
           "zOrder": 242,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "RoomEntranceDoor",
+          "persistentUuid": "f818f8b3-a09d-4f59-8e63-79be5644da98",
+          "width": 0,
+          "x": 576,
+          "y": 576,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 128,
+          "keepRatio": true,
+          "layer": "",
+          "name": "RK_NoDigZone",
+          "persistentUuid": "c23c865e-2fd8-4d6f-a545-004dbe8d7534",
+          "width": 128,
+          "x": 576,
+          "y": 576,
+          "zOrder": 258,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -78155,6 +78740,373 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "RoomEntranceDoor",
+          "persistentUuid": "8779238a-5f26-440b-b7c4-78f1579d49e2",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "RoomKitType",
+              "persistentUuid": "6b91e7d9-76a3-4dec-81bd-61109a502a22",
+              "type": "string",
+              "value": "Buried Ancient Door"
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Sealed",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-00.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Open",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.065,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-00.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-01.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-02.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-03.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-04.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-05.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-06.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-07.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-08.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-09.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-10.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-11.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-12.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-13.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-14.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-15.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-16.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\RoomKit\\ancient-door-purchased-17.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -78396,6 +79348,9 @@
           },
           {
             "objectName": "EchoSoundWave"
+          },
+          {
+            "objectName": "RoomEntranceDoor"
           }
         ]
       },
@@ -81806,11 +82761,19 @@
                 "const arrivalTable = {",
                 "  \"Base camp 2\": {",
                 "    Camp_FromTemple: { x: 928, y: 457, animation: \"Walk1\" },",
+                "    Camp_FromExcavation01: { x: 928, y: 457, animation: \"Walk1\" },",
                 "    Camp_FromMuseum: { x: 184, y: 288, animation: \"Walk1\" },",
                 "    Camp_FromShop: { x: 506, y: 439, animation: \"Walk1\" }",
                 "  },",
                 "  \"Temple Room 1\": {",
                 "    Temple_FromCamp: { x: 272, y: 427, animation: \"Walk3\" }",
+                "  },",
+                "  \"Excavation Room 01\": {",
+                "    Room01_FromSurface: { x: 640, y: 552, animation: \"Walk3\" },",
+                "    Room01_FromRoom02: { x: 1184, y: 176, animation: \"Walk1\" }",
+                "  },",
+                "  \"Excavation Room 02\": {",
+                "    Room02_FromRoom01: { x: 640, y: 552, animation: \"Walk3\" }",
                 "  },",
                 "  \"Museum Interior\": {",
                 "    Museum_FromCamp: { x: 608, y: 505, animation: \"Walk3\" }",
@@ -82697,14 +83660,18 @@
             "  const excavationDugTiles = excavationRoomState.getChild(\"DugTiles\");",
             "  const excavationBuriedContents = excavationRoomState.getChild(\"BuriedContents\");",
             "  const excavationDetailMaps = runtimeScene.getObjects(\"AD_DETAILS\");",
-            "  const excavationNoDigObjects = runtimeScene.getObjects(\"RK_NoDigZone\").concat(runtimeScene.getObjects(\"RK_SolidNoDigZone\"), runtimeScene.getObjects(\"RK_SlidingRock\"), runtimeScene.getObjects(\"RK_FixedRock\"));",
-            "  const excavationPointBlocked = (pointX, pointY) => excavationNoDigObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight());",
+            "  const excavationPermanentNoDigObjects = runtimeScene.getObjects(\"RK_NoDigZone\").concat(runtimeScene.getObjects(\"RK_SolidNoDigZone\"), runtimeScene.getObjects(\"RK_FixedRock\"));",
+            "  const excavationActiveNoDigObjects = excavationPermanentNoDigObjects.concat(runtimeScene.getObjects(\"RK_SlidingRock\"));",
+            "  const excavationPointPermanentlyBlocked = (pointX, pointY) => excavationPermanentNoDigObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight());",
+            "  const excavationPointCurrentlyBlocked = (pointX, pointY) => excavationActiveNoDigObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight());",
             "  const excavationDiggableKeys = [];",
             "  for (let tileY = 1; tileY < 22; tileY += 1) for (let tileX = 1; tileX < 39; tileX += 1) {",
             "    const detailTile = excavationDetailMaps.length ? excavationDetailMaps[0].getTileAtGridCoordinates(tileX, tileY) : -1;",
-            "    if (detailTile === -1 && !excavationPointBlocked(tileX * 32 + 16, tileY * 32 + 16)) excavationDiggableKeys.push(String(tileX) + \"_\" + String(tileY));",
+            "    if (detailTile === -1 && !excavationPointPermanentlyBlocked(tileX * 32 + 16, tileY * 32 + 16)) excavationDiggableKeys.push(String(tileX) + \"_\" + String(tileY));",
             "  }",
             "  const excavationDiggableKeySet = new Set(excavationDiggableKeys);",
+            "  const excavationBuriedStructureObjects = runtimeScene.getObjects(\"RK_AncientDoor\").concat(runtimeScene.getObjects(\"RK_PressurePlate\"));",
+            "  const excavationDiscoveryKeys = excavationDiggableKeys.filter(key => { const [tileX, tileY] = key.split(\"_\").map(Number); const pointX = tileX * 32 + 16; const pointY = tileY * 32 + 16; return !excavationBuriedStructureObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight()); });",
             "  excavationRoomState.getChild(\"DiggableTileTotal\").setNumber(excavationDiggableKeys.length);",
             "  excavationRoomState.getChild(\"JarTotal\").setNumber(25);",
             "  excavationRoomState.getChild(\"BoneTotal\").setNumber(20);",
@@ -82719,7 +83686,7 @@
             "  const excavationRequiredHits = excavationShovelLevel <= 0 ? 3 : (excavationShovelLevel === 1 ? 2 : 1);",
             "  excavationShovel.getChild(\"DigHitsRequired\").setNumber(excavationRequiredHits);",
             "  if (excavationShovelInitialized) excavationSaveSystem.getChild(\"SaveRequested\").setBoolean(true);",
-            "  if (excavationRoomState.getChild(\"DistributionVersion\").getAsNumber() < 2) {",
+            "  if (excavationRoomState.getChild(\"DistributionVersion\").getAsNumber() < 3) {",
             "    const excavationExistingTiles = excavationDugTiles.toJSObject();",
             "    const excavationLegacyJarWasCollected = excavationGameVariables.get(\"CollectedArtifacts\").getChild(\"ancient_jar\").getChild(\"Discovered\").getAsBoolean();",
             "    if (excavationLegacyJarWasCollected) {",
@@ -82731,7 +83698,7 @@
             "    const excavationExistingValues = Object.values(excavationExistingTiles);",
             "    const excavationExistingJars = excavationExistingValues.filter(value => value === \"ancient_jar\" || value === \"collected\" || value === \"collected_ancient_jar\").length;",
             "    const excavationExistingBones = excavationExistingValues.filter(value => value === \"ancient_bones\" || value === \"collected_ancient_bones\").length;",
-            "    const excavationAvailableKeys = excavationDiggableKeys.filter(key => !Object.prototype.hasOwnProperty.call(excavationExistingTiles, key));",
+            "    const excavationAvailableKeys = excavationDiscoveryKeys.filter(key => !Object.prototype.hasOwnProperty.call(excavationExistingTiles, key));",
             "    let excavationSeed = (excavationWorldSeedVariable.getAsNumber() >>> 0) || 1;",
             "    for (let index = 0; index < excavationRoomId.length; index += 1) excavationSeed = ((excavationSeed * 31) + excavationRoomId.charCodeAt(index)) >>> 0;",
             "    const excavationRandom = () => { excavationSeed = (1664525 * excavationSeed + 1013904223) >>> 0; return excavationSeed / 4294967296; };",
@@ -82754,7 +83721,7 @@
             "    for (let index = 0; index < excavationBonesNeeded && excavationAvailableKeys.length; index += 1) excavationHidden[excavationAvailableKeys.shift()] = \"ancient_bones\";",
             "    excavationBuriedContents.fromJSObject(excavationHidden);",
             "    if (excavationReservedKeys.length) excavationRoomState.getChild(\"GuaranteedFindKey\").setString(excavationReservedKeys[0]);",
-            "    excavationRoomState.getChild(\"DistributionVersion\").setNumber(2);",
+            "    excavationRoomState.getChild(\"DistributionVersion\").setNumber(3);",
             "    excavationSaveSystem.getChild(\"SaveRequested\").setBoolean(true);",
             "  }",
             "  const excavationRuntime = runtimeScene.__ancientDigsExcavation || (runtimeScene.__ancientDigsExcavation = { restored: false, tiles: {}, introducedJar: false, introducedBones: false });",
@@ -82819,8 +83786,9 @@
             "    const excavationWithinFloor = excavationTargetX >= 1 && excavationTargetX < 39 && excavationTargetY >= 1 && excavationTargetY < 22;",
             "    const excavationTargetContent = excavationDugTiles.toJSObject()[excavationTargetKey] || \"\";",
             "    const excavationTargetIsDiggable = excavationDiggableKeySet.has(excavationTargetKey);",
+            "    const excavationTargetCurrentlyBlocked = excavationPointCurrentlyBlocked(excavationTargetX * 32 + 16, excavationTargetY * 32 + 16);",
             "    const excavationTileCanProgress = !excavationTargetContent || /^progress[12]$/.test(excavationTargetContent);",
-            "    excavationCanDig = excavationWithinFloor && excavationTargetIsDiggable && excavationTileCanProgress && !excavationMenuOpen && !excavationDialogueActive && !excavationTransitionLocked && !excavationGuitarActive;",
+            "    excavationCanDig = excavationWithinFloor && excavationTargetIsDiggable && !excavationTargetCurrentlyBlocked && excavationTileCanProgress && !excavationMenuOpen && !excavationDialogueActive && !excavationTransitionLocked && !excavationGuitarActive;",
             "  }",
             "  excavationSceneVariables.get(\"ExcavationTargetX\").setNumber(excavationTargetX);",
             "  excavationSceneVariables.get(\"ExcavationTargetY\").setNumber(excavationTargetY);",
@@ -82883,7 +83851,8 @@
             "      excavationSaveSystem.getChild(\"SaveRequested\").setBoolean(true);",
             "    }",
             "  }",
-            "  const excavationCompletedTiles = Object.values(excavationDugTiles.toJSObject()).filter(content => content && !/^progress[12]$/.test(content)).length;",
+            "  const excavationDugSnapshot = excavationDugTiles.toJSObject();",
+            "  const excavationCompletedTiles = excavationDiggableKeys.filter(key => { const content = excavationDugSnapshot[key]; return content && !/^progress[12]$/.test(content); }).length;",
             "  excavationRoomState.getChild(\"CompletedTileCount\").setNumber(excavationCompletedTiles);",
             "  if (excavationCompletedTiles >= excavationDiggableKeys.length && !excavationRoomState.getChild(\"CompletionBonusAwarded\").getAsBoolean()) {",
             "    excavationRoomState.getChild(\"CompletionBonusAwarded\").setBoolean(true);",
@@ -85451,6 +86420,87 @@
                 "for (const icon of runtimeScene.getObjects(\"InventoryIcons\")) icon.setZOrder(12);",
                 "for (const label of runtimeScene.getObjects(\"SlotText\")) label.setZOrder(13);",
                 "for (const selection of runtimeScene.getObjects(\"Inventory_SelectionBox\")) selection.setZOrder(14);"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 77,
+          "colorG": 170,
+          "colorR": 210,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Ancient Digs Room Pipeline",
+          "source": "Paired room entrances, puzzle restart choice, and ancient-door travel",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "// ROOM PIPELINE: paired thresholds, Room 01 restart choice, and Room 02 travel.",
+                "const pipelineSceneName = runtimeScene.getName();",
+                "const pipelineGameVariables = runtimeScene.getGame().getVariables();",
+                "const pipelineSceneVariables = runtimeScene.getVariables();",
+                "const pipelinePlayer = runtimeScene.getObjects(\"TopDown_Character\")[0];",
+                "const pipelineEntrance = runtimeScene.getObjects(\"RoomEntranceDoor\")[0];",
+                "const pipelinePrompt = runtimeScene.getObjects(\"InteractionPrompt\")[0];",
+                "const pipelinePromptBox = runtimeScene.getObjects(\"InteractionPromptBox\")[0];",
+                "if (pipelineEntrance) {",
+                "  pipelineEntrance.hide(false);",
+                "  pipelineEntrance.setAnimationName(\"Open\");",
+                "  pipelineEntrance.setAnimationFrame(17);",
+                "}",
+                "const pipelineActionKeyboard = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"Space\") || gdjs.evtTools.input.isKeyPressed(runtimeScene, \"Return\");",
+                "let pipelineActionPointer = false;",
+                "let pipelineBPointer = false;",
+                "try {",
+                "  pipelineActionPointer = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, \"Left\") && runtimeScene.getObjects(\"ActionButton\").some(button => button && !button.isHidden() && button.cursorOnObject());",
+                "  pipelineBPointer = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, \"Left\") && runtimeScene.getObjects(\"GuitarButton\").some(button => button && !button.isHidden() && button.cursorOnObject());",
+                "} catch (error) {}",
+                "let pipelineControllerA = false;",
+                "let pipelineControllerB = false;",
+                "try {",
+                "  const gamepads = typeof navigator !== \"undefined\" && navigator.getGamepads ? navigator.getGamepads() : [];",
+                "  for (const gamepad of gamepads || []) if (gamepad && gamepad.buttons) {",
+                "    pipelineControllerA ||= !!(gamepad.buttons[0] && gamepad.buttons[0].pressed);",
+                "    pipelineControllerB ||= !!(gamepad.buttons[1] && gamepad.buttons[1].pressed);",
+                "  }",
+                "} catch (error) {}",
+                "const pipelineActionHeld = pipelineActionKeyboard || pipelineActionPointer || pipelineControllerA || pipelineSceneVariables.get(\"InteractionRequested\").getAsBoolean();",
+                "const pipelineBHeld = gdjs.evtTools.input.isKeyPressed(runtimeScene, \"e\") || pipelineBPointer || pipelineControllerB;",
+                "const pipelineInput = runtimeScene.__ancientDigsRoomPipelineInput || (runtimeScene.__ancientDigsRoomPipelineInput = { actionHeld: false, bHeld: false });",
+                "const pipelineActionPressed = pipelineActionHeld && !pipelineInput.actionHeld;",
+                "const pipelineBPressed = pipelineBHeld && !pipelineInput.bHeld;",
+                "pipelineInput.actionHeld = pipelineActionHeld;",
+                "pipelineInput.bHeld = pipelineBHeld;",
+                "const pipelineDistance = (object, offsetX = 64, offsetY = 64) => object && pipelinePlayer ? Math.hypot(pipelinePlayer.getX() - (object.getX() + offsetX), pipelinePlayer.getY() - (object.getY() + offsetY)) : 99999;",
+                "const pipelineShowPrompt = text => {",
+                "  if (pipelinePromptBox) pipelinePromptBox.hide(false);",
+                "  if (pipelinePrompt) { pipelinePrompt.setString(text); pipelinePrompt.hide(false); }",
+                "};",
+                "const pipelineQueueScene = (target, spawn, doorId) => {",
+                "  if (runtimeScene.__ancientDigsRoomPipelinePending) return;",
+                "  pipelineGameVariables.get(\"PreviousRoom\").setString(pipelineSceneName);",
+                "  pipelineGameVariables.get(\"CurrentRoom\").setString(target);",
+                "  pipelineGameVariables.get(\"NextSpawn\").setString(spawn);",
+                "  pipelineGameVariables.get(\"LastDoorUsed\").setString(doorId);",
+                "  pipelineGameVariables.get(\"SaveSystem\").getChild(\"SaveRequested\").setBoolean(true);",
+                "  runtimeScene.__ancientDigsRoomPipelinePending = { target, frames: 2 };",
+                "};",
+                "if (runtimeScene.__ancientDigsRoomPipelinePending) {",
+                "  runtimeScene.__ancientDigsRoomPipelinePending.frames -= 1;",
+                "  if (runtimeScene.__ancientDigsRoomPipelinePending.frames <= 0) gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, runtimeScene.__ancientDigsRoomPipelinePending.target, false);",
+                "} else if (pipelinePlayer) {",
+                "  const pipelineEntranceNear = pipelineDistance(pipelineEntrance) <= 112;",
+                "  if (pipelineEntranceNear) {",
+                "    pipelineShowPrompt(\"A: Return to Excavation Room 01\");",
+                "    if (pipelineActionPressed) pipelineQueueScene(\"Excavation Room 01\", \"Room01_FromRoom02\", \"Room02Entrance\");",
+                "  }",
+                "}"
               ],
               "parameterObjects": "",
               "useStrict": true,
@@ -98682,11 +99732,19 @@
                 "const arrivalTable = {",
                 "  \"Base camp 2\": {",
                 "    Camp_FromTemple: { x: 928, y: 457, animation: \"Walk1\" },",
+                "    Camp_FromExcavation01: { x: 928, y: 457, animation: \"Walk1\" },",
                 "    Camp_FromMuseum: { x: 184, y: 288, animation: \"Walk1\" },",
                 "    Camp_FromShop: { x: 506, y: 439, animation: \"Walk1\" }",
                 "  },",
                 "  \"Temple Room 1\": {",
                 "    Temple_FromCamp: { x: 272, y: 427, animation: \"Walk3\" }",
+                "  },",
+                "  \"Excavation Room 01\": {",
+                "    Room01_FromSurface: { x: 640, y: 552, animation: \"Walk3\" },",
+                "    Room01_FromRoom02: { x: 1184, y: 176, animation: \"Walk1\" }",
+                "  },",
+                "  \"Excavation Room 02\": {",
+                "    Room02_FromRoom01: { x: 640, y: 552, animation: \"Walk3\" }",
                 "  },",
                 "  \"Museum Interior\": {",
                 "    Museum_FromCamp: { x: 608, y: 505, animation: \"Walk3\" }",
@@ -99573,14 +100631,18 @@
             "  const excavationDugTiles = excavationRoomState.getChild(\"DugTiles\");",
             "  const excavationBuriedContents = excavationRoomState.getChild(\"BuriedContents\");",
             "  const excavationDetailMaps = runtimeScene.getObjects(\"AD_DETAILS\");",
-            "  const excavationNoDigObjects = runtimeScene.getObjects(\"RK_NoDigZone\").concat(runtimeScene.getObjects(\"RK_SolidNoDigZone\"), runtimeScene.getObjects(\"RK_SlidingRock\"), runtimeScene.getObjects(\"RK_FixedRock\"));",
-            "  const excavationPointBlocked = (pointX, pointY) => excavationNoDigObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight());",
+            "  const excavationPermanentNoDigObjects = runtimeScene.getObjects(\"RK_NoDigZone\").concat(runtimeScene.getObjects(\"RK_SolidNoDigZone\"), runtimeScene.getObjects(\"RK_FixedRock\"));",
+            "  const excavationActiveNoDigObjects = excavationPermanentNoDigObjects.concat(runtimeScene.getObjects(\"RK_SlidingRock\"));",
+            "  const excavationPointPermanentlyBlocked = (pointX, pointY) => excavationPermanentNoDigObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight());",
+            "  const excavationPointCurrentlyBlocked = (pointX, pointY) => excavationActiveNoDigObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight());",
             "  const excavationDiggableKeys = [];",
             "  for (let tileY = 1; tileY < 22; tileY += 1) for (let tileX = 1; tileX < 39; tileX += 1) {",
             "    const detailTile = excavationDetailMaps.length ? excavationDetailMaps[0].getTileAtGridCoordinates(tileX, tileY) : -1;",
-            "    if (detailTile === -1 && !excavationPointBlocked(tileX * 32 + 16, tileY * 32 + 16)) excavationDiggableKeys.push(String(tileX) + \"_\" + String(tileY));",
+            "    if (detailTile === -1 && !excavationPointPermanentlyBlocked(tileX * 32 + 16, tileY * 32 + 16)) excavationDiggableKeys.push(String(tileX) + \"_\" + String(tileY));",
             "  }",
             "  const excavationDiggableKeySet = new Set(excavationDiggableKeys);",
+            "  const excavationBuriedStructureObjects = runtimeScene.getObjects(\"RK_AncientDoor\").concat(runtimeScene.getObjects(\"RK_PressurePlate\"));",
+            "  const excavationDiscoveryKeys = excavationDiggableKeys.filter(key => { const [tileX, tileY] = key.split(\"_\").map(Number); const pointX = tileX * 32 + 16; const pointY = tileY * 32 + 16; return !excavationBuriedStructureObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight()); });",
             "  excavationRoomState.getChild(\"DiggableTileTotal\").setNumber(excavationDiggableKeys.length);",
             "  excavationRoomState.getChild(\"JarTotal\").setNumber(25);",
             "  excavationRoomState.getChild(\"BoneTotal\").setNumber(20);",
@@ -99595,7 +100657,7 @@
             "  const excavationRequiredHits = excavationShovelLevel <= 0 ? 3 : (excavationShovelLevel === 1 ? 2 : 1);",
             "  excavationShovel.getChild(\"DigHitsRequired\").setNumber(excavationRequiredHits);",
             "  if (excavationShovelInitialized) excavationSaveSystem.getChild(\"SaveRequested\").setBoolean(true);",
-            "  if (excavationRoomState.getChild(\"DistributionVersion\").getAsNumber() < 2) {",
+            "  if (excavationRoomState.getChild(\"DistributionVersion\").getAsNumber() < 3) {",
             "    const excavationExistingTiles = excavationDugTiles.toJSObject();",
             "    const excavationLegacyJarWasCollected = excavationGameVariables.get(\"CollectedArtifacts\").getChild(\"ancient_jar\").getChild(\"Discovered\").getAsBoolean();",
             "    if (excavationLegacyJarWasCollected) {",
@@ -99607,7 +100669,7 @@
             "    const excavationExistingValues = Object.values(excavationExistingTiles);",
             "    const excavationExistingJars = excavationExistingValues.filter(value => value === \"ancient_jar\" || value === \"collected\" || value === \"collected_ancient_jar\").length;",
             "    const excavationExistingBones = excavationExistingValues.filter(value => value === \"ancient_bones\" || value === \"collected_ancient_bones\").length;",
-            "    const excavationAvailableKeys = excavationDiggableKeys.filter(key => !Object.prototype.hasOwnProperty.call(excavationExistingTiles, key));",
+            "    const excavationAvailableKeys = excavationDiscoveryKeys.filter(key => !Object.prototype.hasOwnProperty.call(excavationExistingTiles, key));",
             "    let excavationSeed = (excavationWorldSeedVariable.getAsNumber() >>> 0) || 1;",
             "    for (let index = 0; index < excavationRoomId.length; index += 1) excavationSeed = ((excavationSeed * 31) + excavationRoomId.charCodeAt(index)) >>> 0;",
             "    const excavationRandom = () => { excavationSeed = (1664525 * excavationSeed + 1013904223) >>> 0; return excavationSeed / 4294967296; };",
@@ -99630,7 +100692,7 @@
             "    for (let index = 0; index < excavationBonesNeeded && excavationAvailableKeys.length; index += 1) excavationHidden[excavationAvailableKeys.shift()] = \"ancient_bones\";",
             "    excavationBuriedContents.fromJSObject(excavationHidden);",
             "    if (excavationReservedKeys.length) excavationRoomState.getChild(\"GuaranteedFindKey\").setString(excavationReservedKeys[0]);",
-            "    excavationRoomState.getChild(\"DistributionVersion\").setNumber(2);",
+            "    excavationRoomState.getChild(\"DistributionVersion\").setNumber(3);",
             "    excavationSaveSystem.getChild(\"SaveRequested\").setBoolean(true);",
             "  }",
             "  const excavationRuntime = runtimeScene.__ancientDigsExcavation || (runtimeScene.__ancientDigsExcavation = { restored: false, tiles: {}, introducedJar: false, introducedBones: false });",
@@ -99695,8 +100757,9 @@
             "    const excavationWithinFloor = excavationTargetX >= 1 && excavationTargetX < 39 && excavationTargetY >= 1 && excavationTargetY < 22;",
             "    const excavationTargetContent = excavationDugTiles.toJSObject()[excavationTargetKey] || \"\";",
             "    const excavationTargetIsDiggable = excavationDiggableKeySet.has(excavationTargetKey);",
+            "    const excavationTargetCurrentlyBlocked = excavationPointCurrentlyBlocked(excavationTargetX * 32 + 16, excavationTargetY * 32 + 16);",
             "    const excavationTileCanProgress = !excavationTargetContent || /^progress[12]$/.test(excavationTargetContent);",
-            "    excavationCanDig = excavationWithinFloor && excavationTargetIsDiggable && excavationTileCanProgress && !excavationMenuOpen && !excavationDialogueActive && !excavationTransitionLocked && !excavationGuitarActive;",
+            "    excavationCanDig = excavationWithinFloor && excavationTargetIsDiggable && !excavationTargetCurrentlyBlocked && excavationTileCanProgress && !excavationMenuOpen && !excavationDialogueActive && !excavationTransitionLocked && !excavationGuitarActive;",
             "  }",
             "  excavationSceneVariables.get(\"ExcavationTargetX\").setNumber(excavationTargetX);",
             "  excavationSceneVariables.get(\"ExcavationTargetY\").setNumber(excavationTargetY);",
@@ -99759,7 +100822,8 @@
             "      excavationSaveSystem.getChild(\"SaveRequested\").setBoolean(true);",
             "    }",
             "  }",
-            "  const excavationCompletedTiles = Object.values(excavationDugTiles.toJSObject()).filter(content => content && !/^progress[12]$/.test(content)).length;",
+            "  const excavationDugSnapshot = excavationDugTiles.toJSObject();",
+            "  const excavationCompletedTiles = excavationDiggableKeys.filter(key => { const content = excavationDugSnapshot[key]; return content && !/^progress[12]$/.test(content); }).length;",
             "  excavationRoomState.getChild(\"CompletedTileCount\").setNumber(excavationCompletedTiles);",
             "  if (excavationCompletedTiles >= excavationDiggableKeys.length && !excavationRoomState.getChild(\"CompletionBonusAwarded\").getAsBoolean()) {",
             "    excavationRoomState.getChild(\"CompletionBonusAwarded\").setBoolean(true);",
@@ -115558,11 +116622,19 @@
                 "const arrivalTable = {",
                 "  \"Base camp 2\": {",
                 "    Camp_FromTemple: { x: 928, y: 457, animation: \"Walk1\" },",
+                "    Camp_FromExcavation01: { x: 928, y: 457, animation: \"Walk1\" },",
                 "    Camp_FromMuseum: { x: 184, y: 288, animation: \"Walk1\" },",
                 "    Camp_FromShop: { x: 506, y: 439, animation: \"Walk1\" }",
                 "  },",
                 "  \"Temple Room 1\": {",
                 "    Temple_FromCamp: { x: 272, y: 427, animation: \"Walk3\" }",
+                "  },",
+                "  \"Excavation Room 01\": {",
+                "    Room01_FromSurface: { x: 640, y: 552, animation: \"Walk3\" },",
+                "    Room01_FromRoom02: { x: 1184, y: 176, animation: \"Walk1\" }",
+                "  },",
+                "  \"Excavation Room 02\": {",
+                "    Room02_FromRoom01: { x: 640, y: 552, animation: \"Walk3\" }",
                 "  },",
                 "  \"Museum Interior\": {",
                 "    Museum_FromCamp: { x: 608, y: 505, animation: \"Walk3\" }",
@@ -116449,14 +117521,18 @@
             "  const excavationDugTiles = excavationRoomState.getChild(\"DugTiles\");",
             "  const excavationBuriedContents = excavationRoomState.getChild(\"BuriedContents\");",
             "  const excavationDetailMaps = runtimeScene.getObjects(\"AD_DETAILS\");",
-            "  const excavationNoDigObjects = runtimeScene.getObjects(\"RK_NoDigZone\").concat(runtimeScene.getObjects(\"RK_SolidNoDigZone\"), runtimeScene.getObjects(\"RK_SlidingRock\"), runtimeScene.getObjects(\"RK_FixedRock\"));",
-            "  const excavationPointBlocked = (pointX, pointY) => excavationNoDigObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight());",
+            "  const excavationPermanentNoDigObjects = runtimeScene.getObjects(\"RK_NoDigZone\").concat(runtimeScene.getObjects(\"RK_SolidNoDigZone\"), runtimeScene.getObjects(\"RK_FixedRock\"));",
+            "  const excavationActiveNoDigObjects = excavationPermanentNoDigObjects.concat(runtimeScene.getObjects(\"RK_SlidingRock\"));",
+            "  const excavationPointPermanentlyBlocked = (pointX, pointY) => excavationPermanentNoDigObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight());",
+            "  const excavationPointCurrentlyBlocked = (pointX, pointY) => excavationActiveNoDigObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight());",
             "  const excavationDiggableKeys = [];",
             "  for (let tileY = 1; tileY < 22; tileY += 1) for (let tileX = 1; tileX < 39; tileX += 1) {",
             "    const detailTile = excavationDetailMaps.length ? excavationDetailMaps[0].getTileAtGridCoordinates(tileX, tileY) : -1;",
-            "    if (detailTile === -1 && !excavationPointBlocked(tileX * 32 + 16, tileY * 32 + 16)) excavationDiggableKeys.push(String(tileX) + \"_\" + String(tileY));",
+            "    if (detailTile === -1 && !excavationPointPermanentlyBlocked(tileX * 32 + 16, tileY * 32 + 16)) excavationDiggableKeys.push(String(tileX) + \"_\" + String(tileY));",
             "  }",
             "  const excavationDiggableKeySet = new Set(excavationDiggableKeys);",
+            "  const excavationBuriedStructureObjects = runtimeScene.getObjects(\"RK_AncientDoor\").concat(runtimeScene.getObjects(\"RK_PressurePlate\"));",
+            "  const excavationDiscoveryKeys = excavationDiggableKeys.filter(key => { const [tileX, tileY] = key.split(\"_\").map(Number); const pointX = tileX * 32 + 16; const pointY = tileY * 32 + 16; return !excavationBuriedStructureObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight()); });",
             "  excavationRoomState.getChild(\"DiggableTileTotal\").setNumber(excavationDiggableKeys.length);",
             "  excavationRoomState.getChild(\"JarTotal\").setNumber(25);",
             "  excavationRoomState.getChild(\"BoneTotal\").setNumber(20);",
@@ -116471,7 +117547,7 @@
             "  const excavationRequiredHits = excavationShovelLevel <= 0 ? 3 : (excavationShovelLevel === 1 ? 2 : 1);",
             "  excavationShovel.getChild(\"DigHitsRequired\").setNumber(excavationRequiredHits);",
             "  if (excavationShovelInitialized) excavationSaveSystem.getChild(\"SaveRequested\").setBoolean(true);",
-            "  if (excavationRoomState.getChild(\"DistributionVersion\").getAsNumber() < 2) {",
+            "  if (excavationRoomState.getChild(\"DistributionVersion\").getAsNumber() < 3) {",
             "    const excavationExistingTiles = excavationDugTiles.toJSObject();",
             "    const excavationLegacyJarWasCollected = excavationGameVariables.get(\"CollectedArtifacts\").getChild(\"ancient_jar\").getChild(\"Discovered\").getAsBoolean();",
             "    if (excavationLegacyJarWasCollected) {",
@@ -116483,7 +117559,7 @@
             "    const excavationExistingValues = Object.values(excavationExistingTiles);",
             "    const excavationExistingJars = excavationExistingValues.filter(value => value === \"ancient_jar\" || value === \"collected\" || value === \"collected_ancient_jar\").length;",
             "    const excavationExistingBones = excavationExistingValues.filter(value => value === \"ancient_bones\" || value === \"collected_ancient_bones\").length;",
-            "    const excavationAvailableKeys = excavationDiggableKeys.filter(key => !Object.prototype.hasOwnProperty.call(excavationExistingTiles, key));",
+            "    const excavationAvailableKeys = excavationDiscoveryKeys.filter(key => !Object.prototype.hasOwnProperty.call(excavationExistingTiles, key));",
             "    let excavationSeed = (excavationWorldSeedVariable.getAsNumber() >>> 0) || 1;",
             "    for (let index = 0; index < excavationRoomId.length; index += 1) excavationSeed = ((excavationSeed * 31) + excavationRoomId.charCodeAt(index)) >>> 0;",
             "    const excavationRandom = () => { excavationSeed = (1664525 * excavationSeed + 1013904223) >>> 0; return excavationSeed / 4294967296; };",
@@ -116506,7 +117582,7 @@
             "    for (let index = 0; index < excavationBonesNeeded && excavationAvailableKeys.length; index += 1) excavationHidden[excavationAvailableKeys.shift()] = \"ancient_bones\";",
             "    excavationBuriedContents.fromJSObject(excavationHidden);",
             "    if (excavationReservedKeys.length) excavationRoomState.getChild(\"GuaranteedFindKey\").setString(excavationReservedKeys[0]);",
-            "    excavationRoomState.getChild(\"DistributionVersion\").setNumber(2);",
+            "    excavationRoomState.getChild(\"DistributionVersion\").setNumber(3);",
             "    excavationSaveSystem.getChild(\"SaveRequested\").setBoolean(true);",
             "  }",
             "  const excavationRuntime = runtimeScene.__ancientDigsExcavation || (runtimeScene.__ancientDigsExcavation = { restored: false, tiles: {}, introducedJar: false, introducedBones: false });",
@@ -116571,8 +117647,9 @@
             "    const excavationWithinFloor = excavationTargetX >= 1 && excavationTargetX < 39 && excavationTargetY >= 1 && excavationTargetY < 22;",
             "    const excavationTargetContent = excavationDugTiles.toJSObject()[excavationTargetKey] || \"\";",
             "    const excavationTargetIsDiggable = excavationDiggableKeySet.has(excavationTargetKey);",
+            "    const excavationTargetCurrentlyBlocked = excavationPointCurrentlyBlocked(excavationTargetX * 32 + 16, excavationTargetY * 32 + 16);",
             "    const excavationTileCanProgress = !excavationTargetContent || /^progress[12]$/.test(excavationTargetContent);",
-            "    excavationCanDig = excavationWithinFloor && excavationTargetIsDiggable && excavationTileCanProgress && !excavationMenuOpen && !excavationDialogueActive && !excavationTransitionLocked && !excavationGuitarActive;",
+            "    excavationCanDig = excavationWithinFloor && excavationTargetIsDiggable && !excavationTargetCurrentlyBlocked && excavationTileCanProgress && !excavationMenuOpen && !excavationDialogueActive && !excavationTransitionLocked && !excavationGuitarActive;",
             "  }",
             "  excavationSceneVariables.get(\"ExcavationTargetX\").setNumber(excavationTargetX);",
             "  excavationSceneVariables.get(\"ExcavationTargetY\").setNumber(excavationTargetY);",
@@ -116635,7 +117712,8 @@
             "      excavationSaveSystem.getChild(\"SaveRequested\").setBoolean(true);",
             "    }",
             "  }",
-            "  const excavationCompletedTiles = Object.values(excavationDugTiles.toJSObject()).filter(content => content && !/^progress[12]$/.test(content)).length;",
+            "  const excavationDugSnapshot = excavationDugTiles.toJSObject();",
+            "  const excavationCompletedTiles = excavationDiggableKeys.filter(key => { const content = excavationDugSnapshot[key]; return content && !/^progress[12]$/.test(content); }).length;",
             "  excavationRoomState.getChild(\"CompletedTileCount\").setNumber(excavationCompletedTiles);",
             "  if (excavationCompletedTiles >= excavationDiggableKeys.length && !excavationRoomState.getChild(\"CompletionBonusAwarded\").getAsBoolean()) {",
             "    excavationRoomState.getChild(\"CompletionBonusAwarded\").setBoolean(true);",
@@ -132434,11 +133512,19 @@
                 "const arrivalTable = {",
                 "  \"Base camp 2\": {",
                 "    Camp_FromTemple: { x: 928, y: 457, animation: \"Walk1\" },",
+                "    Camp_FromExcavation01: { x: 928, y: 457, animation: \"Walk1\" },",
                 "    Camp_FromMuseum: { x: 184, y: 288, animation: \"Walk1\" },",
                 "    Camp_FromShop: { x: 506, y: 439, animation: \"Walk1\" }",
                 "  },",
                 "  \"Temple Room 1\": {",
                 "    Temple_FromCamp: { x: 272, y: 427, animation: \"Walk3\" }",
+                "  },",
+                "  \"Excavation Room 01\": {",
+                "    Room01_FromSurface: { x: 640, y: 552, animation: \"Walk3\" },",
+                "    Room01_FromRoom02: { x: 1184, y: 176, animation: \"Walk1\" }",
+                "  },",
+                "  \"Excavation Room 02\": {",
+                "    Room02_FromRoom01: { x: 640, y: 552, animation: \"Walk3\" }",
                 "  },",
                 "  \"Museum Interior\": {",
                 "    Museum_FromCamp: { x: 608, y: 505, animation: \"Walk3\" }",
@@ -133325,14 +134411,18 @@
             "  const excavationDugTiles = excavationRoomState.getChild(\"DugTiles\");",
             "  const excavationBuriedContents = excavationRoomState.getChild(\"BuriedContents\");",
             "  const excavationDetailMaps = runtimeScene.getObjects(\"AD_DETAILS\");",
-            "  const excavationNoDigObjects = runtimeScene.getObjects(\"RK_NoDigZone\").concat(runtimeScene.getObjects(\"RK_SolidNoDigZone\"), runtimeScene.getObjects(\"RK_SlidingRock\"), runtimeScene.getObjects(\"RK_FixedRock\"));",
-            "  const excavationPointBlocked = (pointX, pointY) => excavationNoDigObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight());",
+            "  const excavationPermanentNoDigObjects = runtimeScene.getObjects(\"RK_NoDigZone\").concat(runtimeScene.getObjects(\"RK_SolidNoDigZone\"), runtimeScene.getObjects(\"RK_FixedRock\"));",
+            "  const excavationActiveNoDigObjects = excavationPermanentNoDigObjects.concat(runtimeScene.getObjects(\"RK_SlidingRock\"));",
+            "  const excavationPointPermanentlyBlocked = (pointX, pointY) => excavationPermanentNoDigObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight());",
+            "  const excavationPointCurrentlyBlocked = (pointX, pointY) => excavationActiveNoDigObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight());",
             "  const excavationDiggableKeys = [];",
             "  for (let tileY = 1; tileY < 22; tileY += 1) for (let tileX = 1; tileX < 39; tileX += 1) {",
             "    const detailTile = excavationDetailMaps.length ? excavationDetailMaps[0].getTileAtGridCoordinates(tileX, tileY) : -1;",
-            "    if (detailTile === -1 && !excavationPointBlocked(tileX * 32 + 16, tileY * 32 + 16)) excavationDiggableKeys.push(String(tileX) + \"_\" + String(tileY));",
+            "    if (detailTile === -1 && !excavationPointPermanentlyBlocked(tileX * 32 + 16, tileY * 32 + 16)) excavationDiggableKeys.push(String(tileX) + \"_\" + String(tileY));",
             "  }",
             "  const excavationDiggableKeySet = new Set(excavationDiggableKeys);",
+            "  const excavationBuriedStructureObjects = runtimeScene.getObjects(\"RK_AncientDoor\").concat(runtimeScene.getObjects(\"RK_PressurePlate\"));",
+            "  const excavationDiscoveryKeys = excavationDiggableKeys.filter(key => { const [tileX, tileY] = key.split(\"_\").map(Number); const pointX = tileX * 32 + 16; const pointY = tileY * 32 + 16; return !excavationBuriedStructureObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight()); });",
             "  excavationRoomState.getChild(\"DiggableTileTotal\").setNumber(excavationDiggableKeys.length);",
             "  excavationRoomState.getChild(\"JarTotal\").setNumber(25);",
             "  excavationRoomState.getChild(\"BoneTotal\").setNumber(20);",
@@ -133347,7 +134437,7 @@
             "  const excavationRequiredHits = excavationShovelLevel <= 0 ? 3 : (excavationShovelLevel === 1 ? 2 : 1);",
             "  excavationShovel.getChild(\"DigHitsRequired\").setNumber(excavationRequiredHits);",
             "  if (excavationShovelInitialized) excavationSaveSystem.getChild(\"SaveRequested\").setBoolean(true);",
-            "  if (excavationRoomState.getChild(\"DistributionVersion\").getAsNumber() < 2) {",
+            "  if (excavationRoomState.getChild(\"DistributionVersion\").getAsNumber() < 3) {",
             "    const excavationExistingTiles = excavationDugTiles.toJSObject();",
             "    const excavationLegacyJarWasCollected = excavationGameVariables.get(\"CollectedArtifacts\").getChild(\"ancient_jar\").getChild(\"Discovered\").getAsBoolean();",
             "    if (excavationLegacyJarWasCollected) {",
@@ -133359,7 +134449,7 @@
             "    const excavationExistingValues = Object.values(excavationExistingTiles);",
             "    const excavationExistingJars = excavationExistingValues.filter(value => value === \"ancient_jar\" || value === \"collected\" || value === \"collected_ancient_jar\").length;",
             "    const excavationExistingBones = excavationExistingValues.filter(value => value === \"ancient_bones\" || value === \"collected_ancient_bones\").length;",
-            "    const excavationAvailableKeys = excavationDiggableKeys.filter(key => !Object.prototype.hasOwnProperty.call(excavationExistingTiles, key));",
+            "    const excavationAvailableKeys = excavationDiscoveryKeys.filter(key => !Object.prototype.hasOwnProperty.call(excavationExistingTiles, key));",
             "    let excavationSeed = (excavationWorldSeedVariable.getAsNumber() >>> 0) || 1;",
             "    for (let index = 0; index < excavationRoomId.length; index += 1) excavationSeed = ((excavationSeed * 31) + excavationRoomId.charCodeAt(index)) >>> 0;",
             "    const excavationRandom = () => { excavationSeed = (1664525 * excavationSeed + 1013904223) >>> 0; return excavationSeed / 4294967296; };",
@@ -133382,7 +134472,7 @@
             "    for (let index = 0; index < excavationBonesNeeded && excavationAvailableKeys.length; index += 1) excavationHidden[excavationAvailableKeys.shift()] = \"ancient_bones\";",
             "    excavationBuriedContents.fromJSObject(excavationHidden);",
             "    if (excavationReservedKeys.length) excavationRoomState.getChild(\"GuaranteedFindKey\").setString(excavationReservedKeys[0]);",
-            "    excavationRoomState.getChild(\"DistributionVersion\").setNumber(2);",
+            "    excavationRoomState.getChild(\"DistributionVersion\").setNumber(3);",
             "    excavationSaveSystem.getChild(\"SaveRequested\").setBoolean(true);",
             "  }",
             "  const excavationRuntime = runtimeScene.__ancientDigsExcavation || (runtimeScene.__ancientDigsExcavation = { restored: false, tiles: {}, introducedJar: false, introducedBones: false });",
@@ -133447,8 +134537,9 @@
             "    const excavationWithinFloor = excavationTargetX >= 1 && excavationTargetX < 39 && excavationTargetY >= 1 && excavationTargetY < 22;",
             "    const excavationTargetContent = excavationDugTiles.toJSObject()[excavationTargetKey] || \"\";",
             "    const excavationTargetIsDiggable = excavationDiggableKeySet.has(excavationTargetKey);",
+            "    const excavationTargetCurrentlyBlocked = excavationPointCurrentlyBlocked(excavationTargetX * 32 + 16, excavationTargetY * 32 + 16);",
             "    const excavationTileCanProgress = !excavationTargetContent || /^progress[12]$/.test(excavationTargetContent);",
-            "    excavationCanDig = excavationWithinFloor && excavationTargetIsDiggable && excavationTileCanProgress && !excavationMenuOpen && !excavationDialogueActive && !excavationTransitionLocked && !excavationGuitarActive;",
+            "    excavationCanDig = excavationWithinFloor && excavationTargetIsDiggable && !excavationTargetCurrentlyBlocked && excavationTileCanProgress && !excavationMenuOpen && !excavationDialogueActive && !excavationTransitionLocked && !excavationGuitarActive;",
             "  }",
             "  excavationSceneVariables.get(\"ExcavationTargetX\").setNumber(excavationTargetX);",
             "  excavationSceneVariables.get(\"ExcavationTargetY\").setNumber(excavationTargetY);",
@@ -133511,7 +134602,8 @@
             "      excavationSaveSystem.getChild(\"SaveRequested\").setBoolean(true);",
             "    }",
             "  }",
-            "  const excavationCompletedTiles = Object.values(excavationDugTiles.toJSObject()).filter(content => content && !/^progress[12]$/.test(content)).length;",
+            "  const excavationDugSnapshot = excavationDugTiles.toJSObject();",
+            "  const excavationCompletedTiles = excavationDiggableKeys.filter(key => { const content = excavationDugSnapshot[key]; return content && !/^progress[12]$/.test(content); }).length;",
             "  excavationRoomState.getChild(\"CompletedTileCount\").setNumber(excavationCompletedTiles);",
             "  if (excavationCompletedTiles >= excavationDiggableKeys.length && !excavationRoomState.getChild(\"CompletionBonusAwarded\").getAsBoolean()) {",
             "    excavationRoomState.getChild(\"CompletionBonusAwarded\").setBoolean(true);",
@@ -149310,11 +150402,19 @@
                 "const arrivalTable = {",
                 "  \"Base camp 2\": {",
                 "    Camp_FromTemple: { x: 928, y: 457, animation: \"Walk1\" },",
+                "    Camp_FromExcavation01: { x: 928, y: 457, animation: \"Walk1\" },",
                 "    Camp_FromMuseum: { x: 184, y: 288, animation: \"Walk1\" },",
                 "    Camp_FromShop: { x: 506, y: 439, animation: \"Walk1\" }",
                 "  },",
                 "  \"Temple Room 1\": {",
                 "    Temple_FromCamp: { x: 272, y: 427, animation: \"Walk3\" }",
+                "  },",
+                "  \"Excavation Room 01\": {",
+                "    Room01_FromSurface: { x: 640, y: 552, animation: \"Walk3\" },",
+                "    Room01_FromRoom02: { x: 1184, y: 176, animation: \"Walk1\" }",
+                "  },",
+                "  \"Excavation Room 02\": {",
+                "    Room02_FromRoom01: { x: 640, y: 552, animation: \"Walk3\" }",
                 "  },",
                 "  \"Museum Interior\": {",
                 "    Museum_FromCamp: { x: 608, y: 505, animation: \"Walk3\" }",
@@ -150201,14 +151301,18 @@
             "  const excavationDugTiles = excavationRoomState.getChild(\"DugTiles\");",
             "  const excavationBuriedContents = excavationRoomState.getChild(\"BuriedContents\");",
             "  const excavationDetailMaps = runtimeScene.getObjects(\"AD_DETAILS\");",
-            "  const excavationNoDigObjects = runtimeScene.getObjects(\"RK_NoDigZone\").concat(runtimeScene.getObjects(\"RK_SolidNoDigZone\"), runtimeScene.getObjects(\"RK_SlidingRock\"), runtimeScene.getObjects(\"RK_FixedRock\"));",
-            "  const excavationPointBlocked = (pointX, pointY) => excavationNoDigObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight());",
+            "  const excavationPermanentNoDigObjects = runtimeScene.getObjects(\"RK_NoDigZone\").concat(runtimeScene.getObjects(\"RK_SolidNoDigZone\"), runtimeScene.getObjects(\"RK_FixedRock\"));",
+            "  const excavationActiveNoDigObjects = excavationPermanentNoDigObjects.concat(runtimeScene.getObjects(\"RK_SlidingRock\"));",
+            "  const excavationPointPermanentlyBlocked = (pointX, pointY) => excavationPermanentNoDigObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight());",
+            "  const excavationPointCurrentlyBlocked = (pointX, pointY) => excavationActiveNoDigObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight());",
             "  const excavationDiggableKeys = [];",
             "  for (let tileY = 1; tileY < 22; tileY += 1) for (let tileX = 1; tileX < 39; tileX += 1) {",
             "    const detailTile = excavationDetailMaps.length ? excavationDetailMaps[0].getTileAtGridCoordinates(tileX, tileY) : -1;",
-            "    if (detailTile === -1 && !excavationPointBlocked(tileX * 32 + 16, tileY * 32 + 16)) excavationDiggableKeys.push(String(tileX) + \"_\" + String(tileY));",
+            "    if (detailTile === -1 && !excavationPointPermanentlyBlocked(tileX * 32 + 16, tileY * 32 + 16)) excavationDiggableKeys.push(String(tileX) + \"_\" + String(tileY));",
             "  }",
             "  const excavationDiggableKeySet = new Set(excavationDiggableKeys);",
+            "  const excavationBuriedStructureObjects = runtimeScene.getObjects(\"RK_AncientDoor\").concat(runtimeScene.getObjects(\"RK_PressurePlate\"));",
+            "  const excavationDiscoveryKeys = excavationDiggableKeys.filter(key => { const [tileX, tileY] = key.split(\"_\").map(Number); const pointX = tileX * 32 + 16; const pointY = tileY * 32 + 16; return !excavationBuriedStructureObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight()); });",
             "  excavationRoomState.getChild(\"DiggableTileTotal\").setNumber(excavationDiggableKeys.length);",
             "  excavationRoomState.getChild(\"JarTotal\").setNumber(25);",
             "  excavationRoomState.getChild(\"BoneTotal\").setNumber(20);",
@@ -150223,7 +151327,7 @@
             "  const excavationRequiredHits = excavationShovelLevel <= 0 ? 3 : (excavationShovelLevel === 1 ? 2 : 1);",
             "  excavationShovel.getChild(\"DigHitsRequired\").setNumber(excavationRequiredHits);",
             "  if (excavationShovelInitialized) excavationSaveSystem.getChild(\"SaveRequested\").setBoolean(true);",
-            "  if (excavationRoomState.getChild(\"DistributionVersion\").getAsNumber() < 2) {",
+            "  if (excavationRoomState.getChild(\"DistributionVersion\").getAsNumber() < 3) {",
             "    const excavationExistingTiles = excavationDugTiles.toJSObject();",
             "    const excavationLegacyJarWasCollected = excavationGameVariables.get(\"CollectedArtifacts\").getChild(\"ancient_jar\").getChild(\"Discovered\").getAsBoolean();",
             "    if (excavationLegacyJarWasCollected) {",
@@ -150235,7 +151339,7 @@
             "    const excavationExistingValues = Object.values(excavationExistingTiles);",
             "    const excavationExistingJars = excavationExistingValues.filter(value => value === \"ancient_jar\" || value === \"collected\" || value === \"collected_ancient_jar\").length;",
             "    const excavationExistingBones = excavationExistingValues.filter(value => value === \"ancient_bones\" || value === \"collected_ancient_bones\").length;",
-            "    const excavationAvailableKeys = excavationDiggableKeys.filter(key => !Object.prototype.hasOwnProperty.call(excavationExistingTiles, key));",
+            "    const excavationAvailableKeys = excavationDiscoveryKeys.filter(key => !Object.prototype.hasOwnProperty.call(excavationExistingTiles, key));",
             "    let excavationSeed = (excavationWorldSeedVariable.getAsNumber() >>> 0) || 1;",
             "    for (let index = 0; index < excavationRoomId.length; index += 1) excavationSeed = ((excavationSeed * 31) + excavationRoomId.charCodeAt(index)) >>> 0;",
             "    const excavationRandom = () => { excavationSeed = (1664525 * excavationSeed + 1013904223) >>> 0; return excavationSeed / 4294967296; };",
@@ -150258,7 +151362,7 @@
             "    for (let index = 0; index < excavationBonesNeeded && excavationAvailableKeys.length; index += 1) excavationHidden[excavationAvailableKeys.shift()] = \"ancient_bones\";",
             "    excavationBuriedContents.fromJSObject(excavationHidden);",
             "    if (excavationReservedKeys.length) excavationRoomState.getChild(\"GuaranteedFindKey\").setString(excavationReservedKeys[0]);",
-            "    excavationRoomState.getChild(\"DistributionVersion\").setNumber(2);",
+            "    excavationRoomState.getChild(\"DistributionVersion\").setNumber(3);",
             "    excavationSaveSystem.getChild(\"SaveRequested\").setBoolean(true);",
             "  }",
             "  const excavationRuntime = runtimeScene.__ancientDigsExcavation || (runtimeScene.__ancientDigsExcavation = { restored: false, tiles: {}, introducedJar: false, introducedBones: false });",
@@ -150323,8 +151427,9 @@
             "    const excavationWithinFloor = excavationTargetX >= 1 && excavationTargetX < 39 && excavationTargetY >= 1 && excavationTargetY < 22;",
             "    const excavationTargetContent = excavationDugTiles.toJSObject()[excavationTargetKey] || \"\";",
             "    const excavationTargetIsDiggable = excavationDiggableKeySet.has(excavationTargetKey);",
+            "    const excavationTargetCurrentlyBlocked = excavationPointCurrentlyBlocked(excavationTargetX * 32 + 16, excavationTargetY * 32 + 16);",
             "    const excavationTileCanProgress = !excavationTargetContent || /^progress[12]$/.test(excavationTargetContent);",
-            "    excavationCanDig = excavationWithinFloor && excavationTargetIsDiggable && excavationTileCanProgress && !excavationMenuOpen && !excavationDialogueActive && !excavationTransitionLocked && !excavationGuitarActive;",
+            "    excavationCanDig = excavationWithinFloor && excavationTargetIsDiggable && !excavationTargetCurrentlyBlocked && excavationTileCanProgress && !excavationMenuOpen && !excavationDialogueActive && !excavationTransitionLocked && !excavationGuitarActive;",
             "  }",
             "  excavationSceneVariables.get(\"ExcavationTargetX\").setNumber(excavationTargetX);",
             "  excavationSceneVariables.get(\"ExcavationTargetY\").setNumber(excavationTargetY);",
@@ -150387,7 +151492,8 @@
             "      excavationSaveSystem.getChild(\"SaveRequested\").setBoolean(true);",
             "    }",
             "  }",
-            "  const excavationCompletedTiles = Object.values(excavationDugTiles.toJSObject()).filter(content => content && !/^progress[12]$/.test(content)).length;",
+            "  const excavationDugSnapshot = excavationDugTiles.toJSObject();",
+            "  const excavationCompletedTiles = excavationDiggableKeys.filter(key => { const content = excavationDugSnapshot[key]; return content && !/^progress[12]$/.test(content); }).length;",
             "  excavationRoomState.getChild(\"CompletedTileCount\").setNumber(excavationCompletedTiles);",
             "  if (excavationCompletedTiles >= excavationDiggableKeys.length && !excavationRoomState.getChild(\"CompletionBonusAwarded\").getAsBoolean()) {",
             "    excavationRoomState.getChild(\"CompletionBonusAwarded\").setBoolean(true);",
@@ -166186,11 +167292,19 @@
                 "const arrivalTable = {",
                 "  \"Base camp 2\": {",
                 "    Camp_FromTemple: { x: 928, y: 457, animation: \"Walk1\" },",
+                "    Camp_FromExcavation01: { x: 928, y: 457, animation: \"Walk1\" },",
                 "    Camp_FromMuseum: { x: 184, y: 288, animation: \"Walk1\" },",
                 "    Camp_FromShop: { x: 506, y: 439, animation: \"Walk1\" }",
                 "  },",
                 "  \"Temple Room 1\": {",
                 "    Temple_FromCamp: { x: 272, y: 427, animation: \"Walk3\" }",
+                "  },",
+                "  \"Excavation Room 01\": {",
+                "    Room01_FromSurface: { x: 640, y: 552, animation: \"Walk3\" },",
+                "    Room01_FromRoom02: { x: 1184, y: 176, animation: \"Walk1\" }",
+                "  },",
+                "  \"Excavation Room 02\": {",
+                "    Room02_FromRoom01: { x: 640, y: 552, animation: \"Walk3\" }",
                 "  },",
                 "  \"Museum Interior\": {",
                 "    Museum_FromCamp: { x: 608, y: 505, animation: \"Walk3\" }",
@@ -167077,14 +168191,18 @@
             "  const excavationDugTiles = excavationRoomState.getChild(\"DugTiles\");",
             "  const excavationBuriedContents = excavationRoomState.getChild(\"BuriedContents\");",
             "  const excavationDetailMaps = runtimeScene.getObjects(\"AD_DETAILS\");",
-            "  const excavationNoDigObjects = runtimeScene.getObjects(\"RK_NoDigZone\").concat(runtimeScene.getObjects(\"RK_SolidNoDigZone\"), runtimeScene.getObjects(\"RK_SlidingRock\"), runtimeScene.getObjects(\"RK_FixedRock\"));",
-            "  const excavationPointBlocked = (pointX, pointY) => excavationNoDigObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight());",
+            "  const excavationPermanentNoDigObjects = runtimeScene.getObjects(\"RK_NoDigZone\").concat(runtimeScene.getObjects(\"RK_SolidNoDigZone\"), runtimeScene.getObjects(\"RK_FixedRock\"));",
+            "  const excavationActiveNoDigObjects = excavationPermanentNoDigObjects.concat(runtimeScene.getObjects(\"RK_SlidingRock\"));",
+            "  const excavationPointPermanentlyBlocked = (pointX, pointY) => excavationPermanentNoDigObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight());",
+            "  const excavationPointCurrentlyBlocked = (pointX, pointY) => excavationActiveNoDigObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight());",
             "  const excavationDiggableKeys = [];",
             "  for (let tileY = 1; tileY < 22; tileY += 1) for (let tileX = 1; tileX < 39; tileX += 1) {",
             "    const detailTile = excavationDetailMaps.length ? excavationDetailMaps[0].getTileAtGridCoordinates(tileX, tileY) : -1;",
-            "    if (detailTile === -1 && !excavationPointBlocked(tileX * 32 + 16, tileY * 32 + 16)) excavationDiggableKeys.push(String(tileX) + \"_\" + String(tileY));",
+            "    if (detailTile === -1 && !excavationPointPermanentlyBlocked(tileX * 32 + 16, tileY * 32 + 16)) excavationDiggableKeys.push(String(tileX) + \"_\" + String(tileY));",
             "  }",
             "  const excavationDiggableKeySet = new Set(excavationDiggableKeys);",
+            "  const excavationBuriedStructureObjects = runtimeScene.getObjects(\"RK_AncientDoor\").concat(runtimeScene.getObjects(\"RK_PressurePlate\"));",
+            "  const excavationDiscoveryKeys = excavationDiggableKeys.filter(key => { const [tileX, tileY] = key.split(\"_\").map(Number); const pointX = tileX * 32 + 16; const pointY = tileY * 32 + 16; return !excavationBuriedStructureObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight()); });",
             "  excavationRoomState.getChild(\"DiggableTileTotal\").setNumber(excavationDiggableKeys.length);",
             "  excavationRoomState.getChild(\"JarTotal\").setNumber(25);",
             "  excavationRoomState.getChild(\"BoneTotal\").setNumber(20);",
@@ -167099,7 +168217,7 @@
             "  const excavationRequiredHits = excavationShovelLevel <= 0 ? 3 : (excavationShovelLevel === 1 ? 2 : 1);",
             "  excavationShovel.getChild(\"DigHitsRequired\").setNumber(excavationRequiredHits);",
             "  if (excavationShovelInitialized) excavationSaveSystem.getChild(\"SaveRequested\").setBoolean(true);",
-            "  if (excavationRoomState.getChild(\"DistributionVersion\").getAsNumber() < 2) {",
+            "  if (excavationRoomState.getChild(\"DistributionVersion\").getAsNumber() < 3) {",
             "    const excavationExistingTiles = excavationDugTiles.toJSObject();",
             "    const excavationLegacyJarWasCollected = excavationGameVariables.get(\"CollectedArtifacts\").getChild(\"ancient_jar\").getChild(\"Discovered\").getAsBoolean();",
             "    if (excavationLegacyJarWasCollected) {",
@@ -167111,7 +168229,7 @@
             "    const excavationExistingValues = Object.values(excavationExistingTiles);",
             "    const excavationExistingJars = excavationExistingValues.filter(value => value === \"ancient_jar\" || value === \"collected\" || value === \"collected_ancient_jar\").length;",
             "    const excavationExistingBones = excavationExistingValues.filter(value => value === \"ancient_bones\" || value === \"collected_ancient_bones\").length;",
-            "    const excavationAvailableKeys = excavationDiggableKeys.filter(key => !Object.prototype.hasOwnProperty.call(excavationExistingTiles, key));",
+            "    const excavationAvailableKeys = excavationDiscoveryKeys.filter(key => !Object.prototype.hasOwnProperty.call(excavationExistingTiles, key));",
             "    let excavationSeed = (excavationWorldSeedVariable.getAsNumber() >>> 0) || 1;",
             "    for (let index = 0; index < excavationRoomId.length; index += 1) excavationSeed = ((excavationSeed * 31) + excavationRoomId.charCodeAt(index)) >>> 0;",
             "    const excavationRandom = () => { excavationSeed = (1664525 * excavationSeed + 1013904223) >>> 0; return excavationSeed / 4294967296; };",
@@ -167134,7 +168252,7 @@
             "    for (let index = 0; index < excavationBonesNeeded && excavationAvailableKeys.length; index += 1) excavationHidden[excavationAvailableKeys.shift()] = \"ancient_bones\";",
             "    excavationBuriedContents.fromJSObject(excavationHidden);",
             "    if (excavationReservedKeys.length) excavationRoomState.getChild(\"GuaranteedFindKey\").setString(excavationReservedKeys[0]);",
-            "    excavationRoomState.getChild(\"DistributionVersion\").setNumber(2);",
+            "    excavationRoomState.getChild(\"DistributionVersion\").setNumber(3);",
             "    excavationSaveSystem.getChild(\"SaveRequested\").setBoolean(true);",
             "  }",
             "  const excavationRuntime = runtimeScene.__ancientDigsExcavation || (runtimeScene.__ancientDigsExcavation = { restored: false, tiles: {}, introducedJar: false, introducedBones: false });",
@@ -167199,8 +168317,9 @@
             "    const excavationWithinFloor = excavationTargetX >= 1 && excavationTargetX < 39 && excavationTargetY >= 1 && excavationTargetY < 22;",
             "    const excavationTargetContent = excavationDugTiles.toJSObject()[excavationTargetKey] || \"\";",
             "    const excavationTargetIsDiggable = excavationDiggableKeySet.has(excavationTargetKey);",
+            "    const excavationTargetCurrentlyBlocked = excavationPointCurrentlyBlocked(excavationTargetX * 32 + 16, excavationTargetY * 32 + 16);",
             "    const excavationTileCanProgress = !excavationTargetContent || /^progress[12]$/.test(excavationTargetContent);",
-            "    excavationCanDig = excavationWithinFloor && excavationTargetIsDiggable && excavationTileCanProgress && !excavationMenuOpen && !excavationDialogueActive && !excavationTransitionLocked && !excavationGuitarActive;",
+            "    excavationCanDig = excavationWithinFloor && excavationTargetIsDiggable && !excavationTargetCurrentlyBlocked && excavationTileCanProgress && !excavationMenuOpen && !excavationDialogueActive && !excavationTransitionLocked && !excavationGuitarActive;",
             "  }",
             "  excavationSceneVariables.get(\"ExcavationTargetX\").setNumber(excavationTargetX);",
             "  excavationSceneVariables.get(\"ExcavationTargetY\").setNumber(excavationTargetY);",
@@ -167263,7 +168382,8 @@
             "      excavationSaveSystem.getChild(\"SaveRequested\").setBoolean(true);",
             "    }",
             "  }",
-            "  const excavationCompletedTiles = Object.values(excavationDugTiles.toJSObject()).filter(content => content && !/^progress[12]$/.test(content)).length;",
+            "  const excavationDugSnapshot = excavationDugTiles.toJSObject();",
+            "  const excavationCompletedTiles = excavationDiggableKeys.filter(key => { const content = excavationDugSnapshot[key]; return content && !/^progress[12]$/.test(content); }).length;",
             "  excavationRoomState.getChild(\"CompletedTileCount\").setNumber(excavationCompletedTiles);",
             "  if (excavationCompletedTiles >= excavationDiggableKeys.length && !excavationRoomState.getChild(\"CompletionBonusAwarded\").getAsBoolean()) {",
             "    excavationRoomState.getChild(\"CompletionBonusAwarded\").setBoolean(true);",
@@ -183062,11 +184182,19 @@
                 "const arrivalTable = {",
                 "  \"Base camp 2\": {",
                 "    Camp_FromTemple: { x: 928, y: 457, animation: \"Walk1\" },",
+                "    Camp_FromExcavation01: { x: 928, y: 457, animation: \"Walk1\" },",
                 "    Camp_FromMuseum: { x: 184, y: 288, animation: \"Walk1\" },",
                 "    Camp_FromShop: { x: 506, y: 439, animation: \"Walk1\" }",
                 "  },",
                 "  \"Temple Room 1\": {",
                 "    Temple_FromCamp: { x: 272, y: 427, animation: \"Walk3\" }",
+                "  },",
+                "  \"Excavation Room 01\": {",
+                "    Room01_FromSurface: { x: 640, y: 552, animation: \"Walk3\" },",
+                "    Room01_FromRoom02: { x: 1184, y: 176, animation: \"Walk1\" }",
+                "  },",
+                "  \"Excavation Room 02\": {",
+                "    Room02_FromRoom01: { x: 640, y: 552, animation: \"Walk3\" }",
                 "  },",
                 "  \"Museum Interior\": {",
                 "    Museum_FromCamp: { x: 608, y: 505, animation: \"Walk3\" }",
@@ -183953,14 +185081,18 @@
             "  const excavationDugTiles = excavationRoomState.getChild(\"DugTiles\");",
             "  const excavationBuriedContents = excavationRoomState.getChild(\"BuriedContents\");",
             "  const excavationDetailMaps = runtimeScene.getObjects(\"AD_DETAILS\");",
-            "  const excavationNoDigObjects = runtimeScene.getObjects(\"RK_NoDigZone\").concat(runtimeScene.getObjects(\"RK_SolidNoDigZone\"), runtimeScene.getObjects(\"RK_SlidingRock\"), runtimeScene.getObjects(\"RK_FixedRock\"));",
-            "  const excavationPointBlocked = (pointX, pointY) => excavationNoDigObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight());",
+            "  const excavationPermanentNoDigObjects = runtimeScene.getObjects(\"RK_NoDigZone\").concat(runtimeScene.getObjects(\"RK_SolidNoDigZone\"), runtimeScene.getObjects(\"RK_FixedRock\"));",
+            "  const excavationActiveNoDigObjects = excavationPermanentNoDigObjects.concat(runtimeScene.getObjects(\"RK_SlidingRock\"));",
+            "  const excavationPointPermanentlyBlocked = (pointX, pointY) => excavationPermanentNoDigObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight());",
+            "  const excavationPointCurrentlyBlocked = (pointX, pointY) => excavationActiveNoDigObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight());",
             "  const excavationDiggableKeys = [];",
             "  for (let tileY = 1; tileY < 22; tileY += 1) for (let tileX = 1; tileX < 39; tileX += 1) {",
             "    const detailTile = excavationDetailMaps.length ? excavationDetailMaps[0].getTileAtGridCoordinates(tileX, tileY) : -1;",
-            "    if (detailTile === -1 && !excavationPointBlocked(tileX * 32 + 16, tileY * 32 + 16)) excavationDiggableKeys.push(String(tileX) + \"_\" + String(tileY));",
+            "    if (detailTile === -1 && !excavationPointPermanentlyBlocked(tileX * 32 + 16, tileY * 32 + 16)) excavationDiggableKeys.push(String(tileX) + \"_\" + String(tileY));",
             "  }",
             "  const excavationDiggableKeySet = new Set(excavationDiggableKeys);",
+            "  const excavationBuriedStructureObjects = runtimeScene.getObjects(\"RK_AncientDoor\").concat(runtimeScene.getObjects(\"RK_PressurePlate\"));",
+            "  const excavationDiscoveryKeys = excavationDiggableKeys.filter(key => { const [tileX, tileY] = key.split(\"_\").map(Number); const pointX = tileX * 32 + 16; const pointY = tileY * 32 + 16; return !excavationBuriedStructureObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight()); });",
             "  excavationRoomState.getChild(\"DiggableTileTotal\").setNumber(excavationDiggableKeys.length);",
             "  excavationRoomState.getChild(\"JarTotal\").setNumber(25);",
             "  excavationRoomState.getChild(\"BoneTotal\").setNumber(20);",
@@ -183975,7 +185107,7 @@
             "  const excavationRequiredHits = excavationShovelLevel <= 0 ? 3 : (excavationShovelLevel === 1 ? 2 : 1);",
             "  excavationShovel.getChild(\"DigHitsRequired\").setNumber(excavationRequiredHits);",
             "  if (excavationShovelInitialized) excavationSaveSystem.getChild(\"SaveRequested\").setBoolean(true);",
-            "  if (excavationRoomState.getChild(\"DistributionVersion\").getAsNumber() < 2) {",
+            "  if (excavationRoomState.getChild(\"DistributionVersion\").getAsNumber() < 3) {",
             "    const excavationExistingTiles = excavationDugTiles.toJSObject();",
             "    const excavationLegacyJarWasCollected = excavationGameVariables.get(\"CollectedArtifacts\").getChild(\"ancient_jar\").getChild(\"Discovered\").getAsBoolean();",
             "    if (excavationLegacyJarWasCollected) {",
@@ -183987,7 +185119,7 @@
             "    const excavationExistingValues = Object.values(excavationExistingTiles);",
             "    const excavationExistingJars = excavationExistingValues.filter(value => value === \"ancient_jar\" || value === \"collected\" || value === \"collected_ancient_jar\").length;",
             "    const excavationExistingBones = excavationExistingValues.filter(value => value === \"ancient_bones\" || value === \"collected_ancient_bones\").length;",
-            "    const excavationAvailableKeys = excavationDiggableKeys.filter(key => !Object.prototype.hasOwnProperty.call(excavationExistingTiles, key));",
+            "    const excavationAvailableKeys = excavationDiscoveryKeys.filter(key => !Object.prototype.hasOwnProperty.call(excavationExistingTiles, key));",
             "    let excavationSeed = (excavationWorldSeedVariable.getAsNumber() >>> 0) || 1;",
             "    for (let index = 0; index < excavationRoomId.length; index += 1) excavationSeed = ((excavationSeed * 31) + excavationRoomId.charCodeAt(index)) >>> 0;",
             "    const excavationRandom = () => { excavationSeed = (1664525 * excavationSeed + 1013904223) >>> 0; return excavationSeed / 4294967296; };",
@@ -184010,7 +185142,7 @@
             "    for (let index = 0; index < excavationBonesNeeded && excavationAvailableKeys.length; index += 1) excavationHidden[excavationAvailableKeys.shift()] = \"ancient_bones\";",
             "    excavationBuriedContents.fromJSObject(excavationHidden);",
             "    if (excavationReservedKeys.length) excavationRoomState.getChild(\"GuaranteedFindKey\").setString(excavationReservedKeys[0]);",
-            "    excavationRoomState.getChild(\"DistributionVersion\").setNumber(2);",
+            "    excavationRoomState.getChild(\"DistributionVersion\").setNumber(3);",
             "    excavationSaveSystem.getChild(\"SaveRequested\").setBoolean(true);",
             "  }",
             "  const excavationRuntime = runtimeScene.__ancientDigsExcavation || (runtimeScene.__ancientDigsExcavation = { restored: false, tiles: {}, introducedJar: false, introducedBones: false });",
@@ -184075,8 +185207,9 @@
             "    const excavationWithinFloor = excavationTargetX >= 1 && excavationTargetX < 39 && excavationTargetY >= 1 && excavationTargetY < 22;",
             "    const excavationTargetContent = excavationDugTiles.toJSObject()[excavationTargetKey] || \"\";",
             "    const excavationTargetIsDiggable = excavationDiggableKeySet.has(excavationTargetKey);",
+            "    const excavationTargetCurrentlyBlocked = excavationPointCurrentlyBlocked(excavationTargetX * 32 + 16, excavationTargetY * 32 + 16);",
             "    const excavationTileCanProgress = !excavationTargetContent || /^progress[12]$/.test(excavationTargetContent);",
-            "    excavationCanDig = excavationWithinFloor && excavationTargetIsDiggable && excavationTileCanProgress && !excavationMenuOpen && !excavationDialogueActive && !excavationTransitionLocked && !excavationGuitarActive;",
+            "    excavationCanDig = excavationWithinFloor && excavationTargetIsDiggable && !excavationTargetCurrentlyBlocked && excavationTileCanProgress && !excavationMenuOpen && !excavationDialogueActive && !excavationTransitionLocked && !excavationGuitarActive;",
             "  }",
             "  excavationSceneVariables.get(\"ExcavationTargetX\").setNumber(excavationTargetX);",
             "  excavationSceneVariables.get(\"ExcavationTargetY\").setNumber(excavationTargetY);",
@@ -184139,7 +185272,8 @@
             "      excavationSaveSystem.getChild(\"SaveRequested\").setBoolean(true);",
             "    }",
             "  }",
-            "  const excavationCompletedTiles = Object.values(excavationDugTiles.toJSObject()).filter(content => content && !/^progress[12]$/.test(content)).length;",
+            "  const excavationDugSnapshot = excavationDugTiles.toJSObject();",
+            "  const excavationCompletedTiles = excavationDiggableKeys.filter(key => { const content = excavationDugSnapshot[key]; return content && !/^progress[12]$/.test(content); }).length;",
             "  excavationRoomState.getChild(\"CompletedTileCount\").setNumber(excavationCompletedTiles);",
             "  if (excavationCompletedTiles >= excavationDiggableKeys.length && !excavationRoomState.getChild(\"CompletionBonusAwarded\").getAsBoolean()) {",
             "    excavationRoomState.getChild(\"CompletionBonusAwarded\").setBoolean(true);",
@@ -199938,11 +201072,19 @@
                 "const arrivalTable = {",
                 "  \"Base camp 2\": {",
                 "    Camp_FromTemple: { x: 928, y: 457, animation: \"Walk1\" },",
+                "    Camp_FromExcavation01: { x: 928, y: 457, animation: \"Walk1\" },",
                 "    Camp_FromMuseum: { x: 184, y: 288, animation: \"Walk1\" },",
                 "    Camp_FromShop: { x: 506, y: 439, animation: \"Walk1\" }",
                 "  },",
                 "  \"Temple Room 1\": {",
                 "    Temple_FromCamp: { x: 272, y: 427, animation: \"Walk3\" }",
+                "  },",
+                "  \"Excavation Room 01\": {",
+                "    Room01_FromSurface: { x: 640, y: 552, animation: \"Walk3\" },",
+                "    Room01_FromRoom02: { x: 1184, y: 176, animation: \"Walk1\" }",
+                "  },",
+                "  \"Excavation Room 02\": {",
+                "    Room02_FromRoom01: { x: 640, y: 552, animation: \"Walk3\" }",
                 "  },",
                 "  \"Museum Interior\": {",
                 "    Museum_FromCamp: { x: 608, y: 505, animation: \"Walk3\" }",
@@ -200829,14 +201971,18 @@
             "  const excavationDugTiles = excavationRoomState.getChild(\"DugTiles\");",
             "  const excavationBuriedContents = excavationRoomState.getChild(\"BuriedContents\");",
             "  const excavationDetailMaps = runtimeScene.getObjects(\"AD_DETAILS\");",
-            "  const excavationNoDigObjects = runtimeScene.getObjects(\"RK_NoDigZone\").concat(runtimeScene.getObjects(\"RK_SolidNoDigZone\"), runtimeScene.getObjects(\"RK_SlidingRock\"), runtimeScene.getObjects(\"RK_FixedRock\"));",
-            "  const excavationPointBlocked = (pointX, pointY) => excavationNoDigObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight());",
+            "  const excavationPermanentNoDigObjects = runtimeScene.getObjects(\"RK_NoDigZone\").concat(runtimeScene.getObjects(\"RK_SolidNoDigZone\"), runtimeScene.getObjects(\"RK_FixedRock\"));",
+            "  const excavationActiveNoDigObjects = excavationPermanentNoDigObjects.concat(runtimeScene.getObjects(\"RK_SlidingRock\"));",
+            "  const excavationPointPermanentlyBlocked = (pointX, pointY) => excavationPermanentNoDigObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight());",
+            "  const excavationPointCurrentlyBlocked = (pointX, pointY) => excavationActiveNoDigObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight());",
             "  const excavationDiggableKeys = [];",
             "  for (let tileY = 1; tileY < 22; tileY += 1) for (let tileX = 1; tileX < 39; tileX += 1) {",
             "    const detailTile = excavationDetailMaps.length ? excavationDetailMaps[0].getTileAtGridCoordinates(tileX, tileY) : -1;",
-            "    if (detailTile === -1 && !excavationPointBlocked(tileX * 32 + 16, tileY * 32 + 16)) excavationDiggableKeys.push(String(tileX) + \"_\" + String(tileY));",
+            "    if (detailTile === -1 && !excavationPointPermanentlyBlocked(tileX * 32 + 16, tileY * 32 + 16)) excavationDiggableKeys.push(String(tileX) + \"_\" + String(tileY));",
             "  }",
             "  const excavationDiggableKeySet = new Set(excavationDiggableKeys);",
+            "  const excavationBuriedStructureObjects = runtimeScene.getObjects(\"RK_AncientDoor\").concat(runtimeScene.getObjects(\"RK_PressurePlate\"));",
+            "  const excavationDiscoveryKeys = excavationDiggableKeys.filter(key => { const [tileX, tileY] = key.split(\"_\").map(Number); const pointX = tileX * 32 + 16; const pointY = tileY * 32 + 16; return !excavationBuriedStructureObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight()); });",
             "  excavationRoomState.getChild(\"DiggableTileTotal\").setNumber(excavationDiggableKeys.length);",
             "  excavationRoomState.getChild(\"JarTotal\").setNumber(25);",
             "  excavationRoomState.getChild(\"BoneTotal\").setNumber(20);",
@@ -200851,7 +201997,7 @@
             "  const excavationRequiredHits = excavationShovelLevel <= 0 ? 3 : (excavationShovelLevel === 1 ? 2 : 1);",
             "  excavationShovel.getChild(\"DigHitsRequired\").setNumber(excavationRequiredHits);",
             "  if (excavationShovelInitialized) excavationSaveSystem.getChild(\"SaveRequested\").setBoolean(true);",
-            "  if (excavationRoomState.getChild(\"DistributionVersion\").getAsNumber() < 2) {",
+            "  if (excavationRoomState.getChild(\"DistributionVersion\").getAsNumber() < 3) {",
             "    const excavationExistingTiles = excavationDugTiles.toJSObject();",
             "    const excavationLegacyJarWasCollected = excavationGameVariables.get(\"CollectedArtifacts\").getChild(\"ancient_jar\").getChild(\"Discovered\").getAsBoolean();",
             "    if (excavationLegacyJarWasCollected) {",
@@ -200863,7 +202009,7 @@
             "    const excavationExistingValues = Object.values(excavationExistingTiles);",
             "    const excavationExistingJars = excavationExistingValues.filter(value => value === \"ancient_jar\" || value === \"collected\" || value === \"collected_ancient_jar\").length;",
             "    const excavationExistingBones = excavationExistingValues.filter(value => value === \"ancient_bones\" || value === \"collected_ancient_bones\").length;",
-            "    const excavationAvailableKeys = excavationDiggableKeys.filter(key => !Object.prototype.hasOwnProperty.call(excavationExistingTiles, key));",
+            "    const excavationAvailableKeys = excavationDiscoveryKeys.filter(key => !Object.prototype.hasOwnProperty.call(excavationExistingTiles, key));",
             "    let excavationSeed = (excavationWorldSeedVariable.getAsNumber() >>> 0) || 1;",
             "    for (let index = 0; index < excavationRoomId.length; index += 1) excavationSeed = ((excavationSeed * 31) + excavationRoomId.charCodeAt(index)) >>> 0;",
             "    const excavationRandom = () => { excavationSeed = (1664525 * excavationSeed + 1013904223) >>> 0; return excavationSeed / 4294967296; };",
@@ -200886,7 +202032,7 @@
             "    for (let index = 0; index < excavationBonesNeeded && excavationAvailableKeys.length; index += 1) excavationHidden[excavationAvailableKeys.shift()] = \"ancient_bones\";",
             "    excavationBuriedContents.fromJSObject(excavationHidden);",
             "    if (excavationReservedKeys.length) excavationRoomState.getChild(\"GuaranteedFindKey\").setString(excavationReservedKeys[0]);",
-            "    excavationRoomState.getChild(\"DistributionVersion\").setNumber(2);",
+            "    excavationRoomState.getChild(\"DistributionVersion\").setNumber(3);",
             "    excavationSaveSystem.getChild(\"SaveRequested\").setBoolean(true);",
             "  }",
             "  const excavationRuntime = runtimeScene.__ancientDigsExcavation || (runtimeScene.__ancientDigsExcavation = { restored: false, tiles: {}, introducedJar: false, introducedBones: false });",
@@ -200951,8 +202097,9 @@
             "    const excavationWithinFloor = excavationTargetX >= 1 && excavationTargetX < 39 && excavationTargetY >= 1 && excavationTargetY < 22;",
             "    const excavationTargetContent = excavationDugTiles.toJSObject()[excavationTargetKey] || \"\";",
             "    const excavationTargetIsDiggable = excavationDiggableKeySet.has(excavationTargetKey);",
+            "    const excavationTargetCurrentlyBlocked = excavationPointCurrentlyBlocked(excavationTargetX * 32 + 16, excavationTargetY * 32 + 16);",
             "    const excavationTileCanProgress = !excavationTargetContent || /^progress[12]$/.test(excavationTargetContent);",
-            "    excavationCanDig = excavationWithinFloor && excavationTargetIsDiggable && excavationTileCanProgress && !excavationMenuOpen && !excavationDialogueActive && !excavationTransitionLocked && !excavationGuitarActive;",
+            "    excavationCanDig = excavationWithinFloor && excavationTargetIsDiggable && !excavationTargetCurrentlyBlocked && excavationTileCanProgress && !excavationMenuOpen && !excavationDialogueActive && !excavationTransitionLocked && !excavationGuitarActive;",
             "  }",
             "  excavationSceneVariables.get(\"ExcavationTargetX\").setNumber(excavationTargetX);",
             "  excavationSceneVariables.get(\"ExcavationTargetY\").setNumber(excavationTargetY);",
@@ -201015,7 +202162,8 @@
             "      excavationSaveSystem.getChild(\"SaveRequested\").setBoolean(true);",
             "    }",
             "  }",
-            "  const excavationCompletedTiles = Object.values(excavationDugTiles.toJSObject()).filter(content => content && !/^progress[12]$/.test(content)).length;",
+            "  const excavationDugSnapshot = excavationDugTiles.toJSObject();",
+            "  const excavationCompletedTiles = excavationDiggableKeys.filter(key => { const content = excavationDugSnapshot[key]; return content && !/^progress[12]$/.test(content); }).length;",
             "  excavationRoomState.getChild(\"CompletedTileCount\").setNumber(excavationCompletedTiles);",
             "  if (excavationCompletedTiles >= excavationDiggableKeys.length && !excavationRoomState.getChild(\"CompletionBonusAwarded\").getAsBoolean()) {",
             "    excavationRoomState.getChild(\"CompletionBonusAwarded\").setBoolean(true);",
@@ -216814,11 +217962,19 @@
                 "const arrivalTable = {",
                 "  \"Base camp 2\": {",
                 "    Camp_FromTemple: { x: 928, y: 457, animation: \"Walk1\" },",
+                "    Camp_FromExcavation01: { x: 928, y: 457, animation: \"Walk1\" },",
                 "    Camp_FromMuseum: { x: 184, y: 288, animation: \"Walk1\" },",
                 "    Camp_FromShop: { x: 506, y: 439, animation: \"Walk1\" }",
                 "  },",
                 "  \"Temple Room 1\": {",
                 "    Temple_FromCamp: { x: 272, y: 427, animation: \"Walk3\" }",
+                "  },",
+                "  \"Excavation Room 01\": {",
+                "    Room01_FromSurface: { x: 640, y: 552, animation: \"Walk3\" },",
+                "    Room01_FromRoom02: { x: 1184, y: 176, animation: \"Walk1\" }",
+                "  },",
+                "  \"Excavation Room 02\": {",
+                "    Room02_FromRoom01: { x: 640, y: 552, animation: \"Walk3\" }",
                 "  },",
                 "  \"Museum Interior\": {",
                 "    Museum_FromCamp: { x: 608, y: 505, animation: \"Walk3\" }",
@@ -217705,14 +218861,18 @@
             "  const excavationDugTiles = excavationRoomState.getChild(\"DugTiles\");",
             "  const excavationBuriedContents = excavationRoomState.getChild(\"BuriedContents\");",
             "  const excavationDetailMaps = runtimeScene.getObjects(\"AD_DETAILS\");",
-            "  const excavationNoDigObjects = runtimeScene.getObjects(\"RK_NoDigZone\").concat(runtimeScene.getObjects(\"RK_SolidNoDigZone\"), runtimeScene.getObjects(\"RK_SlidingRock\"), runtimeScene.getObjects(\"RK_FixedRock\"));",
-            "  const excavationPointBlocked = (pointX, pointY) => excavationNoDigObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight());",
+            "  const excavationPermanentNoDigObjects = runtimeScene.getObjects(\"RK_NoDigZone\").concat(runtimeScene.getObjects(\"RK_SolidNoDigZone\"), runtimeScene.getObjects(\"RK_FixedRock\"));",
+            "  const excavationActiveNoDigObjects = excavationPermanentNoDigObjects.concat(runtimeScene.getObjects(\"RK_SlidingRock\"));",
+            "  const excavationPointPermanentlyBlocked = (pointX, pointY) => excavationPermanentNoDigObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight());",
+            "  const excavationPointCurrentlyBlocked = (pointX, pointY) => excavationActiveNoDigObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight());",
             "  const excavationDiggableKeys = [];",
             "  for (let tileY = 1; tileY < 22; tileY += 1) for (let tileX = 1; tileX < 39; tileX += 1) {",
             "    const detailTile = excavationDetailMaps.length ? excavationDetailMaps[0].getTileAtGridCoordinates(tileX, tileY) : -1;",
-            "    if (detailTile === -1 && !excavationPointBlocked(tileX * 32 + 16, tileY * 32 + 16)) excavationDiggableKeys.push(String(tileX) + \"_\" + String(tileY));",
+            "    if (detailTile === -1 && !excavationPointPermanentlyBlocked(tileX * 32 + 16, tileY * 32 + 16)) excavationDiggableKeys.push(String(tileX) + \"_\" + String(tileY));",
             "  }",
             "  const excavationDiggableKeySet = new Set(excavationDiggableKeys);",
+            "  const excavationBuriedStructureObjects = runtimeScene.getObjects(\"RK_AncientDoor\").concat(runtimeScene.getObjects(\"RK_PressurePlate\"));",
+            "  const excavationDiscoveryKeys = excavationDiggableKeys.filter(key => { const [tileX, tileY] = key.split(\"_\").map(Number); const pointX = tileX * 32 + 16; const pointY = tileY * 32 + 16; return !excavationBuriedStructureObjects.some(object => pointX >= object.getX() && pointX < object.getX() + object.getWidth() && pointY >= object.getY() && pointY < object.getY() + object.getHeight()); });",
             "  excavationRoomState.getChild(\"DiggableTileTotal\").setNumber(excavationDiggableKeys.length);",
             "  excavationRoomState.getChild(\"JarTotal\").setNumber(25);",
             "  excavationRoomState.getChild(\"BoneTotal\").setNumber(20);",
@@ -217727,7 +218887,7 @@
             "  const excavationRequiredHits = excavationShovelLevel <= 0 ? 3 : (excavationShovelLevel === 1 ? 2 : 1);",
             "  excavationShovel.getChild(\"DigHitsRequired\").setNumber(excavationRequiredHits);",
             "  if (excavationShovelInitialized) excavationSaveSystem.getChild(\"SaveRequested\").setBoolean(true);",
-            "  if (excavationRoomState.getChild(\"DistributionVersion\").getAsNumber() < 2) {",
+            "  if (excavationRoomState.getChild(\"DistributionVersion\").getAsNumber() < 3) {",
             "    const excavationExistingTiles = excavationDugTiles.toJSObject();",
             "    const excavationLegacyJarWasCollected = excavationGameVariables.get(\"CollectedArtifacts\").getChild(\"ancient_jar\").getChild(\"Discovered\").getAsBoolean();",
             "    if (excavationLegacyJarWasCollected) {",
@@ -217739,7 +218899,7 @@
             "    const excavationExistingValues = Object.values(excavationExistingTiles);",
             "    const excavationExistingJars = excavationExistingValues.filter(value => value === \"ancient_jar\" || value === \"collected\" || value === \"collected_ancient_jar\").length;",
             "    const excavationExistingBones = excavationExistingValues.filter(value => value === \"ancient_bones\" || value === \"collected_ancient_bones\").length;",
-            "    const excavationAvailableKeys = excavationDiggableKeys.filter(key => !Object.prototype.hasOwnProperty.call(excavationExistingTiles, key));",
+            "    const excavationAvailableKeys = excavationDiscoveryKeys.filter(key => !Object.prototype.hasOwnProperty.call(excavationExistingTiles, key));",
             "    let excavationSeed = (excavationWorldSeedVariable.getAsNumber() >>> 0) || 1;",
             "    for (let index = 0; index < excavationRoomId.length; index += 1) excavationSeed = ((excavationSeed * 31) + excavationRoomId.charCodeAt(index)) >>> 0;",
             "    const excavationRandom = () => { excavationSeed = (1664525 * excavationSeed + 1013904223) >>> 0; return excavationSeed / 4294967296; };",
@@ -217762,7 +218922,7 @@
             "    for (let index = 0; index < excavationBonesNeeded && excavationAvailableKeys.length; index += 1) excavationHidden[excavationAvailableKeys.shift()] = \"ancient_bones\";",
             "    excavationBuriedContents.fromJSObject(excavationHidden);",
             "    if (excavationReservedKeys.length) excavationRoomState.getChild(\"GuaranteedFindKey\").setString(excavationReservedKeys[0]);",
-            "    excavationRoomState.getChild(\"DistributionVersion\").setNumber(2);",
+            "    excavationRoomState.getChild(\"DistributionVersion\").setNumber(3);",
             "    excavationSaveSystem.getChild(\"SaveRequested\").setBoolean(true);",
             "  }",
             "  const excavationRuntime = runtimeScene.__ancientDigsExcavation || (runtimeScene.__ancientDigsExcavation = { restored: false, tiles: {}, introducedJar: false, introducedBones: false });",
@@ -217827,8 +218987,9 @@
             "    const excavationWithinFloor = excavationTargetX >= 1 && excavationTargetX < 39 && excavationTargetY >= 1 && excavationTargetY < 22;",
             "    const excavationTargetContent = excavationDugTiles.toJSObject()[excavationTargetKey] || \"\";",
             "    const excavationTargetIsDiggable = excavationDiggableKeySet.has(excavationTargetKey);",
+            "    const excavationTargetCurrentlyBlocked = excavationPointCurrentlyBlocked(excavationTargetX * 32 + 16, excavationTargetY * 32 + 16);",
             "    const excavationTileCanProgress = !excavationTargetContent || /^progress[12]$/.test(excavationTargetContent);",
-            "    excavationCanDig = excavationWithinFloor && excavationTargetIsDiggable && excavationTileCanProgress && !excavationMenuOpen && !excavationDialogueActive && !excavationTransitionLocked && !excavationGuitarActive;",
+            "    excavationCanDig = excavationWithinFloor && excavationTargetIsDiggable && !excavationTargetCurrentlyBlocked && excavationTileCanProgress && !excavationMenuOpen && !excavationDialogueActive && !excavationTransitionLocked && !excavationGuitarActive;",
             "  }",
             "  excavationSceneVariables.get(\"ExcavationTargetX\").setNumber(excavationTargetX);",
             "  excavationSceneVariables.get(\"ExcavationTargetY\").setNumber(excavationTargetY);",
@@ -217891,7 +219052,8 @@
             "      excavationSaveSystem.getChild(\"SaveRequested\").setBoolean(true);",
             "    }",
             "  }",
-            "  const excavationCompletedTiles = Object.values(excavationDugTiles.toJSObject()).filter(content => content && !/^progress[12]$/.test(content)).length;",
+            "  const excavationDugSnapshot = excavationDugTiles.toJSObject();",
+            "  const excavationCompletedTiles = excavationDiggableKeys.filter(key => { const content = excavationDugSnapshot[key]; return content && !/^progress[12]$/.test(content); }).length;",
             "  excavationRoomState.getChild(\"CompletedTileCount\").setNumber(excavationCompletedTiles);",
             "  if (excavationCompletedTiles >= excavationDiggableKeys.length && !excavationRoomState.getChild(\"CompletionBonusAwarded\").getAsBoolean()) {",
             "    excavationRoomState.getChild(\"CompletionBonusAwarded\").setBoolean(true);",
@@ -234639,11 +235801,19 @@
                 "const arrivalTable = {",
                 "  \"Base camp 2\": {",
                 "    Camp_FromTemple: { x: 928, y: 457, animation: \"Walk1\" },",
+                "    Camp_FromExcavation01: { x: 928, y: 457, animation: \"Walk1\" },",
                 "    Camp_FromMuseum: { x: 184, y: 288, animation: \"Walk1\" },",
                 "    Camp_FromShop: { x: 506, y: 439, animation: \"Walk1\" }",
                 "  },",
                 "  \"Temple Room 1\": {",
                 "    Temple_FromCamp: { x: 272, y: 427, animation: \"Walk3\" }",
+                "  },",
+                "  \"Excavation Room 01\": {",
+                "    Room01_FromSurface: { x: 640, y: 552, animation: \"Walk3\" },",
+                "    Room01_FromRoom02: { x: 1184, y: 176, animation: \"Walk1\" }",
+                "  },",
+                "  \"Excavation Room 02\": {",
+                "    Room02_FromRoom01: { x: 640, y: 552, animation: \"Walk3\" }",
                 "  },",
                 "  \"Museum Interior\": {",
                 "    Museum_FromCamp: { x: 608, y: 505, animation: \"Walk3\" }",
@@ -251911,11 +253081,19 @@
                 "const arrivalTable = {",
                 "  \"Base camp 2\": {",
                 "    Camp_FromTemple: { x: 928, y: 457, animation: \"Walk1\" },",
+                "    Camp_FromExcavation01: { x: 928, y: 457, animation: \"Walk1\" },",
                 "    Camp_FromMuseum: { x: 184, y: 288, animation: \"Walk1\" },",
                 "    Camp_FromShop: { x: 506, y: 439, animation: \"Walk1\" }",
                 "  },",
                 "  \"Temple Room 1\": {",
                 "    Temple_FromCamp: { x: 272, y: 427, animation: \"Walk3\" }",
+                "  },",
+                "  \"Excavation Room 01\": {",
+                "    Room01_FromSurface: { x: 640, y: 552, animation: \"Walk3\" },",
+                "    Room01_FromRoom02: { x: 1184, y: 176, animation: \"Walk1\" }",
+                "  },",
+                "  \"Excavation Room 02\": {",
+                "    Room02_FromRoom01: { x: 640, y: 552, animation: \"Walk3\" }",
                 "  },",
                 "  \"Museum Interior\": {",
                 "    Museum_FromCamp: { x: 608, y: 505, animation: \"Walk3\" }",
