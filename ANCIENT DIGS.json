@@ -15991,6 +15991,8 @@
                 "    arrivalGameVariables.get(\"PlayerState\").getChild(\"CurrentY\").setNumber(arrival.y);",
                 "    arrivalGameVariables.get(\"CurrentRoom\").setString(runtimeScene.getName());",
                 "    arrivalGameVariables.get(\"NextSpawn\").setString(\"\");",
+                "    const arrivalSceneVariables = runtimeScene.getVariables();",
+                "    arrivalSceneVariables.get(\"TransitionLockFrames\").setNumber(20);",
                 "    runtimeScene.__doorArrivalApplied = arrivalMarker;",
                 "    if (runtimeScene.__ancientDigsPlayerAnimation) {",
                 "      runtimeScene.__ancientDigsPlayerAnimation.x = arrival.x;",
@@ -16307,241 +16309,29 @@
               ]
             },
             {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BooleanVariable"
-                  },
-                  "parameters": [
-                    "DialogueActive",
-                    "False",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "StringVariable"
-                  },
-                  "parameters": [
-                    "InteractionTarget",
-                    "=",
-                    "\"\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "CollisionNP"
-                  },
-                  "parameters": [
-                    "TopDown_Character",
-                    "TempleEntrance",
-                    "",
-                    "",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "NumberVariable"
-                  },
-                  "parameters": [
-                    "TransitionLockFrames",
-                    "<=",
-                    "0"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BooleanVariable"
-                  },
-                  "parameters": [
-                    "MenuOpen",
-                    "False",
-                    ""
-                  ]
-                }
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "// Doorway-only building interactions: use the exact return-spawn points at each entrance.",
+                "const doorwayPlayer = runtimeScene.getObjects(\"TopDown_Character\")[0];",
+                "const doorwayVariables = runtimeScene.getVariables();",
+                "if (doorwayPlayer && doorwayVariables.get(\"InteractionTarget\").getAsString() === \"\" && doorwayVariables.get(\"TransitionLockFrames\").getAsNumber() <= 0 && !doorwayVariables.get(\"MenuOpen\").getAsBoolean() && !doorwayVariables.get(\"DialogueActive\").getAsBoolean()) {",
+                "  const playerX = doorwayPlayer.getX();",
+                "  const playerY = doorwayPlayer.getY();",
+                "  const doorways = [",
+                "    { x: 928, y: 457, target: \"EnterTemple\", prompt: \"A: Enter pyramid\" },",
+                "    { x: 184, y: 288, target: \"EnterMuseum\", prompt: \"A: Enter museum\" },",
+                "    { x: 506, y: 439, target: \"EnterShop\", prompt: \"A: Enter shop\" }",
+                "  ];",
+                "  const doorway = doorways.find(point => Math.abs(playerX - point.x) <= 48 && Math.abs(playerY - point.y) <= 48);",
+                "  if (doorway) {",
+                "    doorwayVariables.get(\"InteractionTarget\").setString(doorway.target);",
+                "    doorwayVariables.get(\"InteractionPromptText\").setString(doorway.prompt);",
+                "  }",
+                "}"
               ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetStringVariable"
-                  },
-                  "parameters": [
-                    "InteractionTarget",
-                    "=",
-                    "\"EnterTemple\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetStringVariable"
-                  },
-                  "parameters": [
-                    "InteractionPromptText",
-                    "=",
-                    "\"A: Enter pyramid\""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BooleanVariable"
-                  },
-                  "parameters": [
-                    "DialogueActive",
-                    "False",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "StringVariable"
-                  },
-                  "parameters": [
-                    "InteractionTarget",
-                    "=",
-                    "\"\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "CollisionNP"
-                  },
-                  "parameters": [
-                    "TopDown_Character",
-                    "MuseumEntrance",
-                    "",
-                    "",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "NumberVariable"
-                  },
-                  "parameters": [
-                    "TransitionLockFrames",
-                    "<=",
-                    "0"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BooleanVariable"
-                  },
-                  "parameters": [
-                    "MenuOpen",
-                    "False",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetStringVariable"
-                  },
-                  "parameters": [
-                    "InteractionTarget",
-                    "=",
-                    "\"EnterMuseum\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetStringVariable"
-                  },
-                  "parameters": [
-                    "InteractionPromptText",
-                    "=",
-                    "\"A: Enter museum\""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BooleanVariable"
-                  },
-                  "parameters": [
-                    "DialogueActive",
-                    "False",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "StringVariable"
-                  },
-                  "parameters": [
-                    "InteractionTarget",
-                    "=",
-                    "\"\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "CollisionNP"
-                  },
-                  "parameters": [
-                    "TopDown_Character",
-                    "ShopEntrance",
-                    "",
-                    "",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "NumberVariable"
-                  },
-                  "parameters": [
-                    "TransitionLockFrames",
-                    "<=",
-                    "0"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BooleanVariable"
-                  },
-                  "parameters": [
-                    "MenuOpen",
-                    "False",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetStringVariable"
-                  },
-                  "parameters": [
-                    "InteractionTarget",
-                    "=",
-                    "\"EnterShop\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetStringVariable"
-                  },
-                  "parameters": [
-                    "InteractionPromptText",
-                    "=",
-                    "\"A: Enter shop\""
-                  ]
-                }
-              ]
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -31385,6 +31175,8 @@
                 "    arrivalGameVariables.get(\"PlayerState\").getChild(\"CurrentY\").setNumber(arrival.y);",
                 "    arrivalGameVariables.get(\"CurrentRoom\").setString(runtimeScene.getName());",
                 "    arrivalGameVariables.get(\"NextSpawn\").setString(\"\");",
+                "    const arrivalSceneVariables = runtimeScene.getVariables();",
+                "    arrivalSceneVariables.get(\"TransitionLockFrames\").setNumber(20);",
                 "    runtimeScene.__doorArrivalApplied = arrivalMarker;",
                 "    if (runtimeScene.__ancientDigsPlayerAnimation) {",
                 "      runtimeScene.__ancientDigsPlayerAnimation.x = arrival.x;",
@@ -47799,6 +47591,8 @@
                 "    arrivalGameVariables.get(\"PlayerState\").getChild(\"CurrentY\").setNumber(arrival.y);",
                 "    arrivalGameVariables.get(\"CurrentRoom\").setString(runtimeScene.getName());",
                 "    arrivalGameVariables.get(\"NextSpawn\").setString(\"\");",
+                "    const arrivalSceneVariables = runtimeScene.getVariables();",
+                "    arrivalSceneVariables.get(\"TransitionLockFrames\").setNumber(20);",
                 "    runtimeScene.__doorArrivalApplied = arrivalMarker;",
                 "    if (runtimeScene.__ancientDigsPlayerAnimation) {",
                 "      runtimeScene.__ancientDigsPlayerAnimation.x = arrival.x;",
@@ -51918,6 +51712,12 @@
           "persistentUuid": "bda52c60-9c7e-48d1-bfd9-e728c8952b49",
           "type": "boolean",
           "value": true
+        },
+        {
+          "name": "RoomPipelinePromptText",
+          "persistentUuid": "397bf08a-6282-4526-b3d9-750a904c0ff7",
+          "type": "string",
+          "value": ""
         }
       ],
       "instances": [
@@ -53314,6 +53114,40 @@
           "x": 576,
           "y": 576,
           "zOrder": 258,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 32,
+          "keepRatio": true,
+          "layer": "UI",
+          "locked": true,
+          "name": "RoomDoorPrompt",
+          "persistentUuid": "c834db77-0ec9-470f-82ad-61035bb1a699",
+          "width": 360,
+          "x": 460,
+          "y": 492,
+          "zOrder": 260,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 64,
+          "layer": "UI",
+          "locked": true,
+          "name": "RoomDoorPromptBox",
+          "persistentUuid": "448687f4-6f3f-494e-991e-4bcf7fc74d4e",
+          "width": 400,
+          "x": 440,
+          "y": 476,
+          "zOrder": 259,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -61709,6 +61543,67 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "RoomDoorPrompt",
+          "persistentUuid": "c0744c19-cb46-49bf-9ee1-55027fcf5c41",
+          "smoothed": false,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "A: Interact",
+          "font": "assets\\PressStart2P-Regular.ttf",
+          "textAlignment": "center",
+          "characterSize": 16,
+          "color": {
+            "b": 214,
+            "g": 244,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 3,
+            "shadowOpacity": 180,
+            "smoothed": false,
+            "underlined": false,
+            "text": "A: Interact",
+            "font": "assets\\PressStart2P-Regular.ttf",
+            "textAlignment": "center",
+            "verticalTextAlignment": "center",
+            "characterSize": 16,
+            "lineHeight": 0,
+            "color": "255;244;214"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bottomMargin": 8,
+          "height": 64,
+          "leftMargin": 8,
+          "name": "RoomDoorPromptBox",
+          "persistentUuid": "28d9ecf9-f102-4854-be2b-da47d324fc01",
+          "rightMargin": 8,
+          "texture": "assets\\interaction-prompt-retro.png",
+          "tiled": false,
+          "topMargin": 8,
+          "type": "PanelSpriteObject::PanelSprite",
+          "width": 64,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
         }
       ],
       "objectsFolderStructure": {
@@ -61953,6 +61848,12 @@
           },
           {
             "objectName": "RoomEntranceDoor"
+          },
+          {
+            "objectName": "RoomDoorPrompt"
+          },
+          {
+            "objectName": "RoomDoorPromptBox"
           }
         ]
       },
@@ -65396,6 +65297,8 @@
                 "    arrivalGameVariables.get(\"PlayerState\").getChild(\"CurrentY\").setNumber(arrival.y);",
                 "    arrivalGameVariables.get(\"CurrentRoom\").setString(runtimeScene.getName());",
                 "    arrivalGameVariables.get(\"NextSpawn\").setString(\"\");",
+                "    const arrivalSceneVariables = runtimeScene.getVariables();",
+                "    arrivalSceneVariables.get(\"TransitionLockFrames\").setNumber(20);",
                 "    runtimeScene.__doorArrivalApplied = arrivalMarker;",
                 "    if (runtimeScene.__ancientDigsPlayerAnimation) {",
                 "      runtimeScene.__ancientDigsPlayerAnimation.x = arrival.x;",
@@ -69047,10 +68950,14 @@
                 "const pipelineSceneName = runtimeScene.getName();",
                 "const pipelineGameVariables = runtimeScene.getGame().getVariables();",
                 "const pipelineSceneVariables = runtimeScene.getVariables();",
+                "pipelineSceneVariables.get(\"RoomPipelinePromptText\").setString(\"\");",
                 "const pipelinePlayer = runtimeScene.getObjects(\"TopDown_Character\")[0];",
+                "const pipelineTransitionLocked = pipelineSceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
                 "const pipelineEntrance = runtimeScene.getObjects(\"RoomEntranceDoor\")[0];",
-                "const pipelinePrompt = runtimeScene.getObjects(\"InteractionPrompt\")[0];",
-                "const pipelinePromptBox = runtimeScene.getObjects(\"InteractionPromptBox\")[0];",
+                "const pipelinePrompt = runtimeScene.getObjects(\"RoomDoorPrompt\")[0];",
+                "const pipelinePromptBox = runtimeScene.getObjects(\"RoomDoorPromptBox\")[0];",
+                "if (pipelinePrompt) pipelinePrompt.hide(true);",
+                "if (pipelinePromptBox) pipelinePromptBox.hide(true);",
                 "if (pipelineEntrance) {",
                 "  pipelineEntrance.hide(false);",
                 "  pipelineEntrance.setAnimationName(\"Open\");",
@@ -69079,8 +68986,9 @@
                 "const pipelineBPressed = pipelineBHeld && !pipelineInput.bHeld;",
                 "pipelineInput.actionHeld = pipelineActionHeld;",
                 "pipelineInput.bHeld = pipelineBHeld;",
-                "const pipelineDistance = (object, offsetX = 64, offsetY = 64) => object && pipelinePlayer ? Math.hypot(pipelinePlayer.getX() - (object.getX() + offsetX), pipelinePlayer.getY() - (object.getY() + offsetY)) : 99999;",
+                "const pipelineTouchingDoor = door => !!(pipelinePlayer && door && gdjs.RuntimeObject.collisionTest(pipelinePlayer, door, false));",
                 "const pipelineShowPrompt = text => {",
+                "  pipelineSceneVariables.get(\"RoomPipelinePromptText\").setString(text);",
                 "  if (pipelinePromptBox) pipelinePromptBox.hide(false);",
                 "  if (pipelinePrompt) { pipelinePrompt.setString(text); pipelinePrompt.hide(false); }",
                 "};",
@@ -69096,32 +69004,22 @@
                 "if (runtimeScene.__ancientDigsRoomPipelinePending) {",
                 "  runtimeScene.__ancientDigsRoomPipelinePending.frames -= 1;",
                 "  if (runtimeScene.__ancientDigsRoomPipelinePending.frames <= 0) gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, runtimeScene.__ancientDigsRoomPipelinePending.target, false);",
-                "} else if (pipelinePlayer) {",
-                "  const pipelineEntranceNear = pipelineDistance(pipelineEntrance) <= 112;",
+                "} else if (pipelinePlayer && !pipelineTransitionLocked && !pipelineSceneVariables.get(\"MenuOpen\").getAsBoolean() && !pipelineSceneVariables.get(\"DialogueActive\").getAsBoolean()) {",
+                "  const pipelineEntranceNear = pipelineTouchingDoor(pipelineEntrance);",
                 "  const pipelinePuzzleState = pipelineGameVariables.get(\"CompletedPuzzles\").getChild(pipelineSceneName).getChild(\"PressurePuzzle\");",
                 "  const pipelinePuzzleUnlocked = pipelinePuzzleState.getChild(\"Unlocked\").getAsBoolean();",
                 "  const pipelineAncientDoor = runtimeScene.getObjects(\"RK_AncientDoor\")[0];",
-                "  const pipelineAncientDoorNear = pipelineAncientDoor && !pipelineAncientDoor.isHidden() && pipelineDistance(pipelineAncientDoor, 64, 128) <= 96;",
-                "  if (runtimeScene.__ancientDigsSurfaceExitChoice) {",
-                "    pipelinePlayer.getVariables().get(\"MovementLocked\").setBoolean(true);",
-                "    pipelineShowPrompt(\"A: RESTART PUZZLE     B: RETURN TO SURFACE\");",
+                "  const pipelineAncientDoorNear = pipelineAncientDoor && !pipelineAncientDoor.isHidden() && pipelineTouchingDoor(pipelineAncientDoor);",
+                "  if (pipelineEntranceNear) {",
+                "    pipelinePlayer.getVariables().get(\"MovementLocked\").setBoolean(false);",
+                "    pipelineShowPrompt(\"A: RESTART PUZZLE     B: SURFACE\");",
                 "    if (pipelineActionPressed) {",
                 "      pipelineGameVariables.get(\"CompletedPuzzles\").removeChild(pipelineSceneName);",
                 "      pipelineGameVariables.get(\"SaveSystem\").getChild(\"SaveRequested\").setBoolean(true);",
                 "      pipelineGameVariables.get(\"NextSpawn\").setString(\"Room01_FromSurface\");",
                 "      runtimeScene.__ancientDigsRoomPipelinePending = { target: pipelineSceneName, frames: 2 };",
                 "    } else if (pipelineBPressed) {",
-                "      pipelinePlayer.getVariables().get(\"MovementLocked\").setBoolean(false);",
                 "      pipelineQueueScene(\"Base camp 2\", \"Camp_FromExcavation01\", \"Room01SurfaceEntrance\");",
-                "    } else if (!pipelineEntranceNear) {",
-                "      runtimeScene.__ancientDigsSurfaceExitChoice = false;",
-                "      pipelinePlayer.getVariables().get(\"MovementLocked\").setBoolean(false);",
-                "    }",
-                "  } else if (pipelineEntranceNear) {",
-                "    pipelineShowPrompt(pipelinePuzzleUnlocked ? \"A: Return to surface\" : \"A: Leave or restart room\");",
-                "    if (pipelineActionPressed) {",
-                "      if (pipelinePuzzleUnlocked) pipelineQueueScene(\"Base camp 2\", \"Camp_FromExcavation01\", \"Room01SurfaceEntrance\");",
-                "      else runtimeScene.__ancientDigsSurfaceExitChoice = true;",
                 "    }",
                 "  } else if (pipelineAncientDoorNear) {",
                 "    pipelineShowPrompt(pipelinePuzzleUnlocked ? \"A: Enter Excavation Room 02\" : \"The ancient door is still sealed\");",
@@ -69132,6 +69030,52 @@
               "parameterObjects": "",
               "useStrict": true,
               "eventsSheetExpanded": false
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringVariable"
+                  },
+                  "parameters": [
+                    "RoomPipelinePromptText",
+                    "!=",
+                    "\"\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "RoomDoorPromptBox",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "RoomDoorPrompt",
+                    "Text",
+                    "=",
+                    "VariableString(RoomPipelinePromptText)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "RoomDoorPrompt",
+                    ""
+                  ]
+                }
+              ]
             }
           ],
           "parameters": []
@@ -69199,7 +69143,7 @@
           "isLocked": false,
           "name": "UI",
           "renderingType": "",
-          "visibility": false,
+          "visibility": true,
           "cameras": [],
           "effects": []
         }
@@ -69636,6 +69580,12 @@
           "persistentUuid": "485eab81-4120-4c61-8f1b-1f32101cdb49",
           "type": "boolean",
           "value": true
+        },
+        {
+          "name": "RoomPipelinePromptText",
+          "persistentUuid": "9a7c6378-9669-42e5-aec7-d7665c0062ce",
+          "type": "string",
+          "value": ""
         }
       ],
       "instances": [
@@ -70712,6 +70662,40 @@
           "x": 576,
           "y": 576,
           "zOrder": 258,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 32,
+          "keepRatio": true,
+          "layer": "UI",
+          "locked": true,
+          "name": "RoomDoorPrompt",
+          "persistentUuid": "6d8301a1-94d2-40fc-90e8-1743dc711448",
+          "width": 360,
+          "x": 460,
+          "y": 492,
+          "zOrder": 260,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 64,
+          "layer": "UI",
+          "locked": true,
+          "name": "RoomDoorPromptBox",
+          "persistentUuid": "4baa1b61-4fc8-45ac-8bdb-14d4106cbbc4",
+          "width": 400,
+          "x": 440,
+          "y": 476,
+          "zOrder": 259,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -79107,6 +79091,67 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "RoomDoorPrompt",
+          "persistentUuid": "757f6e0a-290e-4ee5-80fc-e7ddcf3f2466",
+          "smoothed": false,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "A: Interact",
+          "font": "assets\\PressStart2P-Regular.ttf",
+          "textAlignment": "center",
+          "characterSize": 16,
+          "color": {
+            "b": 214,
+            "g": 244,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 3,
+            "shadowOpacity": 180,
+            "smoothed": false,
+            "underlined": false,
+            "text": "A: Interact",
+            "font": "assets\\PressStart2P-Regular.ttf",
+            "textAlignment": "center",
+            "verticalTextAlignment": "center",
+            "characterSize": 16,
+            "lineHeight": 0,
+            "color": "255;244;214"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bottomMargin": 8,
+          "height": 64,
+          "leftMargin": 8,
+          "name": "RoomDoorPromptBox",
+          "persistentUuid": "39ddaf68-72e5-4ea7-aac9-54560ab241dd",
+          "rightMargin": 8,
+          "texture": "assets\\interaction-prompt-retro.png",
+          "tiled": false,
+          "topMargin": 8,
+          "type": "PanelSpriteObject::PanelSprite",
+          "width": 64,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
         }
       ],
       "objectsFolderStructure": {
@@ -79351,6 +79396,12 @@
           },
           {
             "objectName": "RoomEntranceDoor"
+          },
+          {
+            "objectName": "RoomDoorPrompt"
+          },
+          {
+            "objectName": "RoomDoorPromptBox"
           }
         ]
       },
@@ -82794,6 +82845,8 @@
                 "    arrivalGameVariables.get(\"PlayerState\").getChild(\"CurrentY\").setNumber(arrival.y);",
                 "    arrivalGameVariables.get(\"CurrentRoom\").setString(runtimeScene.getName());",
                 "    arrivalGameVariables.get(\"NextSpawn\").setString(\"\");",
+                "    const arrivalSceneVariables = runtimeScene.getVariables();",
+                "    arrivalSceneVariables.get(\"TransitionLockFrames\").setNumber(20);",
                 "    runtimeScene.__doorArrivalApplied = arrivalMarker;",
                 "    if (runtimeScene.__ancientDigsPlayerAnimation) {",
                 "      runtimeScene.__ancientDigsPlayerAnimation.x = arrival.x;",
@@ -86445,10 +86498,14 @@
                 "const pipelineSceneName = runtimeScene.getName();",
                 "const pipelineGameVariables = runtimeScene.getGame().getVariables();",
                 "const pipelineSceneVariables = runtimeScene.getVariables();",
+                "pipelineSceneVariables.get(\"RoomPipelinePromptText\").setString(\"\");",
                 "const pipelinePlayer = runtimeScene.getObjects(\"TopDown_Character\")[0];",
+                "const pipelineTransitionLocked = pipelineSceneVariables.get(\"TransitionLockFrames\").getAsNumber() > 0;",
                 "const pipelineEntrance = runtimeScene.getObjects(\"RoomEntranceDoor\")[0];",
-                "const pipelinePrompt = runtimeScene.getObjects(\"InteractionPrompt\")[0];",
-                "const pipelinePromptBox = runtimeScene.getObjects(\"InteractionPromptBox\")[0];",
+                "const pipelinePrompt = runtimeScene.getObjects(\"RoomDoorPrompt\")[0];",
+                "const pipelinePromptBox = runtimeScene.getObjects(\"RoomDoorPromptBox\")[0];",
+                "if (pipelinePrompt) pipelinePrompt.hide(true);",
+                "if (pipelinePromptBox) pipelinePromptBox.hide(true);",
                 "if (pipelineEntrance) {",
                 "  pipelineEntrance.hide(false);",
                 "  pipelineEntrance.setAnimationName(\"Open\");",
@@ -86477,8 +86534,9 @@
                 "const pipelineBPressed = pipelineBHeld && !pipelineInput.bHeld;",
                 "pipelineInput.actionHeld = pipelineActionHeld;",
                 "pipelineInput.bHeld = pipelineBHeld;",
-                "const pipelineDistance = (object, offsetX = 64, offsetY = 64) => object && pipelinePlayer ? Math.hypot(pipelinePlayer.getX() - (object.getX() + offsetX), pipelinePlayer.getY() - (object.getY() + offsetY)) : 99999;",
+                "const pipelineTouchingDoor = door => !!(pipelinePlayer && door && gdjs.RuntimeObject.collisionTest(pipelinePlayer, door, false));",
                 "const pipelineShowPrompt = text => {",
+                "  pipelineSceneVariables.get(\"RoomPipelinePromptText\").setString(text);",
                 "  if (pipelinePromptBox) pipelinePromptBox.hide(false);",
                 "  if (pipelinePrompt) { pipelinePrompt.setString(text); pipelinePrompt.hide(false); }",
                 "};",
@@ -86494,8 +86552,8 @@
                 "if (runtimeScene.__ancientDigsRoomPipelinePending) {",
                 "  runtimeScene.__ancientDigsRoomPipelinePending.frames -= 1;",
                 "  if (runtimeScene.__ancientDigsRoomPipelinePending.frames <= 0) gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, runtimeScene.__ancientDigsRoomPipelinePending.target, false);",
-                "} else if (pipelinePlayer) {",
-                "  const pipelineEntranceNear = pipelineDistance(pipelineEntrance) <= 112;",
+                "} else if (pipelinePlayer && !pipelineTransitionLocked && !pipelineSceneVariables.get(\"MenuOpen\").getAsBoolean() && !pipelineSceneVariables.get(\"DialogueActive\").getAsBoolean()) {",
+                "  const pipelineEntranceNear = pipelineTouchingDoor(pipelineEntrance);",
                 "  if (pipelineEntranceNear) {",
                 "    pipelineShowPrompt(\"A: Return to Excavation Room 01\");",
                 "    if (pipelineActionPressed) pipelineQueueScene(\"Excavation Room 01\", \"Room01_FromRoom02\", \"Room02Entrance\");",
@@ -86505,6 +86563,52 @@
               "parameterObjects": "",
               "useStrict": true,
               "eventsSheetExpanded": false
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringVariable"
+                  },
+                  "parameters": [
+                    "RoomPipelinePromptText",
+                    "!=",
+                    "\"\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "RoomDoorPromptBox",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "RoomDoorPrompt",
+                    "Text",
+                    "=",
+                    "VariableString(RoomPipelinePromptText)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "RoomDoorPrompt",
+                    ""
+                  ]
+                }
+              ]
             }
           ],
           "parameters": []
@@ -99765,6 +99869,8 @@
                 "    arrivalGameVariables.get(\"PlayerState\").getChild(\"CurrentY\").setNumber(arrival.y);",
                 "    arrivalGameVariables.get(\"CurrentRoom\").setString(runtimeScene.getName());",
                 "    arrivalGameVariables.get(\"NextSpawn\").setString(\"\");",
+                "    const arrivalSceneVariables = runtimeScene.getVariables();",
+                "    arrivalSceneVariables.get(\"TransitionLockFrames\").setNumber(20);",
                 "    runtimeScene.__doorArrivalApplied = arrivalMarker;",
                 "    if (runtimeScene.__ancientDigsPlayerAnimation) {",
                 "      runtimeScene.__ancientDigsPlayerAnimation.x = arrival.x;",
@@ -116655,6 +116761,8 @@
                 "    arrivalGameVariables.get(\"PlayerState\").getChild(\"CurrentY\").setNumber(arrival.y);",
                 "    arrivalGameVariables.get(\"CurrentRoom\").setString(runtimeScene.getName());",
                 "    arrivalGameVariables.get(\"NextSpawn\").setString(\"\");",
+                "    const arrivalSceneVariables = runtimeScene.getVariables();",
+                "    arrivalSceneVariables.get(\"TransitionLockFrames\").setNumber(20);",
                 "    runtimeScene.__doorArrivalApplied = arrivalMarker;",
                 "    if (runtimeScene.__ancientDigsPlayerAnimation) {",
                 "      runtimeScene.__ancientDigsPlayerAnimation.x = arrival.x;",
@@ -133545,6 +133653,8 @@
                 "    arrivalGameVariables.get(\"PlayerState\").getChild(\"CurrentY\").setNumber(arrival.y);",
                 "    arrivalGameVariables.get(\"CurrentRoom\").setString(runtimeScene.getName());",
                 "    arrivalGameVariables.get(\"NextSpawn\").setString(\"\");",
+                "    const arrivalSceneVariables = runtimeScene.getVariables();",
+                "    arrivalSceneVariables.get(\"TransitionLockFrames\").setNumber(20);",
                 "    runtimeScene.__doorArrivalApplied = arrivalMarker;",
                 "    if (runtimeScene.__ancientDigsPlayerAnimation) {",
                 "      runtimeScene.__ancientDigsPlayerAnimation.x = arrival.x;",
@@ -150435,6 +150545,8 @@
                 "    arrivalGameVariables.get(\"PlayerState\").getChild(\"CurrentY\").setNumber(arrival.y);",
                 "    arrivalGameVariables.get(\"CurrentRoom\").setString(runtimeScene.getName());",
                 "    arrivalGameVariables.get(\"NextSpawn\").setString(\"\");",
+                "    const arrivalSceneVariables = runtimeScene.getVariables();",
+                "    arrivalSceneVariables.get(\"TransitionLockFrames\").setNumber(20);",
                 "    runtimeScene.__doorArrivalApplied = arrivalMarker;",
                 "    if (runtimeScene.__ancientDigsPlayerAnimation) {",
                 "      runtimeScene.__ancientDigsPlayerAnimation.x = arrival.x;",
@@ -167325,6 +167437,8 @@
                 "    arrivalGameVariables.get(\"PlayerState\").getChild(\"CurrentY\").setNumber(arrival.y);",
                 "    arrivalGameVariables.get(\"CurrentRoom\").setString(runtimeScene.getName());",
                 "    arrivalGameVariables.get(\"NextSpawn\").setString(\"\");",
+                "    const arrivalSceneVariables = runtimeScene.getVariables();",
+                "    arrivalSceneVariables.get(\"TransitionLockFrames\").setNumber(20);",
                 "    runtimeScene.__doorArrivalApplied = arrivalMarker;",
                 "    if (runtimeScene.__ancientDigsPlayerAnimation) {",
                 "      runtimeScene.__ancientDigsPlayerAnimation.x = arrival.x;",
@@ -184215,6 +184329,8 @@
                 "    arrivalGameVariables.get(\"PlayerState\").getChild(\"CurrentY\").setNumber(arrival.y);",
                 "    arrivalGameVariables.get(\"CurrentRoom\").setString(runtimeScene.getName());",
                 "    arrivalGameVariables.get(\"NextSpawn\").setString(\"\");",
+                "    const arrivalSceneVariables = runtimeScene.getVariables();",
+                "    arrivalSceneVariables.get(\"TransitionLockFrames\").setNumber(20);",
                 "    runtimeScene.__doorArrivalApplied = arrivalMarker;",
                 "    if (runtimeScene.__ancientDigsPlayerAnimation) {",
                 "      runtimeScene.__ancientDigsPlayerAnimation.x = arrival.x;",
@@ -201105,6 +201221,8 @@
                 "    arrivalGameVariables.get(\"PlayerState\").getChild(\"CurrentY\").setNumber(arrival.y);",
                 "    arrivalGameVariables.get(\"CurrentRoom\").setString(runtimeScene.getName());",
                 "    arrivalGameVariables.get(\"NextSpawn\").setString(\"\");",
+                "    const arrivalSceneVariables = runtimeScene.getVariables();",
+                "    arrivalSceneVariables.get(\"TransitionLockFrames\").setNumber(20);",
                 "    runtimeScene.__doorArrivalApplied = arrivalMarker;",
                 "    if (runtimeScene.__ancientDigsPlayerAnimation) {",
                 "      runtimeScene.__ancientDigsPlayerAnimation.x = arrival.x;",
@@ -217995,6 +218113,8 @@
                 "    arrivalGameVariables.get(\"PlayerState\").getChild(\"CurrentY\").setNumber(arrival.y);",
                 "    arrivalGameVariables.get(\"CurrentRoom\").setString(runtimeScene.getName());",
                 "    arrivalGameVariables.get(\"NextSpawn\").setString(\"\");",
+                "    const arrivalSceneVariables = runtimeScene.getVariables();",
+                "    arrivalSceneVariables.get(\"TransitionLockFrames\").setNumber(20);",
                 "    runtimeScene.__doorArrivalApplied = arrivalMarker;",
                 "    if (runtimeScene.__ancientDigsPlayerAnimation) {",
                 "      runtimeScene.__ancientDigsPlayerAnimation.x = arrival.x;",
@@ -223377,13 +223497,13 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 140,
+          "height": 64,
           "layer": "",
           "name": "WorkerInteractionZone",
           "persistentUuid": "1d964872-1077-462c-b00b-58cd7cfdc92b",
-          "width": 420,
-          "x": 430,
-          "y": 298,
+          "width": 192,
+          "x": 544,
+          "y": 304,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -235834,6 +235954,8 @@
                 "    arrivalGameVariables.get(\"PlayerState\").getChild(\"CurrentY\").setNumber(arrival.y);",
                 "    arrivalGameVariables.get(\"CurrentRoom\").setString(runtimeScene.getName());",
                 "    arrivalGameVariables.get(\"NextSpawn\").setString(\"\");",
+                "    const arrivalSceneVariables = runtimeScene.getVariables();",
+                "    arrivalSceneVariables.get(\"TransitionLockFrames\").setNumber(20);",
                 "    runtimeScene.__doorArrivalApplied = arrivalMarker;",
                 "    if (runtimeScene.__ancientDigsPlayerAnimation) {",
                 "      runtimeScene.__ancientDigsPlayerAnimation.x = arrival.x;",
@@ -236229,83 +236351,21 @@
               ]
             },
             {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BooleanVariable"
-                  },
-                  "parameters": [
-                    "DialogueActive",
-                    "False",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "StringVariable"
-                  },
-                  "parameters": [
-                    "InteractionTarget",
-                    "=",
-                    "\"\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "CollisionNP"
-                  },
-                  "parameters": [
-                    "TopDown_Character",
-                    "InteriorExitZone",
-                    "",
-                    "",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "NumberVariable"
-                  },
-                  "parameters": [
-                    "TransitionLockFrames",
-                    "<=",
-                    "0"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BooleanVariable"
-                  },
-                  "parameters": [
-                    "MenuOpen",
-                    "False",
-                    ""
-                  ]
-                }
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "// Doorway-only interior exit: match the exact arrival point in front of the door.",
+                "const doorwayPlayer = runtimeScene.getObjects(\"TopDown_Character\")[0];",
+                "const doorwayVariables = runtimeScene.getVariables();",
+                "if (doorwayPlayer && doorwayVariables.get(\"InteractionTarget\").getAsString() === \"\" && doorwayVariables.get(\"TransitionLockFrames\").getAsNumber() <= 0 && !doorwayVariables.get(\"MenuOpen\").getAsBoolean() && !doorwayVariables.get(\"DialogueActive\").getAsBoolean()) {",
+                "  if (Math.abs(doorwayPlayer.getX() - 608) <= 48 && Math.abs(doorwayPlayer.getY() - 505) <= 48) {",
+                "    doorwayVariables.get(\"InteractionTarget\").setString(\"ExitInterior\");",
+                "    doorwayVariables.get(\"InteractionPromptText\").setString(\"A: Return to camp\");",
+                "  }",
+                "}"
               ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetStringVariable"
-                  },
-                  "parameters": [
-                    "InteractionTarget",
-                    "=",
-                    "\"ExitInterior\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetStringVariable"
-                  },
-                  "parameters": [
-                    "InteractionPromptText",
-                    "=",
-                    "\"A: Return to camp\""
-                  ]
-                }
-              ]
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -240988,13 +241048,13 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 140,
+          "height": 64,
           "layer": "",
           "name": "WorkerInteractionZone",
           "persistentUuid": "e41d8675-ab0f-4117-b8fc-81e5eb8cac48",
-          "width": 420,
-          "x": 430,
-          "y": 328,
+          "width": 192,
+          "x": 544,
+          "y": 336,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -253114,6 +253174,8 @@
                 "    arrivalGameVariables.get(\"PlayerState\").getChild(\"CurrentY\").setNumber(arrival.y);",
                 "    arrivalGameVariables.get(\"CurrentRoom\").setString(runtimeScene.getName());",
                 "    arrivalGameVariables.get(\"NextSpawn\").setString(\"\");",
+                "    const arrivalSceneVariables = runtimeScene.getVariables();",
+                "    arrivalSceneVariables.get(\"TransitionLockFrames\").setNumber(20);",
                 "    runtimeScene.__doorArrivalApplied = arrivalMarker;",
                 "    if (runtimeScene.__ancientDigsPlayerAnimation) {",
                 "      runtimeScene.__ancientDigsPlayerAnimation.x = arrival.x;",
@@ -253509,83 +253571,21 @@
               ]
             },
             {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BooleanVariable"
-                  },
-                  "parameters": [
-                    "DialogueActive",
-                    "False",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "StringVariable"
-                  },
-                  "parameters": [
-                    "InteractionTarget",
-                    "=",
-                    "\"\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "CollisionNP"
-                  },
-                  "parameters": [
-                    "TopDown_Character",
-                    "InteriorExitZone",
-                    "",
-                    "",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "NumberVariable"
-                  },
-                  "parameters": [
-                    "TransitionLockFrames",
-                    "<=",
-                    "0"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BooleanVariable"
-                  },
-                  "parameters": [
-                    "MenuOpen",
-                    "False",
-                    ""
-                  ]
-                }
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "// Doorway-only interior exit: match the exact arrival point in front of the door.",
+                "const doorwayPlayer = runtimeScene.getObjects(\"TopDown_Character\")[0];",
+                "const doorwayVariables = runtimeScene.getVariables();",
+                "if (doorwayPlayer && doorwayVariables.get(\"InteractionTarget\").getAsString() === \"\" && doorwayVariables.get(\"TransitionLockFrames\").getAsNumber() <= 0 && !doorwayVariables.get(\"MenuOpen\").getAsBoolean() && !doorwayVariables.get(\"DialogueActive\").getAsBoolean()) {",
+                "  if (Math.abs(doorwayPlayer.getX() - 608) <= 48 && Math.abs(doorwayPlayer.getY() - 505) <= 48) {",
+                "    doorwayVariables.get(\"InteractionTarget\").setString(\"ExitInterior\");",
+                "    doorwayVariables.get(\"InteractionPromptText\").setString(\"A: Return to camp\");",
+                "  }",
+                "}"
               ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetStringVariable"
-                  },
-                  "parameters": [
-                    "InteractionTarget",
-                    "=",
-                    "\"ExitInterior\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetStringVariable"
-                  },
-                  "parameters": [
-                    "InteractionPromptText",
-                    "=",
-                    "\"A: Return to camp\""
-                  ]
-                }
-              ]
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
