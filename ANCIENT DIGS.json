@@ -1,7 +1,7 @@
 {
   "firstLayout": "Base camp 2",
   "gdVersion": {
-    "build": 277,
+    "build": 279,
     "major": 5,
     "minor": 6,
     "revision": 0
@@ -2158,6 +2158,158 @@
         "kind": "image",
         "metadata": "",
         "name": "assets\\Environment\\ShopProps\\Desert_Chest.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Environment/MuseumProps/Museum_Blue_Carpet.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Environment\\MuseumProps\\Museum_Blue_Carpet.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Environment/MuseumProps/Museum_Obelisk.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Environment\\MuseumProps\\Museum_Obelisk.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Environment/MuseumProps/Museum_Sarcophagus_Gold.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Environment\\MuseumProps\\Museum_Sarcophagus_Gold.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Environment/MuseumProps/Museum_Sarcophagus_Green.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Environment\\MuseumProps\\Museum_Sarcophagus_Green.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Environment/MuseumProps/Museum_Vase.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Environment\\MuseumProps\\Museum_Vase.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Environment/MuseumProps/Museum_Blue_Stone_Floor.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Environment\\MuseumProps\\Museum_Blue_Stone_Floor.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Environment/MuseumProps/Museum_Curator_Desk.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Environment\\MuseumProps\\Museum_Curator_Desk.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Environment/MuseumProps/Museum_Polished_Marble_Floor.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Environment\\MuseumProps\\Museum_Polished_Marble_Floor.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Environment/MuseumProps/Museum_Navy_Gold_Wall.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Environment\\MuseumProps\\Museum_Navy_Gold_Wall.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Characters/MuseumDirector/MuseumDirector_Idle_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Characters\\MuseumDirector\\MuseumDirector_Idle_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Characters/MuseumDirector/MuseumDirector_Idle_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Characters\\MuseumDirector\\MuseumDirector_Idle_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Characters/MuseumDirector/MuseumDirector_Idle_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Characters\\MuseumDirector\\MuseumDirector_Idle_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Characters/MuseumDirector/MuseumDirector_Idle_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Characters\\MuseumDirector\\MuseumDirector_Idle_4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Characters/MuseumDirector/MuseumDirector_Idle_5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Characters\\MuseumDirector\\MuseumDirector_Idle_5.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Characters/MuseumDirector/MuseumDirector_Idle_6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Characters\\MuseumDirector\\MuseumDirector_Idle_6.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Characters/MuseumDirector/MuseumDirector_Idle_7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Characters\\MuseumDirector\\MuseumDirector_Idle_7.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Characters/MuseumDirector/MuseumDirector_Idle_8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Characters\\MuseumDirector\\MuseumDirector_Idle_8.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Characters/MuseumDirector/MuseumDirector_Idle_9.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Characters\\MuseumDirector\\MuseumDirector_Idle_9.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Characters/MuseumDirector/MuseumDirector_Idle_10.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Characters\\MuseumDirector\\MuseumDirector_Idle_10.png",
         "smoothed": false,
         "userAdded": true
       }
@@ -223561,45 +223713,13 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 128,
-          "keepRatio": true,
-          "layer": "",
-          "name": "MuseumPillar",
-          "persistentUuid": "6d9a1f35-6d3d-4df4-9262-73ad7a823044",
-          "width": 64,
-          "x": 128,
-          "y": 88,
-          "zOrder": 7,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 128,
-          "keepRatio": true,
-          "layer": "",
-          "name": "MuseumPillar",
-          "persistentUuid": "d5388aa7-6617-40dd-8da6-1bb2fc88d6eb",
-          "width": 64,
-          "x": 1088,
-          "y": 88,
-          "zOrder": 7,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
           "height": 96,
           "keepRatio": true,
           "layer": "",
           "name": "MuseumStatue",
           "persistentUuid": "49e69652-951b-4a8a-947a-1dff98fc8414",
           "width": 64,
-          "x": 248,
+          "x": 208,
           "y": 104,
           "zOrder": 7,
           "numberProperties": [],
@@ -223615,7 +223735,7 @@
           "name": "MuseumStatue",
           "persistentUuid": "2a676cda-a50b-4c86-8ab4-3320843e1284",
           "width": 64,
-          "x": 968,
+          "x": 1008,
           "y": 104,
           "zOrder": 7,
           "numberProperties": [],
@@ -223625,60 +223745,15 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 112,
+          "height": 91,
           "keepRatio": true,
           "layer": "",
           "name": "CommerceWorker",
           "persistentUuid": "5670d3fb-e12b-4147-bf2a-8a5dffe8a466",
-          "width": 64,
-          "x": 608,
-          "y": 80,
+          "width": 96,
+          "x": 592,
+          "y": 128,
           "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 128,
-          "layer": "",
-          "name": "InteriorCounter",
-          "persistentUuid": "ea376c78-21a9-43ef-a53c-686e699fd668",
-          "width": 192,
-          "x": 352,
-          "y": 176,
-          "zOrder": 18,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 128,
-          "layer": "",
-          "name": "InteriorCounter",
-          "persistentUuid": "62beb9a2-1592-4349-a0d7-7e613c76a920",
-          "width": 192,
-          "x": 544,
-          "y": 176,
-          "zOrder": 18,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 128,
-          "layer": "",
-          "name": "InteriorCounter",
-          "persistentUuid": "af1be96f-71ec-4938-8c73-2479b4e7ba6d",
-          "width": 192,
-          "x": 736,
-          "y": 176,
-          "zOrder": 18,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -223702,28 +223777,13 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 128,
-          "layer": "",
-          "name": "InteriorRug",
-          "persistentUuid": "f1e8f19b-c6cb-42ca-b5bb-0f9c640051b8",
-          "width": 192,
-          "x": 544,
-          "y": 392,
-          "zOrder": 3,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 64,
+          "height": 20,
           "layer": "",
           "name": "WorkerInteractionZone",
           "persistentUuid": "1d964872-1077-462c-b00b-58cd7cfdc92b",
-          "width": 192,
-          "x": 544,
-          "y": 304,
+          "width": 80,
+          "x": 600,
+          "y": 210,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -223732,13 +223792,13 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 110,
+          "height": 96,
           "layer": "",
           "name": "InteriorExitZone",
           "persistentUuid": "724516cc-3659-4b66-bb11-ab93807f9dcf",
-          "width": 210,
-          "x": 535,
-          "y": 610,
+          "width": 96,
+          "x": 592,
+          "y": 608,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -224060,6 +224120,193 @@
           "x": 520,
           "y": 338,
           "zOrder": 242,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 96,
+          "keepRatio": true,
+          "layer": "",
+          "locked": true,
+          "name": "InteriorRug",
+          "persistentUuid": "6a2348ce-b686-41fa-b48c-4ac77e86f720",
+          "width": 160,
+          "x": 560,
+          "y": 320,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 96,
+          "keepRatio": true,
+          "layer": "",
+          "locked": true,
+          "name": "InteriorRug",
+          "persistentUuid": "8c6244b9-5f55-43fa-ae25-a8fb1d005d6a",
+          "width": 160,
+          "x": 560,
+          "y": 416,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 96,
+          "keepRatio": true,
+          "layer": "",
+          "locked": true,
+          "name": "InteriorRug",
+          "persistentUuid": "4fb3c3c4-d90a-4591-a01d-298883c5d681",
+          "width": 160,
+          "x": 560,
+          "y": 512,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 96,
+          "keepRatio": true,
+          "layer": "",
+          "locked": true,
+          "name": "InteriorRug",
+          "persistentUuid": "9320e866-c1c7-47c6-abf2-23b8d1c1cf35",
+          "width": 160,
+          "x": 560,
+          "y": 608,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 160,
+          "keepRatio": true,
+          "layer": "",
+          "locked": true,
+          "name": "MuseumObelisk",
+          "persistentUuid": "eadc8206-e85d-464e-9d75-415b54afea9f",
+          "width": 64,
+          "x": 96,
+          "y": 64,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 160,
+          "keepRatio": true,
+          "layer": "",
+          "locked": true,
+          "name": "MuseumObelisk",
+          "persistentUuid": "20eb614c-c3fe-45cd-9bdc-ae3d4b5d92fe",
+          "width": 64,
+          "x": 1120,
+          "y": 64,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "locked": true,
+          "name": "MuseumVase",
+          "persistentUuid": "b8449562-79e5-4e48-8997-b0561b509325",
+          "width": 64,
+          "x": 304,
+          "y": 112,
+          "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "locked": true,
+          "name": "MuseumVase",
+          "persistentUuid": "c60ce2c1-4050-463b-8704-c220a23de708",
+          "width": 64,
+          "x": 912,
+          "y": 112,
+          "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 192,
+          "keepRatio": true,
+          "layer": "",
+          "locked": true,
+          "name": "MuseumSarcophagusGold",
+          "persistentUuid": "d390b8ef-d28c-412c-a04b-531e2be6de8f",
+          "width": 96,
+          "x": 272,
+          "y": 352,
+          "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 192,
+          "keepRatio": true,
+          "layer": "",
+          "locked": true,
+          "name": "MuseumSarcophagusGreen",
+          "persistentUuid": "ca49bc17-deb6-4ef0-bb20-399597e8769d",
+          "width": 96,
+          "x": 912,
+          "y": 352,
+          "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 160,
+          "keepRatio": true,
+          "layer": "",
+          "locked": true,
+          "name": "MuseumWall",
+          "persistentUuid": "274582b6-4b16-42b8-8790-319967ee42ca",
+          "width": 1152,
+          "x": 64,
+          "y": 32,
+          "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -230942,7 +231189,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "assets\\Characters\\MuseumCurator\\MuseumCurator_Idle_1.png",
+                      "image": "assets\\Characters\\MuseumDirector\\MuseumDirector_Idle_1.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -230959,7 +231206,7 @@
                     },
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "assets\\Characters\\MuseumCurator\\MuseumCurator_Idle_2.png",
+                      "image": "assets\\Characters\\MuseumDirector\\MuseumDirector_Idle_2.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -230976,7 +231223,7 @@
                     },
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "assets\\Characters\\MuseumCurator\\MuseumCurator_Idle_3.png",
+                      "image": "assets\\Characters\\MuseumDirector\\MuseumDirector_Idle_3.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -230993,7 +231240,7 @@
                     },
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "assets\\Characters\\MuseumCurator\\MuseumCurator_Idle_4.png",
+                      "image": "assets\\Characters\\MuseumDirector\\MuseumDirector_Idle_4.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -231010,7 +231257,7 @@
                     },
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "assets\\Characters\\MuseumCurator\\MuseumCurator_Idle_5.png",
+                      "image": "assets\\Characters\\MuseumDirector\\MuseumDirector_Idle_5.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -231027,7 +231274,7 @@
                     },
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "assets\\Characters\\MuseumCurator\\MuseumCurator_Idle_6.png",
+                      "image": "assets\\Characters\\MuseumDirector\\MuseumDirector_Idle_6.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -231044,7 +231291,7 @@
                     },
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "assets\\Characters\\MuseumCurator\\MuseumCurator_Idle_7.png",
+                      "image": "assets\\Characters\\MuseumDirector\\MuseumDirector_Idle_7.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -231061,7 +231308,7 @@
                     },
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "assets\\Characters\\MuseumCurator\\MuseumCurator_Idle_8.png",
+                      "image": "assets\\Characters\\MuseumDirector\\MuseumDirector_Idle_8.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -231078,7 +231325,7 @@
                     },
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "assets\\Characters\\MuseumCurator\\MuseumCurator_Idle_9.png",
+                      "image": "assets\\Characters\\MuseumDirector\\MuseumDirector_Idle_9.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -231095,7 +231342,7 @@
                     },
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "assets\\Characters\\MuseumCurator\\MuseumCurator_Idle_10.png",
+                      "image": "assets\\Characters\\MuseumDirector\\MuseumDirector_Idle_10.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -231820,7 +232067,7 @@
           "effects": [],
           "behaviors": [],
           "content": {
-            "atlasImage": "assets\\Environment\\InteriorPieces_v2\\Museum_Floor_Atlas.png",
+            "atlasImage": "assets\\Environment\\MuseumProps\\Museum_Polished_Marble_Floor.png",
             "rowCount": 2,
             "columnCount": 2,
             "tileSize": 32,
@@ -231842,48 +232089,6 @@
             "tileSize": 32,
             "tilesWithHitBox": ""
           }
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "",
-          "name": "InteriorCounter",
-          "persistentUuid": "977061e9-10dd-4f7c-849d-0535c77ebf17",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "assets\\Environment\\InteriorPieces_v2\\Counter.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
         },
         {
           "adaptCollisionMaskAutomatically": true,
@@ -231948,7 +232153,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "assets\\Environment\\InteriorPieces_v2\\Museum_Rug.png",
+                      "image": "assets\\Environment\\MuseumProps\\Museum_Blue_Carpet.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -232618,6 +232823,216 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "MuseumObelisk",
+          "persistentUuid": "54d84fd9-3426-43bc-995a-779e97918d9f",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Environment\\MuseumProps\\Museum_Obelisk.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "MuseumSarcophagusGold",
+          "persistentUuid": "c761867d-d9ca-4ec4-a487-ac1b62232293",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Environment\\MuseumProps\\Museum_Sarcophagus_Gold.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "MuseumSarcophagusGreen",
+          "persistentUuid": "9ed49bf5-1cbb-4609-80a0-e8380f37b253",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Environment\\MuseumProps\\Museum_Sarcophagus_Green.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "MuseumVase",
+          "persistentUuid": "d3fbb64c-991e-4acc-93de-f4c33a39137c",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Environment\\MuseumProps\\Museum_Vase.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "MuseumWall",
+          "persistentUuid": "780ac195-d1f0-49aa-8360-3f974713eda2",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Environment\\MuseumProps\\Museum_Navy_Gold_Wall.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -232877,9 +233292,6 @@
             "objectName": "InteriorWalls"
           },
           {
-            "objectName": "InteriorCounter"
-          },
-          {
             "objectName": "InteriorBooks"
           },
           {
@@ -232926,6 +233338,21 @@
           },
           {
             "objectName": "EchoSoundWave"
+          },
+          {
+            "objectName": "MuseumObelisk"
+          },
+          {
+            "objectName": "MuseumSarcophagusGold"
+          },
+          {
+            "objectName": "MuseumSarcophagusGreen"
+          },
+          {
+            "objectName": "MuseumVase"
+          },
+          {
+            "objectName": "MuseumWall"
           }
         ]
       },
@@ -236726,11 +237153,33 @@
             {
               "type": "BuiltinCommonInstructions::JsCode",
               "inlineCode": [
-                "// Doorway-only interior exit: match the exact arrival point in front of the door.",
+                "// TIGHT CURATOR DESK PROXIMITY: use the explorer's feet, not full-sprite overlap.",
+                "const museumSceneVariables = runtimeScene.getVariables();",
+                "if (museumSceneVariables.get(\"InteractionTarget\").getAsString() === \"CommerceWorker\") {",
+                "  const museumPlayer = runtimeScene.getObjects(\"TopDown_Character\")[0];",
+                "  const curatorFeetX = museumPlayer ? museumPlayer.getAABBCenterX() : -9999;",
+                "  const curatorFeetY = museumPlayer ? museumPlayer.getAABBBottom() - 2 : -9999;",
+                "  const directlyAtCuratorDesk = curatorFeetX >= 600 && curatorFeetX <= 680 && curatorFeetY >= 214 && curatorFeetY <= 250;",
+                "  if (!directlyAtCuratorDesk) {",
+                "    museumSceneVariables.get(\"InteractionTarget\").setString(\"\");",
+                "    museumSceneVariables.get(\"InteractionPromptText\").setString(\"\");",
+                "  }",
+                "}"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            },
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "// Bottom threshold exit: the museum doorway is implied just below the camera.",
                 "const doorwayPlayer = runtimeScene.getObjects(\"TopDown_Character\")[0];",
                 "const doorwayVariables = runtimeScene.getVariables();",
                 "if (doorwayPlayer && doorwayVariables.get(\"InteractionTarget\").getAsString() === \"\" && doorwayVariables.get(\"TransitionLockFrames\").getAsNumber() <= 0 && !doorwayVariables.get(\"MenuOpen\").getAsBoolean() && !doorwayVariables.get(\"DialogueActive\").getAsBoolean()) {",
-                "  if (Math.abs(doorwayPlayer.getX() - 608) <= 40 && Math.abs(doorwayPlayer.getY() - 560) <= 28) {",
+                "  const doorwayCenterX = doorwayPlayer.getCenterXInScene();",
+                "  const doorwayCenterY = doorwayPlayer.getCenterYInScene();",
+                "  if (doorwayCenterX >= 592 && doorwayCenterX <= 688 && doorwayCenterY >= 600 && doorwayCenterY <= 696) {",
                 "    doorwayVariables.get(\"InteractionTarget\").setString(\"ExitInterior\");",
                 "    doorwayVariables.get(\"InteractionPromptText\").setString(\"A: Return to camp\");",
                 "  }",
@@ -239461,11 +239910,13 @@
             "    for (const guitar of runtimeScene.getObjects(\"ExplorerGuitar\")) guitar.setScale(1);",
             "    const px = player.getAABBCenterX(); const py = player.getAABBBottom() - 2;",
             "    const obstacles = [",
-            "      [335,945,155,330],",
+            "      [576,704,150,230],",
             "      [70,220,185,625],",
             "      [1060,1210,185,625],",
             "      [225,330,90,240],",
-            "      [950,1055,90,240]",
+            "      [950,1055,90,240],",
+            "      [250,390,340,560],",
+            "      [890,1030,340,560],",
             "    ];",
             "    const blocked = obstacles.some(rect => px > rect[0] && px < rect[1] && py > rect[2] && py < rect[3]);",
             "    const playerVariables = player.getVariables();",
@@ -239606,6 +240057,24 @@
             "  setObjectText(\"CommerceChoice1Text\", `${selection === 0 ? \"> \" : \"\"}${labels[0]}`);",
             "  setObjectText(\"CommerceChoice2Text\", `${selection === 1 ? \"> \" : \"\"}${labels[1]}`);",
             "  setObjectText(\"CommerceBackText\", `${selection === 2 ? \"> \" : \"\"}${labels[2]}`);",
+            "}"
+          ],
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        },
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": [
+            "// MUSEUM PROMPT ANCHORS: curator prompt at the desk, exit prompt at the bottom threshold.",
+            "const museumPromptTarget = runtimeScene.getVariables().get(\"InteractionTarget\").getAsString();",
+            "for (const box of runtimeScene.getObjects(\"InteractionPromptBox\")) {",
+            "  if (museumPromptTarget === \"CommerceWorker\") { box.setPosition(480, 248); box.setWidth(320); box.setHeight(52); }",
+            "  else if (museumPromptTarget === \"ExitInterior\") { box.setPosition(480, 536); box.setWidth(320); box.setHeight(52); }",
+            "}",
+            "for (const label of runtimeScene.getObjects(\"InteractionPrompt\")) {",
+            "  if (museumPromptTarget === \"CommerceWorker\") { label.setPosition(500, 260); label.setWidth(280); }",
+            "  else if (museumPromptTarget === \"ExitInterior\") { label.setPosition(500, 548); label.setWidth(280); }",
             "}"
           ],
           "parameterObjects": "",
@@ -250526,6 +250995,21 @@
           },
           {
             "objectName": "EchoSoundWave"
+          },
+          {
+            "objectName": "DesertProvisionBaskets"
+          },
+          {
+            "objectName": "DesertCrateSmall"
+          },
+          {
+            "objectName": "DesertCrateStack"
+          },
+          {
+            "objectName": "DesertRope"
+          },
+          {
+            "objectName": "DesertChest"
           }
         ]
       },
