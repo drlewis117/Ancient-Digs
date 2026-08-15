@@ -2312,6 +2312,14 @@
         "name": "assets\\Characters\\MuseumDirector\\MuseumDirector_Idle_10.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/Environment/ShopProps/Shop_Tent_Wall_Darker.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Environment\\ShopProps\\Shop_Tent_Wall_Darker.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ]
   },
@@ -233432,6 +233440,12 @@
           },
           {
             "objectName": "MuseumWall"
+          },
+          {
+            "objectName": "MuseumExhibitLabel"
+          },
+          {
+            "objectName": "MuseumExhibitLabelBox"
           }
         ]
       },
@@ -241897,14 +241911,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 91,
+          "height": 137,
           "keepRatio": true,
           "layer": "",
           "name": "CommerceWorker",
           "persistentUuid": "b0b1f379-cb3f-4440-bf60-a887fc4cdc4b",
-          "width": 96,
-          "x": 592,
-          "y": 128,
+          "width": 144,
+          "x": 568,
+          "y": 91,
           "zOrder": 18,
           "numberProperties": [],
           "stringProperties": [],
@@ -241943,13 +241957,13 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 20,
+          "height": 24,
           "layer": "",
           "name": "WorkerInteractionZone",
           "persistentUuid": "e41d8675-ab0f-4117-b8fc-81e5eb8cac48",
-          "width": 80,
-          "x": 600,
-          "y": 210,
+          "width": 112,
+          "x": 584,
+          "y": 220,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -249802,7 +249816,7 @@
           "effects": [],
           "behaviors": [],
           "content": {
-            "atlasImage": "assets\\Environment\\InteriorPieces_v2\\Interior_Wall_Atlas.png",
+            "atlasImage": "assets\\Environment\\ShopProps\\Shop_Tent_Wall_Darker.png",
             "rowCount": 2,
             "columnCount": 2,
             "tileSize": 32,
@@ -257607,6 +257621,26 @@
         {
           "type": "BuiltinCommonInstructions::JsCode",
           "inlineCode": [
+            "// TIGHT SHOP DESK PROXIMITY: only show the merchant prompt directly in front of the counter.",
+            "const shopSceneVariables = runtimeScene.getVariables();",
+            "if (shopSceneVariables.get(\"InteractionTarget\").getAsString() === \"CommerceWorker\") {",
+            "  const shopPlayer = runtimeScene.getObjects(\"TopDown_Character\")[0];",
+            "  const merchantFeetX = shopPlayer ? shopPlayer.getAABBCenterX() : -9999;",
+            "  const merchantFeetY = shopPlayer ? shopPlayer.getAABBBottom() - 2 : -9999;",
+            "  const directlyAtMerchantDesk = merchantFeetX >= 584 && merchantFeetX <= 696 && merchantFeetY >= 214 && merchantFeetY <= 254;",
+            "  if (!directlyAtMerchantDesk) {",
+            "    shopSceneVariables.get(\"InteractionTarget\").setString(\"\");",
+            "    shopSceneVariables.get(\"InteractionPromptText\").setString(\"\");",
+            "  }",
+            "}"
+          ],
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        },
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": [
             "// SYSTEM 15: Shop purchasing and shovel upgrade (shop).",
             "const isMuseum = false;",
             "const sceneVariables = runtimeScene.getVariables();",
@@ -257654,10 +257688,19 @@
             "      [80,352,110,245],",
             "      [928,1200,110,245],",
             "      [80,352,300,430],",
-            "      [928,1200,300,430],",
-            "      [580,700,140,270]",
+            "      [928,1200,300,430]",
             "    ];",
-            "    const blocked = obstacles.some(rect => px > rect[0] && px < rect[1] && py > rect[2] && py < rect[3]);",
+            "    const footLeft = px - 10, footRight = px + 10, footTop = py - 5, footBottom = py + 3;",
+            "    const shopFixtures = [",
+            "      [586,691,124,213],",
+            "      [360,408,148,183],",
+            "      [870,922,144,208],",
+            "      [358,406,326,378],",
+            "      [826,900,336,396],",
+            "      [1098,1150,396,444]",
+            "    ];",
+            "    const footHitsFixture = shopFixtures.some(rect => footRight > rect[0] && footLeft < rect[1] && footBottom > rect[2] && footTop < rect[3]);",
+            "    const blocked = obstacles.some(rect => px > rect[0] && px < rect[1] && py > rect[2] && py < rect[3]) || footHitsFixture;",
             "    const playerVariables = player.getVariables();",
             "    const safeReady = playerVariables.get(\"InteriorSafeReady\");",
             "    if (!blocked) { playerVariables.get(\"InteriorSafeX\").setNumber(player.getX()); playerVariables.get(\"InteriorSafeY\").setNumber(player.getY()); safeReady.setBoolean(true); }",
@@ -257807,27 +257850,13 @@
           "inlineCode": [
             "// SHOP PROMPT ANCHORS: keep each message attached to its actual interaction point.",
             "const shopPromptTarget = runtimeScene.getVariables().get(\"InteractionTarget\").getAsString();",
-            "const shopPromptBoxes = runtimeScene.getObjects(\"InteractionPromptBox\");",
-            "const shopPromptTexts = runtimeScene.getObjects(\"InteractionPrompt\");",
-            "for (const box of shopPromptBoxes) {",
-            "  if (shopPromptTarget === \"CommerceWorker\") {",
-            "    box.setPosition(480, 228);",
-            "    box.setWidth(320);",
-            "    box.setHeight(52);",
-            "  } else if (shopPromptTarget === \"ExitInterior\") {",
-            "    box.setPosition(480, 536);",
-            "    box.setWidth(320);",
-            "    box.setHeight(52);",
-            "  }",
+            "for (const box of runtimeScene.getObjects(\"InteractionPromptBox\")) {",
+            "  if (shopPromptTarget === \"CommerceWorker\") { box.setPosition(420, 248); box.setWidth(440); box.setHeight(64); }",
+            "  else if (shopPromptTarget === \"ExitInterior\") { box.setPosition(480, 536); box.setWidth(320); box.setHeight(52); }",
             "}",
-            "for (const label of shopPromptTexts) {",
-            "  if (shopPromptTarget === \"CommerceWorker\") {",
-            "    label.setPosition(500, 240);",
-            "    label.setWidth(280);",
-            "  } else if (shopPromptTarget === \"ExitInterior\") {",
-            "    label.setPosition(500, 548);",
-            "    label.setWidth(280);",
-            "  }",
+            "for (const label of runtimeScene.getObjects(\"InteractionPrompt\")) {",
+            "  if (shopPromptTarget === \"CommerceWorker\") { label.setPosition(440, 264); label.setWidth(400); }",
+            "  else if (shopPromptTarget === \"ExitInterior\") { label.setPosition(500, 548); label.setWidth(280); }",
             "}"
           ],
           "parameterObjects": "",
