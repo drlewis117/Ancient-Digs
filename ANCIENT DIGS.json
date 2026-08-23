@@ -2807,7 +2807,7 @@
             {
               "name": "AppraisedValue",
               "type": "number",
-              "value": 0
+              "value": 10
             },
             {
               "name": "Culture",
@@ -2817,7 +2817,7 @@
             {
               "name": "Description",
               "type": "string",
-              "value": "Weathered remains recorded during excavation. They have historical interest but no sale value."
+              "value": "Weathered remains recorded during excavation. The museum pays a modest amount for catalogued specimens."
             },
             {
               "name": "IconAnimation",
@@ -2852,7 +2852,7 @@
             {
               "name": "Sellable",
               "type": "number",
-              "value": 0
+              "value": 1
             },
             {
               "name": "Unique",
@@ -18606,8 +18606,9 @@
                 "  const satchelExistingData = satchelInventory.toJSObject();",
                 "  let satchelMigrationChanged = false;",
                 "  for (const slot of satchelExistingData) {",
-                "    if (slot && slot.ItemId === \"ancient_jar\") {",
-                "      if (Number(slot.AppraisedValue) !== 100) { slot.AppraisedValue = 100; satchelMigrationChanged = true; }",
+                "    if (slot && (slot.ItemId === \"ancient_jar\" || slot.ItemId === \"ancient_bones\")) {",
+                "      const expectedValue = slot.ItemId === \"ancient_bones\" ? 10 : 100;",
+                "      if (Number(slot.AppraisedValue) !== expectedValue) { slot.AppraisedValue = expectedValue; satchelMigrationChanged = true; }",
                 "      if (Number(slot.MaxStack) !== 999) { slot.MaxStack = 999; satchelMigrationChanged = true; }",
                 "      if (Number(slot.Stackable) !== 1) { slot.Stackable = 1; satchelMigrationChanged = true; }",
                 "      if (Number(slot.QuestItem) !== 0) { slot.QuestItem = 0; satchelMigrationChanged = true; }",
@@ -18644,7 +18645,7 @@
                 "  const satchelItemId = satchelItemVariables.get(\"ItemId\").getAsString();",
                 "  const satchelDisplayName = satchelItemVariables.get(\"DisplayName\").getAsString();",
                 "  const satchelAnimationName = satchelItemVariables.get(\"InventoryAnimation\").getAsString();",
-                "  const satchelValue = satchelItemVariables.get(\"AppraisedValue\").getAsNumber();",
+                "  const satchelValue = satchelItemId === \"ancient_bones\" ? 10 : satchelItemVariables.get(\"AppraisedValue\").getAsNumber();",
                 "  const satchelStackable = satchelItemVariables.get(\"Stackable\").getAsBoolean();",
                 "  const satchelMaxStack = Math.max(1, satchelItemVariables.get(\"MaxStack\").getAsNumber());",
                 "  const satchelData = satchelInventory.toJSObject();",
@@ -18676,7 +18677,7 @@
                 "    Name: satchelAnimationName,",
                 "    Quantity: satchelExistingQuantity + 1,",
                 "    QuestItem: satchelItemVariables.get(\"QuestItem\").getAsBoolean() ? 1 : 0,",
-                "    Sellable: satchelItemVariables.get(\"Sellable\").getAsBoolean() ? 1 : 0,",
+                "    Sellable: satchelItemId === \"ancient_bones\" || satchelItemVariables.get(\"Sellable\").getAsBoolean() ? 1 : 0,",
                 "    Stackable: satchelStackable ? 1 : 0,",
                 "    Usable: satchelItemVariables.get(\"Usable\").getAsBoolean() ? 1 : 0",
                 "  };",
@@ -69402,13 +69403,13 @@
                 "  const pipelineAncientDoorNear = pipelineAncientDoor && !pipelineAncientDoor.isHidden() && pipelineTouchingDoor(pipelineAncientDoor);",
                 "  if (pipelineEntranceNear) {",
                 "    pipelinePlayer.getVariables().get(\"MovementLocked\").setBoolean(false);",
-                "    pipelineShowPrompt(\"A: RESTART PUZZLE     B: SURFACE\");",
-                "    if (pipelineActionPressed) {",
+                "    pipelineShowPrompt(\"A: SURFACE     B: RESTART PUZZLE\");",
+                "    if (pipelineBPressed) {",
                 "      pipelineGameVariables.get(\"CompletedPuzzles\").removeChild(pipelineSceneName);",
                 "      pipelineGameVariables.get(\"SaveSystem\").getChild(\"SaveRequested\").setBoolean(true);",
                 "      pipelineGameVariables.get(\"NextSpawn\").setString(\"Room01_FromSurface\");",
                 "      runtimeScene.__ancientDigsRoomPipelinePending = { target: pipelineSceneName, frames: 2 };",
-                "    } else if (pipelineBPressed) {",
+                "    } else if (pipelineActionPressed) {",
                 "      pipelineQueueScene(\"Base camp 2\", \"Camp_FromExcavation01\", \"Room01SurfaceEntrance\");",
                 "    }",
                 "  } else if (pipelineAncientDoorNear) {",
@@ -87068,7 +87069,7 @@
           "isLocked": false,
           "name": "UI",
           "renderingType": "",
-          "visibility": true,
+          "visibility": false,
           "cameras": [],
           "effects": []
         }
@@ -231551,7 +231552,7 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "ancient_jar",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -231590,6 +231591,54 @@
                           {
                             "x": 6,
                             "y": 36
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "ancient_bones",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Excavation\\Ancient_Bones.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 8,
+                            "y": 10
+                          },
+                          {
+                            "x": 24,
+                            "y": 10
+                          },
+                          {
+                            "x": 24,
+                            "y": 25
+                          },
+                          {
+                            "x": 8,
+                            "y": 25
                           }
                         ]
                       ]
@@ -239991,7 +240040,7 @@
             "const isMuseum = true;",
             "const sceneVariables = runtimeScene.getVariables();",
             "const gameVariables = runtimeScene.getGame().getVariables();",
-            "const state = runtimeScene.__ancientDigsCommerce || (runtimeScene.__ancientDigsCommerce = { initialized: false, up: false, down: false, confirm: false, escape: false, displayOrder: null, lastOpen: false, status: \"\" });",
+            "const state = runtimeScene.__ancientDigsCommerce || (runtimeScene.__ancientDigsCommerce = { initialized: false, up: false, down: false, confirm: false, escape: false, lastOpen: false, status: \"\" });",
             "const players = runtimeScene.getObjects(\"TopDown_Character\");",
             "const player = players.length ? players[0] : null;",
             "const worldLayer = runtimeScene.getLayer(\"\");",
@@ -240007,13 +240056,6 @@
             "  const nextSpawn = gameVariables.get(\"NextSpawn\").getAsString();",
             "  if (player && !runtimeScene.__doorArrivalApplied && (nextSpawn === \"Museum_FromCamp\" || nextSpawn === \"Shop_FromCamp\" || nextSpawn === \"\")) player.setPosition(608, 505);",
             "  gameVariables.get(\"NextSpawn\").setString(\"\");",
-            "  if (isMuseum) {",
-            "    state.displayOrder = [0,1,2,3,4,5,6,7];",
-            "    for (let index = state.displayOrder.length - 1; index > 0; index--) {",
-            "      const swap = Math.floor(Math.random() * (index + 1));",
-            "      [state.displayOrder[index], state.displayOrder[swap]] = [state.displayOrder[swap], state.displayOrder[index]];",
-            "    }",
-            "  }",
             "}",
             "const commerceOpen = sceneVariables.get(\"CommerceOpen\").getAsBoolean();",
             "if (sceneVariables.get(\"CommerceInputDelay\").getAsNumber() > 0) sceneVariables.get(\"CommerceInputDelay\").setNumber(sceneVariables.get(\"CommerceInputDelay\").getAsNumber() - 1);",
@@ -240031,7 +240073,7 @@
             "    for (const guitar of runtimeScene.getObjects(\"ExplorerGuitar\")) guitar.setScale(1);",
             "    const px = player.getAABBCenterX(); const py = player.getAABBBottom() - 2;",
             "    const obstacles = [",
-            "      [560,720,120,236],",
+            "      [64,1216,0,236],",
             "      [70,220,185,625],",
             "      [1060,1210,185,625],",
             "      [225,330,90,240],",
@@ -240062,12 +240104,38 @@
             "  sceneVariables.get(\"UpdateInventoryDisplay\").setBoolean(true);",
             "}",
             "state.lastOpen = commerceOpen;",
-            "const museumSold = gameVariables.get(\"StoryProgress\").getChild(\"Museum\").getChild(\"SoldJars\").getAsNumber();",
+            "const museumProgress = gameVariables.get(\"StoryProgress\").getChild(\"Museum\");",
+            "const museumExhibitsVariable = museumProgress.getChild(\"Exhibits\");",
+            "const readMuseumExhibits = () => { const value = museumExhibitsVariable.toJSObject(); return Array.isArray(value) ? value : []; };",
+            "const writeMuseumExhibits = exhibits => museumExhibitsVariable.fromJSObject(exhibits);",
+            "const rankMuseumExhibits = exhibits => exhibits.slice().sort((a, b) => Number(b.AppraisedValue || 0) - Number(a.AppraisedValue || 0) || Number(b.SoldSequence || 0) - Number(a.SoldSequence || 0));",
+            "if (isMuseum && !museumProgress.getChild(\"LegacyExhibitsMigrated\").getAsBoolean()) {",
+            "  const legacySold = Math.max(0, Math.floor(museumProgress.getChild(\"SoldJars\").getAsNumber()));",
+            "  const exhibits = readMuseumExhibits();",
+            "  if (exhibits.length === 0) for (let index = 0; index < Math.min(legacySold, 8); index++) exhibits.push({ ItemId: \"ancient_jar\", DisplayName: \"Ancient Jar\", AppraisedValue: 100, SoldSequence: index + 1 });",
+            "  writeMuseumExhibits(exhibits);",
+            "  museumProgress.getChild(\"LegacyExhibitsMigrated\").setBoolean(true);",
+            "  if (legacySold > 0) gameVariables.get(\"SaveSystem\").getChild(\"SaveRequested\").setBoolean(true);",
+            "}",
             "if (isMuseum) {",
-            "  const displays = runtimeScene.getObjects(\"MuseumDisplayArtifact\");",
-            "  const visibleCount = Math.min(displays.length, Math.max(0, Math.floor(museumSold)));",
-            "  const visibleIndexes = new Set((state.displayOrder || []).slice(0, visibleCount));",
-            "  displays.forEach((display, index) => display.hide(!visibleIndexes.has(index)));",
+            "  const byRowThenSide = (a, b) => a.getY() - b.getY() || a.getX() - b.getX();",
+            "  const pedestals = runtimeScene.getObjects(\"MuseumPedestal\").slice().sort(byRowThenSide);",
+            "  const displays = runtimeScene.getObjects(\"MuseumDisplayArtifact\").slice().sort(byRowThenSide);",
+            "  const rankedExhibits = rankMuseumExhibits(readMuseumExhibits());",
+            "  displays.forEach((display, index) => {",
+            "    const pedestal = pedestals[index]; const exhibit = rankedExhibits[index];",
+            "    if (!pedestal || !exhibit) { display.hide(true); return; }",
+            "    const displayType = exhibit.ItemId === \"ancient_bones\" ? \"ancient_bones\" : \"ancient_jar\";",
+            "    display.setAnimationName(displayType);",
+            "    display.setWidth(displayType === \"ancient_bones\" ? 40 : 38);",
+            "    display.setHeight(displayType === \"ancient_bones\" ? 40 : 48);",
+            "    display.setX(pedestal.getX() + (pedestal.getWidth() - display.getWidth()) / 2);",
+            "    display.setY(pedestal.getY() + (displayType === \"ancient_bones\" ? -6 : -4));",
+            "    display.setZOrder(pedestal.getZOrder() + 2);",
+            "    display.getVariables().get(\"ItemId\").setString(String(exhibit.ItemId || \"ancient_jar\"));",
+            "    display.getVariables().get(\"AppraisedValue\").setNumber(Number(exhibit.AppraisedValue || 0));",
+            "    display.hide(false);",
+            "  });",
             "}",
             "if (commerceOpen) {",
             "  let mode = sceneVariables.get(\"CommerceMode\").getAsString() || \"root\";",
@@ -240092,32 +240160,46 @@
             "  if (requested === \"choice2\") selection = 1;",
             "  if (requested === \"back\") selection = 2;",
             "  const inventoryVariable = gameVariables.get(\"Inventory\");",
-            "  const jarQuantity = () => {",
+            "  const isSellableArtifact = slot => slot && Number(slot.Quantity || 0) > 0 && Number(slot.Sellable || 0) === 1 && Number(slot.QuestItem || 0) !== 1;",
+            "  const sellableArtifacts = () => inventoryVariable.toJSObject().filter(isSellableArtifact);",
+            "  const artifactQuantity = () => sellableArtifacts().reduce((total, slot) => total + Number(slot.Quantity || 0), 0);",
+            "  const artifactTotalValue = () => sellableArtifacts().reduce((total, slot) => total + Number(slot.Quantity || 0) * Math.max(0, Number(slot.AppraisedValue || 0)), 0);",
+            "  const nextArtifactValue = () => sellableArtifacts().reduce((highest, slot) => Math.max(highest, Number(slot.AppraisedValue || 0)), 0);",
+            "  const sellArtifacts = requestedCount => {",
             "    const inventory = inventoryVariable.toJSObject();",
-            "    return inventory.reduce((total, slot) => total + (slot.ItemId === \"ancient_jar\" ? Number(slot.Quantity || 0) : 0), 0);",
-            "  };",
-            "  const sellJars = requestedCount => {",
-            "    const inventory = inventoryVariable.toJSObject();",
-            "    let remaining = Math.min(requestedCount, jarQuantity());",
+            "    let remaining = Math.min(requestedCount, artifactQuantity());",
             "    const sold = remaining;",
-            "    for (const slot of inventory) {",
-            "      if (remaining <= 0 || slot.ItemId !== \"ancient_jar\") continue;",
+            "    const soldExhibits = [];",
+            "    let payout = 0;",
+            "    let soldJarCount = 0;",
+            "    const saleOrder = inventory.map((slot, index) => ({ slot, index })).filter(entry => isSellableArtifact(entry.slot)).sort((a, b) => Number(b.slot.AppraisedValue || 0) - Number(a.slot.AppraisedValue || 0));",
+            "    for (const entry of saleOrder) {",
+            "      if (remaining <= 0) break;",
+            "      const slot = entry.slot;",
             "      const taken = Math.min(remaining, Number(slot.Quantity || 0));",
+            "      const appraisedValue = Math.max(0, Number(slot.AppraisedValue || 0));",
+            "      const displayName = String(slot.DisplayName || slot.Name || \"Artifact\");",
+            "      for (let index = 0; index < taken; index++) soldExhibits.push({ ItemId: String(slot.ItemId), DisplayName: displayName, AppraisedValue: appraisedValue });",
+            "      payout += taken * appraisedValue;",
+            "      if (slot.ItemId === \"ancient_jar\") soldJarCount += taken;",
             "      slot.Quantity = Number(slot.Quantity || 0) - taken;",
             "      remaining -= taken;",
-            "      if (slot.Quantity <= 0) Object.assign(slot, { Category:\"\", DisplayName:\"\", ItemId:\"\", MaxStack:1, Name:\"Empty\", Quantity:0, QuestItem:0, Stackable:0, Usable:0, AppraisedValue:0, Sellable:0 });",
+            "      if (slot.Quantity <= 0) inventory[entry.index] = { Category:\"\", DisplayName:\"\", ItemId:\"\", MaxStack:1, Name:\"Empty\", Quantity:0, QuestItem:0, Stackable:0, Usable:0, AppraisedValue:0, Sellable:0 };",
             "    }",
             "    if (sold > 0) {",
             "      inventoryVariable.fromJSObject(inventory);",
-            "      const payout = sold * 100;",
+            "      const exhibits = readMuseumExhibits();",
+            "      let nextSequence = exhibits.reduce((highest, exhibit) => Math.max(highest, Number(exhibit.SoldSequence || 0)), 0) + 1;",
+            "      for (const exhibit of soldExhibits) { exhibit.SoldSequence = nextSequence++; exhibits.push(exhibit); }",
+            "      writeMuseumExhibits(exhibits);",
             "      gameVariables.get(\"Economy\").getChild(\"Coins\").setNumber(gameVariables.get(\"Economy\").getChild(\"Coins\").getAsNumber() + payout);",
             "      gameVariables.get(\"Economy\").getChild(\"LifetimeEarned\").setNumber(gameVariables.get(\"Economy\").getChild(\"LifetimeEarned\").getAsNumber() + payout);",
-            "      gameVariables.get(\"StoryProgress\").getChild(\"Museum\").getChild(\"SoldJars\").setNumber(gameVariables.get(\"StoryProgress\").getChild(\"Museum\").getChild(\"SoldJars\").getAsNumber() + sold);",
+            "      gameVariables.get(\"StoryProgress\").getChild(\"Museum\").getChild(\"SoldJars\").setNumber(gameVariables.get(\"StoryProgress\").getChild(\"Museum\").getChild(\"SoldJars\").getAsNumber() + soldJarCount);",
             "      gameVariables.get(\"SaveSystem\").getChild(\"SaveRequested\").setBoolean(true);",
             "      sceneVariables.get(\"UpdateInventoryDisplay\").setBoolean(true);",
-            "      state.status = sold === 1 ? \"SOLD 1 ANCIENT JAR FOR 100 COINS!\" : `SOLD ${sold} ANCIENT JARS FOR ${payout} COINS!`;",
+            "      state.status = sold === 1 ? `SOLD 1 ARTIFACT FOR ${payout} COINS!` : `SOLD ${sold} ARTIFACTS FOR ${payout} COINS!`;",
             "      gdjs.evtTools.sound.playSound(runtimeScene, \"assets/Artifact Pickup Chime.wav\", false, 75, 1);",
-            "    } else state.status = \"NO ANCIENT JARS IN YOUR SATCHEL.\";",
+            "    } else state.status = \"NO SELLABLE ARTIFACTS IN YOUR SATCHEL.\";",
             "  };",
             "  const buyShovel = () => {",
             "    const shovel = gameVariables.get(\"PlayerState\").getChild(\"Shovel\");",
@@ -240142,8 +240224,8 @@
             "      else if (requested === \"back\") { sceneVariables.get(\"CommerceOpen\").setBoolean(false); sceneVariables.get(\"DialogueActive\").setBoolean(false); }",
             "    } else if (mode === \"talk\") { mode = \"root\"; selection = 0; }",
             "    else if (mode === \"sell\") {",
-            "      if (requested === \"choice1\") sellJars(1);",
-            "      else if (requested === \"choice2\") sellJars(jarQuantity());",
+            "      if (requested === \"choice1\") sellArtifacts(1);",
+            "      else if (requested === \"choice2\") sellArtifacts(artifactQuantity());",
             "      else if (requested === \"back\") { mode = \"root\"; selection = 0; state.status = \"\"; }",
             "    } else if (mode === \"buy\") {",
             "      if (requested === \"choice1\") state.status = \"NO EQUIPMENT STOCKED YET.\";",
@@ -240164,9 +240246,12 @@
             "    detail = isMuseum ? \"The display stands begin empty. As you sell discoveries, pieces from your collection will appear here on future visits.\" : \"New excavation tools will appear here as you progress. The first shovel becomes available after Room 5.\";",
             "    labels = [\"CONTINUE\",\"\",\"BACK\"];",
             "  } else if (mode === \"sell\") {",
-            "    const quantity = jarQuantity();",
-            "    detail = state.status || `ANCIENT JARS IN SATCHEL: ${quantity}\\nAPPRAISED VALUE: 100 EACH\\nTOTAL VALUE: ${quantity * 100}`;",
-            "    labels = quantity > 0 ? [\"SELL ONE — 100\",\"SELL ALL — \" + (quantity * 100),\"BACK\"] : [\"NO JARS TO SELL\",\"\",\"BACK\"];",
+            "    const quantity = artifactQuantity(); const totalValue = artifactTotalValue(); const nextValue = nextArtifactValue();",
+            "    const inventory = inventoryVariable.toJSObject();",
+            "    const jarCount = inventory.reduce((total, slot) => total + (slot.ItemId === \"ancient_jar\" && isSellableArtifact(slot) ? Number(slot.Quantity || 0) : 0), 0);",
+            "    const boneCount = inventory.reduce((total, slot) => total + (slot.ItemId === \"ancient_bones\" && isSellableArtifact(slot) ? Number(slot.Quantity || 0) : 0), 0);",
+            "    detail = state.status || `SELLABLE FINDS: ${quantity}\\nJARS: ${jarCount} x 100  |  BONES: ${boneCount} x 10\\nTOTAL VALUE: ${totalValue}`;",
+            "    labels = quantity > 0 ? [\"SELL HIGHEST — \" + nextValue,\"SELL ALL — \" + totalValue,\"BACK\"] : [\"NO ARTIFACTS TO SELL\",\"\",\"BACK\"];",
             "  } else {",
             "    detail = state.status || \"EQUIPMENT STOCK\\nNo tools are available yet.\\nNew stock arrives as you clear excavation rooms.\";",
             "    labels = [\"STOCK COMING SOON\",\"\",\"BACK\"];",
